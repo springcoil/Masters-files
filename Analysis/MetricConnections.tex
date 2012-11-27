@@ -1,0 +1,74 @@
+\section{Metrics and Connections}
+When we think of Manifolds we often think in terms of a Riemannian Metric with a Euclidean Metric. Another important 
+notion is that of a connection. 
+We define a flat connection to be any submersion $\phi: M \rightarrow S$ between two manifolds to be a subbundle
+E $\subseteq$ TM such that
+\begin{enumerate}
+ \item TM = $E \oplus ker T\phi$
+\item $[E,E] \subseteq E$ (That is, sections of E are closed under the Lie bracket, and so by the Frobenius theorem E 
+is integrable
+\item Every path in S has a horizontal lift through each of its points
+\end{enumerate}
+(1) and (3) imply that there is an Ehresman connection.
+(2) implies the flatness propert, which implies that the fibration has a discrete structure group.
+\textbf{Curvature}
+Let P $\in \Omega^{1}(M;TM)$ be a fiber projection, i.e $P \circ P = P$. This is the most general case of a (first
+order) connection. If P is of constant rank, then both are subvector bundles of TM. If im P is some primarily fixed
+sub vector bundle, P can be called a connection for it. Let (E, p, M, S) be a fiber bundle; we consider the fiber linear
+tangent mapping (pushforward) $T_p: TE \rightarrow TM$ and its $ker T_{p} =: VE$ whcih is called the vertical bundle
+of E. 
+\begin{dfn}
+ A \textbf{connection} on the fiber bundle (E,p,M,S) is a vector bundle 1-form $\Phi \in \Omega^{1}(E; VE)$ with
+values in the vertical bundle VE such that $\Phi \circ \Phi = \Phi$ and $Im \Phi = VE$; so $\Phi$ is just a projection
+$TE \rightarrow VE$. Then ker $\Phi$ is of constant rnak, so ker $\Phi$ is a subvectorbundle of TE, it is called the space 
+of horizontal vector bundles (denoted HE). Clearly $TE = HE \oplus VE$ and 
+$T_u E = H_u E \oplus V_u E$ $\forall u \in E$.
+\end{dfn}
+ 
+\begin{dfn}
+ Let E be a vector bundle on the differentiable manifold M with bundle metric $<.,.>$. A connection D on E is called \textbf{metric}
+if $d<\mu,\nu>=<D\mu,\nu> +<\mu, D\nu>$ for all $\mu, \nu \in \Gamma(E)$
+\end{dfn}
+A metric condition respects the metric. 
+\subsection{Curvature of a Connection}
+One of the most powerful and important ideas in Differential Geometry is that of the 'curvature' of a connection.
+\begin{dfn} Let $\nabla$ be a connection on a vector bundle $\pi: E \to M$. The bilinear map 
+ \begin{equation}
+  R: \mathcal{X}(M)\times \mathcal{X}(M) \to \mathcal{L}(Sec(E), Sec(E)),
+ \end{equation}
+defined for $X,Y \in \mathcal{X}(M)$ and $s \in Sec(E)$ by
+\begin{equation}
+ R(X,Y)s = \nabla_{X} \nabla_{Y}s -\nabla_{Y} \nabla_{X}s - \nabla_{[X,Y]}s,
+\end{equation}
+is called the curvature of the connection $\nabla$
+\end{dfn}
+We can make some remarks, before considering the local form. 
+\begin{rem}
+ \begin{enumerate}
+  \item Note that R is a trilinear map R:Sec(TM) $\times $ Sec(TM) $\times$ Sec(E) \To Sec(E), which is also 
+$C^{\infty}(M)$-linear in each argument and skew-symmetric in the first two arguments. Hence
+ \begin{equation}
+  R \in Sec(\bigwedge^{2} T^{*}M \tensor E^{*} \tensor E),
+ \end{equation}
+i.e. the curvature of a connection on a vector bundle E with base manifold M is a differential 2-form on M valued
+in the endomorphism bundle of E.
+\item The curvature tensor R of a connection $\nabla$ is often denoted by $R^{\nabla}$.
+\item We immediately see that curvature tensor of the trivial connection on a trivial bundle vanishes, since this
+covariant derivative with respect to a vector field X is just the Lie derivative with respect to X. 
+ \end{enumerate}
+
+\end{rem}
+\subsubsection{Local form and components}
+Remember that a covariant derivative is locally characterized by a connection 1-form 
+\begin{equation}
+ \mathcal{A} \in \Omega^{1}(U) \tensor \mathfrak{gl}(r,\Rbb)
+\end{equation}
+It is clearn that the de Rham differenial can be extended, for any manifold M, to $\Omega(M) \tensor \mathfrak{gl}(r,
+\Rbb)$.
+Just set 
+\begin{equation}
+ d(\alpha \tensor A) = (d\alpha) \tensor A
+\end{equation}
+where $(\alpha \in \Omega(M), A \in \mathfrak{gl}(r,\Rbb))$. Note here we apply the universal property of 
+the tensor product. 
+  

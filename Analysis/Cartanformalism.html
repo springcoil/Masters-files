@@ -1,0 +1,88 @@
+
+<p>
+\maketitle
+<p>
+ On a manifold it is necessary to use covariant differentation, curvature measures its noncommutativity. Its combination as a characteristic form measures the nontriviality of the underlying bundle. This train of ideas is so simple, that their importance can not be exaggerated. - Shiing-shen Chern 
+<p>
+For a smooth (for now, real) manifold M, we let $latex {\mathcal{A}^{1}(M)}&fg=000000$ denote smooth \Cbb-valued differential forms and \mathcal{A}^{1}A(M) denote smooth functions. Similarly for a complex bundle $latex {E \rightarrow M}&fg=000000$, we let E(M) denote (smooth, \Cbb-valued ) sections 
+
+<p>
+
+<b>  0.1. Connections </b>
+
+<p>
+
+ Recall that a connection on a vector bundle E over a smooth manifold is a \Cbb-homomorphism <p align=center>$latex \displaystyle  \nabla:E(M) \rightarrow (\mathcal{A}^{1} \otimes E)(M)&fg=000000$</p>
+ that maps global sections on M to global sections of $latex {\mathcal{A}^{1} \otimes E}&fg=000000$, which satisfies the Leibniz rule $latex { \nabla(fs) = (df)s + f \nabla s}&fg=000000$ $latex {f \in \mathcal{A}^{1}A(M)}&fg=000000$ $latex {s \in E(M)}&fg=000000$ This is essentially an way of differentiating sections of E, because for any vector field X on M, we can define 
+<blockquote><b>Definition 1</b> <em> The Covariant derivative w.r.t this connection of s in the direction of X <p align=center>$latex \displaystyle \nabla_X s&fg=000000$</p>
+. This satisfies 
+
+<ol> <li> $latex {\nabla_fX(s) \;=\; f\nabla_X s}&fg=000000$ <li> $latex {\nabla_X(fs)\;=\;(Xf)_s\;+\;f\nabla_X s}&fg=000000$ 
+</ol>
+
+
+<p>
+</em></blockquote>
+
+<p>
+
+ In fact these two properties <b>characterize</b> a connection. <br/>
+ We can describe a connection <b>locally</b> in terms of frames. 
+<blockquote><b>Definition 2</b> <em> Recall that a <b>frame</b> of an n-dimensional vector bundle E, over an open subset $latex {U \subset M}&fg=000000$, is a family of sections $latex {(e_1,\cdots e_n)\;\in\;E(U)}&fg=000000$ that form a basis at each point; thus $latex {{e_1,\cdots,e_n}}&fg=000000$ forms a vector bundle isomorphism between $latex {E|_U}&fg=000000$ and the trivial bundle. </em></blockquote>
+
+<p>
+
+ Then $latex {\nabla}&fg=000000$ is <b>determined</b> over U by the elements $latex {\nabla_{e_1},\cdots \nabla_{e_n}\;\in\;(\mathcal{A}^{1} \otimes E)(U)}&fg=000000$. For any sections s of $latex {E(U)}&fg=000000$ can be written as $latex {s \; = \;\sum_i f_i e_i}&fg=000000$ for the $latex {f_i}&fg=000000$ smooth functions, and consequently <p align=center>$latex \displaystyle \nabla s = \sum e_i(df_i)\;+\;\sum f_i \nabla e_i&fg=000000$</p>
+ In other words, if we use the fram $latex {{e_i}}&fg=000000$ to identify each section of E(U) with the tuple $latex {f_i}&fg=000000$ such that $latex {s\;=\;\sum f_i e_i}&fg=000000$ then $latex {\nabla}&fg=000000$ acts by applying d and multiplying by suitable matrix corresponding to the $latex {\nabla e_i}&fg=000000$. In view of this we make: 
+<blockquote><b>Definition 3</b> <em> Given a frame $latex {\mathfrak{F} = {e_1,\cdots,e_n}}&fg=000000$ over U and a connection $latex {\nabla}&fg=000000$, we define the n-by-n matrix $latex {\theta(\mathfrak{F})}&fg=000000$ of 1-forms via <p align=center>$latex \displaystyle \nabla \mathfrak{F} = \theta(\mathfrak{F})\mathfrak{F}&fg=000000$</p>
+ In other words, $latex {\nabla e_i\;=\;\sum_{j}\theta(\mathfrak{F})_{ij} e_j}&fg=000000$ for each j </em></blockquote>
+
+<p>
+
+ Note that the $latex {\theta}&fg=000000$ itself makes no reference to the bundle: it is simply a matrix of 1-forms. Given a frame $latex {\mathfrak{F}}&fg=000000$, and given $latex {g:U \rightarrow GL_n(\Cbb)}&fg=000000$, we define a new frame $latex {g\mathfrak{F}}&fg=000000$ by multiplying on the left. We would like to determine how a connection <b>transforms</b> with respect to a change of frame, so we can think of a connection in a different way. Namely we have: <p align=center>$latex \displaystyle \nabla (g \mathfrak{F})\;=\;(dg)\mathfrak{F} \;+\;g\nabla \mathfrak{F}\;=\;(dg)\mathfrak{F}\;+\;g\theta(\mathfrak{F})\mathfrak{F}&fg=000000$</p>
+ where df is considered as a matrix of 1-forms. As a result we get the <b>transformation law</b> <a name="transformation law"><p align=center>$latex \displaystyle   \theta(g\mathfrak{F}) = (dg)g^{-1} + g\theta(\mathfrak{F})g^{-1},\;g:U\rightarrow\;GL_n(\Cbb) \ \ \ \ \ (1)&fg=000000$</p>
+</a> Conversely, if we have for each local fram $latex {\mathfrak{F}}&fg=000000$ of a vector bundle $latex {E\rightarrow M}&fg=000000$ a matrix $latex {\theta(\mathfrak{F})}&fg=000000$ of 1-forms as above, which satisfy the transformation law <a href="#transformation law">1</a> as above,then we get a connection on E.  Any vector bundle $latex {E\rightarrow M}&fg=000000$ admits a connection  <em>Proof:</em>  It is easy to see that a convex combination of connections is a connection. Namely in each coordinate patch U over which E is trivial with a fixed frame, we choose the matrix $latex {\theta}&fg=000000$ arbitrarily and get some connection $latex {\nabla'_U}&fg=000000$ on $latex {E|_U}&fg=000000$. Let these various $latex {U'_s}&fg=000000$ form an open cover $latex {\mathfrak{A}}&fg=000000$. Then we can find a partition of unity $latex {\phi_U}&fg=000000$, $latex {U\in\mathfrak{A}}&fg=000000$ subordinate to $latex {\mathfrak{A}}&fg=000000$, and we can define our global connection va <p align=center>$latex \displaystyle \nabla \;=\;\sum_U \phi_U \nabla'_U &fg=000000$</p>
+ $latex \Box&fg=000000$
+
+
+<p>
+
+
+<p>
+
+<b>  0.2. Curvature </b>
+
+<p>
+
+ We want to now describe the <b>curvature</b> of a connection. A connection is a means of differentiating sections; however, it may not satisfy the standard results for functions, that mixed partials are equal. The curvature will be the measure of how much that fails. Let M be a smooth manifold, $latex {E\rightarrow M}&fg=000000$ a smooth complex vector bundle. Given a connection $latex {\nabla}&fg=000000$ on E ,the curvature is going to be a global section of $latex {\mathcal{A}^{1}A^{2}\otimes\hom(E,E)}&fg=000000$: in other words, the global differential 2-forms with coefficients in the vector bundle $latex {\hom(E,E)}&fg=000000$
+<p>
+ Let s be a section of E, and X,Y vector fields. The map: <p align=center>$latex \displaystyle s,X,Y \mapsto R(X,Y,s)=(\nabla_Y \nabla_X - \nabla_X \nabla_Y - \nabla_{[X,Y]})s&fg=000000$</p>
+ is a bundle map $latex {E \rightarrow E}&fg=000000$, and is $latex {\mathcal{A}^{1}A(M)}&fg=000000$-linear in X,Y 
+<p>
+<em>Proof:</em>  Calculation typically done to define the Riemannian curvature tensor in the case of the tangent bundle $latex \Box&fg=000000$
+
+ Since the quantity $latex {R(X,Y,s)}&fg=000000$ is $latex {\mathcal{A}^{1}A(M)}&fg=000000$-linear in all these quantities (X,Y,s),and clearly alternating in X,Y, we can think of it as a global section of the bundle $latex {\mathcal{A}^{1}A^{2}\otimes \hom(E,E)}&fg=000000$. Here recall that $latex {\mathcal{A}^{1}A^{2}}&fg=000000$ is the bundle of 2-forms. 
+<blockquote><b>Definition 4</b> <em> The above elements of $latex {\mathcal{A}^{1}A^{2}\otimes \hom(E,E)(M)}&fg=000000$ is called the <b>curvature</b> of the connection $latex {\nabla}&fg=000000$ and is denoted by $latex {\Theta}&fg=000000$. </em></blockquote>
+
+<p>
+
+
+<p>
+We now wish to think of the curvature in another manner. To do this, we start by extending the connection $latex {\nabla}&fg=000000$ to maps $latex {\nabla:(E \otimes \mathcal{A}^{1}A^p)(M)\rightarrow (E\otimes \mathcal{A}^{1}A^{p+1})(M)}&fg=000000$. The requirement is that the Leibnitz rule holds: that is, <a name="Leibnitz"><p align=center>$latex \displaystyle  \nabla (\omega s) = (d \omega)s + (-1)^p \omega \wedge \nabla s, \ \ \ \ \ (2)&fg=000000$</p>
+</a> whenever $latex {\omega}&fg=000000$ is a p-form and s a global section. We can this locally and glue them. Thus:  One can extend $latex {\nabla}&fg=000000$ to map s <p align=center>$latex \displaystyle \nabla: (E \otimes \mathcal{A}^{1}A^p)(M)\rightarrow (E\otimes \mathcal{A}^{1}A^{p+1})(M) &fg=000000$</p>
+ satisfying <a href="#Leibnitz">2</a>  Given such an extension, we can consider the map <p align=center>$latex \displaystyle \nabla^2:E(M) \rightarrow (E \otimes \mathcal{A}^{1}A^2(M)) &fg=000000$</p>
+. This is $latex {\mathcal{A}^{1}A(M)}&fg=000000$-linear. Indeed we can check this by computation  <p align=center>$latex \displaystyle \nabla^2(fs) = \nabla(\nabla(fs)) \\ = \nabla(dfs + f\nabla s) \\ = d^2 fs +(-1)df \nabla s + df(\nabla s) +f \nabla^{2} s \\ = f\nabla^2 s&fg=000000$</p>
+  We now want to connect this $latex {\mathcal{A}^{1}A(M)}&fg=000000$- linear map with the earlier curvature tensor  The vector bundle map $latex {\nabla^2}&fg=000000$ is equal to the curvature tensor $latex {\Theta}&fg=000000$  <em>Proof:</em>  We can work in local coordinates, and assume that X,Y are the standard commuting vector fields $latex {\partial_i}&fg=000000$ ,$latex {\partial_j}&fg=000000$. We want to show that, given a section s, we have \&#36;$latex {\nabla^2(s)(\partial_i , \partial_j) = (\nabla_{\partial_i} \nabla_{\partial_i} - \nabla_{\partial_j}\nabla_{\partial_i})s \in E(M)}&fg=000000$\nabla$latex { was defined. Namely we have, by definition }&fg=000000$\nabla s = \sum_i dx_i \nabla_{\partial_i} s$latex { and consequently }&fg=000000$\sum_{i\lt j}(\nabla_{\partial_j \nabla_{\partial_i} - \nabla_{\partial_i} \nabla_{\partial_j}}s dx_i \wedge dx_j$latex {. It is easy to see that this, evaluated on on }&fg=000000$(\partial_i,\partial_j)$latex {, gives the desired quantity. It follows that }&fg=000000$\nabla^2$latex { is equal to the curvature tensor }&fg=000000$\Theta$latex { \end{proof} As a result, we may calculate {\bf curvature} in a frame. Let }&fg=000000$\mathfrak{F} = {e_1,\cdots,e_n}$latex { be a frame and let }&fg=000000$\theta(\mathfrak{F})$latex { be the connection matrix. Then we can obtain an n-by-n {\bf curvature matrix} }&fg=000000$\Theta(\mathfrak{F})$latex { of 2-forms such that \\$}&fg=000000$ \Theta(\mathfrak{F}) = \nabla^2(\mathfrak{F})\] The follow result enables us to compute $latex {\Theta(\mathfrak{F})}&fg=000000$.  <p align=center>$latex \displaystyle \Theta(\mathfrak{F})=d\theta(\mathfrak{F}) - \theta(\mathfrak{F})\wedge \theta(\mathfrak{F})\ \ \ \ \ (3)&fg=000000$</p>
+ Note that $latex {\theta(\mathfrak{F}) \wedge \theta(\mathfrak{F})}&fg=000000$ is not zero in general! The reason is that one is working with matrices of 1-forms, not just plain 1-forms. The wedge product is a matrix product in a sense.  <em>Proof:</em>  Indeed, we need to determine how $latex {\nabla^2}&fg=000000$ acts on the fram $latex {{e_i}.}&fg=000000$ Namely with an abuse of notation: <p align=center>$latex \displaystyle \nabla^2(\mathfrak{F})=\nabla(\nabla \mathfrak{F}) = \nabla (\theta \mathfrak{F})(\mathfrak{F}) = d \theta(\mathfrak{F})\mathfrak{F} - \theta(\mathfrak{F}) \wedge (\theta(\mathfrak{F})\mathfrak{F})&fg=000000$</p>
+ We have used this formula that describes how $latex {\nabla}&fg=000000$ acts on a product with a form. As a result the proof holds.$latex \Box&fg=000000$
+
+ Finally, we shall need an expression for $latex {d \Theta}&fg=000000$. We state this in terms of a local frame.  With respect to a frame $latex {\mathfrak{F}}&fg=000000$ $latex {d \Theta(\mathfrak{F}) = [\theta(\mathfrak{F}),\Theta(\mathfrak{F})]}&fg=000000$
+<p>
+ Here the right side consists of matrices, so we talk about the commutator. We shall use this identity at a crucial point in showing that the Chern-Weil homomorphism is even well-defined. <em>Proof:</em>  This is a simple condition. For, by Cartan's equations, <p align=center>$latex \displaystyle d\Theta(\mathfrak{F}) = d(d\theta(\mathfrak{F})- \theta(\mathfrak{F}) \wedge \theta(\mathfrak{F})&fg=000000$</p>
+ = <p align=center>$latex \displaystyle -d\theta(\mathfrak{F})\wedge \theta(\mathfrak{F}) + \theta(\mathfrak{F}) \wedge d\theta(\mathfrak{F})&fg=000000$</p>
+ Similarly, <br/>
+ <p align=center>$latex \displaystyle [\theta(\mathfrak{F}),\Theta(\mathfrak{F})]=[\theta(\mathfrak{F}),d\theta(\mathfrak{F})+\theta(\mathfrak{F})\wedge \theta (\mathfrak{F}) \wedge \theta (\mathfrak{F})]&fg=000000$</p>
+ <br/>
+ $latex {[\theta(\mathfrak{F}),d\theta (\mathfrak{F})]}&fg=000000$ because $latex {[\theta(\mathfrak{F}),\theta(\mathfrak{F})\wedge \theta(\mathfrak{F})] =0}&fg=000000$ $latex \Box&fg=000000$
+
+ 

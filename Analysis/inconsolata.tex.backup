@@ -1,0 +1,32 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{Inconsolata}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+\texttt{This is Inconsolata}
+But perfect control is rarely assured in any free market, not with code or any-
+thing else.
+This is a hard fact for lawyers to understand (protected as they are by
+exclusionary rules such as the bar exam), but most of production in our so-
+ciety occurs without any guarantee of government protection. Starbucks
+didn’t get a government monopoly before it risked a great deal of capital
+to open coffee shops around the world. All it was assured was that people
+would have to pay for the coffee they sold; the idea of a high-quality coffee
+shop was free for others to take. Similarly, chip fabricators around the world
+invest billions in chip production plants, with no assurance from the
+government that another competitor won’t open a competing plant right
+next door.
+
+\end{document}

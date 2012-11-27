@@ -1,0 +1,38 @@
+
+
+<p>
+
+<b>1. The Laplace Operator </b>
+
+<p>
+
+  The aim is to introduce some notions associated with the Laplace Operator. And to enhance some of the remarks made in the PDE II problem class. Particularly on Riemannian Manifolds and volume forms. A good reference is \cite{jost2011riemannian}, or any Differential Geometry book/ a good PDE book. The idea of the 'Hodge Star Operator' is introduced and defined.  Let V be a real vector space with scalar product \scal,and let $latex {\bigwedge^{p}V}&fg=000000$ be the p-fold exterior product of V. We then obtain a scalar product on $latex {\bigwedge^{p}V}&fg=000000$ by <a name="1"><p align=center>$latex \displaystyle  &lt;v_1\wedge\cdots \wedge v_p,\omega_1\wedge \cdots \wedge \omega_p &gt; = det(&lt;v_i,\omega_j&gt;) \ \ \ \ \ (1)&fg=000000$</p>
+</a> and bilinear extensions to $latex {\bigwedge^{p}V}&fg=000000$ if $latex {e_1,\cdots, e_d}&fg=000000$ is an orthonormal basis of V, <a name="2"><p align=center>$latex \displaystyle  e_{i_1}\wedge \cdots \wedge_{i_p} with 1 \leq i_1 \lt i_2 \cdots \lt i_p \leq d \ \ \ \ \ (2)&fg=000000$</p>
+</a> constitutes an orthonormal basis of $latex {\bigwedge^{p}V}&fg=000000$ . \paragraph{Orientation} We've spoken of 'orientation' in some examples in PDE II so let us define what an \newword{orientation} is. An orientation on V is obtained by distinguishing a basis of V as positive. Any other basis that is obtained from this basis by a base change with positive determinant is likewise called positive, and the remaining bases are called negative. Let now V carry and orientation. We define the linear star operator (or Hodge star operator\footnote{After the late great British Mathematician and Analyst}) <p align=center>$latex \displaystyle \hodge:\bigwedge^p(V) \rightarrow \bigwedge^{d-p}(V)&fg=000000$</p>
+ $latex {(0 \leq p \leq d)}&fg=000000$ by <a name="3"><p align=center>$latex \displaystyle  \hodge(\eee) = e_{j_1}\wedge \cdots \wedge e_{j_d-p} \ \ \ \ \ (3)&fg=000000$</p>
+</a> where $latex {j_1,\cdots,j_{d-p}}&fg=000000$ is selected such that $latex {e_{i_1},\cdots,e_{i_p},e_{j_1},\cdots,e_{j_{d-p}}}&fg=000000$ is a positive basis of V. Since the star operator is supposed to be linear it is determined by its values on some basis <a href="#3">(3)</a>. In particular <a name="4"><p align=center>$latex \displaystyle  \hodge(1) = \eee, \ \ \ \ \ (4)&fg=000000$</p>
+</a> <a name="5"><p align=center>$latex \displaystyle  \hodge(\eee) = 1, \ \ \ \ \ (5)&fg=000000$</p>
+</a> if $latex {e_1,\cdots,e_d}&fg=000000$ is a positive basis. From the rules of multilinear algebra, it easily follows that if A is a d x d matrix, and if $latex {f_1,\cdots,f_d \in V}&fg=000000$, then <p align=center>$latex \displaystyle \hodge(Af_1\wedge\cdots\wedge Af_p = (det A)\hodge(f_1\wedge\cdots\wedge f_p)&fg=000000$</p>
+ In particular, this implies that the star operator does not depend on the choise of positive orthonormal basis (O.N.B) in V, as any two such bases are related by a linear transformation with determinant 1. For a negative basis instead of a positive one, one gets a minus sign on the r.h.s of <a href="#3">(3)</a> <a href="#4">(4)</a> <a href="#5">(5)</a>  \begin{equation*} \hodge \hodge = (-1)^{p(d-p)} : \bigwedge^p(V) \rightarrow \bigwedge^p(V) \end{equation*} <em>Proof:</em>  $latex {\hodge \hodge}&fg=000000$ maps $latex {\bigwedge^p(V)}&fg=000000$ onto itself. Suppose <p align=center>$latex \displaystyle \hodge(\eee)=e_{j_1}\wedge \cdots \wedge e_{j_d-p}&fg=000000$</p>
+ (c.f <a href="#3">(3)</a>)
+<p>
+Then <p align=center>$latex \displaystyle \hodge \hodge (\eee) = \textpm \eee&fg=000000$</p>
+ depending on positive or negative basis of V. The proof follows as $latex {(-1)^{p(d-p)}}&fg=000000$ is the determinant of the basis change from $latex {e_{j_1}\wedge \cdots \wedge e_{j_d-p}}&fg=000000$ to $latex {\eee}&fg=000000$ $latex \Box&fg=000000$
+
+
+<p>
+  For v,w $latex {\in \bigwedge^{p}(V)}&fg=000000$ <a name="6"><p align=center>$latex \displaystyle  &lt;v,w&gt; = \hodge(w \wedge \hodge v) = \hodge(v \wedge \hodge w) \ \ \ \ \ (6)&fg=000000$</p>
+</a>
+<p>
+<em>Proof:</em> It suffices to prove $latex {<a href="#6">(6)</a>}&fg=000000$ for elements of the basis $latex {<a href="#2">(2)</a>}&fg=000000$. For any two different of these base vectors \begin{equation*} v\wedge \hodge w = 0, \end{equation*} whereas $latex {\hodge(\eee \wedge\hodge(\eee)) = \hodge(e_1\wedge\cdots \wedge e_d), }&fg=000000$ where $latex {e_1,\cdots,e_d}&fg=000000$ is an O.N.B ($latex {<a href="#3">(3)</a>}&fg=000000$) and this = 1 $latex {<a href="#5">(5)</a>}&fg=000000$ $latex \Box&fg=000000$
+
+  The claim clear follows.  Let $latex {v_1,\cdots v_d}&fg=000000$ be an arbitrary positive basis of V. Then <a name="7"><p align=center>$latex \displaystyle  \hodge(1) = \frac{1}{\sqrt{det(&lt;v_i,v_j&gt;)}} v_1\wedge \cdots \wedge v_d \ \ \ \ \ (7)&fg=000000$</p>
+</a> <em>Proof:</em>  Let $latex {e_1,\cdots,e_d}&fg=000000$ be a positive O.N.B as before. Then $latex {v_1\wedge \cdots \wedge v_d = (det(&lt;v_i,v_j&gt;))^{1/2}e_1\wedge \cdots \wedge e_d}&fg=000000$ and the claim follows from $latex {<a href="#4">(4)</a>}&fg=000000$ $latex \Box&fg=000000$
+
+
+<p>
+
+<p>
+Let now M be an oriented Riemannian manifold of dimension d. Since M is oriented, we may select an orientation of all tangent spaces $latex {T_{x}M}&fg=000000$, hence also on all cotangent spaces $latex {T^{\hodge}_{x}M}&fg=000000$ in a consistent manner. We simply choose the Euclidean O.N.B $latex {\frac{\partial}{\partial x_1},\cdots, \frac{\partial}{\partial x_d}}&fg=000000$ of $latex {\Rbb^d}&fg=000000$ as being positive. Since all chart transitions of an oritented manifold have positive functional determinant, our basis will not depend on the choice of charts. So we have a basis for the tangent space,and we have a Riemannian structure, so we have a scalar product on each $latex {T^{*}_{x} M}&fg=000000$. We thus obtain a star operator (which preserves the base points) \begin{equation*} \hodge: \bigwedge^p(T^{*}_{x}M) \rightarrow \bigwedge^{d-p}(T^{*}_{x}M). \end{equation*} We recall that the metric on $latex {T^{*}_{x}M}&fg=000000$is given by $latex {(g^{ij}(x))=(g_{ij}(x))^{-1}}&fg=000000$. Therefore by $latex {<a href="#3">(3)</a>}&fg=000000$ we have in local coordinates <a name="8"><p align=center>$latex \displaystyle  \hodge(1) = \sqrt{g_{ij}}dx^1\wedge\cdots\wedge dx^d \ \ \ \ \ (8)&fg=000000$</p>
+</a> This expression is called the \newword{volume form}\footnote{This was mentioned in a PDE problem class}. In particular we get this nice formula (provided the integral is finite) <a name="9"><p align=center>$latex \displaystyle  vol(M):= \int_{M}\hodge(1) \ \ \ \ \ (9)&fg=000000$</p>
+</a> 

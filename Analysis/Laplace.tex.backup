@@ -1,0 +1,141 @@
+\section{The Laplace Operator}\cite{jost2011riemannian}
+\begin{idea}
+ The aim is to introduce some notions associated with the Laplace Operator. And
+to enhance some of the remarks made in the PDE II problem class. Particularly on Riemannian Manifolds and volume forms.
+  Also the idea of the 'Hodge Star Operator' is introduced and defined. 
+
+\end{idea}
+The source is of course the excellent 'Jost-Riemannian Geometry and Geometric Analysis' 
+  Let V be a real vector space with scalar product \scal,and let $\bigwedge^{p}V$ be the p-fold exterior product
+of V.
+We then obtain a scalar product on $\bigwedge^{p}V$  by 
+\begin{equation}\label{1}
+ <v_1\wedge\cdots \wedge v_p,\omega_1\wedge \cdots \wedge \omega_p > = det(<v_i,\omega_j>)
+\end{equation}
+and bilinear extensions to $\bigwedge^{p}V$  if $e_1,\cdots, e_d$ is an orthonormal basis of V, 
+\begin{equation}\label{2}
+ e_{i_1}\wedge \cdots \wedge_{i_p} with 1 \leq i_1 \lt i_2 \cdots \lt i_p \leq d
+\end{equation}
+constitutes an orthonormal basis of $\bigwedge^{p}V$ .
+  \paragraph{Orientation}
+We've spoken of 'orientation' in some examples in PDE II so let us define what an \newword{orientation} is.
+An orientation on V is obtained by distinguishing a basis of V as positive. Any other basis that is obtained from this basis
+by a base change with positive determinant is likewise called positive, and the remaining bases are called negative.
+Let now V carry and orientation. We define the linear star operator (or Hodge star operator\footnote{After the late great
+British Mathematician and Analyst})
+$$\hodge:\bigwedge^p(V) \to \bigwedge^{d-p}(V)$$ $(0 \leq p \leq d)$
+by 
+\begin{equation}\label{3}
+ \hodge(\eee) = e_{j_1}\wedge \cdots \wedge e_{j_d-p}
+\end{equation}
+where $j_1,\cdots,j_{d-p}$ is selected such that $e_{i_1},\cdots,e_{i_p},e_{j_1},\cdots,e_{j_{d-p}}$ is a positive
+basis of V. Since the star operator is supposed to be linear it is determined by its values on some basis \eqref{3}.
+In particular 
+\begin{equation}\label{4}
+  \hodge(1) = \eee,
+\end{equation}
+\begin{equation}\label{5}
+ \hodge(\eee) = 1,
+\end{equation}
+if $e_1,\cdots,e_d$ is a positive basis. 
+        From the rules of multilinear algebra, it easily follows that if A is a d x d matrix, and if $f_1,\cdots,f_d \in V$,
+then 
+$$\hodge(Af_1\wedge\cdots\wedge Af_p = (det A)\hodge(f_1\wedge\cdots\wedge f_p)$$
+In particular, this implies that the star operator does not depend on the choise of positive orthonormal basis (O.N.B) in V, as
+any two such bases are related by a linear transformation with determinant 1.
+For a negative basis instead of a positive one, one gets a minus sign on the r.h.s of  \eqref{3} \eqref{4} \eqref{5}
+\begin{lem}
+ \begin{equation*}
+  \hodge \hodge = (-1)^{p(d-p)} : \bigwedge^p(V) \to \bigwedge^p(V)
+ \end{equation*}
+\begin{proof}
+ $\hodge \hodge$ maps $\bigwedge^p(V)$ onto itself. Suppose
+$$\hodge(\eee)=e_{j_1}\wedge \cdots \wedge e_{j_d-p}$$ (c.f \eqref{3})
+
+Then $$\hodge \hodge (\eee) = \textpm \eee$$
+depending on positive or negative basis of V.
+The proof follows as $(-1)^{p(d-p)}$ is the determinant of the basis change from $e_{j_1}\wedge \cdots \wedge e_{j_d-p}$ to
+$\eee$
+ \end{proof}
+
+\end{lem}
+\begin{lem}
+ For v,w $\in \bigwedge^{p}(V)$
+\begin{equation}\label{6}
+ <v,w> = \hodge(w \wedge \hodge v) = \hodge(v \wedge \hodge w)
+\end{equation}
+
+\begin{proof}It suffices to prove $\eqref{6}$ for elements of the basis $\eqref{2}$. For any two different of these base vectors
+ \begin{equation*}
+  v\wedge \hodge w = 0,
+ \end{equation*}
+whereas $\hodge(\eee \wedge\hodge(\eee)) = \hodge(e_1\wedge\cdots \wedge e_d), $ where $e_1,\cdots,e_d$ is an O.N.B 
+($\eqref{3}$)
+and this = 1 $\eqref{5}$
+\end{proof}
+\end{lem}
+The claim clear follows. 
+\begin{lem}
+ Let $v_1,\cdots v_d$ be an arbitrary positive basis of V. Then
+\begin{equation}\label{7}
+ \hodge(1) = \frac{1}{\sqrt{det(<v_i,v_j>)}} v_1\wedge \cdots \wedge v_d
+\end{equation}
+\begin{proof}
+ Let $e_1,\cdots,e_d$ be a positive O.N.B as before. Then
+$v_1\wedge \cdots \wedge v_d = (det(<v_i,v_j>))^{1/2}e_1\wedge \cdots \wedge e_d$
+and the claim follows from $\eqref{4}$
+\end{proof}
+
+\end{lem}
+
+
+Let now M be an oriented Riemannian manifold of dimension d. Since M is oriented, we may select an orientation of all
+tangent spaces $T_{x}M$, hence also on all cotangent spaces $T^{\hodge}_{x}M$ in a consistent manner. We simply choose the Euclidean
+O.N.B $\frac{\partial}{\partial x_1},\cdots, \frac{\partial}{\partial x_d}$ of $\Rbb^d$ as being positive. Since all chart 
+transitions of an oritented manifold have positive functional determinant, our basis will not depend on the choice of charts.
+   So we have a basis for the tangent space,and we have a Riemannian structure, so we have a scalar product on each 
+$T^{*}_{x} M$. We thus obtain a star operator (which preserves the base points)
+\begin{equation*}
+ \hodge: \bigwedge^p(T^{*}_{x}M) \to \bigwedge^{d-p}(T^{*}_{x}M).
+\end{equation*}
+   We recall that the metric on $T^{*}_{x}M$is given by $(g^{ij}(x))=(g_{ij}(x))^{-1}$. Therefore by $\eqref{3}$ we have
+in local coordinates 
+\begin{equation}\label{8}
+ \hodge(1) = \sqrt{g_{ij}}dx^1\wedge\cdots\wedge dx^d
+\end{equation}
+This expression is called the \newword{volume form}\footnote{This was mentioned in a PDE problem class}.
+In particular we get this nice formula (provided the integral is finite)
+\begin{equation}\label{9}
+ vol(M):= \int_{M}\hodge(1)
+\end{equation}
+\section{Schroedinger Operators}
+Before we embark on thinking more about Elliptic operators. Let us recall a cryptic remark sometimes attributed to Barry
+Simon, that 'all Mathematics is Schrodinger operators'. 
+We start with a definition
+\begin{dfn}
+Let $V: \Rbb^n \to \Rbb$ be a real-valued function.
+The \emph{Schr\"odinger operator} \textbf{H} on the Hilbert space $L^2(\Rbb^n)$ is given by the action
+\[
+\psi \Rightarrow -\nab^2\psi+V(x)\psi, \quad\psi\in L^2(\Rbb^n).
+\]
+
+This can be obviously re-written as:
+
+\[
+\psi \Rightarrow [-\nab^2 +V(x)]\psi, \quad\psi\in L^2(\Rbb^n),
+\] where $[-\nabla^2 +V(x)]$ is the {\em Schr\"odinger} operator, which is now
+called the Hamiltonian Operator, \textbf{H}.
+\end{dfn}
+For stationary quantum systems such as electrons in `stable' atoms the {\em Schr\"odinger equation}
+takes the very simple form :
+\[
+\textbf{H} \psi=E \psi
+\] , where $E$ stands for energy eigenvalues of the stationary quantum states. Thus, in quantum mechanics of systems with finite degrees of freedom that are `stationary', the Schr\"odinger operator is used to calculate the (time-independent) energy states of a quantum system with potential energy $V(x)$. 
+Schr\"odinger called this operator the Hamilton operator, or the
+Hamiltonian, and the latter name is currently used in almost all of quantum physics publications, etc. 
+The eigenvalues give the energy levels, and the wavefunctions are given by the eigenfunctions.
+In the more general, non-stationary, or `dynamic' case, the Schr\"odinger equation takes the general form:
+
+\[
+\textbf{H} \psi= (-i) \frac{\partial \psi}{\partial t}
+\]. 

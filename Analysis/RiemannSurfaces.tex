@@ -1,0 +1,170 @@
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage[all]{xy}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, amsfonts, color, hyperref}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{clm}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+%\newtheorem*{remu}{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nab {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+
+
+
+\def \C {\mathcal{C}} % for categories
+\def \D {\mathcal{D}}
+\def \S {\mathcal{S}}
+\def \P {\mathcal{P}}
+
+
+
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\mathbb{P}}
+\def\Qbb{\mathbb{Q}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+
+\def \eps {\varepsilon}
+\def \AA{\ensuremath{\mathcal{A}^{1}}}
+\def  \AAA{\ensuremath{\mathcal{A}}}
+\def \Fff{\mathfrak{F}}
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\tensor}{\otimes}
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\Rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\title{\bf Riemann Surfaces}
+
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\section{Answers for Riemann Surfaces}
+\begin{ex}
+Proof of the \Cbb-algebra structure of meromorphic functions
+\begin{proof}
+ $\mathcal{M}(Y)$ has the natural structure of a $\Cbb$-algebra. First of all the sm and the product of two meromorphic 
+functions $f,g \in \mathcal{M}(Y)$ are holomorphic functions at those points where both f and g are holomorphic. Then 
+one holomorphically extends, using Riemann's Removable Singularities Theorem, f+g (resp. fg) across any
+singularities which are removable.
+\end{proof}
+\end{ex}
+
+\begin{ex}\textbf{Exercise 6}
+2) Let $\Gamma$ be a lattice in C. Can you describe all holomorphic functions on the torus $$\frac{\Cbb}{\Gamma}$$ using
+a similar reasoning as in part 1) of this exercise?
+\begin{proof}
+Any holomorphic function on complex tori is constant, as it is a bounded holomorphic function on the 
+universal covering space, and by Liouvilles theorem this is constant (and by the Maximum moduli theorem)
+\end{proof}
+\end{ex}
+\begin{ex}
+ \textbf{Exercise 9}
+Let us consider a point $p\in P$, where P is the set of poles. 
+We've defined
+$\hat{f}(p) = f(p)$ if p $\notin$P 
+
+
+Alternatively the function $\hat{f}$ is infinity. 
+But we know that p is definitely in the set of poles, and we know that $\hat{f}$ is mapping from the domain $\infty$
+to the codomain $\infty$. On the Riemann sphere, by definition, this is therefore a continuous map. 
+
+\end{ex}
+\begin{ex}\textbf{Exercise 12}
+1) Let $$f : X \rightarrow Y$$ be a non-constant morphism of Riemann surfaces. Prove
+that if X is compact, then f is surjective. In particular, Y is compact as well in this case.
+2) Use the first part of this exercise to conclude that $\mathcal{O}_X(X) = \mathbb{C}$ for every compact Riemann
+surface X, i. e., the only holomorphic functions on a compact Riemann surface are constants.
+
+Let us introduce a corollary
+\begin{cor} Let $f : M \rightarrow N$ be a non-constant holomorphic mapping, then f is open,
+i.e. an image of any open set is open.
+\end{cor}
+\begin{cor} Let $f : M \rightarrow N$ be a non-constant holomorphic mapping and M compact.
+Then f is surjective f(M) = N and N is also compact.
+\end{cor}
+\begin{proof} The previous corollary implies that f(M) is open. On the other hand, f(M)
+is compact since it is a continuous image of a compact set. f(M) is open, closed and
+non-empty, therefore f(M) = N and N compact.
+\end{proof}
+For question 2, it is simply a case of Liouvilles theorem. 
+\begin{thm}[Liouville]
+There are no non-constant holomorphic functions on compact Riemann surfaces.
+\begin{proof} An existence of a non-constant holomorphic mapping $f : M \rightarrow \mathbb{C}$ contradicts to
+the previous corollary since \Cbb is not compact.
+\end{proof}
+\end{thm}
+
+\end{ex}
+\begin{ex}\textbf{Exercise 14}
+
+ \begin{prop}Any doubly periodic holomorphic function on \Cbb is constant.\end{prop}
+\begin{proof}: Global holomorphic functions on $\dfrac{\Cbb}{L}$ are constant.\end{proof}
+\begin{proof} By Liouville's theorem, bounded holomorphic functions on \Cbb  are constant. \end{proof}
+To get any interesting functions, we must allow poles.
+\begin{dfn}: An elliptic function is a doubly periodic meromorphic function on \Cbb.\end{dfn}
+Elliptic functions are thus meromorphic functions on a torus $\dfrac{\Cbb}{L}$. The reason for the name is
+lost in the dawn of time. (Really, elliptic functions can be used to express the arc-length on the
+ellipse.)
+\end{ex}
+\begin{ex}\textbf{Exercise 15}
+Prove that a Riemann surface X is path-connected.
+\begin{proof}
+ Consider a point $x_{0}$ and consider the set of all points S which $x_{0}$ can be connected to by a path.
+This set S is an open subset of X, and all open subsets of X can be mapped to an open subset of \Cbb which is
+open, closed and non-empty.
+\end{proof}
+
+ 
+\end{ex}
+\begin{ex}
+ Prove that 0 is the only ramification point of the holomorphic map 
+$\Cbb \to \Cbb$, $z \mapsto z^{k}$, $k \geq 2$
+\end{ex}
+
+\newpage
+
+
+\end{document} 

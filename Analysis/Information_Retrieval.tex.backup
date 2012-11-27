@@ -1,0 +1,45 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Information Retrieval}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Textual features}
+I'd like to introduce the concepts of how \textbf{features} are extracted, and we shall consider these proxies of 
+actual meanings. One classic representation we can use is \textbf{bag-of-words} (BoW).
+Let us define this representation, this means we list all of the distinct words in the document together
+with how often each one appears. This is easy to calculate from the text.
+\textbf{Vectors} One way we could try to code up the bag-of-words is to use vectors. Let each component of the 
+vector correspond to a different word in the total \textbf{lexicon} of our document collection, in a fixed, standardised order.
+The value of the component would be the number of times the word appears, possibly including zero. 
+   We use this vector bag-of-words representation of documents for two big reasons: 
+\begin{itemize}
+ \item There is a huge pre-existing technology for vectors: people have worked out, 
+in excruciating detail, how to compare them, compose them, simplify them, etc. Why not exploit that, rather
+than coming up with stuff from scratch? 
+\item In practice, it's proved to work pretty well.
+\end{itemize}
+We can store data from a corpus in the form of a matrix. Each row corresponds to a distinct \textbf{case}
+(or instance \textbf{instance}, \textbf{unit, subject},...) - here, a document - and each column to a 
+distinct feature. Conventionally, the number of cases is n and the number of features is p. It is no coincidence
+that this is the same format as the data matrix \textbf{X} in linear regression.
+\section{Measuring Similarity}
+Right now, we are interested in saying which documents are similar to each other because we want
+to do a search by content. But measuring \textbf{similarity} - or equivalently measuring \textbf{dissimilarity} or \textbf{distance}
+- is fundamental to data mining. Most of what we will do will rely on having a sensible way of saying how similar to each other different objects are, or how close they are in some geometric setting. Getting the right measure of closeness will have a huge
+impact on our results. 
+      This is where representing the data as vectors comes in so handy. We already know a nice way of saying how far apart two vectors
+are, the ordinary or \textbf{Euclidean distance}, which we can calculate with the Pythagorean formula:
+$\|\bar{x} - \bar{y}\| = \sqrt{\sum_{i=1}^{p}(x_i - y_i)^2}$
+where $x_i$, $y_i$ are the $i^{th}$ components of $\bar{x}$ and $\bar{y}$. Remember that for bag-of-words vectors 
+each distinct word - each entry in the lexicon - is a component or a fecture. 
+   We can also use our Linear Algebra skills to calculate the \textbf{Euclidean norm} or \textbf{Euclidean distance}
+. Of any vector this is 
+$\|\|$
+\end{document}

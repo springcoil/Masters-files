@@ -1,0 +1,60 @@
+\section{Motivation}
+MCMC techniques have been applied to solve integration and optimisation problems in large dimensional spaces.
+These two types of problem play a fundamental role in machine learning, physics, statistics, econometrics and decision
+analysis. The following are just some examples. 
+\begin{enumerate}
+ \item \textit{Bayesian inference and learning.} 
+Given some unknown variables $x \in \X$ and data $y \in \Y$
+, the following typical intractable problems are central to Bayesian statistics
+\begin{itemize}
+ \item Normalisation. To obtain the posterior $p(x | y)$ given the prior $p(x)$ and likelihood $p(y | x)$,
+the normalising factor in Bayes' theorem needs to be computed 
+\begin{equation*}
+ p(x | y) = \dfrac{p(y |x) p(x)}{\int_{\X} p(y | x') p(x') dx'}
+\end{equation*}
+\item Marginalisation. Given the joint posterior of (x,z) $\in \X \times \Z$, we may often be interested in the 
+marginal posterior 
+\begin{equation*}
+ p(x | y) = \int_{\Z} p(x,z | y)dz.
+\end{equation*}
+\item Expectation. The objective of the analysis is often to obtain summary statistics of the form
+\begin{equation}
+ \mathbb{E}_{p(x | y)}(f(x)) = \int_{\X} f(x) p(x | y) dx
+\end{equation}
+form some function of interest $f: \X \rightarrow \Rbb^{n_{f}}$ integrable with respect to $p(x | y)$. Examples
+of appropriate functions include the conditional mean, in which case f(x) = x, or the conditional covariance of x where f(x) = $xx'
+- \mathbb{E}_{p(x|y)}(x) \mathbb{E}'_{p(x|y)}(x)$
+\end{itemize}
+\item Statistical mechanics. Here, one needs to compute the partition function Z of a system with states s and 
+Hamiltonian E(s) 
+\begin{equation}
+ Z = \sum_{s} \exp\left[ - \dfrac{E(s)}{kT}\right]
+\end{equation}
+where k is the Boltzmann's constant and T denotes the temperature of the system. Summing over the large number
+of possible configurations is prohibitively expensive. Note that problems of computing the partition function and the normalising
+constant in statistical inference are analogous. 
+\end{enumerate}
+\section{Monte Carlo principle}
+The idea of Monte Carlo simulation is to draw an i.i.d. set of samples $\left\lbrace x^{(i)}\right\rbrace ^{N}_{i=1}
+$ from a target density p(x) defined on a high-dimensional space $\X$ (e.g. the set of possible configurations
+of a system, the space on which the posterior is defined, or the combinatorial set of feasible solutions).
+These N samples can be used to approximate the target density with the following empirical point-mass function
+\begin{equation*}
+ p_N(x) = \dfrac{1}{N} \sum_{i=1}^{N} \delta_{x^{(i)}}(x).
+\end{equation*}
+where $\delta_{x^{(i)}}(x)$ denotes the Dirac delta mass at $x^{(i)}$.
+Consequently, one can approximate the integrals (or very large sums) I(f) with tractable sums 
+$I_{N}(f)$ that converge as follows 
+\begin{equation*}
+ I_N(f) = \dfrac{1}{N} \sum_{i=1}^{N} f(x^{(i)})\xrightarrow[N \rightarrow \infty]{a.s.}
+ I(f) = \int_{\X} f(x) p(x) dx
+\end{equation*}
+
+That is, the eestimate $I_{N}(f)$ is unbiased and by the strong law of large numbers, it will almost
+surely (a.s.) converge to I(f). If the variance (in the univariate case for simplicity) of f(x) satisfies
+$\sigma_{f}^{2} \stackrel{\vartriangle}{=} \mathbb{E}_{p(x)} (f^{2} (x)) - I^{2}(f) \lt \infty $, the the variance
+of the estimator $I_{N}(f)$ is equal to var($I_N(f)$) = $\dfrac{\delta^{2}_{f}}{N}$ and a central limit theorem
+yields convergence in distribution of the error 
+\begin{equation*}
+ \sqrt{N}(I_{N}(f) - I(f)) \stackrel{\Longrightarrow}{N\rightarrow\infty} \mathcal{N}(0,\sigma_{f}^{2})
+\end{equation*}

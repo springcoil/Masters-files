@@ -1,0 +1,83 @@
+\section{Lecture 2 on Interest Rate Models}
+Let us outline some assumptions, let us assume that the market is \textit{smooth} (meaning that it follows assumption
+H). 
+We can sell and buy zero-coupon bonds for all values up to T. 
+$\forall t \lt T$; $P(t,T) = $ price in t of a zero-coupon bond with maturity T. 
+\begin{rem}
+ \begin{itemize}
+  \item $P(t,T) \leq 1$ $T \Rightarrow P(t,T)$ non-increasing; $\forall t \lt T$
+\item $P(T,T) = 1$
+ \end{itemize}
+
+\end{rem}
+
+\begin{rem}
+We can use Zero-coupon bonds to \textit{simulate} a FRA
+For instance, consider dates $t \lt T \lt S$ 
+We have the following strategy at t:sell one T-bond and buy $\frac{P(t,T)}{P(t,S)}$ s-bond
+At T: pay 1$\pounds$ 
+At S: Touch $\frac{P(t,T)}{P(t,S)}\cdot P(s,S)= \frac{P(t,T)}{P(t,S)}$ in S $\geq$ 1. 
+Since $T \to P(t,T)$ is non-increasing
+\end{rem}
+This operation is equivalent to \textit{decide in t to invest $1 \pounds$ in T, and receive $\dfrac{P(t,T)}{P(t,S)}$\pounds
+}in S
+We have the following equation
+\begin{equation}\label{1}
+ \begin{vmatrix}
+  T \;&& \rightarrow  S\\
+  1 \pounds &&  \dfrac{P(t,T)}{P(t,S)}\pounds
+ \end{vmatrix}
+\end{equation}
+\textbf{Problem:}
+How do we describe the above \ref{1} in terms of interest rates?
+$t \lt T \lt S$
+\begin{enumerate}
+ \item The \textbf{simple forward rate} associated with $[T,S]$, prevailing at t, is the quantity $F(t; T, S)$ 
+satisfying 
+$\frac{P(t,T)}{P(t,S)}$ = $1 + F(t; T, S)(S - T)$
+\newline $F(tl T, S) = \dfrac{1}{S-T} \left\lbrace \frac{P(t,T)}{P(t,S)}\right\rbrace$
+\item The \textit{simple spot rate} for [t,T] is given by 
+$F(t; t, T) = \dfrac{1}{T-t} \left\lbrace \dfrac{1}{P(t,T)} - 1 \right\rbrace$
+\newline $1 = P(t,T) \left\lbrace 1 + F(t,t, T) (T-t) \right\rbrace$
+\item t < T < S
+\newline The (forward) \textbf{continuous compounded} interest rate for [T,S] prevailing in t, noted $R(t; T, S)$
+\newline $\dfrac{P(t,T)}{P(t,S)} = \exp {R(t;T,S)(S-T)}$
+\newline $R(t; T, S) = \dfrac{-log P(t,S) - log P(t,T)}{S - T}$
+\item \textbf{Continuously compounded interest rate} for [t,T]
+\newline R(t,T) = R(t;t, T) = $\dfrac{-log(P(t,T))}{T-t}$
+\newline (1 = $P(t,T) e^{R(t,T)(T-t)}$)
+\item \textbf{Instantaneous forward rate} with maturity T prevailing in t < T
+\newline $f(t,T) = \lim_{S \textdownarrow T}R(t; T, S) = \dfrac{-\partial}{\partial T} log P(t,T)$
+This simplifies to 
+\begin{equation}\label{2}
+ P(t,T) = \exp {\int_t^T f(t,u) du}
+\end{equation}
+\begin{rem} In fact \ref{2} is the starting point of the Heath-Jarrow-Morton models which are very important in 
+ interest rate models. 
+\end{rem}
+\item \textbf{Short Rate} (Short time frame)
+\newline $r(t) = \lim_{T \textdownarrow t}R(t,T)$
+\newline \quad $=\lim_{T \textdownarrow t} R(t; t, T) = - \dfrac{\partial}{\partial T} log P(t,T)|_{T=t}$
+\end{enumerate}
+\begin{rem} One can model $\left\lbrace r(t): t \geq 0\right\rbrace$ a.s as a stochastic process (diffusion). These 
+are the so-called 'short-rate models' 
+\begin{enumerate} 
+ \item Vasicek 
+\item Cox-Ingensell-Ross
+\end{enumerate}
+\section{Coupons; floating rate notes; Swaps}
+\begin{rem}
+Let us recall the \textit{No Arbitrage}(NA) property $\pi, \pi^{'}$, $\pi(t), \pi^{'}(t)$,
+t $>$0 $\forall t \lt T$ 
+\newline $(\pi(T) \leq \pi^{'}(T)) \longrightarrow \pi(t) \leq \pi^{'}(t) $
+(a) \textbf{Coupon bonds} Financial products composed of 
+\begin{enumerate} 
+ \item $T_0 \lt T_1 \lt \cdots \lt T_n$ = maturity (dates)
+\item sequence of deterministic cashflows $c_1 \pounds, c_2 \pounds, \cdots , c_n \pounds$
+\item 
+\end{enumerate}
+
+
+ 
+ 
+\end{rem}

@@ -1,0 +1,90 @@
+\section{Complex Analysis}
+When studying for a Riemann Surfaces class, I felt it was necessary to write down a few of the 'classical' Complex
+Analysis definitions. It is beneficial (for reference) to have these all in a short document.
+\subsection{Some definitions}
+Singularities are very interesting, the following largely comes from the excellent textbook 
+\cite{Shaw_CA_with_Mathematica} 
+
+A function can fail to be holomorphic in a variety of ways. A large class of interesting cases can be managed
+by exploring those singularities that are isolated in the same sense that zeroes are necessarily isolated. This
+excludes cases such as Log(z) or $\sqrt{z}$ near the origin, where we have to introduce branch cuts just to have
+a well-defined function, but does include a large and very important set of possibilities. 
+\begin{dfn}[Definition of an isolated singularity]
+ Suppose that we have an open U $\subset \Cbb$ and that $z \in \Cbb$. We define $U^* = U - {z}$. We say that a 
+function f that is holomorphic on $U^*$ has an \textit{isolated singularity} at z. Since U is open, $N_{r}(z) \subset
+U$ for some r, and  we define $N_{r}^*(z) = N_r(z) \cap U^*$. This is just a punctured disk, which is a special
+case of an annulus, so we can write down a Laurent expansion:
+\begin{equation}
+ f(z) = \sum_{n=-\infty}^{-1} a_n(z-z_{0})^{n} + \sum_{n=0}^{\infty} a_{n} (z-z_{0})^{n}
+\end{equation}
+
+\end{dfn}
+\textbf{Classification of isolated singularities}
+The Laurent series allows us to classify isolated singularities into three types:
+\begin{enumerate}
+ \item The point z is said to be a \textit{removable singularity} if $a_{-n} = 0$ for all $n \gt 0$.
+\item If $a_{-N}\neq 0$ but $a_{-n}=0$ for all $n \gt N$ then z is a \textit{pole of order} N. 
+\item If infinitely many negative terms are present, then z is an \textit{isolated essential singularity.}
+\end{enumerate}
+We also have a very important removable singularity theorem.
+\begin{thm}[Riemann removable singularities theorem]
+If z is an isolated singularity of f(z) then it is a removable singularity if and only if there is an r $\gt 0$ such that
+$f(z)$ is bounded on $N^*_{r}(z)$.
+ 
+\end{thm}
+\begin{rem}
+ Note that one way is obvious - if the function indeed has a Taylor series it is bounded on a neighbourhood of z.
+For the other way, consider the negative terms in the Laurent series: 
+\begin{equation}
+ a_{-n} = \dfrac{1}{2\pi i} \int_{\phi_{r}} f(z) (z-z_{0})^{n-1} dz
+\end{equation}
+ Now f is bounded on a circle centred on $z_{0}$ of radius s, for any s with $0 \lt s \lt r$, so 
+suppose that $|f| \lt M$ for $|z| \lt r.$
+\begin{equation}
+ |a_{-n}| \leq \dfrac{1}{2\pi}M s^{n-1} 2 \pi s = Ms^{n}
+\end{equation}
+Since s can be as small as we will with $a_{-n} = 0$
+\end{rem}
+\begin{thm}[Identity Theorem]
+ Suppose X and Y are Riemann surfaces and $f_{1}, f_{2}: X \to Y$ are two holomorphic mappings which coincide on a
+set $A \subset X$ having a limit point $a \in X$. Then $f_1$ and $f_2$ are identically equal. 
+\end{thm}
+\begin{proof}
+ Let G be the set of all points $x \in X$ having an open neighbourhood W such that $f_1|W= f_2|W$. By definition 
+G is open. We claim that G is also closed. For, suppose b is a boundary point of G. Then $f_1(b) = f_2(b)$ since 
+$f_1$ and $f_2$ are continuous. Choose charts $\phi: U \to V$ on X and $\phi:U' \to V'$ on Y with $b \in U$ and 
+$f_1(U) \subset U'$. We may also assume that U is connected. The mappings
+\begin{equation}
+ g_{i} := \psi \circ f_i \circ \phi^{-1} : V \to V' \subset \Cbb
+\end{equation}
+are holomorphic. Since $U \cap G \neq \emptyset$, the Identity Theorem for holomorphic functions in \Cbb \; implies $g_1$
+and $g_2$ are identically equal. Thus $f_1|U = f_2|U$. Hence $b\in G$ and thus G is closed. Now since X is connected
+either G = $\emptyset$ or G = X. But the first case is exluded since $a \in G$ (using the Identity Theorem in the plane 
+again). Hence $f_1$ and $f_2$ coincid on all of X. \qed
+\end{proof} 
+\begin{dfn} Let X be a Riemann surface and Y be an open subset of X. 
+ By a \textit{meromorphic function} on Y we mean a holomorphic function $f:Y' \to \Cbb$, 
+where $Y' \subset Y$ is an open subset, such that the following hold:
+\begin{itemize}
+ \item $Y\ Y'$ contain only isolated points
+\item For every point $p \in Y\ Y'$ one has 
+\begin{equation}
+ \lim_{x \to p} |f(x)| = \infty.
+\end{equation}
+The points of $Y \ Y'$ are called the \textit{poles} of f. The set of all meromorphic functions on Y is denoted by 
+$\mathcal{M}(Y)$.
+\end{itemize}
+
+\end{dfn}
+\begin{rem}
+ (a)Let (U,z) be a coordinate neighbourhood of a pole p of f with $z(p) = 0.$ Then f may be expanded in a Laurent
+series 
+\begin{equation}
+ f = \sum_{v=-k}^{\infty} c_{v}z^{v}
+\end{equation}
+in a neighbourhood of p.
+(b) $\mathcal{M}(Y)$ has the natural structure of a $\Cbb$-algebra. First of all the sm and the product of two meromorphic 
+functions $f,g \in \mathcal{M}(Y)$ are holomorphic functions at those points where both f and g are holomorphic. Then 
+one holomorphically extends, using Riemann's Removable Singularities Theorem, f+g (resp. fg) across any
+singularities which are removable.
+\end{rem}

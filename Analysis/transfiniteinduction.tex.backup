@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+%opening
+\title{Transfinite Ordinals}
+\author{Peadar}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Introduction}
+This is supposed to be a primer inspired by a piece by \textbf{Hilbert Levitz}.
+The theory of transfinite ordinals is a part of set theory. While the concept 
+is tied up with the completed infinite and high cardinalities, we'll emphasize more
+constructive aspects of the theory. There have been applicatons of constructive aspects of the 
+theory. There have been applications of constructive treatments of ordinals to recursive 
+function theory, and proof theory. 
+  Pretty much everything we need to know about ordinals follows from the following three properties of 
+the class of all ordinals O. 
+\section{Basic Properties of the System of Ordinal Numbers.}
+\begin{enumerate}
+ \item O has a well ordering, which will be denoted by $\lt$.
+\item Any well ordered set whatsoever is order isomorphic to (a unique) initial segment of O. 
+The ordinal determining the segment is called the ordinal of the set. This makes the system of ordinals in some sense
+the ``mother of all well ordered sets''
+\item Any set of members of O has a strict upper bound (and therefore by well ordering, a least upper bound) in O.
+Warning: The collection of all ordinals itself is not a "set". You'll get hit with a famous paradox if you treat
+it like one. Sub-collections of initial segments of the ordinals are sets, and these are all we use. 
+As a consequence of the well ordering, we see easily that:
+\begin{itemize}
+ \item One can do arguments by induction over the ordinals, or over any initial segment of them, if we use the 
+$\lt$ form of the induction principle. Recall that for natural numbers we also have induction in the $n$ to $n+1$
+form, but that fails as soon as one has an object greater than every natural number. Induction in the $\lt$ form
+frequently goes under the fancy name ``transfinite induction''
+\item We let 0 denote the smallest ordinal. Every ordinal has an immediate successor, so by taking repeated successors 
+of zero, we generate all the natural numbers as an initial segment of the system of ordinals. Not all non-zero ordinals
+have an immediate predecessor. Those without an immediate predecessor are called \textit{limit ordinals}. The smallest
+number is to follow all the natural numbers is denoted by $\omega$ and it is a limit ordinal. Each limit ordinal
+is the least upper bound ('supremum') of the set of smaller ordinals. 
+\item On account of the well ordering we can define by recursion operations of addition, multiplication, and 
+exponentiation. The only added feature over recursion on natural numbers is that we need to specify what to
+do at limit ordinals.
+\end{itemize}
+\begin{equation}
+ x + 0 = x
+\end{equation}
+\begin{equation}
+ x + y' = (x + y)'
+\end{equation}
+\begin{equation}
+ x + \bar{y} = \sup_{y \lt \bar{y}}x+y
+\end{equation}
+when $\bar{y}$ is a limit ordinal.
+$x x 0 = 0$
+\begin{equation}
+ x \times y' = x \times y + x
+\end{equation}
+\begin{equation}
+ x \times \bar{y} = \sup_{y \lt \bar{y}}x \times y
+\end{equation}
+when $\bar{y}$ is limit ordinal. 
+\begin{equation}
+ x^{0} = 1
+\end{equation}
+\begin{equation}
+ x^{y}^{'} = x^{y} \times x
+\end{equation}
+\begin{equation}
+ x^{\bar{y}} = sup_{y \lt \bar{y}} x^{y}
+\end{equation}
+when $\bar{y}$ is a limit ordinal. 
+It turns out that:
+\begin{itemize}
+ \item Addition an Multiplication are associative. Neither is commutative. Multiplication
+distributes from the left over addition; that is
+$x \times (y + z) = x \times y + x \times z$
+Right distributivity fails, but we do have the inequality 
+$(x + y)\times z \lt x \times z + y \times z$
+\item Addition, multiplication and exponetiation are (with trivial exceptions): 
+i)Continuous strictly increasing function of the right argument.
+ii) Weakly monotone increasing functions of the left argument.
+\end{itemize}
+\end{enumerate}
+\section{Cantor Normal Form}
+   The theorem of ordinary number theory that justifies writing any non-zero number to a number base,
+like base 10 or base 2, applies to transfinite ordinals as well. 
+\begin{theorem}
+ Any non-zero ordinal can be written uniquely as a polynomial to any base greater than 1 with descending 
+exponents and coefficients less than the base. The coefficients are written to the right of the base. Such 
+a representation is called a Cantor normal form. 
+\end{theorem}
+It's common to use as the base the number $\omega$, in which case the coefficients are natural numbers, 
+thus a typical normal formlooks like:
+$$\omega^{\alpha_{1}} \times n_{1} + \omega^{\alpha_{2}} \times n_{2} + ... + \omega^{\alpha_{k}} \times n_{k}$$
+where 
+$\alpha_{1} \gt \alpha_{2} \gt ... \gt \alpha_{k}$
+\begin{itemize}
+ \item The rule for comparing two normal forms to see which represents the bigger ordinal is as follows: 
+One first looks to see which has the highest leading exponent, if they are the same then you look to see which
+has the highest leading coefficient, etc. Such a method could go into an infinite regress on account of the fact 
+(shown in the next section) that some ordinals can equal their own leading exponent. 
+\item Numbers of the form $\omega^{x}$ determine initial segments closed under addition, and numbers of the form
+$\omega^{\omega^{x}}$ determine initial segments of the ordinals closed under multiplication.
+\end{itemize}
+\section{Definition of the ordinal $\epsilon_{0}$}
+\begin{itemize}
+ \item The limit of the sequence
+$\omega, \omega^{\omega},\omega^{\omega^{\omega}}.......$
+was named $\epsion_{0}$ by Cantor. We can see that it's a solution of the equation $\omega^{x} = x$
+by the following simple argument: 
+Consider the recursively defined sequence
+\begin{enumerate}
+ \item $a_{0} = 0$
+\item $a_{n+$
+\end{enumerate}
+
+\end{itemize}
+\end{document}

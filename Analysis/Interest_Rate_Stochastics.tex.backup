@@ -1,0 +1,9 @@
+\section{Rapid review of the Stochastic Calculus}
+It became obvious when reviewing the material for Interest rate models that the underlying Mathematics is actually
+the Stochastic Calculus. So let us proceed. 
+The \textbf{Stochastic basis} is a filtered probability space $(\Omega, \mathcal{F}, (\mathcal{F}_{t})_{t \geq 0}, \mathbb{P})$
+satisfying the usual conditions \footnote{The usual conditions are (1) completeness: $\mathcal{F}_{0}$ contains all of the
+null sets, and (2) right continuity: $\mathcal{F}_{t} = \cap_{s > t} \mathcal{F}$ for all $t \geq 0$}
+and carrying a d-dimensional $(\mathcal{F}_{t})$-adapted BM $W = (W_1, \cdots, W_d)^{\intercal}$. We shall assume 
+that $\mathcal{F} = \mathcal{F}_{\infty} = \cup_{t \geq 0} \mathcal{F}_{t}$, we do not a priori fix a finite time 
+horizon. 

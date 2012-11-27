@@ -1,0 +1,81 @@
+
+<p>
+\maketitle
+<p>
+
+
+<p>
+
+<strong>1. Introduction </strong>
+
+<p>
+
+ This is supposed to be a primer inspired by a piece by <strong>Hilbert Levitz</strong>. The theory of transfinite ordinals is a part of set theory. While the concept is tied up with the completed infinite and high cardinalities, we'll emphasize more constructive aspects of the theory. There have been applicatons of constructive aspects of the theory. There have been applications of constructive treatments of ordinals to recursive function theory, and proof theory. Pretty much everything we need to know about ordinals follows from the following three properties of the class of all ordinals O. 
+
+<p>
+
+<strong>2. Basic Properties of the System of Ordinal Numbers. </strong>
+
+<p>
+
+ 
+
+<ol> <li> O has a well ordering, which will be denoted by $latex {<}&fg=000000$. <li> Any well ordered set whatsoever is order isomorphic to (a unique) initial segment of O. The ordinal determining the segment is called the ordinal of the set. This makes the system of ordinals in some sense the ``mother of all well ordered sets'' <li> Any set of members of O has a strict upper bound (and therefore by well ordering, a least upper bound) in O. Warning: The collection of all ordinals itself is not a "set". You'll get hit with a famous paradox if you treat it like one. Sub-collections of initial segments of the ordinals are sets, and these are all we use. As a consequence of the well ordering, we see easily that: 
+
+<ul> <li> One can do arguments by induction over the ordinals, or over any initial segment of them, if we use the $latex {<}$ form of the induction principle. Recall that for natural numbers we also have induction in the $latex {n}&fg=000000$ to $latex {n+1}&fg=000000$ form, but that fails as soon as one has an object greater than every natural number. Induction in the $latex {<}&fg=000000$ form frequently goes under the fancy name ``transfinite induction'' <li> We let 0 denote the smallest ordinal. Every ordinal has an immediate successor, so by taking repeated successors of zero, we generate all the natural numbers as an initial segment of the system of ordinals. Not all non-zero ordinals have an immediate predecessor. Those without an immediate predecessor are called <i>limit ordinals</i>. The smallest number is to follow all the natural numbers is denoted by $latex {\omega}&fg=000000$ and it is a limit ordinal. Each limit ordinal is the least upper bound ('supremum') of the set of smaller ordinals. <li> On account of the well ordering we can define by recursion operations of addition, multiplication, and exponentiation. The only added feature over recursion on natural numbers is that we need to specify what to do at limit ordinals. 
+</ul>
+
+ <p align=center>$latex \displaystyle  x + 0 = x \ \ \ \ \ (1)&fg=000000$</p>
+ <p align=center>$latex \displaystyle  x + y' = (x + y)' \ \ \ \ \ (2)&fg=000000$</p>
+ <p align=center>$latex \displaystyle  x + \bar{y} = \sup_{y < \bar{y}}x+y \ \ \ \ \ (3)&fg=000000$</p>
+ when $latex {\bar{y}}&fg=000000$ is a limit ordinal. $latex {x x 0 = 0}&fg=000000$ <p align=center>$latex \displaystyle  x \times y' = x \times y + x \ \ \ \ \ (4)&fg=000000$</p>
+ <p align=center>$latex \displaystyle  x \times \bar{y} = \sup_{y < \bar{y}}x \times y \ \ \ \ \ (5)&fg=000000$</p>
+ when $latex {\bar{y}}&fg=000000$ is limit ordinal. <p align=center>$latex \displaystyle  x^{0} = 1 \ \ \ \ \ (6)&fg=000000$</p>
+ <p align=center>$latex \displaystyle  x^{y'} = x^{y} \times x \ \ \ \ \ (7)&fg=000000$</p>
+ <p align=center>$latex \displaystyle  x^{\bar{y}} = sup_{y < \bar{y}} x^{y} \ \ \ \ \ (8)&fg=000000$</p>
+ when $latex {\bar{y}}&fg=000000$ is a limit ordinal. It turns out that: 
+
+<ul> <li> Addition an Multiplication are associative. Neither is commutative. Multiplication distributes from the left over addition; that is $latex {x \times (y + z) = x \times y + x \times z}&fg=000000$ Right distributivity fails, but we do have the inequality $latex {(x + y)\times z < x \times z + y \times z}&fg=000000$ <li> Addition, multiplication and exponetiation are (with trivial exceptions): i)Continuous strictly increasing function of the right argument. ii) Weakly monotone increasing functions of the left argument. 
+</ul>
+
+ 
+</ol>
+
+ 
+
+<p>
+
+<strong>3. Cantor Normal Form </strong>
+
+<p>
+
+ The theorem of ordinary number theory that justifies writing any non-zero number to a number base, like base 10 or base 2, applies to transfinite ordinals as well. 
+<blockquote><strong>Theorem 1</strong> <em> Any non-zero ordinal can be written uniquely as a polynomial to any base greater than 1 with descending exponents and coefficients less than the base. The coefficients are written to the right of the base. Such a representation is called a Cantor normal form. </em></blockquote>
+
+<p>
+
+ It's common to use as the base the number $latex {\omega}&fg=000000$, in which case the coefficients are natural numbers, thus a typical normal formlooks like: <p align=center>$latex \displaystyle \omega^{\alpha_{1}} \times n_{1} + \omega^{\alpha_{2}} \times n_{2} + ... + \omega^{\alpha_{k}} \times n_{k}&fg=000000$</p>
+ where $latex {\alpha_{1} > \alpha_{2} > ... > \alpha_{k}}&fg=000000$ 
+
+<ul> <li> The rule for comparing two normal forms to see which represents the bigger ordinal is as follows: One first looks to see which has the highest leading exponent, if they are the same then you look to see which has the highest leading coefficient, etc. Such a method could go into an infinite regress on account of the fact (shown in the next section) that some ordinals can equal their own leading exponent. <li> Numbers of the form $latex {\omega^{x}}&fg=000000$ determine initial segments closed under addition, and numbers of the form $latex {\omega^{\omega^{x}}}&fg=000000$ determine initial segments of the ordinals closed under multiplication. 
+</ul>
+
+ 
+
+<p>
+
+<strong>4. Definition of the ordinal $latex {\epsilon_{0}}&fg=000000$ </strong>
+
+<p>
+
+ 
+
+<ul> <li> The limit of the sequence $latex {\omega, \omega^{\omega},\omega^{\omega^{\omega}}.......}&fg=000000$ was named $latex {\epsion_{0}}&fg=000000$ by Cantor. We can see that it's a solution of the equation $latex {\omega^{x} = x}&fg=000000$ by the following simple argument: Consider the recursively defined sequence 
+
+<ol> <li> $latex {a_{0} = 0}&fg=000000$ <li> $latex {a_{n+1} = \omega^{a_{n}}}&fg=000000$ 
+</ol>
+
+ then $latex {\omega^{lim_{a_n}} = lim \omega^{a_{n}} = lim a_{n+1} = lim a_{n}}&fg=000000$ Another way to say that a number is a solution of $latex {\omega^{x} = x}&fg=000000$ is to say that it's a fixed point of the function $latex {\omega^{x}}&fg=000000$. <li> $latex {\epsilon_{0}}&fg=000000$ is the smallest ordinal bigger than $latex {\omega}&fg=000000$ that determines an initial segment closed under ordinal addition, multiplication, and exponetiation. From this it follows that you can't denote it just using symbols 0, $latex {\omega}&fg=000000$, plus, times, and exponetiation. One can show using Cantor Normal Form that anything smaller can be so represented. <li> Actually a similar argument can be used to show additional fixed points and they run clear through the ordinals. They can be arranged in a transfinite sequence as $latex {\epsilon_0, \epsilon_1, \epsilon_2 .... \epsilon_{\omega}....}&fg=000000$ 
+</ul>
+
+ Next time we will consider computation with Ordinals on Real Computers. ;

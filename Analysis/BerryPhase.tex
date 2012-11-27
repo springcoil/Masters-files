@@ -1,0 +1,124 @@
+\section{Berry Phase}
+\subsection{Introduction}
+The following is based on an amalgamation of notes made from \cite{2005math.ph_geometricphases} and 
+the canonical textbook for learning about the Mathematics of the Geometric phase is ,\cite{geometricphases2004}.
+
+We invite the reader to perform the following simple experiment. Put your
+arm out in front of you keeping your thumb pointing up perpendicular to your
+arm. Move your arm up over your head, then bring it down to your side, and
+at last bring the arm back in front of you again. In this experiment an object
+(your thumb) was taken along a closed path traced by another object (your
+arm) in a way that a simple local law of transport was applied. In our case
+the local law consisted of two ingredients: (1) preserve the orthogonality of
+your thumb with respect to your arm and (2) do not rotate the thumb about
+its instantaneous axis (i.e your arm). Performing the experiment, in this way
+you will manage to avoid rotations of your thumb locally, however in the end
+you will experience a rotation of 90\textdegree globally.
+The experiment above can be regarded as the archetypical example of the
+phenomenon called anholonomy by physicists and holonomy by mathematicians.
+In this paper we consider the manifestation of this phenomenon in the
+realm of quantum theory. The objects to be transported along closed paths
+in suitable manifolds will be wave functions representing quantum systems.
+After applying local laws dictated by inputs coming from physics, one ends up
+with a new wave function that has picked up a complex phase factor. Phases
+of this kind are called Geometric Phases with the famous Berry Phase being
+a special case.
+
+\subsection{Space of Rays}
+Let us consider a quantum system with physical states represented by elements $|\phi\rangle$
+of some Hilbert space $\H$ with scalar product $\langle | \rangle: \H \times \H \to \Cbb$.
+For simplicity we assume that $\H$ is finite dimensional $\H \iso \Cbb^{n+1}$ with $n \gt 1$.
+The infinite dimensional case can be studied by taking the inductive limit $n \to \infty$. Let us denote the complex
+amplitudes characterizing the state $| \psi \rangle$ by $Z^{\alpha}$, $\alpha = 0,1,\cdots, n$
+For a normalized state we have 
+\begin{equation}\label{a}
+ \|\psi\|^{2} = \langle \psi | \psi \rangle \equiv \delta_{\alpha \beta} \bar{Z}^{\alpha} Z^{\beta} \equiv
+\bar{Z}_{\alpha} Z^{\alpha} = 1,
+\end{equation}
+where summation over repreated indices is understood, indices are raised and lowered by $\delta^{\alpha \beta}$ and
+$\delta_{\alpha \beta}$ respectively, and the overbar refers to complex conjugation. 
+ A normalised state lies on the unit sphere $\S \iso S^{2n+1}$ in $\Cbb^{n+1}$. Two nonzero states $|\psi\rangle$ 
+and $|\phi\rangle$ are equivalent $| \psi \rangle \sim |\phi \rangle$ iff they are related as \psiket = $\lambda \phiket$
+for some nonzero complex number $\lambda$. For equivalent states quanities like 
+\begin{equation}\label{b}
+ \dfrac{\psibra \mathbf{A} \psiket}{\psibra \psi \rangle}, \dfrac{|\psibra \phiket|^{2}}{\|\psi\|^{2}\|\phi\|^{2}}
+\end{equation}
+having physical meaning (mean value of a physical quantity represented by a Hermitian operator $\mathbf{A}$, transition
+probability from a physical state represented by \psiket to one represented by \phiket) are invariant. 
+Hence the real space of states representig the physical states of a quantum system unambigiously is the set of 
+equivalence classes \P\; \;$\equiv \H / \sim$ $\P\;$ is called the \textit{space of rays}.
+For $\H \iso \Cbb^{n+1}$ we have $\P\; \iso \Cbb \P\;bb^{n}$, where $\Cbb \P\;bb^{n}$ is the n-dimensional complex projective
+space. For normalised states $\psiket$ and $\phiket$ are equivalent iff $\psiket = \lambda \phiket$, 
+where $|\lambda|=1$ i.e. $\lambda \in U(1)$. In other words, two normalised states are equivalent iff they differ
+merely in a complex phase. 
+  \paragraph{} 
+It is well known that \S \;can be regarded as the total space of a principal bundle \P\; with the structure group U(1). This meanas
+that we have the projection 
+\begin{equation}\label{c}
+ \pi: \psiket \in \S \subset \H \to \psiket \psibra \in \P\;,
+\end{equation}
+where the rank one projector $$\psiket \psibra$$ represents the equivalence class of $\psiket$. Since we will use this 
+bundle frequencly we will call it $\eta_1$.
+Then we have 
+\begin{equation}\label{d}
+ \eta_1 : U(1) \hookrightarrow \S \stackrel{\pi}{\to} \P\;
+\end{equation}
+For $Z^{0} \neq 0$ our space of rays \P\; can be given in local coordinates as 
+\begin{equation}\label{e}
+ \omega^{j} \equiv \dfrac{Z^{j}}{Z^{0}}, \;j=1,\cdots,n
+\end{equation}
+The $\omega^{j}$ are inhomogeneous co-ordinates for $\Cbb\Pbb^{n}$ on the coordinate patch $\mathcal{U}_{0}$
+defined by the condition $Z^{0} \neq 0$.
+\paragraph{}
+ \P\; is a compact complex manifold with a natural Riemannian metric g. This metric g is induced from the scalar 
+product on \H. Let us motivate the constructio of g by using the physical input provided by the invariance of the transition
+probability of \ref{a}. For this we define a \textbf{distance} between $\psiket \psibra$ and $\phiket \phibra$ in 
+\P\; as follows 
+\begin{equation}\label{f}
+ \cos^{2}(\delta (\psi, \phi)/2) \equiv \dfrac{|\psibra \phiket|^2}{\|\phi\|^{2} \|\psi\|^2}
+\end{equation}
+This defnition makes sense due to the Cauchy-Schwarz inequality applied to the R.H.S of \ref{f} is non-negative and less than
+or equal to one. It is equal to one iff $$\psiket$$ is a nonzero complex multiple of $\phiket$ i.e. iff they define
+the same point in \P\;. Hence in this case $\delta(\psi, \phi) = 0$ as we expected. 
+ \paragraph{}
+Suppose now that $\psiket$ and $\phiket$ are seperated by an infinitesimal distance $ds = \delta(\psi, \phi)$.
+Putting this into the definition \ref{f}, using the local coordinates $\omega^j$ for $\psiket$ and $\omega^{j} + d\omega^{j}$
+for $\phiket$ after Taylor expanding both sides one gets\footnote{The author was unable to replicate this step} 
+\begin{equation}\label{g}
+ ds^2 = 4g_{j\bar{k}}d\omega^j d\omega^{\bar{k}}, j,\bar{k} = 1,2,\cdots, n
+\end{equation}
+  where 
+\begin{equation}\label{h}
+ g_{j\bar{k}} \equiv \dfrac{(1+ \bar{\omega_{l}}\omega^l)\delta_{jk} - \bar{\omega}_{j} \omega_{k}}{(1 + \bar{\omega}
+_{m} \omega^{m})^{2}}
+\end{equation}
+with 
+$$d \omega^{\bar{k}} \equiv d \bar{\omega}^k$$. The line element \ref{g}) defines the \textbf{Fubini-Study metric} for 
+$\P\;$.
+\subsection{The Pancharatnam Connection}
+Having defined our basic entity the space of rays $\P\;$ and the principal U(1) bundle $\eta_1$ now we define a 
+connection giving rise to a local law of parallel transport. In the mathematical literature the connection we are 
+going to define is called the canonical connection on our principal bundle.
+\paragraph{}
+ The information we need is an adaptation of Pancharatnam's study of polarized light to quantum mechanics. 
+Let us consder two normalized states $\psiket$ and $\phiket$. When these states belong to the same ray then we have
+$\psiket = e^{i\theta}\phiket$ for some phase fact $e^{i \theta}$, hence the phase difference is $\theta$
+How do we work out the phase difference between $\psiket$ and 
+$\phiket$ (not orthogonal) when the states belong to \textit{different rays?} To compare the phases of non-orthogonal
+states belonging to different rays Pancharatnam employed the following simple rule: two states are 'in phase' iff their
+inference is maximal. In order to find the state $\phiket \equiv e^{i\theta}|\phi^{'} \rangle $ from the ray spanned
+by the representative $|\phi^{'} \rangle$ which is in phase with \psiket we have to find a $\theta$ modulo $2\pi$
+for which the interference term in 
+\begin{equation}\label{i}
+ \|\psi + e^{i\theta} \phi^{'}\|^{2} = 2 (1 + \mathit{Re}(e^{i\theta}\psibra |\phi^{'} \rangle))
+\end{equation}
+is maximal. Obviously the interference is maximal iff 
+$(e^{i\theta}\psibra |\phi^{'} \rangle))$ is a real positive number i.e. 
+\begin{equation}\label{j}
+ e^{i \theta} = \dfrac{\langle \phi^{'} \psiket}{|\langle \phi^{'} \psiket|}, \phiket = |\phi^{'} \dfrac{\rangle \phi^{'} | \psi \rangle}
+{|\langle \phi^{'}| \psi \rangle |} 
+\end{equation}
+Hence for the state $\phiket$ 'in phase' with $\psiket$ we have 
+\begin{equation}\label{k}
+ \psibra \phi \rangle = |\psibra \phi^{'} \rangle| \in \Rbb^{+}
+\end{equation}

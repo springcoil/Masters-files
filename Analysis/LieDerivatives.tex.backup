@@ -1,0 +1,34 @@
+\section{Lie Derivatives}\cite{jost2011riemannian,differentialmanifolds}
+The aim is to give a nice contained introduction to the properties of the Lie Derivative. 
+The Lie Derivative is a method of computing the 'directional derivative' of a vector field with 
+respect to another vector field. We defined the \newword{Lie Derivative of a function} $f \in C^{\infty}(M)$ in the
+direction of a vector field X $\in Vect(M)$ by
+\begin{equation}
+ (L_X f)_m = X_m(df)_m
+\end{equation}
+for all $m \in M$. We have an isomorphism between $X \in Vect(M)$ and $L_X$ $\in Der(C^{\infty}(M))$ so we
+can write $L_X$as X.
+   We would like to extend these ideas to vector fields. On a manifold it isn't as easy as in a Euclidean space. The
+problem is due to the fact different vectors live in different tangent spaces. So we replace the notion of vectors $X \in T_m M$
+with that of a vector field. 
+\begin{idea}
+ We can now use the \textbf{flow} of the vector field to \textbf{push} values of Y back to m and differentiate.
+\end{idea}
+We say the Lie derivative of Y with respect to the vector field X
+We have to compare the value $Y_m \in T_m M$ of Y at m with the value of Y at a point of M that lies close to m in
+the direction specified by X, i.e. with the value 
+\begin{equation*}
+ Y_{\phi^X_t}(m) \in T_{\phi^{X}_t}(m)M
+\end{equation*}
+We want to use the flow of X to \textbf{push} the values of $Y_{\phi^X_t}(m)$ back to $Y_m$and then differentiate.
+\begin{dfn}
+ \begin{equation*}
+  (L_X Y)_m = lim_{t\To0} \frac{(\phi^{X}_{-t,*}Y)_m-(\phi^{X}_{-0,*}Y)_m}{t}
+ \end{equation*}
+\begin{equation*}
+ = \frac{d}{dt}|_{t=0} (\phi^{X}_{-t,*}Y)_m
+\end{equation*}
+
+\end{dfn}
+Where $(\phi^{X}_{-t,*}$ denotes the pushforware by $(\phi^{X}_{-t}$, this does allows us to cmpare two vectors that live in
+different tangent spaces. 

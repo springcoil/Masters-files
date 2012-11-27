@@ -1,0 +1,161 @@
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage[all]{xy}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, amsfonts, color, hyperref, textcomp}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{clm}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+%\newtheorem*{remu}{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+\newtheorem{recall}{Recall}
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nab {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+\def \scal {\text{<\textperiodcentered,\textperiodcentered>}}
+\newcommand{\eee}{\ensuremath{e_{i_1}\wedge \cdots \wedge e_{i_p}}}
+\def \hodge{*}
+
+\def \C {\mathcal{C}} % for categories
+\def \D {\mathcal{D}}
+\def \S {\mathcal{S}}
+\def \P {\mathcal{P}}
+\def \U {\mathcal{U}}
+
+
+
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\mathbb{P}}
+\def\Qbb{\mathbb{Q}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+
+\def \eps {\varepsilon}
+\def \AA{\ensuremath{\mathcal{A}^{1}}}
+\def  \AAA{\ensuremath{\mathcal{A}}}
+\def \Fff{\mathfrak{F}}
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\otimes}{\otimes}
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\Rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\def \hodge{*}
+\def \iso {\cong}
+\title{\bf Some remarks on the Yang-Mills Functional}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+   
+ To define the Yang-Mills Lagrangian, we need to define the 'Trace' of an End(E) valued form. Recall that the Trace
+of a maTrix is the sum of its diagonal enTries. 
+   The Trace is independent of the choice of basis - an invariant notion that is independent of the choice of basis. 
+A definition of the Trace that mkes this clear is as follows. Consider $End(V) \simeq V \otimes V^*$ - an isomorphism that 
+does not depend on any choice of basis - so the pairing between V and $V^*$ defines a linear map
+\begin{equation*}
+ Tr: End(V) \To \Rbb \end{equation*} \begin{equation*}
+   v \otimes f \mapsto f(v)
+\end{equation*}
+To see that this v is really a Trace, pick $e_i$ of V and let $\epsilon^j$ be a dual basis of $V^*$.
+ Writing $T \;\in\; End(V)$ as 
+\begin{equation*}
+ T = T^i_j e_i \otimes \epsilon^j
+\end{equation*}
+We have 
+\begin{equation*}
+ Tr(T) = T^i_je_i(\epsilon^j) = T^i_j \delta_i^j = T^i_i
+\end{equation*}
+which is of course the sum of the diagonal enTries.
+  \newline This implies that if we have a section T of $End(E),$ we can define a funciton Tr(T) on the base manifold M
+whose value at $p \in M$ is the Trace of the endomorphism T(p) of the fiber $E_p$:
+\begin{equation*}
+ Tr(T)(p) = Tr(T(p))
+\end{equation*}
+If $T \in \Gamma(End(E))$ and $\omega \in \Omega^p(M)$ we define 
+$$Tr(T \otimes \omega) = Tr(T)\omega$$
+Now we can write down the \textbf{Yang-Mills Lagrangian}: If D is a connection on E, this is the n-form given by 
+\begin{equation}
+ \mathcal{L}_{YM} = \frac{1}{2} Tr(F \wedge \textasteriskcentered F)
+\end{equation}
+where F is the curvature of D.
+Note that by the defintion of the hodge star operator (also in this collection of notes), we can write this 
+in local co-ordinates as 
+\begin{equation}
+ \mathcal{L}_{YM} = \frac{1}{4} Tr (F_{\mu \nu}F^{\mu \nu})vol
+\end{equation}
+If we integrate $\mathcal{L}_{YM}$ over M we get the \textbf{Yang-Mills action}
+\begin{equation}
+ S_YM = \frac{1}{2} \int_M Tr (F \wedge \textasteriskcentered F)
+\end{equation}
+This needs some elaboration. So let us explain these formulas better.
+We choose the physics convention $F_{\mu \nu} = \partial_\mu A_\nu - \partial_\nu A_\mu -ig[A_\mu,A_\nu]$
+where the generators of the Lie algebra are Hermitian.
+\begin{equation}
+ \mathcal{L}_{YM} = \mathcal{I} = - \int Tr(F \wedge \textasteriskcentered F)
+\end{equation}
+by another convention (there is a lot of ambiguity of signs in this subject).
+The first thing to note is that F has vector \textbf{and} Lie algebra indices. The Trace is over the Lie algebra, \textbf{not}
+over the vector indices. The vector indices are just those of the field sTrength in QED. In Yang-Mills the curvature
+form is Lie Algebra valued.
+   \newline In this case $F_{\mu \nu} = F^{a}_{\mu \nu}T^a$ where the summation convention is used,and where $T^a$ are the 
+generators of $\mathfrak{su}(n)$. To be explicit, F has not only tensor components but maTrix components
+\begin{equation*}
+ (F_{\mu \nu})_{ij} = F^{a}_{\mu \nu}T^a T^a_{ij}
+\end{equation*}
+The inner product of F with itself $<F,F> = \int F \wedge \textasteriskcentered F$ 
+where \textasteriskcentered is the Hodge \textasteriskcentered - operator. Thus we are calculating 
+$\mathcal{I} = -Tr<F,F>$. It is a standard exercise to find the exterior product of two r-forms. We find
+\begin{equation*}
+ F \wedge \textasteriskcentered F = \frac{1}{2!}F_{\mu \nu}F^{\mu \nu} dx^1 \wedge \cdots \wedge dx^4
+\end{equation*}
+Note that the differential forms don't 'know' the Lie algebra. 
+The algebra hasn't come into the calcuation yet.
+$Tr(F_{\mu \nu}F^{\mu \nu})=Tr(F^{a}_{\mu \nu}T^aF^{\mu \nu b}T^b$
+$= Tr(T^aT^b)F^{a}_{\mu \nu}F^{\mu \nu b}$
+$= \frac{1}{2}\delta^{ab}F^{a}_{\mu \nu}F^{\mu \nu b}$
+$=\frac{1}{2}F^{a}_{\mu \nu}F^{\mu \nu a}$
+where e have used the standard normalization convention for the $T^a$, $Tr T^a T^b = \frac{1}{2}\delta^{ab}$. (This comes from the
+fact we want $\mathfrak{su}(2)$ to live in $\mathfrak{su}(n)$, and the generators of $\mathfrak{su}(2)$  are taken 
+to be $T^a = \frac{\sigma^a}{2}$ where $\sigma^a$ are the Pauli matrices.) Thus, we find
+\begin{equation*}
+ \mathcal{I} = - Tr (F \wedge \textasteriskcentered F)
+\end{equation*}
+which can be written as 
+\begin{equation*}
+ \frac{1}{4} \int d^4 x F^{a}_{\mu \nu}F^{a \mu \nu}
+\end{equation*}
+

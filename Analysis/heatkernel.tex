@@ -1,0 +1,69 @@
+\section{Operators and Mathematical Physics}
+\subsection{The Heat Kernel}
+The following section on the Heat Kernel and the following subsection on Magnetic Fields where both taken from the excellent
+and Mathematical Physics orientated textbook\cite{lieb2001analysis}
+The heat kernel \ref{4} is the simplest example of a \newword{semigroup}. Clearly, equation \ref{7} 
+is a linear equation and $e^{t\vartriangle}$ is an \textit{operator valued} solution of the heat equation, in the sense that for every 
+initial condition f, the solution $g_t$ is given by $e^t\vartriangle f$, i.e., the heat kernel applied to the function f.
+This relation can be written, in an admittedly formal way, as
+\begin{equation}
+ \frac{d}{dt} e^{t \vartriangle} = \vartriangle e^{t \vartriangle},
+\end{equation}
+a notation that is familiar when dealint with finite systems of linear ODE\footnote{Ordinary Differential Equations, as always
+is abbreviated}, in which case $e^{t \vartriangle}$ is replaced by a t-dependent matrix $P_t$
+$$t \rightarrow P_t$$: one parameter group of matrices
+  It is easy to see that the heat kernel \ref{4} shares all these properties except for invertibility.
+    Hence we call $e^{t \vartriangle}$ the \newword{heat semigroup} and there is no solution for $t \lt 0$
+\begin{dfn}
+ Define the heat kernel on $\Rbb^n \times \Rbb^n$ to be 
+\begin{equation}\label{4}
+ e^{t \vartriangle}(x,y) = (4\pi t)^{-n/2} exp{\frac{-|x-y|^2}{4t}}
+\end{equation}
+
+\end{dfn}
+THe action of the heat kernel on functions is, by definition, 
+$e^{t \vartriangle}f(x) = \int_{\Rbb^n}e^{t \vartriangle}(x,y)f(y)dy$
+If $f \in L^{p}(\Rbb^n)$ with $1\leq p \leq 2$, then, by Theorem 5.8 in \cite{lieb2001analysis}
+\begin{equation}
+ \hat{e^{t \vartriangle}f(h)}= exp{-4\pi^2|k|^2 t}\hat{f}(k)
+\end{equation}
+\begin{equation}\label{7}
+ \vartriangle g_t = \frac{d}{dt}g_t
+\end{equation}
+The heat equation is a model for heat conduction and $g_t$ is the temperature distribution (as a function $x \in \Rbb^n$)
+at time t. The kernel, given by \ref{4} satisfies \ref{7} for each $y \in \Rbb^n$(as can be verified by 
+explicit calculation) and satisfies the initial condition
+\begin{equation}
+ \lim_{t\textdownarrow 0} e^{t \vartriangle}(\cdotp,y) = \delta_y in \mathcal{D}^{'}(\Rbb^n)
+\end{equation}
+\subsection{Magnetic fields}
+This may seem a bit of a hodge podge of ideas, but I was told that Magnetic fields were $H^1_A$ spaces.
+\begin{rem}
+I'm not as of early 2012 familiar with Sobolev spaces but I thought this section was well written.  
+\end{rem}
+ In differential geometry it is often necessary to consider \textbf{connections}, which are more complicated derivatives
+than $\nabla$. The simplest example is a connection on a 'U(1)-bundle' over $\Rbb^n$\cite{differentialmanifolds}. 
+(Or for further
+explanations of the Geometry of the Aharanov-Bohm effect\cite{geometricphase2004}). This bundle is not too complicated,it 
+merely means acting on complex valued functions f by $(\nabla + iA(x))$, with $A(x):\Rbb^n \rightarrow \Rbb^n$
+being some pre-assigned, real vector field. The same operator occurs in quantum mechanics of particles in external magnetic fields 
+(with n=3). The introduction of a magnetic field $B: \Rbb^3 \To \Rbb^3$ in quantum mechanics involes replacing 
+$\nabla$ by $\nabla + iA(x)$ (in appropriate units). Here A is called a \newword{vector potential} and satisfies 
+curl A = B.
+\paragraph{}
+In general A is not a bounded vector field, e.g., if B is a constant magnetic field (0,0,1), then a suitable vector potential A is given
+by A(x) = ($x_2,0,0)$. Unline in the differential geometric setting, A need not be smooth either, because we could add
+an arbitrary gradient to A, $A \To A + \nabla \Xi$, and still get the same magnetic field B. This is called 
+\newword{gauge invariance}.\footnote{A phrase which strikes fear into the hearts of Grad Students everywhere!}
+   The problem is that $\Xi$ (and hence A) could be a wild function - even if B is well behaved.
+\newline For these reasons we want to find a large class of A's afor which we can make (distributional)sense of $(\nabla + iA(x))$
+and $(\nabla + iA(x))^2$ when action on a suitable calss of $L^2(\Rbb^3)$ functions.
+    For general dimension n, the appropriate condition on A, which we assume henceforth, is 
+\begin{equation}
+ A_j\in L^1_{loc}(\Rbb^n) \;for\;j=1,\cdots,n
+\end{equation}
+because of this condition the functions $A_j f$ are in $L^1_{loc}(\Rbb^n)$ for every $f\in L^2_{loc}(\Rbb^n)$. Therefore the expression
+\begin{equation*}
+ (\nabla + iA)f
+\end{equation*}
+called the \newword{covariant derivative}(with respect to A) of f, is a distribution ofr every $f\in L^2_{loc}(\Rbb^n)$.

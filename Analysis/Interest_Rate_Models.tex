@@ -1,0 +1,106 @@
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage[all]{xy}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, amsfonts, color, hyperref, url, textcomp, mathtools}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{clm}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+%\newtheorem*{remu}{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+\newtheorem{recall}{Recall}
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nab {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+\def \scal {\text{<\textperiodcentered,\textperiodcentered>}}
+
+
+
+\def \C {\ensuremath{\mathcal{C}}} % for categories
+\def \D {\ensuremath{\mathcal{D}}}
+\def \S {\ensuremath{\mathcal{S}}}
+\def \F {\ensuremath{\mathcal{F}}}
+\def \P {\ensuremath{\mathcal{P}}}
+\def \U {\ensuremath{\mathcal{U}}}
+\def \H {\ensuremath{\mathcal{H}}}
+\def \psiket {\ensuremath{|\psi \rangle}}
+\def \phiket {\ensuremath{|\phi \rangle}}
+\def \psibra {\ensuremath{\langle \psi |}}
+\def \phibra {\ensuremath{\langle \phi |}}
+
+\usepackage{textcomp}
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\ensuremath{\mathbb{P}}}
+\def\Qbb{\ensuremath{\mathbb{Q}}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+
+\def \eps {\varepsilon}
+\def \AA{\ensuremath{\mathcal{A}^{1}}}
+\def  \AAA{\ensuremath{\mathcal{A}}}
+\def \Fff{\mathfrak{F}}
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\tensor}{\otimes}
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\newcommand{\eee}{\ensuremath{e_{i_1}\wedge \cdots \wedge e_{i_p}}}
+\def \hodge{*}
+\def \iso {\cong}
+\title{\bf Interest Rate Models}
+
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+%\include{Interest_Rate_Models_L1}
+\newpage
+%\include{Interes_Rate_Models_L2}
+\newpage
+%\include{Interest_Rate_Models_L3}
+%\include{Interest_Rate_Stochastics}
+\include{Interest_Rate_Models_L8}
+\bibliographystyle{plain}
+%\bibliography{bib}
+
+
+\end{document} 

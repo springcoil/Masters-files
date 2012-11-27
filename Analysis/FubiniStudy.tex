@@ -1,0 +1,148 @@
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage[all]{xy}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, amsfonts, color, hyperref, textcomp}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{clm}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+%\newtheorem*{remu}{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+\newtheorem{recall}{Recall}
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nab {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+\def \scal {\text{<\textperiodcentered,\textperiodcentered>}}
+\newcommand{\eee}{\ensuremath{e_{i_1}\wedge \cdots \wedge e_{i_p}}}
+\def \hodge{*}
+
+\def \C {\mathcal{C}} % for categories
+\def \D {\mathcal{D}}
+\def \S {\mathcal{S}}
+\def \P {\mathcal{P}}
+\def \U {\mathcal{U}}
+
+
+
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\mathbb{P}}
+\def\Qbb{\mathbb{Q}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+
+\def \eps {\varepsilon}
+\def \AA{\ensuremath{\mathcal{A}^{1}}}
+\def  \AAA{\ensuremath{\mathcal{A}}}
+\def \Fff{\mathfrak{F}}
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\tensor}{\otimes}
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\Rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\def \hodge{*}
+\def \iso {\cong}
+\title{\bf Some Remarks on the Fubini-Study Metric}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\section{A Little Complex Analysis}
+We want to introduce the notion of a 'Fubini-Study' metric which is important in Complex Manifold Theory and Differential Geometry
+(and the associated theories such as Mathematical Physics).
+  But first we need to introduce a little Complex Analysis. The source is of course Griffiths and Harris.
+Let M be a complex manifold, $p \in M$ any point, and $z=(z_{1},\cdots,z_{n})$ a holomorophic co-ordinate system around p. 
+There are three different notions of a tangent space to M at p,which we now describe:
+\begin{itemize}
+ \item $T_{\Rbb,p}(M)$ is the usual \textbf{real tangent space} to M at p,when we consider M a real manifold of dimension
+2n. $T_{\Rbb,p}(M)$ can be realized as the space of $\Rbb-$linear derivations on the ring of real-valued $C^{\infty}$-functions
+in a neighbourhood of p; if we write $z_i = x_i + iy_i$,
+$T_{\Rbb,p}(M) = \Rbb(\frac{\partial}{\partial x_{i}}, \frac{\partial}{\partial y_i}$.
+\item $T_{\Cbb,p}(M) = T_{\Rbb,p}(M)\tensor_{\Rbb} \Cbb$ is called the \textbf{complexified tangent space} to M at p.
+It can be realized as the space of $\Cbb -$ linear derivations in the ring of complex valued $C^{\infty}$-functions on M around p.
+We can write 
+$T_{\Cbb,p}(M) = \Cbb{\frac{\partial}{\partial x_{i}},\frac{\partial}{\partial y_i}}$
+\newline =$\Cbb{\frac{\partial}{\partial z_{i}},\frac{\partial}{\partial \bar{z}_i}}$
+\item $T'_p(M)= \Cbb{\frac{\partial}{\partial z_{i}}}\subset T_{\Cbb, p}(M)$ is called the \textbf{holomorphic tangent space}
+to M at p. It can be realized as the subspace of $T_{\Cbb,p}(M)$ consisting of derivations that vanish on antiholomorphic functions
+(i.e. F such that T is holomorphic), and so is independent of the holomorphic co-ordinate system chosen. 
+The subspace $T''_p(M)= \Cbb{\frac{\partial}{\partial \bar{z}_{i}}}$ is called the 
+\textbf{antiholomorphic tangent space} to M at p;
+clearly 
+$T_{\Cbb,p}(M) = T'_p(M) \oplus T''_p(M)$
+\end{itemize}
+Now we consider some \textbf{Calculus on Complex Manifolds}. Let M be a complex manifold of dimension n. A \textbf{hermitian metric}
+on M is given by a positive definite hermitian inner product 
+$(,)_z: T'_z(M) \tensor T'_z(M) \To \Cbb$
+on the holomorphic tangent space at z for each $z \in M$, \newline
+depending smootly on z - that is, such that for local co-ordinates z on
+M the function 
+$h_ij(z) = (\frac{\partial}{\partial z_i},\frac{\partial}{\partial z_j})_z$
+are $C^{\infty}$ Writing $(,)_z$ in terms of the basis ${dz_i \tensor d\bar{z}_j}$
+for 
+$(T'_z(M) \tensor \bar{T'_z(M)}^{\textasteriskcentered} = T^{\textasteriskcentered\textquoteright}_z(M) \tensor T^{* \textquotedblright}_{z}(M)$,
+the hermitian metric is given by 
+$ds^2 = \sum_{i,j} h_{ij}(z) dz_i \tensor d \bar{z}_j$
+So let us describe the \textbf{Fubini-Study Metric}
+Let $z_0,\cdots,z_n$ be co-ordinates on $\Cbb^{n+1}$ and denote by $\pi:\Cbb^{n+1} -{0} \To \mathbb{P}^n$
+the standard projection map.
+  Let $U \subset \mathbb{P}^{n}$ be an open set and $Z: U \To \Cbb^{n-1} - {0}$ a lifting of U, i.e. a holomorphic map with 
+$\pi \circ z = id$; consider the differential form 
+ \newline$\omega = \dfrac{i}{2\pi}\partial \bar{\partial}log\|z\|^{2}$
+If $Z':U \To \Cbb^{n-1} - {0}$ is another lifting, then $Z' = f.Z$
+with f a nonzero holomorphic function, so that \newline 
+$\dfrac{i}{2\pi}\partial \bar{\partial}log\|z\|^{2} = \frac{i}{2 \pi}\partial \bar{\partial} (log\|z\|^{2} +
+log f + log \tilde{f})$
+\newline $= \omega + \dfrac{i}{2\pi}(\partial \bar{\partial}log f - \bar{\partial} \partial log \tilde{f})$
+\newline = $\omega$
+Therefore $\omega$is independent of the lifting chosen; since liftings always exist locally, $\omega$ is a
+globally defined differential form in $\mathbb{P}^{n}$. (By the sheaf properties of differential forms) Clearly $\omega$
+is of type (1,1). To see that $\omega$ is positive, first note that the unitary group $U(n+1)$ acts transitively on
+ $\mathbb{P}^{n}$ and leaves the form $\omega$ positive everywhere if it is positive at one point. Now let ${w_i = z_i/z_0}$
+be co-oridnates on the open set $U_{0} = (z_0 \neq 0)$in $\mathbb{P}^{n}$ and use the lifting $Z = (1,w_1,\cdots,w_n)$ on $U_0$
+; we have (after some substitutions
+\newline $\omega = \dfrac{i}{2 \pi} [\frac{\sum dw_i \wedge d\bar{w}_i}{1 + \sum w_i \bar{w}_i} - 
+\frac{(\sum \bar{w}_i dw_i \wedge \sum w_i d\bar{w}_i)}{(1 + \sum w_i \bar{w}_i)^{2}}]$
+At the point $[1,0,\cdots,0]$,
+\newline $\omega = \frac{i}{2\pi} \sum dw_i \wedge d \bar{w}_i > 0$
+Thus $\omega$ defines a particular hermitian metric on the projective complex space called the \textbf{Fubini-Study metric}.
+That was the aim of the article!
+
+
+\end{document} 

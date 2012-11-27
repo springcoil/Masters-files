@@ -1,0 +1,249 @@
+\section{PDE Exercises}
+\begin{equation*}
+ f: \Rbb^n \To \Cbb
+\end{equation*}
+given
+$\tilde{M}f$ is a solution of the homogeneous Cauchy problem, with $\tilde{M}f(0,x) = 0$,
+$\frac{\partial \tilde{M}f}{\partial t}(0,x) = f(x)$
+Let $g:[0,\infty) \times \Rbb^n \To \Cbb$ be sufficiently often continuously differentiable. Show without using any
+explicit formular for $\tilde{M}f$ that the function Qg defined by 
+\begin{equation*}
+ Qg(t,x):= \int^{t}_{0} \tilde{M}g_s(t-s,x)ds, 
+\end{equation*}
+where $g_s(x):= g(s,x),$ is the solution of the Cauchy problem for the inhomogeneous wave equation with right hand
+side g and zero initial conditions. 
+We want to show that this implies $\Box Qg = g$
+$Qg(0,x)= \frac{\partial Qg}{\partial t}(0,x) = 0$
+\newline
+\begin{rm}
+ For n = 1 this gives an alternative solution of Example 1.
+\begin{equation*}
+ \tilde{M}f(0,x) = \frac{1}{2c} \int^{x+t}_{x-t}f(\tau)d\tau
+\end{equation*}
+This implies 
+\begin{equation}
+ Qg(t,x) = \frac{1}{2c} \int^{t}_{0} \int^{x+c(t-s)}_{x-c(t-s)}g(s,\tau)d\tau ds
+\end{equation}
+
+\end{rm}
+We can then write Qg(0,x) = $\int_0^0 \cdots ds = 0$
+$\frac{\partial Q}{\partial t}(t,x) = \tilde{M} g_s(t-s,x)$ 
+We let s = t 
+$+\int^t_0 \frac{\partial}{\partial t} \tilde{M}g_s(t-s,x)ds$
+We know $\tilde{M}g_t(0,x) =0$
+SO: \begin{equation}\label{8}
+     \frac{\partial Qg}{\partial t}(t,x) = \int^{t}_0 \frac{\partial}{\partial t} \tilde{M}g_s(t-s,x)ds 
+    \end{equation}
+In particular if t=0 
+We get $\frac{\partial Qg}{\partial t} (0,x) = \int^0_0 \cdots = 0$
+We also have to look at the box operator 
+$\Box = \frac{\partial^2}{\partial t^2} - \triangle_x$
+We obtain by $\frac{\partial}{\partial t}\ref{8}$
+By parameter dependent integrals;
+\begin{equation*}
+ \frac{\partial^2 Qg}{\partial t^2}(t,x) = \int^{t}_0 \frac{\partial^2}{\partial t^2} \tilde{M}g_s(t-s,x) + 
+\frac{\partial}{\partial t} \tilde{M}g_s (t-s,x)|_{s=t} 
+\end{equation*}
+\begin{equation*}
+ \frac{\partial^2 Qg(t,x)}{\partial t^2} = g(t,x) + \int^t_0 \cdots ds
+\end{equation*}
+By parameter dependent integrals;
+\begin{equation*}
+ \triangle_x Qg(t,x) =\int^t_0 \triangle_x \tilde{M}g_s(t-s,x) ds
+\end{equation*}
+\begin{equation*}
+ \Box Qg(t,x) = g(t,x) + \int^t_0 \Box Mg(t-s,x)ds
+\end{equation*}
+The integral above goes to zero by the homogeneous Cauchy problem solution. 
+Therefore we can write 
+\begin{equation}
+ \Box Qg(t,x) = g(t,x)
+\end{equation}
+\begin{rm}
+ We only need the properties of $\tilde{M}g_s$. This should be seen as an exercise in parameter dependent integrals. 
+\end{rm}
+\section{Examples of distributions and their order}
+Let us recall the criterion:
+T:$C^{\infty}_{c}(U) \To \Cbb$ linear 
+T is a distribution $\iff$ $\forall K \subset U$ compact 
+$\exists p(K) \in \mathbb{N}_0$, $C(K) \in [0,\infty)$ such that for 
+$\phi \in C^{\infty}_{c}(U)$ with supp$\phi \subset K$
+\begin{equation*}
+ |T(\phi)| \leq C(K) \sum_{|\alpha|\leq p(K)}\|D^{\alpha}\phi\|_{\infty}
+\end{equation*}
+Where the last norm is the suprenum norm. 
+\begin{ex}
+ \begin{equation*}
+  \delta_{x_{0}} 
+ \end{equation*}
+\begin{equation*}
+ |\delta_{x_{0}}| = |\phi(x_{0})| \leq \|\phi \|_{\infty}
+\end{equation*}
+(c=1, p = 0, indepedent of K.
+\end{ex}
+\begin{ex}
+ \begin{equation*}
+  f \in L^1_{loc}(U) 
+ \end{equation*}
+$T_f(\phi) = \int_U f(x) \phi (x) ds$
+$|T_f(\phi)| = |\int_U f(x) \phi(x) dx| \leq \int_U|f(x)||\phi(x)|dx$ 
+Assume $K \subset U$ compact 
+$supp \phi \subset K$ $=\int_K|f(x)||\phi(x)|dx$
+$\leq \|\phi\|_\infty \int_K |f(x)|dx$
+the integral above can be considered as C(K) and it is less than infinity (p=0, independent of K).
+\end{ex}
+\begin{ex}
+ $T(\phi) = \int_M \phi|_M . \omega$
+M $\subset U$ k-dim oriented subset and we can consider $\omega$ a k(top) form
+There is a \textbf{trick}: In local coordinates $Y_1,\cdots Y_k$ $V\subset M$ open $y_1: V 
+\To \Rbb$
+$\omega = g(y_1,\cdots, y_k)dY_1\wedge \cdots \wedge dY_k$
+We use the pullback in fact, but we can sloppy write 
+\begin{equation*}
+ \int_V \phi|_M \omega = \int_V \phi(Y_1 \cdots Y_k)g(Y_1,\cdots,Y_k)dy_1,\cdots, dy_k
+\end{equation*}
+$\int_M \phi_M \omega =$ sum over open sets, where we have coordinates using partition of unity. We need a volume form or 
+take the modulus of $|g(y_1,...,y_k)|$
+\begin{rm}
+ If we define, in local coordinates of the correct orientation 
+$|\omega(x)|=|g(y_1,\cdots,y_k)|dy_1 \wedge \cdots \wedge dy_k$
+then $|\omega|$ is well-defined independent of co-ordinates.
+\end{rm}
+We can then write the following 
+\begin{equation*}
+ |\int_M \phi|_M . \omega| \leq \int_M|\phi|_M . |\omega| = \int_{K \cap M} |\phi|_{|M}.|\omega| 
+\leq \|\phi\|_\infty . \int_{K \cap M} |\omega|
+\end{equation*}
+Because $supp \phi \subset K$ we can do this trick.
+The integral above becomes C(K) and is finite, since $\omega$ has a finite number.
+This is indeed a distribution and clearly of order 0.
+\end{ex}
+\begin{ex}
+\begin{rm}
+Show that the sequence $(T_n)$, where
+ $T_n$ is given by the locally integrable function $ne^{-\frac{n^{2}x^{2}}{2}}$,
+ converges in $C^{-\infty}(\mathbb{R})$ and compute its limit. 
+\end{rm}
+\begin{proof}
+ Let $\phi\in\mathcal{D}(\mathbb{R})$ (i.e., $\phi$ is a $C^\infty$ function with compact suport). Then
+$$
+\langle T_n,\phi\rangle=\int_\mathbb{R}n\,e^{-n^2x^2}\phi(x)\,dx=\int_\mathbb{R}\,e^{-x^2}\phi\bigl(\frac xn\bigr)\,dx.
+$$
+We have 
+$$
+\lim_{n\To\infty}e^{-x^2}\phi\bigl(\frac xn\bigr)=e^{-x^2}\phi(0)\quad\forall x\in\mathbb{R}
+$$
+and
+$$
+\Bigl|e^{-x^2}\phi\bigl(\frac xn\bigr)\Bigr|\le \|\phi\|_\infty e^{-x^2}.
+$$
+The dominated convergence theorem implies that
+$$
+\lim_{n\To\infty}\langle T_n,\phi\rangle=\phi(0),
+$$
+that is, $T_n$ converges in the distribution sense to Dirac's $\delta_0$.
+\end{proof}
+\end{ex}
+\begin{ex}
+ Formulate the homogeneous Cauchy problem for the heat equation on $\Rbb^{n}$, and give uniqueness and existence 
+results, including a solution formula, under a boundedness condition.
+\paragraph{} Assume now that the initial condition $\phi$ is real valued, nonnegative, compactly supported and not 
+identically zero. Show that the solution $f(t,x)$ satisfies
+\begin{itemize}
+ \item f(t,x) $\gt$ 0 for all $(t,x) \in (0, \infty) \times \Rbb^n$,\
+\item $lim_{|x| \To \infty}f(t,x) = 0$ for any fixed t $\gt$ 0,
+\item $lim_{t \To \infty} f(t,x)$ = 0 for any fixed $x \in \Rbb^n$
+\end{itemize}
+
+\end{ex}
+\begin{ex}
+ Let us consider what happens to a linear constant coefficient partial differential operator, P(D).
+\textit{the fundamental solution of P can never be a distribution with compact support}.
+\begin{proof}
+In fact, assume we have P(D)u = f, where u is a distribution, then u has compact support 
+$\iff \dfrac{f}{P(\xi)}$ is analytic. (This result can be found in Chapter 7 of Volume 1 of Hormanders
+treatise). 
+Now, if we have 
+\begin{equation}
+ P(D)u = \delta
+\end{equation}
+obviously $\dfrac{\delta}{P(\xi)}$ is never an analytic function for a polynomial P. So the fundamental solution
+of P can not be compactly supported. 
+\end{proof}
+\end{ex}
+\begin{ex} I have a sequence $(T_n)$, where $T_n$ is given by the locally integrable function $ne^{-\dfrac{n^{2}x^{2}}{2}}$, converges in $C^{-\infty}(\mathbb{R})$ and compute its limit. 
+I suspect that the limit tends towards zero since the exponential tending towards infinity will become zero. Is this enough to prove this, in conjunction with the definition? I've already written the definition of a locally integrable function and I already understand the definition (sometimes called the 'weak-dual convergence') of the convergence of a sequence of distributions. 
+   I've not considered any topologies in these cases, as I don't understand Frechet spaces and the like. 
+\end{ex}
+\begin{proof}
+Let $\phi\in\mathcal{D}(\mathbb{R})$ (i.e., $\phi$ is a $C^\infty$ function with compact suport). Then
+$$
+\langle T_n,\phi\rangle=\int_\mathbb{R}n\,e^{-n^2x^2}\phi(x)\,dx=\int_\mathbb{R}\,e^{-x^2}\phi\bigl(\frac xn\bigr)\,dx.
+$$
+We have 
+$$
+\lim_{n\To\infty}e^{-x^2}\phi\bigl(\frac xn\bigr)=e^{-x^2}\phi(0)\quad\forall x\in\mathbb{R}
+$$
+and
+$$
+\Bigl|e^{-x^2}\phi\bigl(\frac xn\bigr)\Bigr|\le \|\phi\|_\infty e^{-x^2}.
+$$
+The dominated convergence theorem implies that
+$$
+\lim_{n\To\infty}\langle T_n,\phi\rangle=\phi(0)\int_\mathbb{R}\,e^{-x^2}dx=\sqrt\pi\,\phi(0),
+$$
+that is, $T_n$ converges in the distribution sense to Dirac's $\sqrt\pi\,\delta_0$.
+\end{proof}
+\begin{ex}
+ Show that he distribution given by the locally integrable function $\dfrac{1}{2} e^{|x|}$ is a fundamental solution of the differential operator 
+$
+-\dfrac{\partial^{2}}{\partial x^{2}} + id
+$ on $\mathbb{R}^{1}$
+\end{ex}
+
+\begin{proof}
+ You can check directly by noting the fact that 
+$$
+\frac{d}{dx}e^{|x|}=(H(x)+H(-x))e^{|x|}
+$$
+where H is the Heaviside function.
+On the other hand,you can use fourier transform to get the desired result,in fact,let u satisfies
+$$
+(1-\frac{d}{dx^2})u=\delta
+$$
+Take fourier transform on both sides,then get 
+$$
+\hat{u}=\frac{1}{1+x^2}
+$$
+then the result follows easily.
+\end{proof}
+\begin{ex}
+ Let us consider 
+$ \lim_{\epsilon \To 0} \dfrac{\epsilon}{x^{2} + \epsilon^{2}} $ in $C^{-\infty}(\Rbb)$
+\end{ex}
+\begin{proof}
+ Firstly let us use $y = \dfrac{x}{\epsilon}$\newline
+So we have $\lim_{\epsilon \To 0} \dfrac{\epsilon}{\epsilon^{2} y^{2} + \epsilon^{2}}$\newline
+We know that $\int_\Rbb g(x)dx$ is Continuous and bounded.\newline
+$y_{\epsilon}(x) = 1/\epsilon(g(\dfrac{x}{\epsilon})dy$ \newline
+Let us now form a distribution \newline
+$T_{y_{\epsilon}}(\phi) = \int_{\Rbb} \epsilon^{-1} y(\dfrac{x}{\epsilon}) \phi(x)$\newline
+$= \int_\Rbb g(y) \phi(\epsilon y) dy$
+$\lim_{\epsilon \To 0} T_{y_{\epsilon}}(\phi) = \lim_{\epsilon \To 0}$\newline
+$= \int_\Rbb g(y) \lim_{\epsilon \To 0} \phi(\epsilon y) dy$ \newline
+$= \int_\Rbb g(y) \phi(0) dy$ \newline
+$\phi(0) \int_\Rbb g(y) dy$ by the assumption that this integral is x. \newline
+= $x\cdot \phi(0)$
+\end{proof}
+\begin{ex}
+ Question 4 on June 20th 2011
+Suppose there exists a non-zero solution $f \in C^{\infty}(\Rbb^{n})$ of th equation 
+$D' f = 0$ 
+\end{ex}
+\begin{proof}
+ DT = S, where $S \in C^{-\infty}_{c}(U)$
+By the a proposition $\exists$! $\tilde{S}:C^{\infty}(U) \To \Cbb$
+such that 
+$\tilde{S}(f) = S(f)$ for all $f \in C^{\infty}_{c}(U)$
+but $f \in C^{\infty}$ therefore by a Proposition \begin{equation}\tilde{S}(f) = 0 \end{equation}
+\end{proof}

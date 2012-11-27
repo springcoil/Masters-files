@@ -1,0 +1,52 @@
+
+
+<p>
+
+<b>1. Operators and Mathematical Physics </b>
+
+<p>
+
+ 
+
+<p>
+
+<b>  1.1. The Heat Kernel </b>
+
+<p>
+
+ The following section on the Heat Kernel and the following subsection on Magnetic Fields where both taken from the excellent and Mathematical Physics orientated textbook\cite{lieb2001analysis} The heat kernel <a href="#4">2</a> is the simplest example of a \newword{semigroup}. Clearly, equation <a href="#7">4</a> is a linear equation and $latex {e^{t\vartriangle}}&fg=000000$ is an <i>operator valued</i> solution of the heat equation, in the sense that for every initial condition f, the solution $latex {g_t}&fg=000000$ is given by $latex {e^t\vartriangle f}&fg=000000$, i.e., the heat kernel applied to the function f. This relation can be written, in an admittedly formal way, as <p align=center>$latex \displaystyle  \frac{d}{dt} e^{t \vartriangle} = \vartriangle e^{t \vartriangle}, \ \ \ \ \ (1)&fg=000000$</p>
+ a notation that is familiar when dealint with finite systems of linear ODE\footnote{Ordinary Differential Equations, as always is abbreviated}, in which case $latex {e^{t \vartriangle}}&fg=000000$ is replaced by a t-dependent matrix $latex {P_t}&fg=000000$ <p align=center>$latex \displaystyle t \rightarrow P_t&fg=000000$</p>
+: one parameter group of matrices It is easy to see that the heat kernel <a href="#4">2</a> shares all these properties except for invertibility. Hence we call $latex {e^{t \vartriangle}}&fg=000000$ the \newword{heat semigroup} and there is no solution for $latex {t \lt 0}&fg=000000$  Define the heat kernel on $latex {\Rbb^n \times \Rbb^n}&fg=000000$ to be <a name="4"><p align=center>$latex \displaystyle  e^{t \vartriangle}(x,y) = (4\pi t)^{-n/2} exp{\frac{-|x-y|^2}{4t}} \ \ \ \ \ (2)&fg=000000$</p>
+</a>
+<p>
+ THe action of the heat kernel on functions is, by definition, $latex {e^{t \vartriangle}f(x) = \int_{\Rbb^n}e^{t \vartriangle}(x,y)f(y)dy}&fg=000000$ If $latex {f \in L^{p}(\Rbb^n)}&fg=000000$ with $latex {1\leq p \leq 2}&fg=000000$, then, by Theorem 5.8 in \cite{lieb2001analysis} <p align=center>$latex \displaystyle  \hat{e^{t \vartriangle}f(h)}= exp{-4\pi^2|k|^2 t}\hat{f}(k) \ \ \ \ \ (3)&fg=000000$</p>
+ <a name="7"><p align=center>$latex \displaystyle  \vartriangle g_t = \frac{d}{dt}g_t \ \ \ \ \ (4)&fg=000000$</p>
+</a> The heat equation is a model for heat conduction and $latex {g_t}&fg=000000$ is the temperature distribution (as a function $latex {x \in \Rbb^n}&fg=000000$) at time t. The kernel, given by <a href="#4">2</a> satisfies <a href="#7">4</a> for each $latex {y \in \Rbb^n}&fg=000000$(as can be verified by explicit calculation) and satisfies the initial condition <p align=center>$latex \displaystyle  \lim_{t\textdownarrow 0} e^{t \vartriangle}(\cdotp,y) = \delta_y in \mathcal{D}^{'}(\Rbb^n) \ \ \ \ \ (5)&fg=000000$</p>
+ 
+
+<p>
+
+<b>  1.2. Magnetic fields </b>
+
+<p>
+
+ This may seem a bit of a hodge podge of ideas, but I was told that Magnetic fields were $latex {H^1_A}&fg=000000$ spaces.  I'm not as of early 2012 familiar with Sobolev spaces but I thought this section was well written.  In differential geometry it is often necessary to consider <b>connections</b>, which are more complicated derivatives than $latex {\nabla}&fg=000000$. The simplest example is a connection on a 'U(1)-bundle' over $latex {\Rbb^n}&fg=000000$\cite{differentialmanifolds}. (Or for further explanations of the Geometry of the Aharanov-Bohm effect\cite{geometricphase2004}). This bundle is not too complicated,it merely means acting on complex valued functions f by $latex {(\nabla + iA(x))}&fg=000000$, with $latex {A(x):\Rbb^n \rightarrow \Rbb^n}&fg=000000$ being some pre-assigned, real vector field. The same operator occurs in quantum mechanics of particles in external magnetic fields (with n=3). The introduction of a magnetic field $latex {B: \Rbb^3 \To \Rbb^3}&fg=000000$ in quantum mechanics involes replacing $latex {\nabla}&fg=000000$ by $latex {\nabla + iA(x)}&fg=000000$ (in appropriate units). Here A is called a \newword{vector potential} and satisfies curl A = B. \paragraph{} In general A is not a bounded vector field, e.g., if B is a constant magnetic field (0,0,1), then a suitable vector potential A is given by A(x) = ($latex {x_2,0,0)}&fg=000000$. Unline in the differential geometric setting, A need not be smooth either, because we could add an arbitrary gradient to A, $latex {A \To A + \nabla \Xi}&fg=000000$, and still get the same magnetic field B. This is called \newword{gauge invariance}.\footnote{A phrase which strikes fear into the hearts of Grad Students everywhere!} The problem is that $latex {\Xi}&fg=000000$ (and hence A) could be a wild function - even if B is well behaved. \newline For these reasons we want to find a large class of A's afor which we can make (distributional)sense of $latex {(\nabla + iA(x))}&fg=000000$ and $latex {(\nabla + iA(x))^2}&fg=000000$ when action on a suitable calss of $latex {L^2(\Rbb^3)}&fg=000000$ functions. For general dimension n, the appropriate condition on A, which we assume henceforth, is <p align=center>$latex \displaystyle  A_j\in L^1_{loc}(\Rbb^n) \;for\;j=1,\cdots,n \ \ \ \ \ (6)&fg=000000$</p>
+ because of this condition the functions $latex {A_j f}&fg=000000$ are in $latex {L^1_{loc}(\Rbb^n)}&fg=000000$ for every $latex {f\in L^2_{loc}(\Rbb^n)}&fg=000000$. Therefore the expression \begin{equation*} (\nabla + iA)f \end{equation*} called the \newword{covariant derivative}(with respect to A) of f, is a distribution ofr every $latex {f\in L^2_{loc}(\Rbb^n)}&fg=000000$. 
+
+<p>
+
+<b>  1.3. Schrodinger Operators </b>
+
+<p>
+
+ Before we embark on thinking more about Elliptic operators. Let us recall a cryptic remark sometimes attributed to Barry Simon, that 'all Mathematics is Schrodinger operators'. So we need to define what this operator is. We start with a definition  Let $latex {V: \Rbb^n \rightarrow \Rbb}&fg=000000$ be a real-valued function. The <em>Schr&ouml;dinger operator</em> <b>H</b> on the Hilbert space $latex {L^2(\Rbb^n)}&fg=000000$ is given by the action <p align=center>$latex \displaystyle  \psi \Rightarrow -\nab^2\psi+V(x)\psi, \quad\psi\in L^2(\Rbb^n). &fg=000000$</p>
+
+<p>
+This can be obviously re-written as:
+<p>
+<p align=center>$latex \displaystyle  \psi \Rightarrow [-\nab^2 +V(x)]\psi, \quad\psi\in L^2(\Rbb^n), &fg=000000$</p>
+ where $latex {[-\nabla^2 +V(x)]}&fg=000000$ is the <em>Schr&ouml;dinger</em> operator, which is now called the Hamiltonian Operator, <b>H</b>.  For stationary quantum systems such as electrons in `stable' atoms the <em>Schr&ouml;dinger equation</em> takes the very simple form : <p align=center>$latex \displaystyle  \textbf{H} \psi=E \psi &fg=000000$</p>
+ , where $latex {E}&fg=000000$ stands for energy eigenvalues of the stationary quantum states. Thus, in quantum mechanics of systems with finite degrees of freedom that are `stationary', the Schr&ouml;dinger operator is used to calculate the (time-independent) energy states of a quantum system with potential energy $latex {V(x)}&fg=000000$. Schr&ouml;dinger called this operator the Hamilton operator, or the Hamiltonian, and the latter name is currently used in almost all of quantum physics publications, etc. The eigenvalues give the energy levels, and the wavefunctions are given by the eigenfunctions. In the more general, non-stationary, or `dynamic' case, the Schr&ouml;dinger equation takes the general form:
+<p>
+<p align=center>$latex \displaystyle  \textbf{H} \psi= (-i) \frac{\partial \psi}{\partial t} &fg=000000$</p>
+. 

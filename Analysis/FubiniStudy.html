@@ -1,0 +1,34 @@
+
+<p>
+\maketitle
+<p>
+\newpage
+<p>
+\tableofcontents
+<p>
+
+
+<p>
+
+<b>1. A Little Complex Analysis </b>
+
+<p>
+
+  We want to introduce the notion of a 'Fubini-Study' metric which is important in Complex Manifold Theory and Differential Geometry (and the associated theories such as Mathematical Physics). But first we need to introduce a little Complex Analysis. The source is of course Griffiths and Harris. Let M be a complex manifold, $latex {p \in M}&amp;fg=000000$ any point, and $latex {z=(z_{1},\cdots,z_{n})}&amp;fg=000000$ a holomorophic co-ordinate system around p. There are three different notions of a tangent space to M at p,which we now describe: 
+
+<ul> <li> $latex {T_{\mathbb{R},p}(M)}&amp;fg=000000$ is the usual <b>real tangent space</b> to M at p,when we consider M a real manifold of dimension 2n. $latex {T_{\mathbb{R},p}(M)}&amp;fg=000000$ can be realized as the space of $latex {\mathbb{R}-}&amp;fg=000000$linear derivations on the ring of real-valued $latex {C^{\infty}}&amp;fg=000000$-functions in a neighbourhood of p; if we write $latex {z_i = x_i + iy_i}&amp;fg=000000$, $latex {T_{\mathbb{R},p}(M) = \mathbb{R}(\frac{\partial}{\partial x_{i}}, \frac{\partial}{\partial y_i}}&amp;fg=000000$. <li> $latex {T_{\mathbb{C},p}(M) = T_{\mathbb{R},p}(M)\otimes_{\mathbb{R}} \mathbb{C}}&amp;fg=000000$ is called the <b>complexified tangent space</b> to M at p. It can be realized as the space of $latex {\mathbb{C} -}&amp;fg=000000$ linear derivations in the ring of complex valued $latex {C^{\infty}}&amp;fg=000000$-functions on M around p. We can write $latex {T_{\mathbb{C},p}(M) = \mathbb{C}{\frac{\partial}{\partial x_{i}},\frac{\partial}{\partial y_i}}}&amp;fg=000000$ 
+ =$latex {\mathbb{C}{\frac{\partial}{\partial z_{i}},\frac{\partial}{\partial \bar{z}_i}}}&amp;fg=000000$ <li> $latex {T'_p(M)= \mathbb{C}{\frac{\partial}{\partial z_{i}}}\subset T_{\mathbb{C}, p}(M)}&amp;fg=000000$ is called the <b>holomorphic tangent space</b> to M at p. It can be realized as the subspace of $latex {T_{\mathbb{C},p}(M)}&amp;fg=000000$ consisting of derivations that vanish on antiholomorphic functions (i.e. F such that T is holomorphic), and so is independent of the holomorphic co-ordinate system chosen. The subspace $latex {T''_p(M)= \mathbb{C}{\frac{\partial}{\partial \bar{z}_{i}}}}&amp;fg=000000$ is called the <b>antiholomorphic tangent space</b> to M at p; clearly $latex {T_{\mathbb{C},p}(M) = T'_p(M) \oplus T''_p(M)}&amp;fg=000000$ 
+</ul>
+
+ Now we consider some <b>Calculus on Complex Manifolds</b>. Let M be a complex manifold of dimension n. A <b>hermitian metric</b> on M is given by a positive definite hermitian inner product $latex {(,)_z: T'_z(M) \otimes T'_z(M) 
+
+
+\rightarrow \mathbb{C}}&amp;fg=000000$ on the holomorphic tangent space at z for each $latex {z \in M}&amp;fg=000000$, 
+depending smootly on z - that is, such that for local co-ordinates z on M the function 
+$latex {h_ij(z) = (\frac{\partial}{\partial z_i},\frac{\partial}{\partial z_j})_z}&amp;fg=000000$ are $latex {C^{\infty}}&amp;fg=000000$ 
+<p>Writing $latex {(,)_z}&amp;fg=000000$ in terms of the basis $latex {{dz_i \otimes d\bar{z}_j}}&amp;fg=000000$ for $latex {(T'_z(M) \otimes \bar{T'_z(M)}^{\textasteriskcentered} = T^{\textasteriskcentered\textquoteright}_z(M) \otimes T^{* \textquotedblright}_{z}(M)}&amp;fg=000000$, the hermitian metric is given by $latex {ds^{2} = \sum_{i,j} h_{ij}(z) dz_i \otimes d \bar{z}_j}&amp;fg=000000$ So let us describe the <b>Fubini-Study Metric</b> Let $latex {z_0,\cdots,z_n}&amp;fg=000000$ be co-ordinates on $latex {\mathbb{C}^{n+1}}&amp;fg=000000$ and denote by $latex {\pi:\mathbb{C}^{n+1} -{0} 
+ \rightarrow \mathbb{P}^n}&amp;fg=000000$ the standard projection map. Let $latex {U \subset \mathbb{P}^{n}}&amp;fg=000000$ be an open set and $latex {Z: U \rightarrow \mathbb{C}^{n-1} - {0}}&amp;fg=000000$ a lifting of U, i.e. a holomorphic map with $latex {\pi \circ z = id}&amp;fg=000000$; consider the differential form <br\>$latex {\omega = \dfrac{i}{2\pi}\partial \bar{\partial}log\|z\|^{2}}&amp;fg=000000$ If $latex {Z':U 
+\rightarrow \mathbb{C}^{n-1} - {0}}&amp;fg=000000$ is another lifting, then $latex {Z' = f.Z}&amp;fg=000000$ with f a nonzero holomorphic function, so that <br/> $latex {\dfrac{i}{2\pi}\partial \bar{\partial}log\|z\|^{2} = \frac{i}{2 \pi}\partial \bar{\partial} (log\|z\|^{2} + log f + log \tilde{f})}&amp;fg=000000$ 
+$latex {= \omega + \dfrac{i}{2\pi}(\partial \bar{\partial}log f - \bar{\partial} \partial log \tilde{f})}&amp;fg=000000$ = $latex {\omega}&amp;fg=000000$ Therefore $latex {\omega}&amp;fg=000000$is independent of the lifting chosen; since liftings always exist locally, $latex {\omega}&amp;fg=000000$ is a globally defined differential form in $latex {\mathbb{P}^{n}}&amp;fg=000000$. (By the sheaf properties of differential forms) Clearly $latex {\omega}&amp;fg=000000$ is of type (1,1). To see that $latex {\omega}&amp;fg=000000$ is positive, first note that the unitary group $latex {U(n+1)}&amp;fg=000000$ acts transitively on $latex {\mathbb{P}^{n}}&amp;fg=000000$ and leaves the form $latex {\omega}&amp;fg=000000$ positive everywhere if it is positive at one point. Now let $latex {{w_i = z_i/z_0}}&amp;fg=000000$ be co-oridnates on the open set $latex {U_{0} = (z_0 \neq 0)}&amp;fg=000000$in $latex {\mathbb{P}^{n}}&amp;fg=000000$ and use the lifting $latex {Z = (1,w_1,\cdots,w_n)}&amp;fg=000000$ on $latex {U_0}&amp;fg=000000$ ; we have (after some substitutions 
+<br/> $latex {\omega = \dfrac{i}{2 \pi} [\frac{\sum dw_i \wedge d\bar{w}_i}{1 + \sum w_i \bar{w}_i} - \frac{(\sum \bar{w}_i dw_i \wedge \sum w_i d\bar{w}_i)}{(1 + \sum w_i \bar{w}_i)^{2}}]}&amp;fg=000000$ At the point $latex {[1,0,\cdots,0]}&amp;fg=000000$, \\ $latex {\omega = \frac{i}{2\pi} \sum dw_i \wedge d \bar{w}_i &gt; 0}&amp;fg=000000$ Thus $latex {\omega}&amp;fg=000000$ defines a particular hermitian metric on the projective complex space called the <b>Fubini-Study metric</b>. That was the aim of the article!
+<p>

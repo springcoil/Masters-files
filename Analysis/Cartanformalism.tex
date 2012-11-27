@@ -1,0 +1,246 @@
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage[all]{xy}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, amsfonts, color, hyperref, textcomp}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{clm}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+%\newtheorem*{remu}{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+\newtheorem{recall}{Recall}
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nabla {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+\def \scal {\text{<\textperiodcentered,\textperiodcentered>}}
+\newcommand{\eee}{\ensuremath{e_{i_1}\wedge \cdots \wedge e_{i_p}}}
+\def \hodge{*}
+
+\def \C {\mathcal{C}} % for categories
+\def \D {\mathcal{D}}
+\def \S {\mathcal{S}}
+\def \P {\mathcal{P}}
+\def \U {\mathcal{U}}
+
+
+
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\mathbb{P}}
+\def\Qbb{\mathbb{Q}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+
+\def \eps {\varepsilon}
+
+
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\otimes}{\otimes}
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\Rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\def \hodge{*}
+\def \iso {\cong}
+\title{\bf Connections and the Cartan formalism}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\begin{quotation}
+ On a manifold it is necessary to use covariant differentation, curvature measures its noncommutativity. Its combination 
+as a characteristic form measures the nontriviality of the underlying bundle. This train of ideas is so simple, that their
+importance can not be exaggerated. - Shiing-shen Chern
+\end{quotation}
+
+For a smooth (for now, real) manifold M, we let $\mathcal{A}^{1}(M)$ denote smooth \Cbb-valued differential forms and \mathcal{A}^{1}A(M) denote
+smooth functions. Similarly for a complex bundle $E \to M$, we let E(M) denote (smooth, \Cbb-valued ) sections
+\subsection{Connections}
+Recall that a connection on a vector bundle E over a smooth manifold is a \Cbb-homomorphism 
+$$ \nabla:E(M) \rightarrow (\mathcal{A}^{1} \otimes E)(M)$$ 
+that maps global sections on M to global sections of $\mathcal{A}^{1} \otimes E$, which satisfies the Leibniz rule
+$ \nabla(fs) = (df)s + f \nabla s$   $f \in \mathcal{A}^{1}A(M)$  $s \in E(M)$
+This is essentially an way of differentiating sections of E, because for any vector field X on M, we can define 
+\begin{definition}
+The Covariant derivative w.r.t this connection of s in the direction of X
+ $$\nabla_X s$$. This satisfies
+\begin{enumerate}
+ \item $\nabla_fX(s) \;=\; f\nabla_X s$
+\item $\nabla_X(fs)\;=\;(Xf)_s\;+\;f\nabla_X s$
+\end{enumerate}
+
+\end{definition}
+In fact these two properties {\bf characterize} a connection.
+\\ We can describe a connection {\bf locally} in terms of frames.
+\begin{definition}
+ Recall that a {\bf frame} of an n-dimensional vector bundle E, over an open subset $U \subset M$, is a family of sections 
+$(e_1,\cdots e_n)\;\in\;E(U)$ that form a basis at each point; thus ${e_1,\cdots,e_n}$ forms a vector bundle isomorphism
+ between
+$E|_U$ and the trivial bundle. 
+\end{definition}
+Then $\nabla$ is {\bf determined} over U by the elements $\nabla_{e_1},\cdots \nabla_{e_n}\;\in\;(\mathcal{A}^{1} \otimes E)(U)$. For any 
+sections 
+s of $E(U)$ can be written as $s \; = \;\sum_i f_i e_i$ for the $f_i$ smooth functions, and consequently 
+$$\nabla s = \sum e_i(df_i)\;+\;\sum f_i \nabla e_i$$
+In other words, if we use the fram ${e_i}$ to identify each section of E(U) with the tuple 
+$f_i$ such that $s\;=\;\sum f_i e_i$ then $\nabla$ acts by applying d and multiplying by suitable matrix corresponding to the $\nabla e_i$.
+In view of this we make:
+\begin{definition}
+Given a frame $\mathfrak{F} = {e_1,\cdots,e_n}$ over U and a connection $\nabla$, we define the n-by-n matrix $\theta(\mathfrak{F})$ of 
+1-forms via
+$$\nabla \mathfrak{F} = \theta(\mathfrak{F})\mathfrak{F}$$
+In other words, $\nabla e_i\;=\;\sum_{j}\theta(\mathfrak{F})_{ij} e_j$ for each j
+\end{definition}
+Note that the $\theta$ itself makes no reference to the bundle: it is simply a matrix of 1-forms.
+Given a frame $\mathfrak{F}$, and given $g:U \rightarrow GL_n(\Cbb)$, we define a new frame $g\mathfrak{F}$ by multiplying on the left.
+We would like to determine how a connection {\bf transforms} with respect to a change of frame, so we can think of a 
+connection
+in a different way. Namely we have:
+$$\nabla (g \mathfrak{F})\;=\;(dg)\mathfrak{F} \;+\;g\nabla \mathfrak{F}\;=\;(dg)\mathfrak{F}\;+\;g\theta(\mathfrak{F})\mathfrak{F}$$
+where df is considered as a matrix of 1-forms. As a result we get the {\bf transformation law}
+\begin{equation} \label{transformation law}
+ \theta(g\mathfrak{F}) = (dg)g^{-1} + g\theta(\mathfrak{F})g^{-1},\;g:U\to\;GL_n(\Cbb)
+\end{equation}
+Conversely, if we have for each local fram $\mathfrak{F}$ of a vector bundle $E\to M$ a matrix $\theta(\mathfrak{F})$ of 1-forms as above,
+which satisfy the transformation law \ref{transformation law} as above,then we get a connection on E.
+\begin{prop}
+ Any vector bundle $E\to M$ admits a connection
+\end{prop}
+\begin{proof}
+ It is easy to see that a convex combination of connections is a connection. Namely in each coordinate patch U over which E 
+is
+ trivial
+with a fixed frame, we choose the matrix $\theta$ arbitrarily and get some connection $\nabla'_U$ on $E|_U$. Let these 
+various 
+$U'_s$ form an open cover $\mathfrak{A}$.
+   Then we can find a partition of unity $\phi_U$, $U\in\mathfrak{A}$ subordinate to $\mathfrak{A}$, and we can define our
+ global
+connection va 
+$$\nabla \;=\;\sum_U \phi_U \nabla'_U $$
+\end{proof}
+
+\subsection{Curvature}
+We want to now describe the {\bf curvature} of a connection. A connection is a means of differentiating sections; 
+however, it 
+may not satisfy the standard results for functions, that mixed partials are equal. The curvature will be the measure of how
+ much
+that fails. Let M be a smooth manifold, $E\to M$ a smooth complex vector bundle. Given a connection $\nabla$ on E 
+,the curvature is going to be a global section of $\mathcal{A}^{1}A^{2}\otimes\hom(E,E)$: in other words, the global differential
+2-forms with coefficients in the vector bundle $\hom(E,E)$
+
+\begin{prop}
+ Let s be a section of E, and X,Y vector fields.
+The map:
+$$s,X,Y \mapsto R(X,Y,s)=(\nabla_Y \nabla_X - \nabla_X \nabla_Y - \nabla_{[X,Y]})s$$
+is a bundle map $E \to E$, and is $\mathcal{A}^{1}A(M)$-linear in X,Y
+\end{prop}
+
+\begin{proof}
+ Calculation typically done to define the Riemannian curvature tensor in the case of the tangent bundle
+\end{proof}
+Since the quantity $R(X,Y,s)$ is $\mathcal{A}^{1}A(M)$-linear in all these quantities (X,Y,s),and clearly alternating in X,Y, we 
+can think of it as a global section of the bundle $\mathcal{A}^{1}A^{2}\otimes \hom(E,E)$. Here recall that $\mathcal{A}^{1}A^{2}$ is the
+bundle of 2-forms.
+\begin{definition}
+ The above elements of $\mathcal{A}^{1}A^{2}\otimes \hom(E,E)(M)$ is called the \textbf{curvature} of the connection $\nabla$ and is 
+denoted by $\Theta$.
+\end{definition}
+
+We now wish to think of the curvature in another manner. To do this, we start by extending the connection $\nabla$ to maps 
+$\nabla:(E \otimes \mathcal{A}^{1}A^p)(M)\to (E\otimes \mathcal{A}^{1}A^{p+1})(M)$. The requirement is that the Leibnitz rule holds: that is,
+\begin{equation}\label{Leibnitz}
+\nabla (\omega s) = (d \omega)s + (-1)^p \omega \wedge \nabla s,
+\end{equation}
+whenever $\omega$ is a p-form and s a global section. We can this locally and glue them.
+Thus: 
+\begin{prop}
+ One can extend $\nabla$ to map s 
+$$\nabla: (E \otimes \mathcal{A}^{1}A^p)(M)\to (E\otimes \mathcal{A}^{1}A^{p+1})(M) $$ satisfying \ref{Leibnitz}
+\end{prop}
+Given such an extension, we can consider the map
+$$\nabla^2:E(M) \to (E \otimes \mathcal{A}^{1}A^2(M)) $$.
+This is $\mathcal{A}^{1}A(M)$-linear. Indeed we can check this by computation
+\begin{ex}
+ $$\nabla^2(fs) = \nabla(\nabla(fs))
+\\ = \nabla(dfs + f\nabla s)
+\\ = d^2 fs +(-1)df \nabla s + df(\nabla s) +f \nabla^{2} s
+\\ = f\nabla^2 s$$
+\end{ex}
+We now want to connect this $\mathcal{A}^{1}A(M)$- linear map with the earlier curvature tensor
+\begin{prop}
+ The vector bundle map $\nabla^2$ is equal to the curvature tensor $\Theta$
+\end{prop}
+\begin{proof}
+ We can work in local coordinates, and assume that X,Y are the standard commuting vector fields $\partial_i$ ,$\partial_j$.
+We want to show that, given a section s, we have 
+\\$$\nabla^2(s)(\partial_i , \partial_j) = (\nabla_{\partial_i} \nabla_{\partial_i} - \nabla_{\partial_j}\nabla_{\partial_i})s 
+\in E(M)$$
+To do this we should check how $\nabla$ was defined. Namely we have, by definition 
+$\nabla s = \sum_i dx_i \nabla_{\partial_i} s$
+and consequently 
+$$\nabla^2 s = \sum_{ij} dx_j \nabla_{\partial_j}(dx_i \nabla_{\partial_i}s)$$
+This becomes, by the sign rules 
+$\sum_{i\lt j}(\nabla_{\partial_j \nabla_{\partial_i} -  \nabla_{\partial_i} \nabla_{\partial_j}}s dx_i \wedge dx_j$.
+It is easy to see that this, evaluated on on $(\partial_i,\partial_j)$, gives the desired quantity.
+It follows that $\nabla^2$ is equal to the curvature tensor $\Theta$
+\end{proof}
+As a result, we may calculate {\bf curvature} in a frame. Let $\mathfrak{F} = {e_1,\cdots,e_n}$ be a frame and let $\theta(\mathfrak{F})$
+be the connection matrix. Then we can obtain an n-by-n {\bf curvature matrix} $\Theta(\mathfrak{F})$ of 2-forms such that
+\\$$ \Theta(\mathfrak{F}) = \nabla^2(\mathfrak{F})$$
+The follow result enables us to compute $\Theta(\mathfrak{F})$.
+\begin{prop}[Cartan]
+\begin{equation}\Theta(\mathfrak{F})=d\theta(\mathfrak{F}) - \theta(\mathfrak{F})\wedge \theta(\mathfrak{F})\end{equation}
+Note that $\theta(\mathfrak{F}) \wedge \theta(\mathfrak{F})$ is not zero in general! The reason is that one is working with matrices of 1-forms,
+not just plain 1-forms. The wedge product is a matrix product in a sense.
+\end{prop}
+\begin{proof}
+ Indeed, we need to determine how $\nabla^2$ acts on the fram ${e_i}.$ Namely with an abuse of notation:
+$$\nabla^2(\mathfrak{F})=\nabla(\nabla \mathfrak{F}) = \nabla (\theta \mathfrak{F})(\mathfrak{F}) = d \theta(\mathfrak{F})\mathfrak{F} - \theta(\mathfrak{F}) \wedge (\theta(\mathfrak{F})\mathfrak{F})$$
+We have used this formula that describes how $\nabla$ acts on a product with a form. As a result the proof holds.\end{proof}
+Finally, we shall need an expression for $d \Theta$. We state this in terms of a local frame.
+\begin{prop}[Bianchi identity]
+ With respect to a frame $\mathfrak{F}$
+$d \Theta(\mathfrak{F}) = [\theta(\mathfrak{F}),\Theta(\mathfrak{F})]$
+
+\end{prop}
+Here the right side consists of matrices, so we talk about the commutator. We shall use this identity at a crucial point in showing
+that the Chern-Weil homomorphism is even well-defined.
+\begin{proof}
+ This is a simple condition. For, by Cartan's equations,
+$$d\Theta(\mathfrak{F}) = d(d\theta(\mathfrak{F})- \theta(\mathfrak{F}) \wedge \theta(\mathfrak{F})$$
+= $$-d\theta(\mathfrak{F})\wedge \theta(\mathfrak{F}) + \theta(\mathfrak{F}) \wedge d\theta(\mathfrak{F})$$
+Similarly,
+\\ $$[\theta(\mathfrak{F}),\Theta(\mathfrak{F})]=[\theta(\mathfrak{F}),d\theta(\mathfrak{F})+\theta(\mathfrak{F})\wedge \theta (\mathfrak{F}) \wedge \theta (\mathfrak{F})]$$
+\\ $[\theta(\mathfrak{F}),d\theta (\mathfrak{F})]$ because $[\theta(\mathfrak{F}),\theta(\mathfrak{F})\wedge \theta(\mathfrak{F})] =0$
+\end{proof}

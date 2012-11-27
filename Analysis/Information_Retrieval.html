@@ -1,0 +1,37 @@
+
+<p>
+\maketitle
+<p>
+
+
+<p>
+
+<b>1. Textual features </b>
+
+<p>
+
+ I'd like to introduce the concepts of how <b>features</b> are extracted, and we shall consider these proxies of actual meanings. One classic representation we can use is <b>bag-of-words</b> (BoW). Let us define this representation, this means we list all of the distinct words in the document together with how often each one appears. This is easy to calculate from the text. <b>Vectors</b> One way we could try to code up the bag-of-words is to use vectors. Let each component of the vector correspond to a different word in the total <b>lexicon</b> of our document collection, in a fixed, standardised order. The value of the component would be the number of times the word appears, possibly including zero. We use this vector bag-of-words representation of documents for two big reasons: 
+
+<ul> <li> There is a huge pre-existing technology for vectors: people have worked out, in excruciating detail, how to compare them, compose them, simplify them, etc. Why not exploit that, rather than coming up with stuff from scratch? <li> In practice, it's proved to work pretty well. 
+</ul>
+
+ We can store data from a corpus in the form of a matrix. Each row corresponds to a distinct <b>case</b> (or instance <b>instance</b>, <b>unit, subject</b>,...) - here, a document - and each column to a distinct feature. Conventionally, the number of cases is n and the number of features is p. It is no coincidence that this is the same format as the data matrix <b>X</b> in linear regression. 
+
+<p>
+
+<b>2. Measuring Similarity </b>
+
+<p>
+
+ Right now, we are interested in saying which documents are similar to each other because we want to do a search by content. But measuring <b>similarity</b> - or equivalently measuring <b>dissimilarity</b> or <b>distance</b> - is fundamental to data mining. Most of what we will do will rely on having a sensible way of saying how similar to each other different objects are, or how close they are in some geometric setting. Getting the right measure of closeness will have a huge impact on our results. \paragraph{} This is where representing the data as vectors comes in so handy. We already know a nice way of saying how far apart two vectors are, the ordinary or <b>Euclidean distance</b>, which we can calculate with the Pythagorean formula: <p align=center>$latex \displaystyle \|\bar{x} - \bar{y}\| = \sqrt{\sum_{i=1}^{p}(x_i - y_i)^2}&fg=000000$</p>
+ where $latex {x_i}&fg=000000$, $latex {y_i}&fg=000000$ are the $latex {i^{th}}&fg=000000$ components of $latex {\bar{x}}&fg=000000$ and $latex {\bar{y}}&fg=000000$. Remember that for bag-of-words vectors each distinct word - each entry in the lexicon - is a component or a fecture. We can also use our Linear Algebra skills to calculate the <b>Euclidean norm</b> or <b>Euclidean distance</b> . Of any vector this is $latex {\|\bar{x}\| = \sqrt{\sum_{i=1}^{p}x^{2}_{i}}}&fg=000000$ so the distance between two vectors is the norm of their distance $latex {\bar{x} - \bar{y}}&fg=000000$. Equivalently, the norm of a vector is the distance from it to the origin, $latex {\bar{0}}&fg=000000$ \paragraph{} Obviously, one can just look up a topology textbook and remind oneself of other metrics such as the <b>taxicab</b> metric. 
+
+<p>
+
+<b>  2.1. Normalisation </b>
+
+<p>
+
+ Just looking at the Euclidean distances between document vectors doesn't work, at least if the documents are at all different in size. Instead, we need to <b>normalise</b> by document size, so that we can fairly compare short texts with long ones. There are (at least) two ways of doing this. \newline <b>Document length normalisation</b> Divide the word counts by the total number of words in the document. In symbols, <p align=center>$latex \displaystyle  \bar{x} \Rightarrow \frac{\bar{x}}{\sum_{i=1}^{p} x_{i}}\ \ \ \ \ (1)&fg=000000$</p>
+ Notice that all the entries in the normalised vector are non-negative fractions, which sum to 1. The i-th component is thus the probability that if we pick a word out of the bag at random, it's the i-th entry in the lexicon. \newline <b>Cosine 'distance'</b> is actually a similarity measure, not a distance`: <p align=center>$latex \displaystyle  d_{cos} \bar{x}, \bar{y} = \frac{\sum_{i} x_{i}y_{i}}{\|\bar{x}\|\|\bar{y}\|} \ \ \ \ \ (2)&fg=000000$</p>
+ It's the cosine of the angle between the vectors $latex {\bar{x}}&fg=000000$ and $latex {\bar{y}}&fg=000000$. 

@@ -67,3 +67,34 @@ because of this condition the functions $A_j f$ are in $L^1_{loc}(\Rbb^n)$ for e
  (\nabla + iA)f
 \end{equation*}
 called the \newword{covariant derivative}(with respect to A) of f, is a distribution ofr every $f\in L^2_{loc}(\Rbb^n)$.
+\subsection{Schrodinger Operators}
+Before we embark on thinking more about Elliptic operators. Let us recall a cryptic remark sometimes attributed to Barry
+Simon, that 'all Mathematics is Schrodinger operators'. So we need to define what this operator is.
+We start with a definition
+\begin{dfn}
+Let $V: \Rbb^n \to \Rbb$ be a real-valued function.
+The \emph{Schr\"odinger operator} \textbf{H} on the Hilbert space $L^2(\Rbb^n)$ is given by the action
+\[
+\psi \Rightarrow -\nab^2\psi+V(x)\psi, \quad\psi\in L^2(\Rbb^n).
+\]
+
+This can be obviously re-written as:
+
+\[
+\psi \Rightarrow [-\nab^2 +V(x)]\psi, \quad\psi\in L^2(\Rbb^n),
+\] where $[-\nabla^2 +V(x)]$ is the {\em Schr\"odinger} operator, which is now
+called the Hamiltonian Operator, \textbf{H}.
+\end{dfn}
+For stationary quantum systems such as electrons in `stable' atoms the {\em Schr\"odinger equation}
+takes the very simple form :
+\[
+\textbf{H} \psi=E \psi
+\] , where $E$ stands for energy eigenvalues of the stationary quantum states. Thus, in quantum mechanics of systems with finite degrees of freedom that are `stationary', the Schr\"odinger operator is used to calculate the (time-independent) energy states of a quantum system with potential energy $V(x)$. 
+Schr\"odinger called this operator the Hamilton operator, or the
+Hamiltonian, and the latter name is currently used in almost all of quantum physics publications, etc. 
+The eigenvalues give the energy levels, and the wavefunctions are given by the eigenfunctions.
+In the more general, non-stationary, or `dynamic' case, the Schr\"odinger equation takes the general form:
+
+\[
+\textbf{H} \psi= (-i) \frac{\partial \psi}{\partial t}
+\]. 

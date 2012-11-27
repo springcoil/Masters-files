@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, textcomp}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand\demo{$\triangleleft$}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+%opening
+\title{Fundamental Concepts: Transformation, Rejection, and Reweighting}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Fundamental concepts: Sampling}
+A fundamental concept in using Monte Carlo methods is sampling.
+\subsection{Transformation methods}
+One of the simplest methods of generating random samples from a distribution with cumulative distribution function 
+(c.d.f.) F(x) = $\mathbb{P}(X \leq x)$ is based on the inverse of the c.d.f.
+   The c.d.f. is an increasing function, however it is not necessarily continuous. Thus
+   we define the \textit{generalised inverse} $F^{-}(u)\;=\; \inf\left\lbrace x\;:\;F(x) \geq u\right\rbrace$
+
+   \begin{theorem}[Inversion Method] Let U $\simeq$ $\bigcup[0,1]$ and F be a c.d.f. Then $F^{-}(U)$ has the c.d.f. F.
+    \begin{proof}
+     It is easy to see (by drawing a diagram say) that $F^{-}(u) \;\leq\;x$ is equivalent to $u \; \leq\; F(x).$
+     Thus for $U\;\simeq\;\bigcup[0,1]$
+   \newline
+   \begin{displaymath}
+    \mathbb{P}(F^{-}(U) \leq x)\;=\;\mathbb{P}(U\leq F(x))\;=\;F(x),
+   \end{displaymath}
+thus F is the c.d.f. of X = $F^{-}(U).$
+
+    \end{proof}
+
+   \end{theorem}
+Let us consider a classical example.
+\begin{example}[Exponential Distribution].\label{3.1}
+The exponential distribution with $\lambda$ > 0 has the c.d.f. $F_{\lambda}(x)= 1 - \exp(-\lambda x)$ for $x$ $\geq$ 0.
+Thus $F^{-}_{\lambda}(x)$ = $F^{-1}_{\lambda}(u)$ = $-log(1 - u)/ \lambda$. Thus we can generate random samples from 
+$Expo(\lambda)$ by applying the transformation $-log(1-U)/ \lambda$ to a uniform $\bigcup[0,1]$ random variable U. As
+U and 1-U, of course have the same distribution we can use $-log(U)/ \lambda$ as well.       \quad\quad$\triangleleft$
+ 
+\end{example}
+  The Inversion Method is a very efficient tool for generating random numbers. However very few distributions 
+  possess a c.d.f. whose (generalised) inverse can be evaluated efficiently. Take the example of the Gaussian distribution
+  , whose c.d.f. is not even available in closed form. 
+     Nevertheless there are other examples of transformations. An example is the Box-Muller method for
+     generating Gaussian random variables.
+  \begin{example}[Box-Muller Method for Sampling from Gaussians]
+   When sampling from the normal distribution, one faces the problem that neither the c.d.f. $\phi(\cdot),$ nor
+   its inverse has a closed-form expression. Thus we cannnot use the inversion method. 
+ It turns out however, that if we consider a pair $X_1,X_2$ $\stackrel{i.i.d.}\sim$ $N(0,1)$, as a point $(X_1,X_2)$
+  in the plane, then its polar coordinates $(R,\theta)$ are again independent and have distributions we can easily
+  sample from: $\bigcup[0,2\pi]$ and $R^{2} \sim Expo(1/2)$. Then the joint density of $(\theta, r^{2})$
+  is 
+ \begin{equation*}
+  f_{(\theta,r^{2})}(\theta, r^{2}) = \frac{1}{2 \pi} 1_{[0,2\pi]}(\theta) \cdot 
+  \frac{1}{2} \exp \left(- \frac{1}{2}r^2\right) \cdot 1_{[0,2\pi]}(\theta)
+ \end{equation*}
+To obtain the probability density function of 
+\begin{equation*}
+ X_1 = \sqrt{R^{2}}\cdot \cos(\theta) \;\;\;\;\; X_2 = \sqrt{R^{2}}\cdot \sin(\theta)
+\end{equation*}
+we need to use the transformaiton of densities formula.
+\begin{equation*}
+ f_{(X_1,X_2)}(x_1,x_2)=f_{(\theta,r^{2})}(\theta(x_1,x_2),r^{2}(x_1,x_2))\cdot \begin{vmatrix}
+\dfrac{\partial x_1}{\partial \theta} & \dfrac{\partial x_1}{\partial r^{2}} \\[3pt]
+\dfrac{\partial x_2}{\partial \theta} & \dfrac{\partial x_2}{\partial r^{2}} \\[3pt]
+
+\end{vmatrix}^{-1} = \frac{1}{4\pi}\exp\left(-\frac{1}{2}(x_1^{2} + x_2^{2})^{2}\right)\cdot 2
+\end{equation*}
+\begin{flushright}
+\begin{displaymath}
+ = \left(\frac{1}{\sqrt{2\pi}}\exp \left(-\frac{1}{2}x^{2}_{1}\right)\right)\cdot \left(\frac{1}{\sqrt{2\pi}}\exp \left(-\frac{1}{2}x^{2}_{2}\right)\right)
+\end{displaymath}\end{flushright}
+as 
+\begin{displaymath}
+ \begin{vmatrix}
+\dfrac{\partial x_1}{\partial \theta} & \dfrac{\partial x_1}{\partial r^{2}} \\[3pt]
+\dfrac{\partial x_2}{\partial \theta} & \dfrac{\partial x_2}{\partial r^{2}} \\[3pt]
+
+\end{vmatrix} = \begin{vmatrix}
+-r\sin(\theta) & \dfrac{\cos(\theta)}{2r} \\[3pt]
+r\cos(\theta) & \dfrac{\sin (\theta)}{2r} \\[3pt]
+
+\end{vmatrix} =  \begin{vmatrix}
+-\dfrac{r\sin(\theta)}{2r} & - \dfrac{r\cos(\theta)^{2}}{2r}
+
+\end{vmatrix}
+= \frac{1}{2}
+\end{displaymath}
+
+
+Thus $X_1,X_2$ $\sim$ $N(0,1).$ As their joint density factorises, $X_1$ and $X_2$ are independent, as required. 
+   Thus we only need to generate $\theta$ $\sim$ $\bigcup[0,2\pi]$, and $R^{2} \sim Expo(1/2)$.
+   Using $U_1$,$U_2$ $\stackrel{i.i.d.}{\sim} \bigcup[0,1]$ and example \ref{3.1} we can generate R = $\sqrt{R^{2}}$
+   and $\theta$ by 
+   \begin{equation*}
+    R = \sqrt{-2\log(U_1)},\;\;\;\;\; \theta = 2\pi U_2,
+   \end{equation*}
+and thus
+\begin{equation*}
+ X_1 = \sqrt{-2 \log (U_1)}\cdot \cos(2\pi U_2), \;\; X_2 = \sqrt{-2\log(U_1}\cdot \sin(2\pi U_2)
+\end{equation*}
+are two independent realisations from a $N(0,1)$ distribution  \quad\quad$\triangleleft$              \end{example}
+
+ The idea of transformation methods like the Inversion Method was to generate random samples
+ from a distribution other than the target distribution and to transform them such that they come
+ from the desired target distribution. In many situatioons, we cannot find such a transformation in closed form.
+ In these cases we have to find other ways of correcting for the fact that we sample from the 'wrong' distribution.
+ The next two sections present two such ideas: rejection sampling and importance sampling.
+ \subsection{Rejection sampling}
+ The basic idea of rejection sampling is to sample from an \textit{instrumental distribution} and reject samples
+ that are 'unlikely' under the target distribution.
+    Assume that we want to sample from a target distribution whose density f is known to us. The simple idea
+    underlying rejection sampling (and other Monte Carlo algorithms) is the rather trivial identity
+    \begin{equation*}
+     f(x) = \int^{f(x)}_{0} 1 du = \int^1_0 1 _{0\lt u \lt f(x)} du
+    \end{equation*}
+Thus f(x) can be interpreted as the marginal density of a uniform distribution on the area under the density f(x)
+\begin{center}
+\begin{equation*}
+ \left\lbrace (x,u):0\leq u\leq f(x)\right\rbrace
+\end{equation*}\end{center}
+
+ \subsection{Importance sampling}
+\end{document}

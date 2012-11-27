@@ -1,0 +1,438 @@
+
+\section{Introduction}
+Statistics is a science which studies methods of inference, from observed data, concerning the 
+probabilistic structure
+underlying such data. The class of all the possible probability distributions is usually too wide to consider all its
+elements as 
+
+This a slightly misleading name for applying differential geometry to families of probability distributions,
+and so to statistical models. Information does however play two roles in it: Kullback-Leibler information, 
+or relative entropy, features as a measure of divergence (not quite a metric, because it's asymmetric), 
+and Fisher information takes the role of curvature. One very nice thing about information geometry 
+is that it gives us very strong tools for proving results about statistical models, simply by 
+considering them as well-behaved geometrical objects. Thus, for instance, it's basically a tautology to say
+that a manifold is not changing much in the vicinity of points of low curvature, and changing greatly near 
+points of high curvature. Stated more precisely, and then translated back into probabilistic language,
+this becomes the Cramer-Rao inequality, that the variance of a parameter estimator is at least the reciprocal 
+of the Fisher information. As someone who likes differential geometry, and now is 
+interested in statistics, I find this very pleasing.
+
+As a physicist, I have always been somewhat bothered by the way statisticians seem to accept 
+particular parametrizations of their models as obvious and natural, and build those parameterization 
+into their procedures. In linear regression, for instance, it's reasonably common for them to want to find models with only a few non-zero coefficients. This makes my thumbs prick, because it seems to me obvious that if I regressed on arbitrary linear combinations of my covariates, I have exactly the same information (provided the transformation is invertible), and so I'm really looking at exactly the same model --- but in general I'm not going to have a small number of non-zero coefficients any more. In other words, I want to be able to do coordinate-free statistics. Since differential geometry lets me do coordinate-free physics, information geometry seems like an appealing way to do this. There are various information-geometric model selection criteria, which I want to know more about; I suspect, based purely on 
+this disciplinary prejudice, that they will out-perform coordinate-dependent criteria.
+
+I should also mention that statistical physics, while it does no actual statistics, 
+is also very much concerned
+with probability distributions. Sun-Ichi Amari, who is the leader of a large and impressive 
+Japanese school of information-geometers, has a nice result
+(in, e.g., his "Hierarchy of Probability Distributions" paper) 
+showing that maximum entropy distributions are, exactly, 
+the ones with minimal interaction between their variables --- 
+the ones which approach most closely to independence.
+        Only local properties of a statistical model are responsible for the asymptotic theory of statistical
+ inference. Local properties are represented by the geometry of the tangent spaces of the manifold. The tangent 
+ space has a natural Riemannian metric given by the \textit{Fisher information matrix} in the regular case.
+ It represents on a local property of the model, because the tangent space is nothing but local linearization of the 
+ model manifold. In order to obtain larger-scale properties, one needs to define mutual relations of the two 
+ different tangent spaces at two neighboring points in the model. This can be done by defining a one-to-one affine
+ correspondence between two tangent spaces, which is called an affine connection in differential geometry. 
+ By an affine connection, one can consider local properties around each point beyond the linear approximation.
+ The curvature of a statistical model can be otained by the use of this connection.
+ It is clear that such a differential-geometrical concept provides a tool convenient for studying higher-order 
+ asymptotic properties of inference. However, by connecting local tangent spaces further, one can obtain global
+ relations. Hence, the validity of the differential-geometrical method is not limited within the framework of
+ asymptotic theory. 
+        It was Rao (1945) who first pointed out the importance of the differential-geometric approach. He introduced 
+        the Riemannian metric by using the Fisher information matrix.
+\section{Geometrical Structure of Statistical Models}
+\subsection{Metric and a-connection}
+    Let S = $(p(x,\theta))$ be a statistical model consisting of probability density functions $p(x,\theta)$ of random 
+    variable $x \in X$ with respect to a measure $\mathbb{P}$ on X such that every distribution is uniquely 
+    parameterized
+    by an n-dimensional vector parameter $\theta = (\theta^{i}) = (\theta^1,\cdots,\theta^n)$. Since the set 
+    $\left\lbrace p(x)\right\rbrace$ of all the density functions on X is a subset of the $L_{1}$ space of functions in x, 
+    S is considered
+    to be a subset of the $L_{1}$ space. A statistical model S is said to be geometrically regular, when it satisfied
+    the following regularity conditions, and S is regarded as an n-dimensional manifold with a
+    coordinate system $\theta$.
+    \begin{enumerate}
+     \item The domain $\Theta$ of the parameter $\theta$ is homeomorphic to an n-dimensional Euclidean space 
+     $\mathbb{R}^{n}$.
+     \item The topology of S induced from $\mathbb{R}^{n}$ is compatible with the relative topology of S in 
+     the $L_{1}$ space.
+     \item The support of p(x,$\theta$) is common for all $\theta \in \Theta$, so that $p(x,\theta)$ are mutually absolutely
+     continuous.
+     \item Every density function $p(x,\theta)$ is a smooth function in $\theta$ uniformly in x, and the partial derivative
+     $\dfrac{\partial}{\partial \theta^{i}}$ and integration $\log p(x, \theta)$ with respect to the measure P(x) are
+     always commutative.
+     \item The moments of the score function $\dfrac{\partial}{\partial \theta^{i}}\log p(x,\theta)$ exist up to the third
+     order and are smooth in $\theta$.
+     \item The Fisher information matrix is positive definite. 
+    \end{enumerate}
+Let us denote by $\partial_{i}  = \dfrac{\partial}{\partial \theta^{i}}$ the tangent vector $e_{i}$ of the i-th 
+coordiate curve $\theta^{i}$ (Fig. 1) at point $\theta$/ Then, n such tangent vectors $e_{i}$ = $\partial_{i}$, 
+i = 1, $\cdots$, n, span the tangent space $T_{\theta}$ at point $\theta$ of the manifold S. Any tangent vector 
+$A \in T_{\theta}$ is a linear combination of the basis vectors $\partial_{i}$,
+\begin{equation*}
+ A = A^{i} \partial_{i},
+\end{equation*}
+where $A^{i}$ are the components of vector A and Einstein's summation convention is assumed throughout the paper.
+  The tangent space $T_\theta$ is a linearized version of a small neighbourhood at $\theta$ of S, and an infinitesimal
+  vector $d\theta = d\theta^{i}\partial_{i}$ denotes the vector connecting two neighbouring points $\theta$ and 
+  $\theta + d \theta$ or two neighbouring distributions $p(x,\theta)$ and $p(x, \theta + d \theta)$.
+    \\\;\; Let us introduce a metric in the tangent space $T_{\theta}$. It can be done by defining the inner 
+   product $g_{ij}(\theta)= \langle \partial_i, \partial_j \rangle$ of two basis vectors $\partial_i$ and $\partial_j$
+  at $\theta$. To this end, we represent a vector $\partial_i \in T_\theta$ by a function $\partial_i l(x,\theta)$ in x,
+  where x(l,$\theta$) = $\log p(x,\theta)$ and $\partial_i$ (in $\partial_i l$) is the partial derivative
+  $\dfrac{\partial}{\partial \theta ^{i}}$. Then, it is natural to define the inner product by 
+  \begin{equation}
+   g_ij(\theta) = \langle \partial_i, \partial_j \rangle = E_{\theta} [\partial_i l(x,\theta)\partial_j l(x,\theta)],
+  \end{equation}
+where $E_{\theta}$ denotes the expectation with respect to $p(x,\theta)$. This $g_{ij}$ is the Fisher information matrix.
+Two vectors A and B are orthogonal when $\langle A, B \rangle$ = 0. 
+    It is sometimes necessary to companre a vector $A \in T_{\theta}$ of the tangent space $T_{\theta}$ at one 
+    point $\theta$ with a vector $B \in T_{\theta'}$, belonging to the tangent space $T_{\theta '}$ at another 
+    point $\theta '$.
+This can be done by comparing the basis vectors $\partial_i$ at $T_\theta$ with the basis vectors $\partial_{i}'$ at
+$T_{\theta '}$. Since $T_{\theta}$ and $T_{\theta '}$, are two different vector spaces, the two vectors $\partial_{i}$
+and $\partial_{i}'$ are not directly comparable, and we need some way of identifying $T_{\theta}$ and $T_{\theta '}$
+in order to compare the vectors in them. This can be accomplished by introducing an affine connection,
+which maps a tangent space $T_{\theta + d \theta}$ at $\theta + d\theta$ to the tangent space $T_{\theta}$ at 
+$\theta$. The mappting should reduce to the identity map as $d\theta \rightarrow 0$. Let $m\left(\partial '_{j}\right)$ 
+be the image of $\partial '_{j} \in T_{\theta + d \theta}$ mapped to $T_{\theta}$. It is slightly 
+different from $\partial_{j} \in T_{\theta}$. The vector
+\begin{equation*}
+ \nabla_{\partial_{i}} \partial_{j} = \lim_{d \theta \rightarrow 0} \dfrac{d}{d \theta^{i}}\left\lbrace m(\partial '_{j}) - \partial_{j}\right\rbrace
+\end{equation*}
+represents the rate at which the j-th basis vector $\partial_{j} \in T_{\theta}$ 'intrinsically' changes as the point $\theta$
+moves from $\theta$ to $\theta + d\theta$ in the direction $\partial_{i}$.
+We call $\nabla_{\partial_{i}}\partial_j$ the covariant derivative of the basis vector $\partial_j$ in the direction
+$\partial_i$. Since it is a vector of $T_{\theta}$, its components are given by 
+\begin{equation}
+ \Gamma_{ijk} = \langle \nabla_{\partial_{i}}\partial_j , \partial_{k}\rangle
+\end{equation}
+and $\nabla_{\partial_{i}}\partial_j = \Gamma_{ij}^{k} \partial_k$
+where $\Gamma_{ijk} = \Gamma_{ij}^{m}g_{mk}$. We call $\Gamma_{ijk}$ the components of the affine connection. An affine
+connection is specified by defining $\nabla_{\partial_{i}}\partial_j$ or $\Gamma_{ijk}$.
+   Let A($\theta$) be a vector field, which assigns to every point $\theta \in S$ a 
+   vector $A(\theta) = A^{i}(\theta)\partial_i \in T_{\theta}$. The intrinsic change of the vector $A(\theta)$
+ as the position $\theta$ moves is now given by the covariant derivative in the direction $\partial_i$ of 
+ $A(\theta)= A^{j}(\theta)\partial_j$, defined by 
+ \begin{equation}
+  \nabla_{\partial_{i}}A = (\partial_{i} A^{j})\partial_j + A^{j}(\nabla_{\partial_{i}} \partial_j) = (\partial_i A^{j}
+  + \Gamma^{j}_{ik} A^k )\partial_j
+ \end{equation}
+in which the change in the basis vectors as well as that in the components $A^i(\theta)$ is taken into account. 
+The covariant derivative in the direction B = $B^i \partial_i$ is given by 
+\begin{equation*}
+ \nabla_B A = B^i_{\nabla_{\partial_{i}}} A
+\end{equation*}
+  \paragraph{} We have defined the covariant derivative by the use fo the basis vectors $\partial_i$ which are
+  associated with the coordinate system or the parameterization $\theta$. However, the covariant derivative 
+  $\nabla_B A$ is invariant under any parameterization, given the same result in any coordinate system.
+  This yields a transformation law for the components of a connection $\Gamma_{ijk}$. When another coordinate system $\theta' = \theta'(\theta)$
+  is used, the basis vectors change from $\left\lbrace \partial_i \right\rbrace$ to $\left\lbrace \partial '_{i'} 
+  \right\rbrace$, where 
+  \begin{equation*}
+   \partial '_{i'} = B^i_{i'} \partial_{i},
+  \end{equation*}
+and $B^i_{i'} = \dfrac{\partial \theta^{i}}{\partial \theta '^{i'}}$ is the inverse matrix of the 
+Jacobian matrix of the coordinate transformation. Since the components $\Gamma'_{i'j'k'}$ of the 
+connection are written as 
+\begin{equation*}
+ \Gamma'_{i'j'k'} = \langle \nabla \partial_{i'} \partial_{j'}, \partial_{k'} \rangle
+\end{equation*}
+in this new coordinate system, we easily have the transformation law 
+\begin{equation*}
+ \Gamma'_{i'j'k'} = B^{i}_{i'}B^{j}_{j'}B^k_{k'}\Gamma_{ijk} + B^{i}_{i'}B^{k}_{k'}g_{kj}(\partial_i)B^{j}_{j'})
+\end{equation*}
+   We introduce the $\alpha$-connection, where $\alpha$ is a real parameter, in the statistical manifold S by the 
+ formula.
+ \begin{equation}\label{2.3}
+  \Gamma^{\alpha}_{ijk} = E_{\theta} [ \{\partial_i\partial_j l(x,\theta) + \dfrac{1 - \alpha}{2} \partial_il(x,\theta)
+  \partial_j l(x,\theta)\} \partial_k l(x,\theta)]
+ \end{equation}
+It is easily checked that the connection defined by \ref{2.3} satisfies the transformation law. In particular the 1- connection is called the exponential
+connection, and the -1-connection is called the mixture connection.
+\subsection{Imbedding and a-curvature}
+The heading should really be $\alpha$-curvature. Let us consider an m-dimensional regular statistical model M
+= $\left\lbrace q(x,u)\right\rbrace$, which is inbedded in S = $\left\lbrace p(x,\theta) \right\rbrace$ by
+\begin{equation*}
+ q(x,u) = p\left\lbrace x, \theta(u) \right\rbrace .
+\end{equation*}
+Here, u = $\left( u^a\right)$ = $\left( u^1,\cdots,u^m \right)$ is a vector parameter specifying distributions of M,
+and defines a coordinate system of M. We assume that $\theta = \theta(u)$ is smooth and its Jacobian matrix has a
+full rank. Moreover, it is assumed that M forms an m-dimensional submanifold in S. We identify a point $u \in M$ with 
+the point $\theta = \theta(u)$ imbedded in S. The tangent space $T_u(M)$ at u of M is spanned by m vectors
+$\partial_{a}$, $a = 1,\cdots, m$, where $\partial_{a}= \dfrac{\partial}{\partial u^{a}}$ denotes the tangent vector
+of the coordinate curve $u^a$ in M. The basis $\partial_a$ can be represented by a function $\partial_a l(x,u)$ in x
+as before, where $l(x,u) = \log q(x,u)$. Since M is imbedded in S, the tangent space $T_u(M)$ of M is regarded as
+a subspace of the tangent space $T_{\theta(u)}(S)$ of S at $\theta = \theta(u).$ 
+The basis vector $\partial_a \in T_u(M)$ is written as a linear combination of $\partial_i$,
+\begin{equation*}
+ \partial_a = B^i_a(u)\partial_i
+\end{equation*}
+where $B^i_a = \frac{\partial \theta^{i}(u)}{\partial u^{a}}$. This can be understood from the relation
+\begin{equation*}
+ \partial_{a} = B^{i}_a (u) \partial_i ,
+\end{equation*}
+where $B_a^{i} = \frac{\partial \theta ^{i}}{\partial u^{a}}$. This can be understood form the relation
+\begin{equation*}
+ \partial_a l(x,u) = B^i_a\partial_i l \left\lbrace x, \theta(u) \right\rbrace .
+\end{equation*}
+Hence, the tangential directions of M at u is represented by m vectors $\partial_a$, (a = 1,$\cdots$, m) or
+$B_{a} = (B^i_a)$ in the component form with respect to the basis $\partial_i$ of $T_{\theta(u)}(S)$ such that
+n vectors $\left\lbrace \partial_a, \partial_\kappa \right\rbrace$, a = 1,...,m; $\kappa = m+1, \cdots, n$, together
+form a basis of $T_{\theta(u)}(S)$ and moreover $\partial_\kappa$'s are orthogonal to $\partial_a$'s 
+\begin{equation*}
+ g_{a \kappa} (u) = \langle \partial_a, \partial_\kappa \rangle = 0 
+\end{equation*}
+  The vectors $\partial_\kappa$ span the orthogonal complement $\partial_{\kappa} \in T_{u}^{\bot}(M)$ where
+  $\bot$ denotes the orthogonal complement of $T_{u}(M)$ in $T_{\theta(U)}(S)$. 
+  \begin{eqnarray}
+   g_{ab}(u) = \langle \partial_a, \partial_b \rangle = B_a^i B_b^j g_{ij} \\
+   g_{a \kappa}(u) = \langle \partial_a, \partial_\kappa \rangle = B_a^i B_\kappa^j g_{ij} \\
+    g_{\kappa \lambda}(u) = \langle \partial_\kappa, \partial_\lambda \rangle = B_\kappa^i B_\lambda^k g_{ik} 
+  \end{eqnarray}
+The basis vector $\partial_a$ may change its direction as point u moves in M. The change is measured by the $\alpha$-
+covariant derivative $\nabla_{\partial_{b}}^{(\alpha)}\partial_a$ is calculated in S as 
+\begin{equation*}
+ \nabla_{\partial_{b}}^{(\alpha)} \partial_a = B_b^i \nabla_{\partial_{i}}^{(\alpha)}(B_a^j \partial_j) 
+\end{equation*}
+ $=(\partial_b B_a^j + B_b^i B_a^k \Gamma_ik^{(\alpha)j})\partial_j$. 
+ When the directions of the tangent space $T_u(M)$ of M do not change as point u moves in M, 
+ the manifold M is said to be $\alpha$-flat in S, where the tangent directions are compared by the
+ $\alpha$-connection. Otherwise, M is curved in the sense of the $\alpha$-connection. 
+ The $\alpha$-covariant derivative $\nabla_{\partial_{b}}^{(\alpha)} \partial_a$ is decomposed into the 
+ tangential component belonging to $T_{u}(M)$ and the normal component perpendicular to $T_u(M)$.
+    The former component represents the way $\partial_a$ changes within $T_u(M)$, while the latter represents the change
+    of $\partial_a$ in the directions perpendicular to $T_u(M)$, as u moves in M. The normal component is measured by
+    \begin{equation}
+     H_{ab \kappa}^{(\alpha)} = \langle \nabla_{\partial_{a}}^{(\alpha)} \partial_b, \partial_\kappa \rangle 
+     = \left( \partial_b B^j_a + B^i_bB_a^k \Gamma_ik^{(\alpha)j}\right)B_\kappa^m g_{mj}
+    \end{equation}
+which is a tensor called the $\alpha$-curvature of submanifold M in S. It is usually called the imbedding curvature
+or Euler-Shouten curvature. This tensor represents how M is curved in S. 
+   A tensor is a multi-linear mapping from the number of tangent vectors (or possibly one forms) to the real set. 
+      In the present case, for A = $A^a \partial_a \in T_u(M)$, B= $B^b \partial_b \in T_u(M)$ and 
+      C=$C^\kappa \partial_\kappa \in T_u^{\bot}(M)$, we have the multi-linear mapping $H^{(\alpha)}$,
+           \begin{equation*}
+            H^{(\alpha)}(A,B,C) = H^{(\alpha)}_{ab \kappa} A^aB^bC^\kappa
+           \end{equation*}
+This $H^{(\alpha)}$ is the $\alpha$-curvature tensor, and $H^{(\alpha)}_{ab \kappa}$ are its components. 
+The sub-manifold M is $\alpha$-flat in S when $H^{(\alpha)}_{ab \kappa} = 0$ holds. The m x m matrix 
+\begin{equation*}
+ [H_M^{(\alpha)}]^2_ab = H^{(\alpha)} = H_{ac \kappa}^{(\alpha)} H_{bd \lambda}^{(\alpha)} g^{\kappa \lambda} g^{cd}
+\end{equation*}
+represents the square of the $\alpha$-curvature of M, where $g^{\kappa \lambda}$ and $g^{cd}$ are the inverse matrix 
+of $g_{\kappa \lambda}$ and $g_{cd}$, respectively. Efron called the scalar
+\begin{equation*}
+ \gamma^{2} = [H_M^{(l)}]^2_ab g^ab
+\end{equation*}
+the statistical curvature in a one-dimensional model M, whcih is the trace of the square of the exponential- or 
+l-curvature of M in our terminology. 
+  Let $\theta = \theta(t)$ be a curve in S parameterized by a scalar t. The curve c: $\theta = \theta(t)$ forms a one 
+  dimensional submanifold in S. 
+  The tangent vector $\partial_t$ of the curve is represented in component form as 
+  \begin{equation*}
+   \partial_t = \dot{\theta^{i}}(t) \partial_i
+  \end{equation*}
+or shortly by $\dot{\theta}$ where $\cdot$ denotes the first derivative with respect tot he time. 
+When the direction of the tangent vector $\partial_t = \dot{\theta}$ does not change along the curve in the sense of 
+the $\alpha$-connection, the curve is called an $\alpha$-geodesic.
+   By choosing an appropriate parameter, an $\alpha$-geodesic $\theta(t)$ satisfies the geodesic equation
+   \begin{equation*}
+    \nabla_{\dot{\theta}}^{(\alpha)}\dot{\theta} = 0
+   \end{equation*}
+or in component form 
+\begin{equation}\label{2.6}
+ \ddot{\theta}^{i} + \Gamma^{(\alpha)i}_{jk}\dot{\theta}^{j} \dot{\theta}^k = 0
+\end{equation}
+
+ \section{Parametric estimation and the Cramer-Rao inequality}
+ Information geometry had its roots in Fisher’s theory of estimation. Let $
+\rho_{\nu}(x)$
+,$x \in \mathbb{R}$, be a strictly positive differentiable probability density, depending on a
+parameter 
+$\nu \in \mathbb{R}.$ To stress the analogy between the classical case and quantum
+case a density is also referred to as a state. The Fisher information of $
+\rho_{\nu}$
+u is defined
+to be (Fisher 1925)
+\begin{equation*}G := \int
+\rho_{\nu}(x)
+\left( \frac{\partial \log
+\rho_{\nu}(x)} 
+{\partial \nu} \right)
+^{2}
+dx.\end{equation*}
+We note that this is the variance of the random variable $Y =\frac{ \partial \log \rho_{\nu}}{ \partial \nu}$, which has
+mean zero. Furthermore, G is associated with the family $\mathcal{M}$ = $\left\lbrace
+\rho_{\nu} \right\rbrace$ of distributions,
+rather than any one of them. This concept arises in the theory of estimation as
+follows. Let X be a random variable whose distribution is believed or hoped to be
+one of those in M. We estimate the value of 
+u by measuring X independently m
+times, getting the data $x_1 \cdots, x_m$ . An \textit{estimator} f is a function of $(x_1 , . . . , x_m )$
+that is used for this estimate. So f is a function of m independent copies of X, and
+so is a random variable. To be useful, the estimator must be a known function of
+X, not depending of 
+$\nu$, which we do not (yet) know. We say that an estimator is
+unbiased if its mean is the desired parameter; it is usual to take f as a function of
+X and to regard f ($X_{i}$ ), $i = 1, \cdots , m$ as samples of f . Then the condition that f is
+unbiased becomes
+\begin{equation*}
+ \rho_{\nu}(x)\cdot f := \int \rho_{\nu}(x) f(x) dx = \nu
+\end{equation*}
+
+A good estimator should also have only a small chance of being far from the correct
+value, which is its mean if it is unbiased. This chance is measured by the variance.
+(Fisher 1925) proved that the variance V of an unbiased estimator f obeys the
+inequality $V \geq G^{-1}$ . This is called the Cram$\grave{e}$r–Rao inequality and its proof is
+based on the Cauchy–Schwarz inequality. We shall show how this is done.
+If we do N independent measurements for the estimator, and average them, we
+improve the inequality to $V \geq G^{-1}$ /N . This inequality expresses that, given the
+family $
+\rho_{\nu}$, there is a limit to the reliability with which we can estimate 
+$\nu$. Fisher
+termed $VG^{−1}$ the efficiency of the estimator f . Equality in the Schwarz inequality
+occurs if and only if the two functions are proportional. In this case, let −$\partial \xi /\partial \nu$
+denote the factor of proportionality. Then the optimal estimator occurs when
+\begin{equation*}
+ \log \rho_{\nu}(x) = - \int \frac{\partial \xi}{\partial \xi}(f(x) - \nu) d\nu
+\end{equation*}
+
+Doing the integral, and adjusting the integration constant by normalisation, leads
+to
+\begin{equation*}
+ \rho_{\nu}(x) = Z^{-1} \exp \left\lbrace - \xi f(x) \right\rbrace
+\end{equation*}
+
+which defines the ‘exponential family’.
+This can be generalised to any n-parameter manifold $\mathcal{M}$ = {$
+\rho_{\nu}$}of distributions,
+$\nu = (\nu_1,\cdots,\nu_n)$
+$\nu \in \mathbb{R}^n$ . Suppose we have unbiased estimators $(X_1 , . . . , X_n )$,
+with covariance matrix V . Fisher introduced the information matrix
+\begin{equation}G^{ij} = \int
+\rho_{\nu}(x) \frac{
+\partial \log \rho_{\nu}(x)}{\partial \nu_{i}} \frac{
+\partial \log \rho_{\nu}(x)}{\partial \nu_{j}} dx
+\end{equation}
+This looks like a Riemannian metric on $\mathcal{M}$. Cramer and Rao obtained hte analogue of the inequality
+$V \geq G^{-1}$ when $n \gt 1$
+Put $V_{ij} = \rho_{\nu} \cdot [\left( X_{i} - \nu_{i} \right)\left( X_j - \nu_j \right)]$
+the covariance matrix of the estimators $\left\lbrace X_i\right\rbrace$, $i = 1,\cdots, n$, and 
+$Y^{i} = \dfrac{\partial \rho_{\nu}} { \partial \nu_{i}}$. We say that the estimators are locally unbiased if
+\begin{equation}\label{14}
+ \int \rho_{\nu}(x) Y^i(x)(X_j(x) - \nu_j)dx = \delta_ij
+\end{equation}
+
+Then we get the Cramer–Rao matrix inequality $V \geq G^{-1}$ as a matrix. 
+For, equation \ref{14} shows that the covariance of $X_{j}$with $Y_i$ is $\delta_{ij}$ , so the covariance matrix
+of $X_{j}$ and $Y^i$ is
+\begin{equation}\label{14.3}
+K:=
+\begin{vmatrix}
+V &
+I \\
+I &
+G 
+\end{vmatrix} 
+\end{equation}
+It follows that the matrix \ref{14.3} is positive semi-definite;
+
+\appendix
+\section{Definitions}
+ Throughout this article, boldfaced unsubscripted \textbf{X} and \textbf{Y} 
+ are used to refer to random vectors, and unboldfaced subscripted 
+ $X_i$ and $Y_i$  are used to refer to random scalars.   If the entries in the column vector
+
+:\begin{equation*} \mathbf{X} = \begin{bmatrix}X_1 \\  \vdots \\ X_n \end{bmatrix}\end{equation*}
+
+are random variables, each with finite variance, then the covariance matrix $\Sigma$ is the matrix whose (i,j) entry is the covariance
+
+:\begin{equation*}
+\Sigma_{ij}
+= \mathrm{cov}(X_i, X_j) = \mathrm{E}\begin{bmatrix}
+(X_i - \mu_i)(X_j - \mu_j)
+\end{bmatrix}
+\end{equation*}
+
+where 
+
+: \begin{equation*}
+\mu_i = \mathrm{E}(X_i)\,
+\end{equation*}
+
+is the expected value of the \textbf{i}th entry in the vector \textbf{X}. In other words, we have
+
+ \begin{equation*}
+\Sigma
+= \begin{bmatrix}
+ \mathrm{E}[(X_1 - \mu_1)(X_1 - \mu_1)] & \mathrm{E}[(X_1 - \mu_1)(X_2 - \mu_2)] & \cdots & \mathrm{E}[(X_1 - \mu_1)(X_n - \mu_n)] \\ \\
+ \mathrm{E}[(X_2 - \mu_2)(X_1 - \mu_1)] & \mathrm{E}[(X_2 - \mu_2)(X_2 - \mu_2)] & \cdots & \mathrm{E}[(X_2 - \mu_2)(X_n - \mu_n)] \\ \\
+ \vdots & \vdots & \ddots & \vdots \\ \\
+ \mathrm{E}[(X_n - \mu_n)(X_1 - \mu_1)] & \mathrm{E}[(X_n - \mu_n)(X_2 - \mu_2)] & \cdots & \mathrm{E}[(X_n - \mu_n)(X_n - \mu_n)]
+\end{bmatrix}.
+\end{equation*}
+
+The inverse of this matrix, \begin{equation*}\Sigma^{-1}\end{equation*}, if it exists, is the 
+\textit{inverse covariance matrix} 
+The elements of the precision matrix have an interpretation in terms of partial correlations and
+partial variances
+
+=== Generalization of the variance ===
+
+The definition above is equivalent to the matrix equality
+
+\begin{equation*}
+\Sigma=\mathrm{E}
+\left[
+ \left(
+ \textbf{X} - \mathrm{E}[\textbf{X}]
+ \right)
+ \left(
+ \textbf{X} - \mathrm{E}[\textbf{X}]
+ \right)^{\rm T}
+\right]
+\end{equation*}
+
+This form can be seen as a generalization of the scalar-valued variance to higher dimensions.  
+Recall that for a scalar-valued random variable \textbf{X}
+
+\begin{equation*}
+\sigma^2 = \mathrm{var}(X)
+= \mathrm{E}[(X-\mathrm{E}(X))^2] = \mathrm{E}[(X-\mathrm{E}(X))\cdot(X-\mathrm{E}(X))].\,
+\end{equation*}
+
+Indeed, the entries on the diagonal of the covariance matrix $\Sigma$are the variances of each element of the 
+vector $\mathbf{X}$
+   \section{What is a Geodesic}
+ Let us recall the definition of a geodesic. 
+ A \textbf{geodesic} on a smooth manifold M with an \textbf{affine connection} $\nabla$ is defined as a curve 
+ $\gamma(t)$ such that \textbf{parallel transport} along the curve preserves the tangent vector to the curve, so 
+ \begin{equation}\label{1}
+  \nabla_{\dot{\gamma}} \dot{\gamma} = 0
+ \end{equation}
+at each point along the curve, where $\dot{\gamma}$ is the derivative w.r.t. t. More precisely, in order to define the 
+covariant derivative of $\dot{\gamma}$ to a continuously differentiable vector field on an open set. 
+However, the resulting value of \ref{1} is independent of the choice of extension.
+    We can however write this in local form, 
+    \begin{equation*}
+     \dfrac{d^{2} x^{\lambda}}{dt^2} + \Gamma_{\mu \nu}^{\lambda} \dfrac{dx^{\mu}}{dt} \dfrac{dx^{\nu}}{dt} = 0,
+    \end{equation*}
+where $x^{\mu}(t)$ are the coordinates of the curve $\gamma(t)$ and $\Gamma_{\mu \nu}^{\lambda}$ are the Christoffel
+symbols of the connection $\nabla$. This is just an ODE for the coordinates. It has a unique solution, given an
+initial position and an initial velocity. Therefore, fromt he point of view of classical mechainics, geodesics can 
+be thought of as trajectories of \textbf{free} \textbf{particles} in a manifold. Indeed, the equation 
+$\nabla_{\dot{\gamma}}\dot{\gamma} = 0$ means that the acceleration of the curve has no components in the direction 
+of the surface (the direction of the surface is the same as the direction of the affine connection). We can also 
+say that the acceleration of the curve is perpendicular to the tangent plane of the surface at each point of the
+curve. So the motion is completely determined by the bending of the surface. This also the idea of General Relativity where
+particles move on geodesics and the bending is caused by gravity. 
+ \section{Fisher Metric and Von Neumann Entropy}
+ The great mathematician Misha Gromov pondered about 
+
+\end{document}

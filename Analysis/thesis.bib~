@@ -1,0 +1,320 @@
+@article{Chern1974,
+      author         = "Chern, Shiin-Shen and Simons, James",
+      title          = "{Characteristic forms and geometric invariants}",
+      journal        = "Annals Math.",
+      volume         = "99",
+      pages          = "48-69",
+      year           = "1974",
+      SLACcitation   = "%%CITATION = ANMAA,99,48;%%",
+}
+@article{Witten:1988hf,
+      author         = "Witten, Edward",
+      title          = "{Quantum Field Theory and the Jones Polynomial}",
+      journal        = "Commun.Math.Phys.",
+      volume         = "121",
+      pages          = "351",
+      doi            = "10.1007/BF01217730",
+      year           = "1989",
+      reportNumber   = "IASSNS-HEP-88-33",
+      SLACcitation   = "%%CITATION = CMPHA,121,351;%%",
+}
+@article{Tong:2005un,
+      author         = "Tong, David",
+      title          = "{TASI lectures on solitons: Instantons, monopoles,
+                        vortices and kinks}",
+      year           = "2005",
+      eprint         = "hep-th/0509216",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-th",
+      SLACcitation   = "%%CITATION = HEP-TH/0509216;%%",
+}
+@book{donaldson1997geometry,
+  title={The Geometry of Four-Manifolds},
+  author={Donaldson, S.K. and Kronheimer, P.B.},
+  isbn={9780198502692},
+  lccn={89077530},
+  series={Oxford Mathematical Monographs},
+  url={http://books.google.co.uk/books?id=LbHmMtrebi4C},
+  year={1997},
+  publisher={Oxford University Press, USA}
+}
+@ARTICLE{2008RvMP,
+   author = {{Nayak}, C. and {Simon}, S.~H. and {Stern}, A. and {Freedman}, M. and 
+	{Das Sarma}, S.},
+    title = "{Non-Abelian anyons and topological quantum computation}",
+  journal = {Reviews of Modern Physics},
+archivePrefix = "arXiv",
+   eprint = {0707.1889},
+ primaryClass = "cond-mat.str-el",
+ keywords = {Fractional statistics systems, Quantum computation, Quantum error correction and other methods for protection against decoherence, Quantum Hall effects},
+     year = 2008,
+    month = jul,
+   volume = 80,
+    pages = {1083-1159},
+      doi = {10.1103/RevModPhys.80.1083},
+   adsurl = {http://adsabs.harvard.edu/abs/2008RvMP...80.1083N},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+@article{Bha,
+    author  = "RAJENDRA BHANDARI",
+    title   = "Polarization of light and topological phases",
+    year    = "1997",
+    journal = "Physics Reports",
+    volume  = "281",
+    number  = "1",
+    pages   = "1-64"
+}
+@article{Aharanov,
+    author  = "AHARANOV AND ANANADAN",
+    title   = "Phase Change during a Cyclic Quantum Evolution",
+    year    = "1987",
+    journal = "Physic Rev. Lett.",
+    volume  = "58"
+}
+@article{Bha2,
+    author  = "RAJENDRA BHANDARI and JOSEPH SAMUEL",
+    title   = "General Setting for Berry's Phase",
+    year    = "1988",
+    journal = "Physic Rev. Lett.",
+    volume  = "60"
+}
+@book{Hecht,
+ author = {EUGENE HECHT},
+ title = "Optics: 2nd Edition",
+ publisher = "Addison-Wesley Publishing Company",
+ year = {1987},
+ address = {Massachusetts, USA}
+ }
+ @article{Wassmann:98, 
+author = {FRANK WASSMANN and ADRIAN ANKIEWICZ}, 
+journal = {Appl. Opt.}, 
+keywords = {Fiber optics and optical communications; Geometric optics ; Sensors; Polarization},
+number = {18}, 
+pages = {3902--3911}, 
+publisher = {OSA},
+title = {Berry's Phase Analysis of Polarization Rotation in Helicoidal Fibers}, 
+volume = {37}, 
+year = {1998}
+}
+ @book{Pol,
+ author = {CHRISTIAN BROSSEAU},
+ title = "Fundamentals of Polarized Light; A Statistical Optics Approach",
+ publisher = "John Wiley and Sons, Inc",
+ year = {1998},
+ address = {New York, USA}
+ }
+ @book{Landau,
+ author = {LANDAU, L.D. AND LIFSHITZ, E.M. AND PITAEVSKII, L.P.},
+ title = "Electrodynamics of Continuous Media",
+ publisher = "Pergamon",
+ year = {1984},
+ address = {Oxford}
+ }
+ @book{Ell,
+ author = {AZZAM AND BASHARA},
+ title = "Ellipsometry and Polarized Light",
+ publisher = {North Holland},
+ year = {1986},
+ address = {Amsterdam, Holland}
+ }
+ @book{Geo,
+ author = {ALFRED SHAPERE AND FRANK WILCZEK},
+ title = "Geometric Phases in Physics",
+ publisher = "World Scientific",
+ year = {1989},
+ address = {PO Box 128, Farrer Road, Singapore}
+ }
+@MISC{dennis-2007,
+  author = {M.R.DENNIS},
+  title = {A three-dimensional degree of polarization based on Rayleigh scattering},
+  url = {http://www.citebase.org/abstract?id=oai:arXiv.org:physics/0702105},
+  year = {2007}
+}
+@article{Berry-87,
+	author = "M.V. BERRY",
+	title = "The Adiabatic Phase and Pancharatnams Phase for Polarized Light",
+	journal = "Journal of Modern Optics",
+	volume = "34",
+	year = "November 1987",
+	pages = "1401-1407(7)",
+	url = "http://www.ingentaconnect.com/content/tandf/tmop/1987/00000034/00000011/art00006"
+}
+@book{Jackson,
+author={JACKSON, JOHN D},
+title={Classical Electrodynamics (3rd ed.)},
+publisher={Wiley},
+year={1998},
+address={London, United Kingdom}
+}
+@PhDThesis{DennisPhd,
+author={M.R.DENNIS},
+title={Topological Singularities in Wave Fields},
+year={2001},
+school={University of Bristol}
+}
+@book{Poincare, 
+author={H. POINCARE},
+title= {ThŽeorie mathematique de la Lumiere, volume 2}, 
+publisher = {Georges Carre},
+address={Paris}, 
+year={1892}
+}
+@book{ModQua,
+author={J.J. SAKURAI},
+title={Modern Quantum Mechanics (Revised Edition)},
+publisher={Addison-Wesley}, 
+year ={1994}
+}
+@book{QI,
+author={MICHAEL A.NIELSEN AND ISSAC L.CHUANG},
+title={Quantum Computation and Quantum Information},
+publisher={Cambridge}, 
+year ={2000}
+}
+@article{Entangle,
+author={T. JENNEWEIN AND C. SIMON AND G. WEIHS AND H. WEINFURTER AND A. ZEILLINGER},
+ title ={Quantum Cryptography with Entangled Photons}, 
+ journal={Physical Review Letters}, 
+ volume={84}, 
+ pages={4729-4732} ,
+ year={2000}
+ }
+ @article{BerryPhase,
+ author={M.V. BERRY}, 
+ title={Quantal phase factors accompanying adiabatic changes},
+ year = {1984}, 
+ journal={Proc. Roy. Soc. A}, 
+ volume={392}
+ } 
+ @Article{ChiaoTomita,
+  title = {Observation of Berry's Topological Phase by Use of an Optical Fiber},
+  author = {TOMITA, AKIRA  and CHIAO, RAYMOND Y.},
+  journal = {Phys. Rev. Lett.},
+  volume = {57},
+  number = {8},
+  pages = {937--940},
+  year = {1986},
+  month = {Aug}
+}
+@book{VCA,
+author={TRISTAN NEEDHAM},
+title={Visual Complex Analysis},
+publisher={Clarendon Press}, 
+year ={1997}
+}
+@book{EDG,
+author={BARRETT O'NEILL},
+title={Elementary Differential Geometry},
+publisher={Academic Press}, 
+year ={1966}
+}
+@book{GeoQua,
+author={A.BOHM AND A.MOSTAFAZADEH AND H. KOIZUMI AND Q.NIU AND J.ZWANZIGER},
+title={The Geometric Phase in Quantum Systems},
+publisher={Springer}, 
+year ={2003}
+}
+@book{DiffGeo,
+author={DIRK J. STRUIK},
+title={Lectures on Classical Differential Geometry},
+publisher={Addison-Wesley}, 
+year ={1961}
+}
+@article{Hannay,
+author={J H HANNAY},
+ title ={Angle Variable Holonomy in adiabatic excursion of an integrable Hamiltonian}, 
+ journal={J. Phys. A: Math. Gen}, 
+ volume={18}, 
+ pages={22130} ,
+ year={1985}
+ }
+ @book{Marsden,
+author={JERROLD E. MARSDEN AND ANTHONY TROMBA},
+title={Vector Calculus},
+publisher={W H Freeman}, 
+year ={2005}
+}
+@article{Bat_Ears,
+author={H. C. LEFEVRE}, 
+journal={Electronic Letters}, 
+title={Single-Mode Fibre Fractional Wave Devices and Polarization Controllers},
+year={1980}, 
+volume={vol. 16}
+} 
+@Mastersthesis{Bohm,
+author={HANNES BOHM},
+title={A Compact Source for Polarization Entangled Photon Pairs},
+year={2003},
+school={University of Vienna}
+}
+@Article{ChiaoWu,
+  title = {Manifestations of Berry's Topological Phase for the Photon},
+  author = {CHIAO, RAYMOND Y. and WU, YONG-SI },
+  journal = {Phys. Rev. Lett.},
+  volume = {57},
+  number = {8},
+  pages = {933--936},
+  numpages = {3},
+  year = {1986}
+  }
+  
+   @article{Simon,
+  title = {Holonomy, the Quantum Adiabatic Theorem, and Berry's Phase},
+  author = {BARRY SIMON },
+  journal = {Phys. Rev. Lett.},
+  volume = {51},
+  number = {24},
+  pages = {2167--2170},
+  year = {1983}
+   } 
+ @article{Helicity,
+ author={SHEN, J. & MA, L.}, 
+ title={Geometric phase and helicity inversion of photons propagating inside a noncoplanarly curved optical fiber},
+ Journal= {Physics Letters A},
+ volume= {308},
+ year={2003}
+}
+@Article{PhysRevLett.66.588,
+  title = {Observation of a nonclassical Berry\char39{}s phase for the photon},
+  author = {KWIAT, PAUL G. and CHIAO, RAYMOND Y.},
+  journal = {Phys. Rev. Lett.},
+  volume = {66},
+  number = {5},
+  pages = {588--591},
+  numpages = {3},
+  year = {1991},
+  month = {Feb}
+  }
+  
+ @Article{Haldane,
+  title = {Path dependence of the geometric rotation of polarization in optical fibers},
+  author = {F.D.M. HALDANE},
+  journal = {Optics Letters},
+  volume = {11},
+  number = {11},
+  year = {1986},
+  month = {November}
+  }
+ @Article{Ryder,
+  title = {The Optical Berry Phase and its generalisation using the Gauss-Bonnett theorem},
+  author = {L.H. RYDER},
+  journal = {European Journal of Physics},
+  volume = {12},
+  year = {1991},
+  }
+@article {Berry:Pancharatnam,
+	author = "BERRY M.V.",
+	title = "The Adiabatic Phase and Pancharatnams Phase for Polarized Light",
+	journal = "Journal of Modern Optics",
+	volume = "34",
+	year = "November 1987",
+	pages = "1401-1407(7)",
+	url = "http://www.ingentaconnect.com/content/tandf/tmop/1987/00000034/00000011/art00006"
+}
+@article{Pancharatnam,
+author={S. PANCHARATNAM}, 
+title="Generalized theory of interference and its applications. Part I. Coherent pencils",
+ journal={Proc. Ind. Acad. Sci.}, 
+ year= {(1956)}, 
+ note = {reprinted in S. Pancharatnam, Collected Works (Oxford University Press, 1975)}
+ }

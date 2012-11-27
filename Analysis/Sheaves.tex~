@@ -1,0 +1,11 @@
+\section{Sheaves}
+The following are some definitions 
+\begin{ex}
+ Let p: $E \to M$ be a holomorphic vector bundle. The presheaf of local holomorphic sections gives rise to a locally fre analythic sheaf. 
+Conversely, a locally free sheaf $\mathcal{E}$ determines a holomorphic vector bundle whose presheaf
+of sections induces the original sheaf. To accomplish the latter, choose sections $\mathbf{e}_j,j=1,...,k$ for 
+$\mathcal{E}(U)$ which generate $\mathcal{E}(U)$ as an $\mathcal{O}_M(U)$-module and use these to define a vector bundle 
+char in the obvious way.
+    Roughly, coherent sheaves may be regarded as families of vector spaces whose fibre dimension 'jumps' from point to point.
+
+\end{ex}

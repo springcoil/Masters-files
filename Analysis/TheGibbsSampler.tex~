@@ -1,0 +1,104 @@
+\documentclass[preprint]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, textcomp}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+%opening
+\title{The Gibbs Sampler}
+\author{Peadar Coyle}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Some brief notes on what a 'Gibbs Sampler' is, just to get to grips with what a Markov Chain Monte Carlo (MCMC) method
+looks like
+\end{abstract}
+
+\section{Introduction}
+We know that, using importance sampling, we can approximate an expectation $\mathbb{E}_{f}(h(X))$ without
+having to sample directly from f. However, finding an instrumental distribution which allows us
+to \textit{efficiently} estimate $\mathbb{E}_{f}(h(X))$ can be difficult, especially in large dimensions.
+   In this chapter and the following chapters we will use a somewhat different approach. We will discuss
+ methods that alow obtaining an \textit{approximate} sample from f without having to sample f directly. More
+ mathematically speaking, we will discuss methods that generate a Markov chain whose \textit{stationary distribution}
+ is the
+ distribution of interest f. Such methods are often called MCMC methods. 
+     Let us state a few definitions before continuning.
+   \begin{definition}
+The prior distribution is a key part of Bayesian inference and represents the information about an uncertain
+parameter $\theta$ that is combined with the probability distribution of new data to yield the \textit{posterior 
+distribution}.
+   \end{definition}
+\begin{example}[Poisson change point model]. Assume the following Poisson model of two regimes for n random
+variables $Y_1,\cdots,Y_n$\footnote{The probability distribution function of the \texttt{Poi}($\lambda$) distribution
+is p(y) = $\frac{\exp(-\lambda)\lambda^{y}}{y!}$}
+ \begin{equation*}
+  Y_i \sim \mathtt{Poi}(\lambda_1)\;for\;i=1,\cdots,M
+ \end{equation*}
+\begin{equation*}
+ Y_i \sim \mathtt{Poi}(\lambda_2)\;for\; i\;=\;+\;1,\cdots,n
+\end{equation*}
+A suitable (conjugate) prior distibution for $\lambda_j$ is the \texttt{Gamma}($\alpha_j,\beta_j$) distribution with
+density 
+\begin{equation*}
+f(\lambda_j) = \frac{1}{\Gamma(\alpha_j)}\lambda_{j}^{\alpha_{j} - 1}\beta_{j}^{\alpha_{j}}\exp(-\beta_{j}\lambda_{j})
+\end{equation*}
+The joint distribution of $Y_1,\cdots,Y_n$, $\lambda_1,\lambda_2$, and M is 
+\begin{eqnarray*}
+ f(y_1,\cdots,y_n,\lambda_1,\lambda_2,M) = \left( \prod_{i=1}^{M} \frac{\exp(-\lambda_1)\lambda_{1}^{y_{i}}}{y_{i} !}\right) \cdot \left(\prod_{i=1}^{M} \frac{\exp(-\lambda_1)\lambda_{1}^{y_{i}}}{y_{i} !} \right)
+\\ \cdot \frac{1}{\Gamma(\alpha_1)}\lambda_{1}^{\alpha_1 - 1}\beta_{1}^{\alpha_{1}}\exp(-\beta_{1}\lambda_{1}) 
+\cdot \frac{1}{\Gamma(\alpha_{2})}\lambda_{2}^{\alpha_{2} - 1}\beta_{2}^{\alpha_{2}}\exp(-\beta_2 \lambda_2)
+ \end{eqnarray*}
+
+
+\end{example}
+If M is known, the \textit{posterior distribution} of $\lambda_{1}$ has the density 
+\begin{equation*}
+ f(\lambda_{1} | Y_{1}, \cdots, Y_n,M) \varpropto \lambda_{1}^{\alpha_{1} - 1 + \sum{i=1}^{M} y_{i}} \exp(-\beta_{1} + M) \lambda_{1}),
+\end{equation*}
+so 
+   \begin{equation}\label{4.1}
+    \lambda_{1}| Y_{1},\cdots,Y_{n},M \sim \mathtt{Gamma}\left( \alpha_1 + \sum_{i=1}^{M} y_{i}, \beta_{1} + M \right)
+   \end{equation}
+\begin{equation}\label{4.2}
+ \lambda_{2}|Y_1,\cdots,Y_n,M \sim \mathtt{Gamma}\left(\alpha_2 + \sum_{i=M+1}^{n} y_i, \beta_2 + n - M \right)
+\end{equation}
+Now assume that we do not know the change point M and that we assume a uniform prior on the set $\left\lbrace 1, \cdots, M - 1\right\rbrace$
+. It is easy to compute the distribution of M given the observations $Y_1, \cdots, Y_n$, and $\lambda_1$ and $\lambda_2$.
+It is a discrete distribution with probability density function proportional to 
+\begin{equation}\label{4.3}
+ p(M|Y_1, \cdots, Y_n, \lambda_1,\lambda_2) \varpropto \lambda_{1}^{\sum_{i=1}^{M} y_{i}} \cdot\lambda_{2}^{\sum_{i = M+1}^{n}y_{i}}
+ \cdot \exp((\lambda_{2} - \lambda_{1}) \cdot M)
+\end{equation}
+The conditional distributions in (4.1) to (4.3) are all easy to sample from. It is however rather difficult to sample 
+from the joint posterior of $\left( \lambda_1, \lambda_2, M\right)$. $\triangleleft$
+The example above suggests the strategy of alternately sampling from the (full) conditional distributions(\ref{4.1} to 
+\ref{4.3} in the example). Ths tentative strategy however raises some questions.
+\begin{itemize} 
+ \item Is the joint distribution uniquely specified by the conditional distributions?
+ \item Sampling alternately from the conditional distributions yields a Markov chain: the newly proposed values only
+ depend on the present values, not the past values. Will this approach yield a Markov chain with the correct
+ invariant distribution? Will the Markov chain converge to the invariant distribution?
+\end{itemize}
+The answer to both questions will turn out to be yes - under certain conditions. The next section will however state
+the Gibbs sampling algorithm. 
+ 
+\end{document}

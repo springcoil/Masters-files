@@ -1,0 +1,110 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2010-2011 Mark Liu (markwayneliu@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{verbatim}
+
+% moderncv themes
+\moderncvtheme[green]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic} % idem
+
+% character encoding
+\usepackage[utf8]{inputenc} % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+%\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}} % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+
+% personal data
+\firstname{Peadar}
+\familyname{Coyle}
+\address{Newry}{Northern Ireland} % optional, remove the line if not wanted
+\mobile{00447851208539} % optional, remove the line if not wanted
+\email{peadarcoyle@googlemail.com} % optional, remove the line if not wanted
+\homepage{http://about.me/peadarcoyle} % optional, remove the line if not wanted
+%\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
+\photo[64pt]{profilepic}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{dimidium facti qui coepit habet: sapere aude, incipe - Horace}           
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+%\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+% content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+
+\maketitle
+
+\section{Experience}
+\cventry{Summer 2009}{Data Scientist Intern}{EightMouths}{Shanghai}{}{Worked on product design and market research for a new dating website product at a startup
+\begin{itemize}%
+\item Wrote code in Python based on graph theory
+\item Researched and presented in-house papers on Statistical Inference
+\item Market research and product design
+\item Consultancy work on image recognition
+\end{itemize}}
+\cventry{Sept 2008 - June 2010}{Technician}{Our Ladys Grammar School}{Newry}{}{Supervised and tutored A Level Physics
+\begin{itemize}%
+\item IT Support
+\item Administrative Work 
+\item Ran and organised workshops on 'Mathematics in Physics' and 'Physics of Flight'
+\item Tutoring students
+\end{itemize}}
+
+
+
+\section{Education}
+\cventry{2010-Ongoing}{MSc}{University of Luxembourg}{Luxembourg}{}{Masters in Mathematics}
+\cventry{2005-2008}{BSc}{University of Bristol}{UK}{}{Bachelors in Physics and Philosophy}
+
+
+
+
+\section{Bachelors thesis}
+\cvline{title}{\emph{On the Anholonomy of Light in Coiled Optical Fibers}}
+\cvline{advisor}{Mark Dennis, University of Bristol}
+\cvline{description}{Compared two variants of the geometric phase in Optics, utilizing fiber bundle theory}
+
+
+\section{Computer skills}
+\cvcomputer{Super}{Matlab, Java, Python}{Good}{Shell, Ruby, \LaTeX, R}
+\cvcomputer{Passable}{C, Lisp}{Platforms}{Linux, Android}
+\cvcomputer{Concepts}{Distributed Algorithms, Machine Learning, System Administration}{Avoid}{Microsoft Office}
+\section{Mathematics Skills}
+\cvcomputer{Concepts}{Stochastic Analysis, Homological Algebra, Complex Analysis, Topology}{Good}{Network Theory,Complex Systems,Statistical Learning Theory}
+
+
+\section{Interests}
+\cvcomputer{UX}{End-user design, User Experience}{Software}{Linux}
+\cvcomputer{Algorithms}{Developing and understanding algorithms}{Writing}{\url{http://www.peadarcoyle.wordpress.com}}
+\cvcomputer{Health}{Rugby, Weightlifting, Rock Climbing}{Languages}{Mandarin Chinese}
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+
+\end{document}

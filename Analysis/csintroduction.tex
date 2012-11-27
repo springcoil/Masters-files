@@ -1,0 +1,32 @@
+\section{Introduction}
+One of the active areas of geometric topology at the border to mathematical physics is the theory of 'Chern-Simons' theory.
+The aim is to elucidate some of the techniques aimed at graduate students, and beginning researchers who know the basics
+of differential forms and differential manifolds. 
+ After an introduction to Lie groups and Lie algebras, principal bundles, connections and gauge transformations,
+ we will carefully construct the Chern-Simons action and study the moduli space of its classical solutions. 
+ This yields Taubes' beautiful and influential description of Casson's invariant for homology 3-spheres via
+ Chern-Simons Theory for which we need such concepts as differential operators and spectral flow. This naturally
+ leads to subjects like the eta invariant and the rho invariant on the one hand as well as the quantization of the
+ Chern-Simons action and Witten's invariants on the other.
+ Furthermore some modern examples from Theoretical Condensed Matter physics will be included. 
+ \subsection{An overview}
+ Let G be a semi-simple Lie group and $\mathfrak{g}$ its Lie algebra. A connection A on the trivial G-bundle over a 
+ closed oriented 3-manifold M is a $\mathfrak{g}$-valued 1-form, i.e. $A \in \Omega^1(M;\mathfrak{g})$.
+ Chern-Simons theory is a quantum field theory in three dimensions, whose action is proportional to the Chern-Simons
+ invariant given in \cite{Chern1974}
+    The celebrated work by Witten on the Jones Polynomial \cite{Witten:1988hf}.
+The other work \cite{donaldson1997geometry,Tong:2005un} are also good references for some of the material referenced.
+\begin{equation*}
+ cs(A_ = \dfrac{1}{8\pi^{2}} \int_M tr(A \wedge dA + \dfrac{1}{3}A \wedge [A \wedge A]).
+\end{equation*}
+Witten introduced Chern-Simons theory to knot theory in 1989 \cite{Witten:1988hf}, when he described for each integer 
+level $k \in \mathbb{Z}$ an invariant of a link $L = (L_{j})$ in a 3-manifold M (and a list of finite-dimensional 
+representations $\rho_k$ of G associated to the link invariant $L_j$) as the (non-rigorous) Feynman path integral
+\begin{equation*}
+ Z_k(M,L) = \int_{\mathcal{A}/\mathcal{G}} \exp^{2\pi ki cs(A)} \prod_{j} tr_{\rho_{j}} (hol_A(L_j))dA,
+\end{equation*}
+where $\mathcal{A}$ is the space of G-connections, $\mathcal{G}$ is the space of gauge transformations. He interpreted
+these invariants using the axioms of Topological Quantum Field Theory (TQFT) as well as via an asymptotic expansion
+- the semiclassical approximation - by using the method of stationary phase. 
+There have also been overlaps with knot Floer homology, and instantons, etc.
+ 

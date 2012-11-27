@@ -1,0 +1,200 @@
+\section{Topological Phases of Matter and Non-Abelian Anyons}
+A useful review article is \cite{2008RvMP} by Freedman, Simon et al.
+    Let us consider some of the theory of Topological Quantum Computation.
+ Topological quantum computation is predicated on the existence in nature of topological phases of matter. In this section,
+ we will discuss the physics of topological phases from several different perspectives, using a variety of theoretical tools.
+ Topological phases, the states of matter which support anyons, occur in many-particle physical systems.
+ Therefore, we will be using field theory techniques to study these states. A canonical, but by no means unique, example of a field
+ theory for a topological phase is Chern-Simons theory. 
+ \subsection{Chern-Simons Theory}
+ Consider the simplest example of a TQFT, Abelian Chern-Simons theory, which is relevant to the Laughlin states at filling
+ fractions of the form $\nu = \dfrac{1}{k}$, with k an odd interger. Although there are many ways to understand the Laughlin
+ states, it is useful for us to take the viewpoint of a low-energy effective theory. Since quantum Hall systems are gapped, we
+ should be able to describe the system by a field theory with very few degrees of freedom.
+ Let us consider the action 
+ \begin{equation}\label{19}
+  S_{CS} = \dfrac{k}{4\pi} \int d^2 \mathbf{r} dt \epsilon^{\mu \nu \rho}a_{\mu}\partial_{\nu} a_{\rho}
+ \end{equation}
+where k is an integer $\epsilon$ is the antisymmetric tensor. Here $\alpha$ is a U(1) gauge field and indices $\mu, \nu, \rho$
+atake the values 0 (for time direction), 1,2 (space-directions). The action represents the low-energy degrees of freedom of 
+the system, which are purely topological.  \paragraph{}
+   The Chern-Simons gauge field $\alpha$ in (\ref{19}) is an emergent degree of freedom which encodes the low-energy physics of a 
+   quantum Hall system. Although in this particular cases, it is simple-related to the electronic charge density, we will also 
+   be considering systems in which emergent Chern-Simons tauge fields cannot be related in a simple way to the underlying 
+   electronic degrees of freedom. 
+   \paragraph{} In the presence of an external electromagnetic field and quasiparticles, the action takes the form:
+   \begin{equation}\label{20}
+    S = S_{CS} - \int d^2\mathbf{r}dt \left(\dfrac{1}{2\pi}\epsilon^{\mu\nu\rho}A_{\mu}\partial_{\nu}a_{\rho} + j_{\mu}^{qp}a_{\mu} \right)
+   \end{equation}
+where $j^{op}_{\mu}$ is the quasiparticle current, $j_{0}^{qp}= \rho^{qp}$ is the quasi-particle density $\mathbf{j}^{qp} = 
+(j_{1}^{qp}, j_{2}^{qp})$ is the quasiparticle spatial current, and $A_{\mu}$ is the external electromagnetic field. We will
+assume that the quasiparticles are not dynamical, but instead move along some classically-prescribed trajectories which
+determine $j_{\mu}^{qp}$. The electircal current is:
+\begin{equation}\label{21}
+ j_{\mu} = \dfrac{\partial\mathcal{L}}{\partial A_{\mu}} = \dfrac{1}{2\pi} \epsilon^{\mu \nu \rho}\partial_{\nu}a_{\rho}
+\end{equation}
+Since the action is quadratic, it is completely solvable, and one can integrate out the field $a_{\mu}$ to obtain the response
+of the current to the external electromagnetic field\footnote{Why exactly does the action being quadratic mean that it is 
+'completely solvable'?}.The result of such a calcuation is precisely the quantized Hall conductivity 
+$\sigma_{xx} = 0$ and $\sigma_{xy} = \dfrac{1}{k} e^{2}/h.$
+  \paragraph{} The equation of motion obtained by varying $a_{0}$ is the Chern-Simons constraint: 
+  \begin{equation}\label{22}
+   \dfrac{k}{2\pi}\nabla \times \mathbf{a} = j_{0}^{qp} + \dfrac{1}{2\pi} B
+  \end{equation}
+According to this equation, each quasiparticle has Chern-
+Simons flux $2pi/k$ attached to it (the magnetic field is assumed
+fixed). Consequently, it has electrical charge 1/k, accord-
+ing to (\ref{21}). As a result of the Chern-Simons flux, another
+quasiparticle moving in this Chern-Simons field picks up an
+Aharonov-Bohm phase. The action associated with taking
+one quasiparticle around another is, according to Eq.\ref{20}, of
+the form 
+\begin{equation}\label{23}\dfrac{1}{2} k \int d\mathbf{r}dt \mathbf{j} \cdot \mathbf{a} = kQ \int_{C} d\mathbf{r} \cdot \mathbf{a}\end{equation}
+where Q is the charge of the quasiparticle and the final integral
+is just the Chern-Simons flux enclosed in the path. (The factor
+of 1/2 on the left-hand side is due to the action of the Chern-
+Simons term itself which, according to the constraint (\ref{22}) is
+-1/2 times the Aharanov-Bohm phase. This is cancelled by a factor of 
+two coming from the fact that each particle sees the other's flux.) 
+Thus the contribution to a path integral $e^{iS_{CS}}$
+just gives an Aharonov-Bohm phase associated with moving
+a charge around the Chern-Simons flux attached to the other
+charges. The phases generated in this way give the quasipar-
+ticles of this Chern-Simons theory $\theta = \pi/k$ Abelian braiding
+statistics.\footnote{The Chern-Simons effective action for a hierarchical state is equivalent to the action for the composite fermion state at the same filling fraction.}
+Therefore, an Abelian Chern-Simons term implements
+Abelian anyonic statistics. In fact, it does nothing else. An
+Abelian gauge field in 2 + 1 dimensions has only one trans-
+verse component; the other two components can be eliminated
+by fixing the gauge. This degree of freedom is fixed by the
+Chern-Simons constraint (\ref{22}). Therefore, a Chern-Simons
+gauge field has no local degrees of freedom and no dynam-
+ics.
+We now turn to non-Abelian Chern-Simons theory. This
+TQFT describes non-Abelian anyons. It is analogous to the
+Abelian Chern-Simons described above, but different meth-
+ods are needed for its solution, as we describe in this section.
+The action can be written on an arbitrary manifold $\mathcal{M}$ in the
+form 
+\begin{eqnarray}\label{24}
+S_{CS}[a] = \dfrac{k}{4\pi} \int_{\mathcal{M}} tr\left(a \wedge da +\dfrac{2}{3} a\wedge a \wedge a\right)
+\\ = \dfrac{k}{4\pi} \int_{\mathcal{M}} \epsilon^{\mu \nu \rho}
+\left(a^{\underline{a}}_{\mu}\partial_{\nu} a^{\underline{a}}_{\rho}
++\dfrac{2}{3} f_{\underline{a}\underline{b}\underline{c}}a^{\underline{a}}_{\mu}a^{\underline{b}}_{\nu}a^{\underline{b}}_{\rho} \right)
+\end{eqnarray}
+In this expression, the gauge field now takes values in the Lie algebra
+of the group G. $f_{\underline{a}\underline{b}\underline{c}}$ are the
+structure constants of the Lie algebra which are simply $\epsilon_{\underline{a}\underline{b}\underline{c}}$ for the case of SU(2). 
+For the case of SU(2), we thus have a gauge field $a^{\underline{a}}_{\mu}$, where the underlined indices run from 1 to 3. A matter field transforming in the spin-j representation of the SU(2) gauge group
+a will couple to the combination $a^{\underline{a}}_{\mu} x_{\underline{a}}$ , where $x_{\underline{a}}$ are the three
+generator matrices of su(2) in the spin-j representation. For
+gauge group G and coupling constant k (called the ‘level’),
+we will denote such a theory by $G_k$ . In this paper, we will be
+primarily concerned with $SU(2)_{k}$ Chern-Simons theory.
+To see that Chern-Simons theory is a TQFT, first note that
+the Chern-Simons action (24) is invariant under all diffeomor-
+phisms of M to itself, $f : \mathcal{M} \rightarrow \mathcal{M}$. The differential form
+notation in (\ref{24}) makes this manifest, but it can be checked
+in coordinate form for $x^{\mu}\rightarrow f ^{\mu} (x)$. Diffeomorphism invariance stems from the absence of the metric tensor in the
+Chern-Simons action. Written out in component form, as in
+(\ref{24}), indices are, instead, contracted with $\epsilon^{\mu \nu \lambda}$ .
+Before analyzing the physics of this action (\ref{24}), we will
+make two observations. First, as a result of the presence 
+of $\epsilon^{\mu \nu \lambda}$, the action changes sign under parity or time-reversal transformations.
+In this paper, we will concentrate, for the 
+most part, on topological phases which are chiral, i.e. which 
+break parity and time-reversal symmetries. These are the 
+phases which can appear in the fractional quantum Hall ef- 
+fect, where the large magnetic field breaks P , T . 
+Secondly, the Chern-Simons action is not quite fully invariant under gauge transformations
+$a_{\mu} \rightarrow ga_{\mu}g^{-1} + g\partial_{\mu}g^{-1}$,
+where $g: \mathcal{M} \rightarrow G$ is any function on the manifold taking values in the group G. On 
+a closed manifold, it is only invariant under 'small' gauge transformations. Suppose that the manifold
+$\mathcal{M}$ is the 3-sphere, $S^{3}$. Then, gauge transformations are maps $S^3 \rightarrow G$, which can be classified
+topologically according to its homotopy $\pi_{3}(G).$ For any simple compact group G, $\pi_{3}(G) = \mathbb{Z}$,
+so gauge transformations can be classified according to their 'winding number'. Under a gauge transformation with winding m,
+\begin{equation}\label{25}
+ S_CS[a] \rightarrow S_CS [a] + 2\pi km
+\end{equation}
+While the action is invariant under 'small' gauge transformations, which are continuously connected to the identity and have m = 0,
+it is not invariant under 'large' gauge transformations $(m \neq 0).$ However, it is sufficent for $\exp(iS)$ to be gague invariant,
+which will be the case so long as we require that the level k be an integer. The requirement that the level k be an integer
+is an example of the highly rigid structure of TQFTs. A small pertubation of the microscopic Hamiltonian cannot continuously 
+change the value of k in the effective low energy theory; only a pertubation which is large enough to change k by
+an integer can do this.
+\paragraph{} The failure of gauge invariance under large gauge transformations is also reflected in the properties of
+Chern-Simons theory on a surface with boundary, where the Chern-Simons action is gauge invariant only up to a
+surface term. Consequently, there must be gapless degrees of freedom at the edge of the system whose dynamics is dictated
+by the requirement of gauge invariance of the combined bulk and edge.
+\paragraph{} To unravel the physics of Chern-Simons theory, it is useful to specialize to the case
+in which the spacetime manifold $\mathcal{M}$ can be decomposed into a product of a spatial surface and time
+$\mathcal{M} = \Sigma \times \mathbb{R}.$ On such a manifold, Chern-Simons theory is a theory of the ground states of a 
+topologically-ordered system on $\Sigma$. There are no excited states in Chern-Simons theory because the Hamiltonian vanishes.
+This is seen most simply in $a_0 = 0$ gauge, where the momentum canonically conjugate to $a_1$ is $-\dfrac{k}{4\pi}a_{2}$,
+and the momentum canonically conjugate to $a_2$ is $\dfrac{k}{4\pi}a_{1}$ so that
+\begin{equation}\label{(26)}
+ \mathcal{H} = \dfrac{k}{4\pi} tr\left(a_2\partial_0 a_1 - a_1 \partial_0 a_2 \right) - \mathcal{L} = 0
+\end{equation}
+Note that this is a special feature of an ation with a Chern-Simons term alone. If the action had both a Chern-Simons and
+a Yang-Mills term, then the Hamiltonian would not vanish, and the theory would have both ground states and excited states
+with a finite gap. ince the Yang-Mills term is sublead-
+ing compared to the Chern-Simons term (i.e. irrelevant in a
+renormalization group (RG) sense), we can forget about it at
+energies smaller than the gap and consider the Chern-Simons
+term alone.
+Therefore, when Chern-Simons theory is viewed as an ef-
+fective field theory, it can only be valid at energies much
+ smaller than the energy gap. As a result, it is unclear, at the
+moment, whether Chern-Simons theory has anything to say
+about the properties of quasiparticles – which are excitations
+ above the gap – or, indeed, whether those properties are part
+  of the universal low-energy physics of the system (i.e. are
+ controlled by the infrared RG fixed point). Nevertheless, as
+  we will see momentarily, it does and they are.
+ Although the Hamiltonian vanishes, the theory is still not
+trivial because one must solve the constraint which follows by
+varying $a_{0}$ . For the sake of concreteness, we will specialize to
+the case G =SU(2). Then the constraint reads:
+\begin{equation}\label{27}
+ \epsilon_{ij} \partial_{i}a^{\underline{a}}_{j} + f^{\underline{a} \underline{b}\underline{c}}a^{\underline{b}_{1} 
+ a^{\underline{b}}_{2}} = 0
+\end{equation}
+where i,j = 1,2. The left-hand side of this equation is the field strength of the gauge field $a^{\underline{a}}_{i}$,
+$\underline{a} = 1,2,3$ is an $\mathfrak{su}$(2) index. Since the field strength must vanish, we can 
+always perform a gauge transformation so that $a^{\underline{a}}_{i} = 0$ locally. Therefore this theory has 
+no local degrees of freedom. 
+However, for some field configurations satisfying the constraint,
+there may be a global topological obstruction which prevents
+us from making the gauge field zero everywhere. Clearly, this
+can only happen if $\Sigma$ is topologically non-trivial.
+The simplest non-trivial manifold is the annulus, which is
+topologically equivalent to the sphere with two punctures.
+Following Elitzur et al., 1989\footnote{include this reference}, let us take coordinates
+$(r, \phi)$ on the annulus, with $r_1 \lt r \lt r_{2}$ , and let t be time.
+Then we can write $a_\mu$ , where
+\begin{equation}\label{28} 
+ g(r,\phi,t)= e^{i\omega(r,\phi,t)}e^{i \dfrac{\phi}{k}\lambda{(t)}}
+\end{equation}
+where $\omega(r,\phi,t)$ and $\lambda{(t)}$ take values in the Lie algebra $\mathfrak{su}(2)$
+and $\omega(r,\phi,t)$ is a single-valued function of $\phi$. The functions $\omega$ and $\phi$
+are the dynamical variables of Chern-Simons theory on the annulus. Substituting (\ref{28})
+into the Chern-Simons action, we see that it now takes the form:
+\begin{equation}\label{29}
+ S = \dfrac{1}{2\pi}\int dt tr(\lambda \partial_{t} \Omega)
+\end{equation}
+where $\Omega(r,t) = \int^{2\pi}_{0} d\phi (\omega(r_1,\phi,t) - \omega(r_2, \phi,t)).$ Therefore $\Omega$ 
+is canonically conjugate to $\lambda$. By a gauge transformation, we can always rotate $\lambda$ and $\Omega$ so that they
+are along the 3 direction in $\mathfrak{su}(2)$, i.e. $\lambda = \lambda_3 T^3$, $\Omega = \Omega_3 T^3$.
+  Since it is defined through the exponential in $(\ref{28})$, $\Omega_3$ takes values in $[0,2\pi].$
+ Therefore, its canonical conjugate $\lambda_3$ is quantized to be an integer from the definition of $\lambda$ in (\ref{28}),
+ we see that $\lambda_3 \equiv  \lambda_3 + 2k.$ However, by a gauge transformation given by a rotation around the 1-axis, we 
+ can transform $\lambda \rightarrow -\lambda$. Hence, the independent allowed values of $\lambda$ are 0,1,$\cdots$,k.
+  \paragraph{} On the two-punctured sphere, if one puncture is of type a,
+  the other puncture must be of type $\bar{a}$. (If the topological charge at one puncture is measured along a loop around
+  the puncture - e.g. by a Wilson loop then the lopp can be deformed so that it goes around the other puncture, but in the
+  opposite direction. Therefore, the two punctures, necessarily have conjugate topological charges.)
+  For SU(2), $a = \bar{a}$, so both punctures have the same topological charge. 
+  Therefore, the restriction to only k+1 different possible allowed boundary condition $\lambda$ for the two-punctured 
+  sphere implies that there are k+1 different quasiparticle types in $SU(2)_{k}$ Chern-Simons theory. As we will describe in a later
+  subsection, these allowed quasiparticle types can be identified with the $j = 0,\dfrac{1}{2},\cdots,\dfrac{k}{2}$
+  representations of the $SU(2)_{2}$ Kac-Moody algebra. 

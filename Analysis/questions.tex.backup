@@ -1,0 +1,135 @@
+\section{Questions for Fiber Bundles and Connections}
+\begin{idea}
+ The idea behind these questions is to elaborate on some of the technicalities in the course.
+They are based upon Questions from the Part III of the Cambridge Mathematical Tripos 2010. And the questions were
+written by Professor A.G. Kovalev
+- Answered provided by Peadar Coyle
+\end{idea}
+
+ \textbf{Showthat every (real) vector bundle can be given a positive definite inner product, varying smoothly in the fibers, i.e
+given a local trivialization $(U_\alpha, \Phi_\alpha)$ 
+by a smooth math $g_{\alpha}: x \in U_\alpha \to g_\alpha(x) \in Sym_{+}(k,\Rbb)$ denotes the set of all real-positive definite k x k symmetric
+matrices. [Hint: you might like to use a partion of unity]
+Deduce that any vector bundle admits an O(n) - structure. Discuss geometric interpretation of the associated principal O(n)-bundle. Are
+there analogous results for complex vector bundles?}
+
+\begin{proof}
+A: We know that every vector space can be given an inner product. Let us recall some facts
+\begin{recall}
+ If V is a vector space over \Rbb, a positive-definite inner product on V is a symmetric bilinear map
+$$\scal: V \times V \to \Rbb, (v,w) \to <v,w>$$
+such that $<v,v>\gt 0$ $\forall v\in V - 0$
+If $\scal$ and $\scal '$ are positive definite inner products on V and $a,a' \in \Rbb^{0}$ are both non zero then
+$$a \scal + a'\scal ': V \times V \to \Rbb,$$ $$ {a\scal +a'\scal'(v,w) = a <v,w> +a'<v,w>'}$$
+is also a positive-definite inner product.
+   
+\end{recall}
+   If W is a subspace of V and \scal is a positive definite inner product on V, let 
+\begin{equation*}
+ W^{\perp} = {v \in V: <v,w> = 0 \forall w \in W}
+\end{equation*}
+be the orthogonal complement of W in V. In particular 
+\begin{equation*}
+ V = W \oplus W^{\perp}
+\end{equation*}
+Furthermore, the quotient project map 
+\begin{equation*}
+ \pi: V \to V/W
+\end{equation*}
+induces an isomorphism from $W^\perp \to V/W$ so that 
+\begin{equation*}
+ V \iso W \oplus (V/W)
+\end{equation*}
+
+If M is a smooth manifold and $V \to M$ is a smooth real vector bundle of rank k, a \newword{Riemannian metric} on V is a 
+positive-definite inner product in each fiber 
+$V_x \iso \Rbb^k$ of V that varies smoothly with $x \in M$.
+    The smoothness requirement is one of the following equivalent conditions:
+\begin{itemize}
+ \item The map \scal: $V \times_{M} V \to \Rbb$ is smooth;
+\item the section \scal of the vector bundle $(V \tensor V^{*})\to M$ is smooth;
+\item if $s_1$ and $s_2$ are smooth sections of the vector bundle $V \to M$, then the map
+$<s_1,s_2>:M \to \Rbb, m \to <s_1(m),s_2(m)>,$ is smooth;
+\item if h: $V|_{\U}\to \U \times \Rbb^k$ is a trivialization of tV, the the matrix valued function
+\begin{equation*}
+ B: \U \to Sym_{k}(\Rbb) s.t. <h^-1(m,v),h^-1(m,w)> = v^t B(m) w 
+\end{equation*}
+$\forall m \in \U, v,w \in \Rbb^k,$ is smooth.
+\end{itemize}
+Every real vector bundle admits a Riemannian metric (by a theorem). Such a metric can be constructed by covering M by a locally
+finite collection of trivializations for V and patching together positive definite inner-products on each trivialization 
+with a partition of unity. If W is a subspace of V and $\scal$ is a Riemannian metric on V, let
+
+\begin{equation*}
+ W^{\perp} = {v \in V: <v,w> = 0 \forall w \in W}
+\end{equation*}
+be the orthogonal complement of W in V. In particular 
+\begin{equation*}
+ V = W \oplus W^{\perp}
+\end{equation*}
+Furthermore, the quotient project map 
+\begin{equation*}
+ \pi: V \to V/W
+\end{equation*}
+induces a vector bundle isomorphism from $W^\perp \to V/W$ so that 
+\begin{equation*}
+ V \iso W \oplus (V/W)
+\end{equation*}
+
+\textit{So what about the complex case?}
+If V is a vector space over \Cbb, a nondegenerate Hermitian inner product on V is a map 
+
+$$\scal: V \times V \to \Cbb, (v,w) \to <v,w>$$
+which is \Cbb-antilinear in the first imput, \Cbb linear in the second input  $<w,v> = \overline{<v,w>}$ and $<v,v>\gt 0$ $\forall v\in V - 0$
+If $\scal$ and $\scal '$ are nondegenerate Hermitian inner products on V and $a,a' \in \Rbb^{0}$ are both non zero then
+$$a \scal + a'\scal ': V \times V \to \Rbb,$$ $$ {a\scal +a'\scal'(v,w) = a <v,w> +a'<v,w>'}$$
+is also a nondegenerate Hermitian inner product on V.
+ If W is a complex subspace of V and \scal is a nondegenerate Hermitian inner product on V, let 
+\begin{equation*}
+ W^{\perp} = {v \in V: <v,w> = 0 \forall w \in W}
+\end{equation*}
+be the orthogonal complement of W in V. In particular 
+\begin{equation*}
+ V = W \oplus W^{\perp}
+\end{equation*}
+Furthermore, the quotient project map 
+\begin{equation*}
+ \pi: V \to V/W
+\end{equation*}
+induces an isomorphism from $W^\perp \to V/W$ so that 
+\begin{equation*}
+ V \iso W \oplus (V/W)
+\end{equation*}
+If M is a smooth manifold and $V \to M$ is a smooth complex vector bundle of rank k, a \newword{Hermitian metric} on V is a 
+positive-definite inner product in each fiber 
+$V_x \iso \Cbb^k$ of V that varies smoothly with $x \in M$.
+    The smoothness requirement is one of the following equivalent conditions:
+\begin{itemize}
+ \item The map \scal: $V \times_{M} V \to \Cbb$ is smooth;
+\item the section \scal of the vector bundle $(V \tensor V^{*})\to M$ is smooth;
+\item if $s_1$ and $s_2$ are smooth sections of the vector bundle $V \to M$, then the map
+$<s_1,s_2>$ on M is smooth;
+\item if h: $V|_{\U}\to \U \times \Cbb^k$ is a trivialization of tV, the the matrix valued function
+\begin{equation*}
+ B: \U \to Sym_{k}(\Cbb) s.t. <h^-1(m,v),h^-1(m,w)> = \overline{v}^t B(m) w 
+\end{equation*}
+$\forall m \in \U, v,w \in \Cbb^k,$ is smooth.
+\end{itemize}
+Similarly to the real case, every complex vector bundle admits a Hermitian metric. 
+ If W is a subspace of V and \scal is a Hermitian inner product on V, let 
+\begin{equation*}
+ W^{\perp} = {v \in V: <v,w> = 0 \forall w \in W}
+\end{equation*}
+be the orthogonal complement of W in V. In particular 
+\begin{equation*}
+ V = W \oplus W^{\perp}
+\end{equation*}
+Furthermore, the quotient project map 
+\begin{equation*}
+ \pi: V \to V/W
+\end{equation*}
+induces an isomorphism of complex vector bundles over M  so that 
+\begin{equation*}
+ V \iso W \oplus (V/W)
+\end{equation*}
+\end{proof}

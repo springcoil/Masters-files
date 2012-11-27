@@ -1,0 +1,151 @@
+
+<p>
+\maketitle
+<p>
+
+<p>
+
+<p>
+
+
+<p>
+
+<b>1. General state space Markov chains </b>
+
+<p>
+
+ Most applications of Markov Chain Monte Carlo algorithms (MCMC) are concerned with continuous random variables, i.e the corresponding Markov chain has a continuous state space <i>S</i>. In this section we will give a brief overview of the theory underlying Markov chains with general state spaces. Although the basic principles are not much different from the discrete case, the study of general state Markov chainns involves many more technicalities and subtleties. Though this section is concerned with general state spaces we will notationally assume that the state space is $latex { S = \mathbb{R}^{d}}&fg=000000$ We need a definition of a Markov chain, to be a stochastic process in which, conditionally on the present, the past and the future are independent. In the discrete case we formalised this idea using the conditional probability of $latex {{X_t = j}}&fg=000000$ given different collections of past events. \paragraph{} In a general state space it can be that all events of the type $latex {{X_t = j}}&fg=000000$ have probability 0, as it is the case for a process with a continuous state space. A process with a continuous state space spreads the probability so thinly that the probability of hitting one given state is 0 for all states. Thus we have to work with conditional probabilities of sets of states, rather than individual states. 
+<blockquote><b>Definition 1 (Markov chain)</b> <em>.<a name="test"></a> Let X be a stochastic process in discrete time with general state space S. X is called a Markov chain if X satisfies the Markov property <p align=center>$latex \displaystyle  \mathbb{P}(X_{t+1} \in A|X_0 = x_0, \cdots , X_t = x_t) = \mathbb{P}(X_{t+1} \in A| X_t = x_t) \ \ \ \ \ (1)&fg=000000$</p>
+ for all measurable sets $latex {A \subset S}&fg=000000$. </em></blockquote>
+
+<p>
+
+ In the following we will assume that the Markov chain is <i>homogeneous</i>. i.e. the probabilities $latex {\mathbb{P}}&fg=000000$ $latex {(X_{t+1} \in A| X_t = x_t)}&fg=000000$ are independent of t. For the remainder of this section we shall also assume that we can express the probability from definition <a href="#test">1</a> using a <i>transition kernel</i> $latex {K: S \times S \rightarrow \mathbb{R}^{+}_{0}:}&fg=000000$ <a name="1.3"><p align=center>$latex \displaystyle  \mathbb{P}(X_{t+1} \in A| X_t = x_t) = \int_A K(x_t,x_{t+1})dx_{t+1} \ \ \ \ \ (2)&fg=000000$</p>
+</a> where the integration is with respect to a suitable dominating measure, i.e. for example with respect to the Lebesgue measure if S = $latex {\mathbb{R}^d}&fg=000000$. The transition kernel K(x,y) is thus just the conditional probability density of $latex {X_{t+1}}&fg=000000$ given $latex {X_t = x_t}&fg=000000$. We obtain the special case of the definition of a transition kernel. 
+<blockquote><b>Definition 2</b> <em> The matrix $latex { \mathbf{K} = (k_{ij})_{ij} = \mathbb{P}(X_{t+1} = j|X_{t} = i)}&fg=000000$ is called the transition kernel (or transition matrix) of the homogeneous Markov chain X. </em></blockquote>
+
+<p>
+
+ We will see that together with the initial distribution, whcih we might write as a vector $latex {\mathbf{\lambda_{0}} = (\mathbb{P}(X_{0} = i) _{(i \in S)}}&fg=000000$ the transition kernel $latex {\mathbf{K}}&fg=000000$ fully specifies the distribution of a homogeneous Markov chain. However, we start by stating two basic properties of the transition kernel <b>K</b>: 
+
+<ul> <li> The entries of the transition kernel are non-negative (they are probabilities). <li> Each row of the kernel sums to 1, as <a name="1"><p align=center>$latex \displaystyle  \sum_{j} k_{ij} = \sum_{j} \mathbb{P}(X_{t+1} = j|X_{t} = i) = \mathbb{P}(X_{t+1} \in S|X_{t} = i) = 1 \ \ \ \ \ (3)&fg=000000$</p>
+</a>
+<p>
+ 
+</ul>
+
+ We obtain the special case of definition 1.8 by setting K(i,j) = $latex {k_{ij}}&fg=000000$, where $latex {k_{ij}}&fg=000000$ is the (i,j)-th element of the transition matrix $latex {\mathbb{K}}&fg=000000$. For a discrete state space the dominating measure is the counting measure, so integration just corresponds to summation, i.e. equation <a href="#1">3</a> is equivalent to \begin{equation*} \mathbb{P}(X_{t+1} \in A|X_{t} = x_t) = \sum_{x_{t+1} \in A} k_{x_{t},x_{t+1}} \end{equation*} We have for measurable set $latex {A \subset S}&fg=000000$ that \begin{equation*} \mathbb{P} (X_{t+m} \in A|X_t = x_t) = \int_A \int_S \cdots \int_S K(x_t,x_{t+1}K(x_{t+1},x_{t+2}) \cdots K(x_{t+m-1},x_{t+m})dx_{t+1} \cdots dx_{t+m-1}dx_{t+m}, \end{equation*} thus the m-step transition kernel is \begin{equation*} K^{(m)}(x_0,x_m) = \int_S \cdots \int_S K(x_0,x_1)\cdots K(x_{m-1},x_{m})dx_{m-1}\cdots dx_1 \end{equation*} The m-step transition kernel allows for expressing the m-step transition probabilities more conveniently: \begin{equation*} \mathbb{P} (X_{t+m} \in A|X_t = x_t) = \int_A K^{(m)}(x_t,x_{t+m})dx_{t+m} \end{equation*}
+<p>
+Let us consider an example. 
+<blockquote><b>Example 1</b> <em> Consider the Gaussian random walk on $latex {\mathbb{R}}&fg=000000$. Consider the random walk on $latex {\mathbb{R}}&fg=000000$ defined by \begin{equation*} X_{t+1} = X_{t} + E_{t} \end{equation*} where $latex {E_{t}\cong N(0,1)}&fg=000000$, i.e. the probability density function of $latex {E_t}&fg=000000$ is $latex {\phi(z) = \frac{1}{\sqrt{2\pi}}exp(-\frac{z^{2}}{2})}&fg=000000$. This is equivalent to assuming that $latex {X_{t+1}|X_t = x_t \cong N(x_t, 1)}&fg=000000$ We also assume that $latex {E_t}&fg=000000$ is independent of $latex {X_0,E_1,\cdots,E_{t-1}}&fg=000000$. Suppose that $latex {X_0 \cong N(0,1)}&fg=000000$. In contrast to the random walk on $latex {\mathbb{Z}}&fg=000000$ the state space of the Gaussian random walk is $latex {\mathbb{R}}&fg=000000$. We have that \begin{equation*} \mathbb{P}(X_{t+1} \in A|X_t = x_t,\cdots X_0 = x_0) = \mathbb{P}(E_t \in A - x_t| X_t =x_t, \cdots , X_0 = x_0) \end{equation*} \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$latex {=\mathbb{P}(E_t \in A - x_t) = \mathbb{P}(X_{t+1} \in A| X_t = x_t),}&fg=000000$ where A - $latex {x_t = {a - x_t : a \in A}}&fg=000000$. Thus X is indeed a Markov chain. Furthermore we have that \begin{equation*} \mathbb{P}(X_{t+1} \in A| X_t = x_t) = \mathbb{P}(E_t \in A - x_t) = \int_A \phi(x_{t+1} - x_{t})dx_{t+1} \end{equation*} Thus the transition kernel (which is nothing other than the conditional density of $latex {X_{t+1}| X_t = x_t}&fg=000000$) is thus \begin{equation*} K(x_t,x_{t+1}) = \phi(x_{t+1} -x_{t}) \end{equation*} To find the m-step transition kernel we could use equation <a href="#1.3">2</a>. However, the resulting integral is difficult to compute. Rather we exploit the fact that \begin{equation*} X_{t+m} = X_{t} + \boxed{E_{t} + \cdots + E_{t+m-1}}, \end{equation*} where the boxed formula is approximately $latex { N(0,m)}&fg=000000$ thus we can write $latex {X_{t+m}|X_{t} ~ N(x_{t},m)}&fg=000000$ \begin{equation*} \mathbb{P}(X_{t+m} \in A|X_t = x_t) = \mathbb{P}(X_{t+m} - X_{t}\in A - x_{t}) = \int_A \frac{1}{\sqrt{m}}\phi (\frac{x_{t+m} -x_{t}}{\sqrt{m}} )dx_{t+m} \end{equation*} Comparing this with <a href="#1.3">2</a> we can identify \begin{equation*} K^{(m)}(x_t, x_{t+m}) = \frac{1}{\sqrt{m}}\phi (\frac{x_{t+m} -x_{t}}{\sqrt{m}} \end{equation*} as m-step transition kernel \qed </em></blockquote>
+
+<p>
+
+
+<p>
+We need the powerful probabilistic notion of irreducibility. 
+<blockquote><b>Definition 3 (Irreducibility)</b> <em> Given a distribution $latex {\mu}&fg=000000$ on the states S, a Markov chain is said to be $latex {\mu}&fg=000000$-irreducible if for all sets A with $latex {\mu(A)&gt; 0}&fg=000000$ and for all $latex {x \in S}&fg=000000$, there exists an $latex {m}&fg=000000$ $latex {\in \mathbb{N}_{0}}&fg=000000$ such that \begin{equation*} \mathbb{P}(X_{t+m} \in A| X_t = x) = \int_A K^{(m)} (x,y) dy > 0 \end{equation*} If the number of steps m=1 then for all A, then the chain is said to be strongly $latex {\mu}&fg=000000$-irreducible. </em></blockquote>
+
+<p>
+
+ 
+<blockquote><b>Example 2</b> <em> In the example above we had that $latex {X_{t+1} | X_t = x_t \cong N(x_{t},1).}&fg=000000$ As the range of the Gaussian distribution is $latex {\mathbb{R}}&fg=000000$, we have that $latex {\mathbb{P}(X_{t+1} \in A | X_t =x_t)}&fg=000000$ > 0 for all sets A of non-zero Lebegue measure. Thus the chain is strongly irreducible with the respect to any continuous distribution. \qed </em></blockquote>
+
+<p>
+
+ We can extend the concepts of periodicity, recurrence, and transience from the discrete case to the general case. However this requires additional technical concepts like <i>atoms</i> and <i>small sets</i> one can see 'Robert and Casella, 2004' for a rigorous treatment of these concepts. Let us define a recurrent discrete Markov chain. 
+<blockquote><b>Definition 4</b> <em> A discrete Markov chain is recurrent, if all states (on average) are visited inifinitely often. </em></blockquote>
+
+<p>
+
+ For more general state spaces, we need to consider the number of visits to a set of states rather than single states. Let $latex {V_A = \sum^{+\infty}_{t=0}\mathbb{\oldstylenums{1}}_{{X_t \in A}}}&fg=000000$ be the number of visits the chain makes to states in the set $latex {A \subset S}&fg=000000$. We then define the expected number of visits in $latex {A \subset S}&fg=000000$, when we start the chain in $latex {x \in S}&fg=000000$: \begin{equation*} \mathbb{E}(V_{A}|X_0 = x) = \mathbb{E}(\sum^{+\infty}_{t=0} \mathbb{\oldstylenums{1}}_{{X_t \in A}}|X_0 = x) = \sum_{t=0}^{+\infty} \int_A K^{(t)}(x,y)dy \end{equation*} This allows us to define recurrence for general state spaces. We start with defining recurrence of sets before extending the definition of recurrence of an entire Markov chain. 
+<blockquote><b>Definition 5</b> <em> (a) A set A $latex {\subset S}&fg=000000$ is said to be recurrent for a Markov chain X if for all $latex {x\;\in\; A}&fg=000000$ \begin{equation*} \mathbb{E}(V_A|X_0 = x) = +\infty, \end{equation*} (b) A Markov chain to be recurrent, if 
+
+<ul> <li> The chain is $latex {\mu}&fg=000000$-irreducible for some distribution $latex {\mu}&fg=000000$. <li> Every measurable set $latex {A \;\subset\;S}&fg=000000$ with $latex {\mu(A) &gt; 0}&fg=000000$ is recurrent. 
+</ul>
+
+
+<p>
+</em></blockquote>
+
+<p>
+
+ \paragraph{} According to the definition a set is recurrent if on average it is visited infinitely often. This is already the case if there is a non-zero probability of visiting the set infinitely often. A stronger concept of recurrence can be obtained if we require that the set is visited infinitely often with probability 1. This type of recurrence is referred to as <i>Harris recurrence.</i> 
+<blockquote><b>Definition 6 (Harris Recurrence)</b> <em>. (a) A set $latex {A \;\subset\; S}&fg=000000$ is said to be Harris-recurrent for a Markov chain X if for all $latex {x\;\in \; A}&fg=000000$ $latex {\mathbb{P} \left(V_{A} = +\infty | X_0 = x \right) = 1,}&fg=000000$ (b) A Markov chain is said to be Harris-recurrent, if 
+
+<ul> <li> The chain is $latex {\mu}&fg=000000$-irreducible for some distribution $latex {\mu}&fg=000000$. <li> Every measurable set $latex {A \; \subset \; S}&fg=000000$ with $latex {\mu(A)}&fg=000000$ $latex {&gt;}&fg=000000$ 0 is Harris-recurrent.
+</ul>
+
+
+<p>
+ </em></blockquote>
+
+<p>
+
+ It is easy to see that Harris-recurrence implies recurrence. For discrete state spaces the two concepts are equivalent. Checking recurrence or Harris recurrence can be very difficult. We will state (without) proof a proposition which establishes that if a Markov chain is irreducible and has a unique invariant distribution, then the chain is also recurrent. \paragraph{} However, before, we can state this proposition, we need to define invariant distributions for general state spaces. 
+<blockquote><b>Definition 7</b> <em><a name="1.27"></a> (Invariant Distribution). A distribution $latex {\mu}&fg=000000$ with density function $latex {f_{\mu}}&fg=000000$ is said to be the invariant distribution of a Markov chain X with transition kernel K if \begin{equation*} f_{\mu} (y) = \int_{S} f_{\mu} (x) K(x,y) dx \end{equation*} for almost all $latex {y \;\in\;S.}&fg=000000$ </em></blockquote>
+
+<p>
+
+ 
+<blockquote><b>Proposition 8</b> <em> Suppose that X is a $latex {\mu}&fg=000000$-irreducible Markov chain having $latex {\mu}&fg=000000$ as unique invariant distibution. Then X is also recurrent. </em></blockquote>
+
+<p>
+
+ Checking the invariance condition of definition<a href="#1.27">7</a> requires computing an integral, but this can be cumbersome, so an alternative condition is the simpler (sufficient but not necessary) condition of detailed balance. 
+<blockquote><b>Definition 9 (Detailed balance)</b> <em>. A transition kernel K is said to be in detailed balance with a distribution $latex {\mu}&fg=000000$ with denisity $latex {f_{\mu}}&fg=000000$ if for almost all x,y $latex {\in\;S}&fg=000000$ </em></blockquote>
+
+<p>
+
+ \begin{equation*} f_{\mu}(x)K(x,y) = f_{\mu}(y)K(y,x). \end{equation*} In complete analogy with theorem 1.22 one can also show in the general case that if the transition kernel of a Markov chain is in detailed balance with a distribution $latex {\mu}&fg=000000$, then the chain is time-reversible and has $latex {\mu}&fg=000000$ as its invariant distribution. 
+
+<p>
+
+<b>  1.1. Ergodic theorems </b>
+
+<p>
+
+ In this section we will study the question of whether we can use observations from a Markov chain to make inferences about its invariant distribution. We will see that under some regularity conditions it is even enough to follow a single sample path of the Markov chain. \paragraph{} For independently identically distributed data the Law of Large Numbers is used to justify estimating the expected value of a functional using empirical averages. A similar result can be obtained for Markov chains. This result is the reason why MCMC methods work: it allows us to set up simulation algorithms to generate a Markov chain, whose sample path we can then use for estimating various quantities of interest. 
+<blockquote><b>Theorem 10 (Ergodic Theorem)</b> <em>.<a name="ergodic"></a> Let X be a $latex {\mu}&fg=000000$-irreducible, recurrent $latex {\mathbb{R}^{d}}&fg=000000$-valued Markov chain with invariant distribution $latex {\mu}&fg=000000$. Then we have for any integrable function $latex {g: \mathbb{R}^{d} \rightarrow \mathbb{R}}&fg=000000$ that with probability 1 \begin{equation*} lim_{t \rightarrow \infty} \frac{1}{t} \sum^{t}_{i=1} g(X_{i}) \rightarrow \mathbb{E}){\mu}(g(X)) = \int_S g(x)f_{\mu}(x)dx \end{equation*} for almost every starting value $latex {X_0 = x}&fg=000000$. If X is Harris-recurrent this holds for every starting value x. </em></blockquote>
+
+<p>
+
+ <em>Proof:</em>  For a proof see (Roberts and Rosenthal, 2004, fact 5) $latex \Box&fg=000000$
+
+ We conclude with an example that illustates that the condition of irreducibility and recurrence are necessary in theorem <a href="#ergodic">10</a>. These conditions ensure that the chain is permamently exploring the entire state space, which is a necessary condition for the convergence of ergodic averages. 
+<p>
+ 
+<blockquote><b>Example 3</b> <em> Consider a discrete chain with two states $latex {S = \left\lbrace 1,2 \right\rbrace}&fg=000000$ and transition matrix Any distribution $latex {\mu}&fg=000000$ on $latex {{1,2}}&fg=000000$ is an invariant distribution, as \begin{equation*} \mathbf{\mu ' K = \mu ' I = \mu '} \end{equation*} for all $latex {\mu}&fg=000000$. However the chain is not irreducible (or recurrent): we cannot get from state 1 to state 2 and vice versa. If the inital distribution is $latex {\mu = (\alpha, 1 - \alpha)'}&fg=000000$ with $latex {\alpha \in [0,1]}&fg=000000$ then for every $latex {t \in \mathbb{N}_{0}}&fg=000000$ we have that \begin{equation*} \mathbb{P}(X_t = 1) = \alpha \;\;\;\;\;\;\;\;\; \mathbb{P}(X_t = 2) = 1 - \alpha \end{equation*} By observing one sample path (which is either 1,1,1,... or 2,2,2,...) we can make no inference about the distribution of $latex {X_t}&fg=000000$ or the parameter $latex {\alpha}&fg=000000$. The reason for this is that the chain fails to explore the whole space space. To clarify the chain fails to switch between the states 1 and 2. In order to estimate the parameter $latex {\alpha}&fg=000000$ we would need to look at more than one sample path. \qed </em></blockquote>
+
+<p>
+
+ 
+
+<p>
+
+<b>2. Monte Carlo Methods </b>
+
+<p>
+
+ 
+
+<p>
+
+<b>  2.1. What are Monte Carlo Methods? </b>
+
+<p>
+
+ This collection of lectures is concerned with Monte Carlo methods, which are sometimes referred to as <i>stochastic simulation</i>. Examples of Monte Carlo methods include stochastic integration, where we use a simulation-based method to evaluate an integral, Monte Carlo tests, where we resort to simulation in order to computer the p-value, and Markov-Chain Monte Carlo (MCMC), where we construct a Markov chain which (hopefully) converges to the distribution of interest. \paragraph{} A formal definition of Monte Carlo methods was given (amongst others) by Halton (1970)\footnote{Halton, J.H. A retrospective and prospective survey of the Monte Carlo method. SIAM Review, <b>12</b>, 1-63.} He defined a Monte Carlo method as "representing the solution of a problem as a parameter of a hypothetical population, and using a random sequence of numbers to construct a sample of the population, from which statistical estimates of the parameter can be obtained." 
+
+<p>
+
+<b>  2.2. Introductory examples </b>
+
+<p>
+
+ 
+<blockquote><b>Example 4 (A raindrop experiment for computing $latex {\pi}&fg=000000$)</b> <em><a name="raindrop"></a> Assume we want to compute an Monte Carlo estimate of $latex {\pi}&fg=000000$ using a simple experiment. Assume that we could produce ``uniform rain'' on the square $latex {[-1,1] \times [-1,1]}&fg=000000$, such that the probability of a raindrop falling in to a region $latex {\mathcal{R} \;\subset\;[-1,1]^{2}}&fg=000000$ is proportional to the area of $latex {\mathcal{R},}&fg=000000$ but independent of the position of $latex {\mathcal{R}}&fg=000000$. It is easy to see that this is the case iff the two coordinates X,Y are i.i.d. realisations of uniform distribution on the interval $latex {[-1,1]}&fg=000000$(in short $latex {X,Y i.i.d\sim \cup[-1,1]).}&fg=000000$ Now consider the probability that a raindrop falls into the unit circle. It is \begin{equation*} \mathbb{P}(drop\; within\; the\; circle) = \frac{area\; of \;the\; unit\; circle}{area\; of\; the \;square} = \frac{\int \int _{{x^2 + y^2 \leq 1}} 1 dxdy}{\int \int _{{-1 \leq x,y \leq 1} }1 dxdy} = \frac{\pi}{2.2} = \frac{\pi}{4} \end{equation*} In other words, \begin{equation*} \pi = 4.\mathbb{P}(drop\;within\;circle), \end{equation*} i.e. we found a way of expressing the desired quantity $latex {\pi}&fg=000000$ as a function of a probability. We can estimate the probability using our raindrop experiment. If we observe n raindrops, then the number of raindrops Z that fall inside the circle is a binomial random variable: \begin{equation*} Z \sim B(n,p) \;\;\;\;\;\;\; with\;p\;=\;\mathbb{P}(drop\;within\;circle). \end{equation*} Thus we can estimate p by its maximum -likelihood estimate \begin{equation*} \hat{p} = \frac{Z}{n} \end{equation*} and we can estimate $latex {\pi}&fg=000000$ by \begin{equation*} \hat{\pi} = 4\hat{p} = 4\cdot\frac{Z}{n}. \end{equation*} Assume we have observed that 77 of the 100 raindrops were inside the circle. In our case our estimate of $latex {\pi}&fg=000000$ is \begin{equation*} \hat{\pi} = \frac{4 \cdot 77}{100} = 3.08 \end{equation*} which is relatively poor. \paragraph{} However the <i>law of large numbers</i> guarantees that our estimate $latex {\hat{\pi}}&fg=000000$ converges almost surely to $latex {\pi}&fg=000000$. As n increases, our estimate improves. We can assess the quality of our estimate by computing a confidence interval for $latex {\pi}&fg=000000$. As we have $latex {Z \sim B(100,p)}&fg=000000$ and $latex {\hat{p} = \frac{Z}{n},}&fg=000000$ we use the approximation that $latex {Z \;\sim\;N(100p,100p(1-p)). }&fg=000000$ Hence, $latex {\hat{p} \sim }&fg=000000$ N(p,p(1-p)/100)$latex {,}&fg=000000$ and we can obtain a 95$latex {\%}&fg=000000$ confidence interval for p using this normal approximation \begin{equation*} \left[ 0.77 - 1.96\cdot \sqrt{\frac{0.77\cdot(1-0.77)}{100}}, 0.77 1.96\cdot \sqrt{\frac{0.77\cdot(1-0.77)}{100}}\right] \end{equation*} = $latex {[0.6875,0.8525]}&fg=000000$, As our estimate of $latex {\pi}&fg=000000$ is four times the estimate of $latex {p}&fg=000000$, we now also have a confidence interval for $latex {\pi}&fg=000000$: \begin{equation*} [2.750,3.410] \end{equation*} Historically, the main drawback of Monte Carlo methods was that they used to be expensive to carry out. Physically random experiments (for example an experiment to examine 'Buffon's Needle' were difficult to perform and so was the numerical processing of their results. This changed fundamentally with the advent of the digital computer. Amongst the first to realize this potential were John von Neuman and Stanislaw Ulam. For any Monte-Carlo simulation we need to be able to reproduce randomness by a deterministic Computer Algorithm. Clearly this is a philosophical paradox, but lots of work has been done on this, and the statistical language R has a lot of 'random number generators' see $latex {(?RNGkind)}&fg=000000$ in GNU R for further details. </em></blockquote>
+
+<p>
+
+ 

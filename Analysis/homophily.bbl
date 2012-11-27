@@ -1,0 +1,452 @@
+\begin{thebibliography}{59}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[\protect\citeauthoryear{Airoldi, Blei, Fienberg and Xing}{Airoldi {\em
+  et~al.\/}}{2008}]{airoldi2008mmsb}
+Airoldi, Edoardo~M., David~M. Blei, Stephen~E. Fienberg and Eric~P. Xing
+  (2008).
+\newblock \enquote{Mixed Membership Stochastic Blockmodels.}
+\newblock {\em Journal of Machine Learning Research\/}, {\bf 9}: 1981--2014.
+\newblock \urlprefix\url{http://jmlr.csail.mit.edu/papers/v9/airoldi08a.html}.
+
+\bibitem[\protect\citeauthoryear{Anagnostopoulos, Kumar and
+  Mahdian}{Anagnostopoulos {\em et~al.\/}}{2008}]{flickr-tagging-influence}
+Anagnostopoulos, Aris, Ravi Kumar and Mohammad Mahdian (2008).
+\newblock \enquote{Influence and correlation in social networks.}
+\newblock In {\em KDD08: Proceeding of the 14th {ACM} {SIGKDD} International
+  Conference on Knowledge Discovery and Data Mining\/} (Bing Liu and Sunita
+  Sarawagi and Ying Li, eds.), pp. 7--15. New York: ACM.
+\newblock \urlprefix\url{http://research.yahoo.com/pub/2210}.
+
+\bibitem[\protect\citeauthoryear{Aral, Muchnik and Sundararajan}{Aral {\em
+  et~al.\/}}{2009}]{aral2009distinguishing}
+Aral, Sinan, Lev Muchnik and Arun Sundararajan (2009).
+\newblock \enquote{Distinguishing Influence Based Contagion from Homophily
+  Driven Diffusion in Dynamic Networks.}
+\newblock {\em Proceedings of the National Academy of Sciences (USA)\/}, {\bf
+  106}: 21544--21549.
+\newblock
+  \href{http://dx.doi.org/10.1073/pnas.0908800106}{doi:10.1073/pnas.0908800106%
+}.
+
+\bibitem[\protect\citeauthoryear{Aron}{Aron}{1989}]{Aron-main-currents}
+Aron, Raymond (1989).
+\newblock {\em Main Currents of Sociological Thought\/}.
+\newblock New York: Anchor Books.
+
+\bibitem[\protect\citeauthoryear{Atkinson}{Atkinson}{2007}]{Atkinson-viruses-o%
+besity}
+Atkinson, Richard~L. (2007).
+\newblock \enquote{Viruses as an Etiology of Obesity.}
+\newblock {\em Mayo Clinic Proceedings\/}, {\bf 82}: 1192--1198.
+\newblock \href{http://dx.doi.org/10.4065/82.10.1192}{doi:10.4065/82.10.1192}.
+
+\bibitem[\protect\citeauthoryear{Bakshy, Karrer and Adamic}{Bakshy {\em
+  et~al.\/}}{2009}]{Bakshy-Karrer-Adamic}
+Bakshy, Eytan, Brian Karrer and Lada~A. Adamic (2009).
+\newblock \enquote{Social Influence and the Diffusion of User-Created Content.}
+\newblock In {\em {EC} '09: Proceedings of the Tenth {ACM} Conference on
+  Electronic Commerce\/} (John Chung and Lance Fortnow and Pearl Pu, eds.), pp.
+  325--334. New York: ACM.
+\newblock \urlprefix\url{http://bibsi.cms.si.umich.edu/node/716}.
+
+\bibitem[\protect\citeauthoryear{Bartlett}{Bartlett}{1932}]{Bartlett-rememberi%
+ng}
+Bartlett, Frederic~C. (1932).
+\newblock {\em Remembering: A Study in Experimental and Social Psychology\/}.
+\newblock Cambridge, England: Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Bartlett}{Bartlett}{1960}]{Bartlett-stochasti%
+c-population-models}
+Bartlett, M.~S. (1960).
+\newblock {\em Stochastic Population Models in Ecology and Epidemiology\/}.
+\newblock London: Methuen.
+
+\bibitem[\protect\citeauthoryear{Berger}{Berger}{1995}]{Berger-culture}
+Berger, Bennett~M. (1995).
+\newblock {\em An Essay on Culture: Symbolic Structure and Social Structure\/}.
+\newblock Berkeley: University of California Press.
+
+\bibitem[\protect\citeauthoryear{Bickel and Chen}{Bickel and
+  Chen}{2009}]{Bickel-Chen-on-modularity}
+Bickel, Peter~J. and Aiyou Chen (2009).
+\newblock \enquote{A nonparametric view of network models and {Newman}-{Girvan}
+  and other modularities.}
+\newblock {\em Proceedings of the National Academy of Sciences (USA)\/}, {\bf
+  106}: 21068--21073.
+\newblock
+  \href{http://dx.doi.org/10.1073/pnas.0907096106}{doi:10.1073/pnas.0907096106%
+}.
+
+\bibitem[\protect\citeauthoryear{Blume, Brock, Durlauf and Ioannides}{Blume
+  {\em et~al.\/}}{2010}]{Blume-Brock-Durlauf-Ioannides-identification}
+Blume, Lawrence~E., William~A. Brock, Steven~N. Durlauf and Yannis~M. Ioannides
+  (2010).
+\newblock \enquote{Identification of Social Interactions.}
+\newblock In {\em Handbook of Social Economics\/} (Jess Benhabib and Alberto
+  Bisin and Matthew Jackson, eds.), p. forthcoming. Amsterdam: Elsevier.
+\newblock \urlprefix\url{http://ssrn.com/abstract=1660002}.
+
+\bibitem[\protect\citeauthoryear{Boudon}{Boudon}{1986/1989}]{Boudon-ideology}
+Boudon, Raymond (1986/1989).
+\newblock {\em The Analysis of Ideology\/}.
+\newblock Cambridge, England: Polity Press.
+\newblock Translated by Malcolm Slater from {\em L'id{\'e}ologie, ou, L'origine
+  des id{\'e}es re\c{c}ues}, Paris: Fayard.
+
+\bibitem[\protect\citeauthoryear{Bourdieu}{Bourdieu}{1984}]{Bourdieu-distincti%
+on}
+Bourdieu, Pierre (1984).
+\newblock {\em Distinction: A Social Critique of the Judgement of Taste\/}.
+\newblock Cambridge, Massachusetts: Harvard University Press.
+
+\bibitem[\protect\citeauthoryear{Bramoull{\'e}, Djebbari and
+  Fortin}{Bramoull{\'e} {\em et~al.\/}}{2009}]{bramoulle2009ipetsn}
+Bramoull{\'e}, Yann, Habiba Djebbari and Bernard Fortin (2009).
+\newblock \enquote{Identification of peer effects through social networks.}
+\newblock {\em Journal of Econometrics\/}, {\bf 159}: 41--55.
+\newblock
+  \urlprefix\url{http://papers.ssrn.com/sol3/papers.cfm?abstract_id=965818}.
+\newblock
+  \href{http://dx.doi.org/10.1016/j.jeconom.2008.12.021}{doi:10.1016/j.jeconom%
+.2008.12.021}.
+
+\bibitem[\protect\citeauthoryear{Calv{\'o}-Armengol and
+  Jackson}{Calv{\'o}-Armengol and
+  Jackson}{2009}]{Calvo-Armengol-Jackson-on-parent-child-correlation}
+Calv{\'o}-Armengol, Antoni and Matthew~O. Jackson (2009).
+\newblock \enquote{Like Father, Like Son: Social Network Externalities and
+  Parent-Child Correlation in Behavior.}
+\newblock {\em American Economic Journal: Microeconomics\/}, {\bf 1}: 124--150.
+\newblock
+  \href{http://dx.doi.org/10.1257/mic.1.1.124}{doi:10.1257/mic.1.1.124}.
+
+\bibitem[\protect\citeauthoryear{Christakis and Fowler}{Christakis and
+  Fowler}{2007}]{Christakis-Fowler-spread-of-obesity}
+Christakis, Nicholas~A. and James~H. Fowler (2007).
+\newblock \enquote{The Spread of Obesity in a Large Social Network over 32
+  Years.}
+\newblock {\em The New England Journal of Medicine\/}, {\bf 357}: 370--379.
+\newblock
+  \urlprefix\url{http://content.nejm.org/cgi/content/abstract/357/4/370}.
+
+\bibitem[\protect\citeauthoryear{Cohen-Cole and Fletcher}{Cohen-Cole and
+  Fletcher}{2008}]{Cohen-Cole-Fletcher}
+Cohen-Cole, Ethan and Jason~M. Fletcher (2008).
+\newblock \enquote{Detecting implausible social network effects in acne,
+  height, and headaches: longitudinal analysis.}
+\newblock {\em British Medical Journal\/}, {\bf 337}: a2533.
+\newblock \href{http://dx.doi.org/10.1136/bmj.a2533}{doi:10.1136/bmj.a2533}.
+
+\bibitem[\protect\citeauthoryear{Cox and Griffeath}{Cox and
+  Griffeath}{1986}]{Cox-Griffeath-voter-model}
+Cox, J.~Theodore and David Griffeath (1986).
+\newblock \enquote{Diffusive Clustering in the Two Dimensional Voter Model.}
+\newblock {\em Annals of Probability\/}, {\bf 14}: 347--370.
+\newblock \urlprefix\url{http://projecteuclid.org/euclid.aop/1176992521}.
+
+\bibitem[\protect\citeauthoryear{Ellner and Guckenheimer}{Ellner and
+  Guckenheimer}{2006}]{Ellner-Guckenheimer}
+Ellner, Stephen~P. and John Guckenheimer (2006).
+\newblock {\em Dynamic Models in Biology\/}.
+\newblock Princeton, New Jersey: Princeton University Press.
+
+\bibitem[\protect\citeauthoryear{Elwert and Christakis}{Elwert and
+  Christakis}{2008}]{Elwert-Christakis-wives-and-ex-wives}
+Elwert, Felix and Nicholas~A. Christakis (2008).
+\newblock \enquote{Wives and Ex-Wives: A New Test for Homogamy Bias in the
+  Widowhood Effect.}
+\newblock {\em Demography\/}, {\bf 45}: 851--873.
+\newblock
+  \urlprefix\url{http://www.ssc.wisc.edu/soc/faculty/pages/docs/elwert/Elwert_%
+Triads%20proofs.pdf}.
+\newblock \href{http://dx.doi.org/10.1353/dem.0.0029}{doi:10.1353/dem.0.0029}.
+
+\bibitem[\protect\citeauthoryear{Fortunato}{Fortunato}{2010}]{Fortunato-commun%
+ity-detection}
+Fortunato, Santo (2010).
+\newblock \enquote{Community Detection in Graphs.}
+\newblock {\em Physics Reports\/}, {\bf 486}: 75--174.
+\newblock \urlprefix\url{http://arxiv.org/abs/0906.0612}.
+
+\bibitem[\protect\citeauthoryear{Fowler and Christakis}{Fowler and
+  Christakis}{2008}]{Fowler-Christakis-happiness}
+Fowler, James~H. and N.~A. Christakis (2008).
+\newblock \enquote{Dynamic spread of happiness in a large social network:
+  longitudinal analysis over 20 years in the {Framingham} {Heart} {Study}.}
+\newblock {\em British Medical Journal\/}, {\bf 337}: A2338.
+\newblock \href{http://dx.doi.org/10.1136/bmj.a2338}{doi:10.1136/bmj.a2338}.
+
+\bibitem[\protect\citeauthoryear{Fowler and Christakis}{Fowler and
+  Christakis}{2010}]{Fowler-Christakis-2010cbchsn}
+Fowler, James~H. and Nicholas~A. Christakis (2010).
+\newblock \enquote{Cooperative Behavior Cascades in Human Social Networks.}
+\newblock {\em Proceedings of the National Academy of Sciences (USA)\/}, {\bf
+  107}: 5334--5338.
+\newblock
+  \href{http://dx.doi.org/10.1073/pnas.0913149107}{doi:10.1073/pnas.0913149107%
+}.
+
+\bibitem[\protect\citeauthoryear{Friedkin}{Friedkin}{1998}]{Friedkin-social-in%
+fluence}
+Friedkin, Noah~E. (1998).
+\newblock {\em A Structural Theory of Social Influence\/}.
+\newblock Cambridge, England: Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Gellner}{Gellner}{1973}]{Gellner-cause-and-me%
+aning}
+Gellner, Ernest (1973).
+\newblock {\em Cause and Meaning in the Social Sciences\/}.
+\newblock London: Routledge and Kegan Paul.
+
+\bibitem[\protect\citeauthoryear{Gelman, Park, Shor, Bafumi and Cortina}{Gelman
+  {\em et~al.\/}}{2008}]{Gelman-et-al-red-state-blue-state}
+Gelman, Andrew, David Park, Boris Shor, Joseph Bafumi and Jeronimo Cortina
+  (2008).
+\newblock {\em Red State, Blue State, Rich State, Poor State: Why {Americans}
+  Vote the Way They Do\/}.
+\newblock Princeton, New Jersey: Princeton University Press.
+
+\bibitem[\protect\citeauthoryear{Gillespie}{Gillespie}{1998}]{Gillespie-pop-ge%
+n}
+Gillespie, John~H. (1998).
+\newblock {\em Population Genetics: A Concise Guide\/}.
+\newblock Baltimore: Johns Hopkins University Press.
+
+\bibitem[\protect\citeauthoryear{Girvan and Newman}{Girvan and
+  Newman}{2002}]{Girvan-MEJN-community-structure}
+Girvan, Michelle and Mark E.~J. Newman (2002).
+\newblock \enquote{Community structure in social and biological networks.}
+\newblock {\em Proceedings of the National Academy of Sciences (USA)\/}, {\bf
+  99}: 7821--7826.
+\newblock \urlprefix\url{http://arxiv.org/abs/cond-mat/0112110}.
+
+\bibitem[\protect\citeauthoryear{Harvey and Pagel}{Harvey and
+  Pagel}{1991}]{Harvey-Pagel}
+Harvey, Paul~H. and Mark~D. Pagel (1991).
+\newblock {\em The Comparative Method in Evolutionary Biology\/}.
+\newblock Oxford: Oxford University Press.
+
+\bibitem[\protect\citeauthoryear{Huckfeldt, Johnson and Sprague}{Huckfeldt {\em
+  et~al.\/}}{2004}]{Huckfeldt-Johnson-Sprague-political-disagreement}
+Huckfeldt, Robert, Paul~E. Johnson and John Sprague (2004).
+\newblock {\em Political Disagreement: The Survival of Diverse Opinions within
+  Communication Networks\/}.
+\newblock Cambridge, England: Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Kaufman}{Kaufman}{2004}]{Kaufman-endogenous}
+Kaufman, Jason (2004).
+\newblock \enquote{Endogenous Explanation in the Sociology of Culture.}
+\newblock {\em Annual Review of Sociology\/}, {\bf 30}: 335--357.
+\newblock
+  \urlprefix\url{http://www.wjh.harvard.edu/~jkaufman/Endogexpl.AnnReview.pdf}.
+\newblock
+  \href{http://dx.doi.org/10.1146/annurev.soc.30.012703.110608}{doi:10.1146/an%
+nurev.soc.30.012703.110608}.
+
+\bibitem[\protect\citeauthoryear{Kipling}{Kipling}{1974}]{Kipling-just-so}
+Kipling, Rudyard (1974).
+\newblock {\em Just So Stories\/}.
+\newblock New York: Signet.
+\newblock First published 1912.
+
+\bibitem[\protect\citeauthoryear{Leenders}{Leenders}{1995}]{Leenders-structure%
+-and-influence}
+Leenders, Roger Th. A.~J. (1995).
+\newblock {\em Structure and Influence: Statistical Models for the Dynamics of
+  Actor Attributes, Network Structure and Their Interdependence\/}.
+\newblock Amsterdam: Thesis Publishers.
+
+\bibitem[\protect\citeauthoryear{Lieberson}{Lieberson}{2000}]{Lieberson-matter%
+-of-taste}
+Lieberson, Stanley (2000).
+\newblock {\em A Matter of Taste: How Names, Fashions, and Culture Change\/}.
+\newblock New Haven, Connecticut: Yale University Press.
+
+\bibitem[\protect\citeauthoryear{Lieberson and Lynn}{Lieberson and
+  Lynn}{2002}]{Lieberson-Lynn-wrong-branch}
+Lieberson, Stanley and Freda~B. Lynn (2002).
+\newblock \enquote{Barking Up the Wrong Branch: Scientific Alternatives to the
+  Current Model of Sociological Science.}
+\newblock {\em Annual Review of Sociology\/}, {\bf 28}: 1--19.
+\newblock
+  \urlprefix\url{http://www.wjh.harvard.edu/soc/faculty/lieberson/Barking.pdf}.
+\newblock
+  \href{http://dx.doi.org/10.1146/annurev.soc.28.110601.141122}{doi:10.1146/an%
+nurev.soc.28.110601.141122}.
+
+\bibitem[\protect\citeauthoryear{Liggett}{Liggett}{1985}]{Liggett-particle-sys%
+tems}
+Liggett, Thomas~M. (1985).
+\newblock {\em Interacting Particle Systems\/}.
+\newblock Berlin: Springer-Verlag.
+
+\bibitem[\protect\citeauthoryear{Lyons}{Lyons}{2010}]{lyons2010semvfsa}
+Lyons, Russell (2010).
+\newblock \enquote{The Spread of Evidence-Poor Medicine via Flawed
+  Social-Network Analysis.}
+\newblock Electronic pre-print, arxiv.org.
+\newblock \urlprefix\url{http://arxiv.org/abs/1007.2876}.
+
+\bibitem[\protect\citeauthoryear{Manski}{Manski}{1993}]{Manski-reflection-prob%
+lem}
+Manski, Charles~F. (1993).
+\newblock \enquote{Identification of Endogeneous Social Effects: The Reflection
+  Problem.}
+\newblock {\em Review of Economic Studies\/}, {\bf 60}: 531--542.
+\newblock \urlprefix\url{http://www.jstor.org/pss/2298123}.
+
+\bibitem[\protect\citeauthoryear{Manski}{Manski}{2007}]{Manski-identification-%
+for-prediction}
+--- (2007).
+\newblock {\em Identification for Prediction and Decision\/}.
+\newblock Cambridge, Massachusetts: Harvard University Press.
+
+\bibitem[\protect\citeauthoryear{Mayo}{Mayo}{1996}]{Mayo-error}
+Mayo, Deborah~G. (1996).
+\newblock {\em Error and the Growth of Experimental Knowledge\/}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem[\protect\citeauthoryear{McPherson, Smith-Lovin and Cook}{McPherson
+  {\em et~al.\/}}{2001}]{Birds-of-a-Feather-review}
+McPherson, Miller, Lynn Smith-Lovin and James~M. Cook (2001).
+\newblock \enquote{Birds of a Feather: Homophily in Social Networks.}
+\newblock {\em Annual Review of Sociology\/}, {\bf 27}: 415--444.
+\newblock
+  \href{http://dx.doi.org/10.1146/annurev.soc.27.1.415}{doi:10.1146/annurev.so%
+c.27.1.415}.
+
+\bibitem[\protect\citeauthoryear{Morgan and Winship}{Morgan and
+  Winship}{2007}]{Morgan-Winship-counterfactuals}
+Morgan, Stephen~L. and Christopher Winship (2007).
+\newblock {\em Counterfactuals and Causal Inference: Methods and Principles for
+  Social Research\/}.
+\newblock Cambridge, England: Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Newman}{Newman}{2002}]{MEJN-epidemics-on-netw%
+orks}
+Newman, Mark E.~J. (2002).
+\newblock \enquote{The spread of epidemic disease on networks.}
+\newblock {\em Physical Review E\/}, {\bf 66}: 016128.
+\newblock \urlprefix\url{http://arxiv.org/abs/cond-mat/0205009}.
+
+\bibitem[\protect\citeauthoryear{Newman and Girvan}{Newman and
+  Girvan}{2003}]{MEJN-Girvan-community-structure}
+Newman, Mark E.~J. and Michelle Girvan (2003).
+\newblock \enquote{Finding and Evaluating Community Structure in Networks.}
+\newblock {\em Physical Review E\/}, {\bf 69}: 026113.
+\newblock \urlprefix\url{http://arxiv.org/abs/cond-mat/0308217}.
+
+\bibitem[\protect\citeauthoryear{Pearl}{Pearl}{2000}]{Pearl-causality}
+Pearl, Judea (2000).
+\newblock {\em Causality: Models, Reasoning, and Inference\/}.
+\newblock Cambridge, England: Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Pearl}{Pearl}{2009{\natexlab{a}}}]{Pearl-on-c%
+ausal-inference}
+--- (2009{\natexlab{a}}).
+\newblock \enquote{Causal inference in statistics: An overview.}
+\newblock {\em Statistics Surveys\/}, {\bf 3}: 96--146.
+\newblock \urlprefix\url{http://projecteuclid.org/euclid.ssu/1255440554}.
+
+\bibitem[\protect\citeauthoryear{Pearl}{Pearl}{2009{\natexlab{b}}}]{Pearl-caus%
+ality-2nd}
+--- (2009{\natexlab{b}}).
+\newblock {\em Causality: Models, Reasoning, and Inference\/}.
+\newblock Cambridge, England: Cambridge University Press, 2nd edn.
+
+\bibitem[\protect\citeauthoryear{Porter, Onnela and Mucha}{Porter {\em
+  et~al.\/}}{2009}]{Porter-Onnela-Mucha-communities}
+Porter, Mason~A., Jukka-Pekka Onnela and Peter~J. Mucha (2009).
+\newblock \enquote{Communities in Networks.}
+\newblock {\em Notices of the {American} Mathematical Society\/}, {\bf 56}:
+  1082--1097 and 1164--1166.
+\newblock \urlprefix\url{http://arxiv.org/abs/0902.3788}.
+
+\bibitem[\protect\citeauthoryear{{R Development Core Team}}{{R Development Core
+  Team}}{2008}]{R}
+{R Development Core Team} (2008).
+\newblock {\em R: A Language and Environment for Statistical Computing\/}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+\newblock \urlprefix\url{http://www.R-project.org}.
+\newblock {ISBN} 3-900051-07-0.
+
+\bibitem[\protect\citeauthoryear{Reichardt and White}{Reichardt and
+  White}{2007}]{Reichardt-White-role-models}
+Reichardt, J{\"o}rg and Douglas~R. White (2007).
+\newblock \enquote{Role models for complex networks.}
+\newblock {\em European Physical Journal B\/}, {\bf 60}: 217--224.
+\newblock \urlprefix\url{http://arxiv.org/abs/0708.0958}.
+
+\bibitem[\protect\citeauthoryear{Rogers}{Rogers}{2003}]{Rogers-diffusion-of-in%
+novations}
+Rogers, Everett~M. (2003).
+\newblock {\em Diffusion of Innovations\/}.
+\newblock New York: Free Press, 5th edn.
+
+\bibitem[\protect\citeauthoryear{Rosenbaum and Rubin}{Rosenbaum and
+  Rubin}{1983}]{Rosenbaum-Rubin-1983}
+Rosenbaum, Paul and Donald Rubin (1983).
+\newblock \enquote{The Central Role of the Propensity Score in Observational
+  Studies for Causal Effects.}
+\newblock {\em Biometrika\/}, {\bf 70}: 41--55.
+\newblock \urlprefix\url{http://www.jstor.org/stable/2335942}.
+
+\bibitem[\protect\citeauthoryear{Shalizi}{Shalizi}{2007}]{CRS-social-media}
+Shalizi, Cosma~Rohilla (2007).
+\newblock \enquote{Social Media as Windows on the Social Life of the Mind.}
+\newblock In {\em AAAI 2008 Spring Symposia: Social Information Processing\/},
+  p. accepted.
+\newblock \urlprefix\url{http://arxiv.org/abs/0710.4911}.
+
+\bibitem[\protect\citeauthoryear{Siegfried}{Siegfried}{1960/1965}]{Siegfried-g%
+erms-and-ideas}
+Siegfried, Andr{\'e} (1960/1965).
+\newblock {\em Germs and Ideas: Routes of Epidemics and Ideologies\/}.
+\newblock Edinburgh: Oliver and Boyd.
+\newblock Translated by Jean Heanderson and Mercedes Claras{\'o} from {\em
+  Itin{\'e}raires de Contagions: Epid{\'e}mies et id{\'e}ologies} (Paris:
+  Librarie Armand Colin).
+
+\bibitem[\protect\citeauthoryear{Sood and Redner}{Sood and
+  Redner}{2005}]{Sood-Redner-voter-model}
+Sood, V. and S.~Redner (2005).
+\newblock \enquote{Voter Model on Heterogeneous Graphs.}
+\newblock {\em Physical Review Letters\/}, {\bf 94}: 178701.
+\newblock \urlprefix\url{http://arxiv.org/abs/cond-mat/0412599}.
+
+\bibitem[\protect\citeauthoryear{Sperber}{Sperber}{1996}]{Sperber-explaining}
+Sperber, Dan (1996).
+\newblock {\em Explaining Culture: A Naturalistic Approach\/}.
+\newblock Oxford: Basil Blackwell.
+
+\bibitem[\protect\citeauthoryear{Spirtes, Glymour and Scheines}{Spirtes {\em
+  et~al.\/}}{2001}]{Spirtes-Glymour-Scheines}
+Spirtes, Peter, Clark Glymour and Richard Scheines (2001).
+\newblock {\em Causation, Prediction, and Search\/}.
+\newblock Cambridge, Massachusetts: MIT Press, 2nd edn.
+
+\bibitem[\protect\citeauthoryear{Steglich, Snijders and Pearson}{Steglich {\em
+  et~al.\/}}{2004}]{Steglich-Snijders-Pearson-selection-and-influence}
+Steglich, Christian, Tom A.~B. Snijders and Michael Pearson (2004).
+\newblock {\em Dynamic Networks and Behavior: Separating Selection from
+  Influence\/}.
+\newblock Tech. Rep. 95-2001, Interuniversity Center for Social Science Theory
+  and Methodology, University of Groningen.
+\newblock
+  \urlprefix\url{http://www.stats.ox.ac.uk/~snijders/siena/SteglichSnijdersPea%
+rson2009.pdf}.
+
+\bibitem[\protect\citeauthoryear{Yang, Longini and Halloran}{Yang {\em
+  et~al.\/}}{2007}]{Yang-Longini-Halloran-detecing-transmission}
+Yang, Yang, Ira~M. Longini, Jr. and M.~Elizabeth Halloran (2007).
+\newblock \enquote{A Resampling-Based Test to Detect Person-to-Person
+  Transmission of Infectious Disease.}
+\newblock {\em Annals of Applied Statistics\/}, {\bf 1}: 211--228.
+\newblock \urlprefix\url{http://arxiv.org/abs/0709.0406}.
+
+\end{thebibliography}

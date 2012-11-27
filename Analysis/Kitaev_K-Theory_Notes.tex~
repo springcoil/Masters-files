@@ -1,0 +1,53 @@
+
+Kitaev's goal is to classify topological phases, in his paper this is a table. 
+He restricts to gapped systems exhibiting topological entanglement (for example the toric code). 
+Both 2D and 3D systems are time reversal invariant insulators. More specifically, they consist of 
+(almost) \textbf{noninteracting} fermions with a \textbf{gapped energy spectrum} and have both the
+time reversal symmetry (T) and a U(1) symmetry (Q). The latter is related to the particle number, which is conserved
+in insulators but not in superconductors or superfluids\footnote{ Felx: why is this so?}
+   There are some classical examples (classical meaning discovered when I was in nappies) of the applications
+   of the first Chern number such as the TKNN invariant.\footnote{As I understand this, this is mentioned in 
+ Barry Simons paper on the Geometric Phase, which I studied under Mark Dennis at Bristol, I must admit I didn't understand
+ the paper until a year ago - because I didn't have the language of connections, principal bundles. I think the Geometric
+ Phase exists on a Hermitian line bundle and can be explained by the first Chern class, I think Simon makes a reference
+ to some connections - forgive the pun - between the Berry Phase and the TKNN invariant}
+For integer quantum hall systems the invariant $\nu$ is related to the index theory and which 
+can be expressed as the trace of a certain infinite operator, which represents the insertion of a magnetic flux
+quantum at an arbitrary point. \footnote{I think here in the paper, he makes reference to the exceedingly difficult paper by
+Kitaev on 'Anyons in an exactly solved model and beyond' cond-mat/0506438 - I was recommended by both Steve Simon and 
+Joost Slingerland to read Parsa Bondersons thesis when trying to read Kitaev's language of superselectors, I have not 
+at this moment looked at Kitaev} \footnote{I looked at Appendix C, it looks tricky and technical although I'm familiar
+with a lot of the mathematics, he uses a lot of functional analysis and homological algebra and even some K-theory}
+   His aim is to look for an enumeration of all possible phases. 
+   \begin{definition}
+    Two Hamiltonians belong to the same phase if they can be continuously transformed one to the other 
+    while maintaining the energy gap or localization. 
+   \end{definition}
+The identity of a phase can be determined by some local probe\footnote{Is this a reference to some experimental procedure}
+  The table includes a general classification scheme for gapped free-fermion phases in all dimensions. 
+ The (mod 2) and (mod 8) patterns mentioned in the table are known as 'Bott Periodicity'; they are part of the 
+ mathematical theory called K-Theory. 
+    In particular the relation between the homotopy-theoretic and Clifford algebra versions of K-groups is important
+    in this paper.
+A key idea in K-Theory is that of \textbf{stable equivalence}:
+when comparing two objects, X' and X'', it is allowed to augment them by some object Y. 
+The final twis is that K-theory deals with \textbf{difference} between objects rather than objects themselves. Thus,
+we consder one phase relative to another. 
+ \paragraph{} We now give exact definitions for d = 0 (meaning
+that the system is viewed as a single blob). The simplest
+case is where the particle number is conserved, but there
+are no other symmetries. A general free-fermion has this
+form
+\begin{equation*}
+ \sum_{jk} X_{jk} \hat{a}_{j}^{\dag} \hat{a}_{k}
+\end{equation*}
+where $X = (X _{jk} )$ is some Hermitian matrix representing
+electron hopping. Since we are interested in gapped sys-
+tems, let us require that the eigenvalues of X are bounded\footnote{Felix: Does it mearly have to be bounded by 
+definition of a gapped system? I'm having trouble translating from Physics to Math and vice versa here}
+from both sides, e.g., $\Delta \leq |\epsilon j | \leq E_max$ . 
+   Furthermore he goes onto define homotopy. And describes the condition for when two matrices are homotopic, and
+   then says
+   This family of
+Hamiltonians is characterized by a nontrivial invariant, the first Chern number. 
+

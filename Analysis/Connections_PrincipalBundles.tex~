@@ -1,0 +1,56 @@
+\section{Connections on Principal bundles}
+\subsection{Some equivalent notions}
+If $\pi: P \rightarrow M$ is a principal G-bundle, then for every $p \in P$ we have a map
+$i_{p}: G \rightarrow P$ given by the formula $i_{p}(g) = p \cdot g$. For $X \in \mathfrak{g}$ we let $X^*$ be
+the \textit{fundamental vector field corresponding to X} given by $X_{p}^* = di_{p}(X_e)$.
+\begin{definition}
+ A \textit{connection} on a principal G-bundle P $\rightarrow$ M over a manifold M is a $\mathfrak{g}$-valued 1-form
+ A on P satisfying
+ \begin{enumerate}
+  \item A($X^*$) = X for every $X \in \gg$;
+  \item A is G-equivariant, i.e. $r^{*}_{g}(A) = Ad_{g^{-1}}A$ for each $g \in G$,
+ \end{enumerate}
+where $r_{g}: P \rightarrow P$ denotes the right action by $g \in G$. We denote the set of connections on P by
+$\mathcal{A}_{p}$.
+\end{definition}
+  G-equivariance says that if Y is a vector field on P and $g \in G$, then $A\left(dr_{g}\left(Y\right) \right) = 
+  Ad_{g^{-1}}(A(Y)).$ Locally, a 1-form on an n-dimensional manifold \M with values in \gg has the expression
+  \begin{equation*}
+   (dx_1 \otimes A_1) + \cdots + (dx_n \otimes A_n),
+  \end{equation*}
+where the $x_i$ are coordinates on M and the $A_i$ are elements of \gg. Given a vector bundle $E \rightarrow \M$,\
+$\Omega^{p}(E)$ will denote the p=forms with values in E, i.e. smooth sections of the vector bundle 
+\begin{equation*}
+ \bigwedge^p T^{*}M \otimes E \rightarrow \M,
+\end{equation*}
+where the symbols denote the wedge and tensor products of the bundles. A connection is therefor an element of $\Omega^1(P;
+\gg)$, where 
+\begin{equation*}
+ \Omega^k(P;\gg) := \Omega^k(P \times \gg)
+\end{equation*}
+are the \gg-valued k-forms on P. Denote the subspace of G-equivariant \gg-valued k-forms on P by 
+$\Omega^k(P;\gg)^G$.
+
+
+\subsection{Chern-Weil Theory}
+Characteristic classes are mainly used in obstruction theory. For example, the \textit{Euler class} $e(\pi) \in H^n(M;\Zbb)$
+is the primary obstruction to trivializing a real vector bundle $\pi:E \rightarrow M$ of rank r or a \Gl-principal bundle
+$\pi:P \rightarrow M$. 
+ Chern-Weil theory is a way of describing characteristic classes of vector bundles or principal bundles using differential
+ geometry, instead of the topological method of pulling back universal cohomology classes. Chern
+ classes and Pontrjagin classes are represented in DeRham theory by differential forms which are functions of
+ the curvature of a connection in the bundle. There are two approaches to defining characteristic forms, one uses
+ invariant polynomials, the other formal power series.
+ \subsubsection{Invariant polynomials}. Let V be a complex vector space. For k $\geq$ 1 let $S^k(V^*)$ be the vector space
+ of linear maps \begin{equation*}
+                 f: V \otimes \cdots \otimes V \rightarrow \Cbb.
+                \end{equation*}
+If we let $S^0(V^{*})= \Cbb$, then
+\begin{equation*}
+ S^{*}(V^*) = \oplus_{k=0}^{\infty} S^k(V^*)
+\end{equation*}
+is a commutative right with unit 1$\in S^0(V^{*})$ and product 
+\begin{equation*}
+ f\cdot g (v_1 ,\cdots,v_{k+1}) = \dfrac{1}{(k+1)!} \Sigma_{\sigma} f(v_{\sigma_{1}}, \cdots, v_{\sigma_{k}})g(v_{\sigma_{k+1}},
+ \cdots, v_{\sigma_{k+1}}
+\end{equation*}

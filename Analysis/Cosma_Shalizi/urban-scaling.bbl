@@ -1,0 +1,215 @@
+\begin{thebibliography}{31}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[West et~al.(1997)West, Brown, and
+  Enquist]{West-Brown-Enquist-origin-of-scaling}
+Geoffrey~B. West, James~H. Brown, and Brian~J. Enquist.
+\newblock A general model for the origin of allometric scaling laws in biology.
+\newblock \emph{Science}, 276:\penalty0 122--126, 1997.
+\newblock URL \url{http://www.santafe.edu/media/workingpapers/97-03-019.pdf}.
+
+\bibitem[Brown and West(2000)]{Brown-West-scaling-in-bio}
+James~H. Brown and Geoffrey~B. West, editors.
+\newblock \emph{Scaling in Biology}, Oxford, 2000. Oxford University Press.
+
+\bibitem[Bettencourt et~al.(2007)Bettencourt, Lobo, Helbing, K{\"u}nhert, and
+  West]{Bettencout-et-al-growth-innovation-scaling}
+Lu{\'i}s M.~A. Bettencourt, Jos{\'e} Lobo, Dirk Helbing, Christian K{\"u}nhert,
+  and Geoffrey~B. West.
+\newblock Growth, innovation, scaling, and the pace of life in cities.
+\newblock \emph{Proceedings of the National Academy of Sciences (USA)},
+  104:\penalty0 7301--7306, 2007.
+\newblock \doi{10.1073/pnas.0610172104}.
+
+\bibitem[Bettencourt et~al.(2010)Bettencourt, Lobo, Strumsky, and
+  West]{Bettencourt-et-al-urban-scaling-and-its-deviations}
+Lu{\'i}s M.~A. Bettencourt, Jos{\'e} Lobo, Deborah Strumsky, and Geoffrey~B.
+  West.
+\newblock Urban scaling and its deviations: Revealing the structure of wealth,
+  innovation and crime across cities.
+\newblock \emph{{PLoS} One}, 5:\penalty0 e13541, 2010.
+\newblock \doi{10.1371/journal.pone.0013541}.
+
+\bibitem[Florida(2002)]{Florida-rise-of-creative-class}
+Richard~L. Florida.
+\newblock \emph{The Rise of the Creative Class}.
+\newblock Basic Books, New York, 2002.
+
+\bibitem[Bettencourt and
+  West(2010)]{Bettencourt-West-unified-theory-of-urban-living}
+Lu{\'i}s M.~A. Bettencourt and Geoffrey~B. West.
+\newblock A unified theory of urban living.
+\newblock \emph{Nature}, 467:\penalty0 912--913, 2010.
+\newblock \doi{10.1038/467912a}.
+
+\bibitem[Krugman(1996)]{Krugman-self-organizing}
+Paul~R. Krugman.
+\newblock \emph{The Self-Organizing Economy}.
+\newblock Blackwell, Oxford, 1996.
+
+\bibitem[Henderson et~al.(2001)Henderson, Shalizi, and
+  Venables]{Henderson-ZMS-Venables}
+J.~Vernon Henderson, Zmarak Shalizi, and Anthony~J. Venables.
+\newblock Geography and development.
+\newblock \emph{Journal of Economic Geography}, 1:\penalty0 81--105, 2001.
+\newblock \doi{10.1093/jeg/1.1.81}.
+\newblock URL \url{http://papers.ssrn.com/sol3/papers.cfm?abstract_id=632526}.
+
+\bibitem[Fujita et~al.(1999)Fujita, Krugman, and
+  Venables]{Fujita-Krugman-Venables}
+Masahisa Fujita, Paul Krugman, and Anthony~J. Venables.
+\newblock \emph{The Spatial Economy: Cities, Regions, and International Trade}.
+\newblock MIT Press, Cambridge, Massachusetts, 1999.
+
+\bibitem[Bornstein and Bornstein(1976)]{Bornstein-Bornstein-pace-of-life}
+Marc~H. Bornstein and Helen~G. Bornstein.
+\newblock The pace of life.
+\newblock \emph{Nature}, 259:\penalty0 557--559, 1976.
+\newblock \doi{10.1038/259557a0}.
+
+\bibitem[{R Development Core Team}(2010)]{R}
+{R Development Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2010.
+\newblock URL \url{http://www.R-project.org}.
+\newblock {ISBN} 3-900051-07-0.
+
+\bibitem[McCormick et~al.(2009)McCormick, Panek, and
+  Rodriguez]{McCormick-Panek-Rodriguez-gmp-for-2009}
+Matthew~J. McCormick, Sharon~D. Panek, and Ralph~M. Rodriguez.
+\newblock Gross domestic product by metropolitan area: Accelerated statistics
+  for 2008, new statistics for 2007, and revised statistics for 2005--2006.
+\newblock \emph{Survey of Current Business}, pages 100--128, October 2009.
+\newblock URL
+  \url{http://www.bea.gov/scb/pdf/2009/10%20October/1009_gdpmetro.pdf}.
+
+\bibitem[Assenova et~al.(2010)Assenova, Broda, and
+  Taylor]{Assenova-Broda-Taylor-gdp-by-state}
+Slavea Assenova, John Broda, and Shane Taylor.
+\newblock Gross domestic product by state: Advance statistics for 2009 and
+  revised statistics for 1963--2008.
+\newblock \emph{Survey of Current Business}, pages 72--77, December 2010.
+\newblock URL
+  \url{http://www.bea.gov/scb/pdf/2010/12%20December/1210_gdp_state-text.pdf}.
+
+\bibitem[Panek et~al.(2007)Panek, Baumgardner, and
+  McCormick]{Panek-Baumgardner-McCormick-gdp-by-msa}
+Sharon~D. Panek, Frank~T. Baumgardner, and Matthew~J. McCormick.
+\newblock Introducing new measures of the metropolitan economy: Prototype
+  gdp-by-metropolitan-area estimates for 2001--2005.
+\newblock \emph{Survey of Current Business}, pages 79--114, November 2007.
+\newblock URL
+  \url{http://www.bea.gov/scb/pdf/2007/11%20November/1107_gdpmetro.pdf}.
+
+\bibitem[Buja et~al.(1989)Buja, Hastie, and
+  Tibshirani]{Buja-Hastie-Tibshirani-additive-models}
+Andreas Buja, Trevor Hastie, and Robert Tibshirani.
+\newblock Linear smoothers and additive models.
+\newblock \emph{Annals of Statistics}, 17:\penalty0 453--555, 1989.
+\newblock URL \url{http://projecteuclid.org/euclid.aos/1176347115}.
+
+\bibitem[Wasserman(2003)]{Wasserman-all-of-stats}
+Larry Wasserman.
+\newblock \emph{All of Statistics: A Concise Course in Statistical Inference}.
+\newblock Springer-Verlag, Berlin, 2003.
+
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and Friedman]{tEoSL-2nd}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock \emph{The Elements of Statistical Learning: Data Mining, Inference,
+  and Prediction}.
+\newblock Springer, Berlin, second edition, 2009.
+\newblock URL \url{http://www-stat.stanford.edu/~tibs/ElemStatLearn/}.
+
+\bibitem[Wahba(1990)]{Wahba-spline-models}
+Grace Wahba.
+\newblock \emph{Spline Models for Observational Data}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, 1990.
+
+\bibitem[Wood(2004)]{Wood-mgcv-2004}
+Simon~N. Wood.
+\newblock Stable and efficient multiple smoothing parameter estimation for
+  generalized additive models.
+\newblock \emph{Journal of the American Statistical Association}, 99:\penalty0
+  673--686, 2004.
+\newblock URL \url{http://www.maths.bath.ac.uk/~sw283/simon/papers/magic.pdf}.
+
+\bibitem[Birnbaum(1973)]{Birnbaum-devil-rides-again}
+Michael~H. Birnbaum.
+\newblock The devil rides again: Correlation as an index of fit.
+\newblock \emph{Psychological Bulletin}, 79:\penalty0 239--242, 1973.
+\newblock \doi{10.1037/h0033853}.
+
+\bibitem[Anderson and Shanteau(1977)]{Anderson-Shanteau-weak-inference}
+Norman~H. Anderson and James Shanteau.
+\newblock Weak inference with linear models.
+\newblock \emph{Psychological Bulletin}, 84:\penalty0 1155--1170, 1977.
+\newblock \doi{10.1037/0033-2909.84.6.1155}.
+
+\bibitem[Berk(2004)]{Berk-on-regression}
+Richard~A. Berk.
+\newblock \emph{Regression Analysis: A Constructive Critique}.
+\newblock Sage, Thousand Oaks, California, 2004.
+
+\bibitem[Kullback(1968)]{Kullback-info-theory-and-stats}
+Solomon Kullback.
+\newblock \emph{Information Theory and Statistics}.
+\newblock Dover Books, New York, 2nd edition, 1968.
+
+\bibitem[Kelly(2010)]{Kelly-simplicity-truth-probability}
+Kevin~T. Kelly.
+\newblock Simplicity, truth, and probability.
+\newblock In Prasanta Bandyopadhyay and Malcolm Forster, editors,
+  \emph{Handbook on the Philosophy of Statistics}. Elsevier, Dordrecht, 2010.
+\newblock URL
+  \url{http://www.andrew.cmu.edu/user/kk3n/ockham/prasanta-submit-final.pdf}.
+
+\bibitem[Benaglia et~al.(2009)Benaglia, Chauveau, Hunter, and
+  Young]{Benaglia-et-al-mixtools}
+Tatiana Benaglia, Didier Chauveau, David~R. Hunter, and Derek~S. Young.
+\newblock mixtools: An {R} package for analyzing mixture models.
+\newblock \emph{Journal of Statistical Software}, 32, 2009.
+\newblock URL \url{http://www.jstatsoft.org/v32/i06}.
+
+\bibitem[Claeskens and Hjort(2008)]{Claeskens-Hjort-model-selection}
+Gerda Claeskens and Nils~Lid Hjort.
+\newblock \emph{Model Selection and Model Averaging}.
+\newblock Cambridge University Press, Cambridge, England, 2008.
+
+\bibitem[Gelman and Hill(2006)]{Gelman-Hill-data-analysis}
+Andrew Gelman and Jennifer Hill.
+\newblock \emph{Data Analysis Using Regression and Multilevel/Hierarchical
+  Models}.
+\newblock Cambridge University Press, Cambridge, England, 2006.
+
+\bibitem[Kallenberg and
+  Ledwina(1997)]{WCMKallenberg-Ledwina-data-driven-smooth-tests}
+Wilbert C.~M. Kallenberg and Teresa Ledwina.
+\newblock Data-driven smooth tests when the hypothesis is composite.
+\newblock \emph{Journal of the American Statistical Association}, 92:\penalty0
+  1094--1104, 1997.
+\newblock URL \url{http://doc.utwente.nl/62408/}.
+
+\bibitem[Biecek and Ledwina(2010)]{ddst}
+Przemyslaw Biecek and Teresa Ledwina.
+\newblock \emph{ddst: {Data} driven smooth test}, 2010.
+\newblock URL \url{http://CRAN.R-project.org/package=ddst}.
+\newblock {R} package, version 1.02.
+
+\bibitem[Mayo and Cox(2006)]{Mayo-Cox-frequentist}
+Deborah~G. Mayo and D.~R. Cox.
+\newblock Frequentist statistics as a theory of inductive inference.
+\newblock In Javier Rojo, editor, \emph{Optimality: The Second Erich L. Lehmann
+  Symposium}, pages 77--97, Bethesda, Maryland, 2006. Institute of Mathematical
+  Statistics.
+\newblock URL \url{http://arxiv.org/abs/math.ST/0610846}.
+
+\bibitem[Simonoff(1996)]{Simonoff-on-smoothing}
+Jeffrey~S. Simonoff.
+\newblock \emph{Smoothing Methods in Statistics}.
+\newblock Springer-Verlag, Berlin, 1996.
+
+\end{thebibliography}

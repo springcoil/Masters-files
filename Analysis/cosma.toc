@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction: ``If your friend jumped off a bridge, would you jump too?''}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Notation, Terminology, Conventions}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}How Homophily and Individual-Level Causation Look Like Contagion}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Contagion Effects are Nonparametrically Unidentifiable}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}The Argument from Asymmetry}{7}{subsection.2.2}
+\contentsline {section}{\numberline {3}How Contagion and Homophily Look Like Causation At The Individual Level}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Simulation Model}{10}{subsection.3.1}
+\contentsline {section}{\numberline {4}Constructive Responses}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Identifying Contagion from Non-Neighbors}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Bounds}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Network Clustering}{14}{subsection.4.3}
+\contentsline {section}{\numberline {5}Conclusion: Towards Responsible Just-So Story-Telling}{15}{section.5}

@@ -1,0 +1,144 @@
+\section{Connections and the Cartan formalism}
+For a smooth (for now, real) manifold M, we let $\AA(M)$ denote smooth \Cbb-valued differential forms and \AAA(M) denote
+smooth functions. Similarly for a complex bundle $E \to M$, we let E(M) denote (smooth, \Cbb-valued ) sections
+\subsection{Connections}
+Recall that a connection on a vector bundle E over a smooth manifold is a \Cbb-homomorphism 
+$$ \nab:E(M) \rightarrow (\AA \tensor E)(M)$$ 
+that maps global sections on M to global sections of $\AA \tensor E$, which satisfies the Leibniz rule
+$ \nab(fs) = (df)s + f \nab s$   $f \in \AAA(M)$  $s \in E(M)$
+This is essentially an way of differentiating sections of E, because for any vector field X on M, we can define 
+\begin{dfn}
+The Covariant derivative w.r.t this connection of s in the direction of X
+ $$\nab_X s$$. This satisfies
+\begin{enumerate}
+ \item $\nab_fX(s) \;=\; f\nab_X s$
+\item $\nab_X(fs)\;=\;(Xf)_s\;+\;f\nab_X s$
+\end{enumerate}
+
+\end{dfn}
+In fact these two properties {\bf characterize} a connection.
+\\ We can describe a connection {\bf locally} in terms of frames.
+\begin{dfn}
+ Recall that a {\bf frame} of an n-dimensional vector bundle E, over an open subset $U \subset M$, is a family of sections 
+$(e_1,\cdots e_n)\;\in\;E(U)$ that form a basis at each point; thus ${e_1,\cdots,e_n}$ forms a vector bundle isomorphism
+ between
+$E|_U$ and the trivial bundle. 
+\end{dfn}
+Then $\nab$ is {\bf determined} over U by the elements $\nab_{e_1},\cdots \nab_{e_n}\;\in\;(\AA \tensor E)(U)$. For any 
+sections 
+s of $E(U)$ can be written as $s \; = \;\sum_i f_i e_i$ for the $f_i$ smooth functions, and consequently 
+$$\nab s = \sum e_i(df_i)\;+\;\sum f_i \nab e_i$$
+In other words, if we use the fram ${e_i}$ to identify each section of E(U) with the tuple 
+$f_i$ such that $s\;=\;\sum f_i e_i$ then $\nab$ acts by applying d and multiplying by suitable matrix corresponding to the $\nab e_i$.
+In view of this we make:
+\begin{dfn}
+Given a frame $\Fff = {e_1,\cdots,e_n}$ over U and a connection $\nab$, we define the n-by-n matrix $\theta(\Fff)$ of 
+1-forms via
+$$\nab \Fff = \theta(\Fff)\Fff$$
+In other words, $\nab e_i\;=\;\sum_{j}\theta(\Fff)_{ij} e_j$ for each j
+\end{dfn}
+Note that the $\theta$ itself makes no reference to the bundle: it is simply a matrix of 1-forms.
+Given a frame $\Fff$, and given $g:U \rightarrow GL_n(\Cbb)$, we define a new frame $g\Fff$ by multiplying on the left.
+We would like to determine how a connection {\bf transforms} with respect to a change of frame, so we can think of a 
+connection
+in a different way. Namely we have:
+$$\nab (g \Fff)\;=\;(dg)\Fff \;+\;g\nab \Fff\;=\;(dg)\Fff\;+\;g\theta(\Fff)\Fff$$
+where df is considered as a matrix of 1-forms. As a result we get the {\bf transformation law}
+\begin{equation} \label{transformation law}
+ \theta(g\Fff) = (dg)g^-1 + g\theta(\Fff)g^-1,\;g:U\to\;GL_n(\Cbb)
+\end{equation}
+Conversely, if we have for each local fram $\Fff$ of a vector bundle $E\to M$ a matrix $\theta(\Fff)$ of 1-forms as above,
+which satisfy the transformation law \ref{transformation law} as above,then we get a connection on E.
+\begin{prop}
+ Any vector bundle $E\to M$ admits a connection
+\end{prop}
+\begin{proof}
+ It is easy to see that a convex combination of connections is a connection. Namely in each coordinate patch U over which E 
+is
+ trivial
+with a fixed frame, we choose the matrix $\theta$ arbitrarily and get some connection $\nab'_U$ on $E|_U$. Let these 
+various 
+$U'_s$ form an open cover $\mathfrak{A}$.
+   Then we can find a partition of unity $\phi_U$, $U\in\mathfrak{A}$ subordinate to $\mathfrak{A}$, and we can define our
+ global
+connection va 
+$$\nab \;=\;\sum_U \phi_U \nab'_U $$
+\end{proof}
+
+\subsection{Curvature}
+We want to now describe the {\bf curvature} of a connection. A connection is a means of differentiating sections; 
+however, it 
+may not satisfy the standard results for functions, that mixed partials are equal. The curvature will be the measure of how
+ much
+that fails. Let M be a smooth manifold, $E\to M$ a smooth complex vector bundle. Given a connection $\nab$ on E 
+,the curvature is going to be a global section of $\AAA^{2}\tensor\hom(E,E)$: in other words, the global differential
+2-forms with coefficients in the vector bundle $\hom(E,E)$
+
+\begin{prop}
+ Let s be a section of E, and X,Y vector fields.
+The map:
+$$s,X,Y \mapsto R(X,Y,s)=(\nab_Y \nab_X - \nab_X \nab_Y - \nab_{[X,Y]})s$$
+is a bundle map $E \to E$, and is $\AAA(M)$-linear in X,Y
+\end{prop}
+
+\begin{proof}
+ Calculation typically done to define the Riemannian curvature tensor in the case of the tangent bundle
+\end{proof}
+Since the quantity $R(X,Y,s)$ is $\AAA(M)$-linear in all these quantities (X,Y,s),and clearly alternating in X,Y, we 
+can think of it as a global section of the bundle $\AAA^{2}\tensor \hom(E,E)$. Here recall that $\AAA^{2}$ is the
+bundle of 2-forms.
+\begin{dfn}
+ The above elements of $\AAA^{2}\tensor \hom(E,E)(M)$ is called the \textbf{curvature} of the connection $\nab$ and is 
+denoted by $\Theta$.
+\end{dfn}
+
+We now wish to think of the curvature in another manner. To do this, we start by extending the connection $\nab$ to maps 
+$\nab:(E \tensor \AAA^p)(M)\to (E\tensor \AAA^{p+1})(M)$. The requirement is that the Leibnitz rule holds: that is,
+\begin{equation}\label{Leibnitz}
+\nab (\omega s) = (d \omega)s + (-1)^p \omega \wedge \nab s,
+\end{equation}
+whenever $\omega$ is a p-form and s a global section. We can this locally and glue them.
+Thus: 
+\begin{prop}
+ One can extend $\nab$ to map s 
+$$\nab: (E \tensor \AAA^p)(M)\to (E\tensor \AAA^{p+1})(M) $$ satisfying \ref{Leibnitz}
+\end{prop}
+Given such an extension, we can consider the map
+$$\nab^2:E(M) \to (E \tensor \AAA^2(M)) $$.
+This is $\AAA(M)$-linear. Indeed we can check this by computation
+\begin{ex}
+ $$\nab^2(fs) = \nab(\nab(fs))
+\\ = \nab(dfs + f\nab s)
+\\ = d^2 fs +(-1)df \nab s + df(\nab s) +f \nab^{2} s
+\\ = f\nab^2 s$$
+\end{ex}
+We now want to connect this $\AAA(M)$- linear map with the earlier curvature tensor
+\begin{prop}
+ The vector bundle map $\nab^2$ is equal to the curvature tensor $\Theta$
+\end{prop}
+\begin{proof}
+ We can work in local coordinates, and assume that X,Y are the standard commuting vector fields $\partial_i$ ,$\partial_j$.
+We want to show that, given a section s, we have 
+\\$$\nab^2(s)(\partial_i , \partial_j) = (\nab_{\partial_i} \nab_{\partial_i} - \nab_{\partial_j}\nab_{\partial_i})s 
+\in E(M)$$
+To do this we should check how $\nab$ was defined. Namely we have, by definition 
+$\nab s = \sum_i dx_i \nab_{\partial_i} s$
+and consequently 
+$$\nab^2 s = \sum_{ij} dx_j \nab_{\partial_j}(dx_i \nab_{\partial_i}s)$$
+This becomes, by the sign rules 
+$\sum_{i\lt j}(\nab_{\partial_j \nab_{\partial_i} -  \nab_{\partial_i} \nab_{\partial_j}}s dx_i \wedge dx_j$.
+It is easy to see that this, evaluated on on $(\partial_i,\partial_j)$, gives the desired quantity.
+It follows that $\nab^2$ is equal to the curvature tensor $\Theta$
+\end{proof}
+As a result, we may calculate {\bf curvature} in a frame. Let $\Fff = {e_1,\cdots,e_n}$ be a frame and let $\theta(\Fff)$
+be the connection matrix. Then we can obtain an n-by-n {\bf curvature matrix} $\Theta(\Fff)$ of 2-forms such that
+\\$$ \Theta(\Fff) = \nab^2(\Fff)$$
+The follow result enables us to compute $\Theta(\Fff)$.
+\begin{prop}[Cartan]
+\begin{equation}\Theta(\Fff)=d\theta(\Fff) - \theta(\Fff)\wedge \theta(\Fff)\end{equation}
+Note that $\theta(\Fff) \wedge \theta(\Fff)$ is not gzero in general! The reason is that one is working with matrices of 1-forms,
+not just plain 1-forms. The wedge product is a matrix product in a sense.
+\end{prop}
+\begin{proof}
+ 
+\end{proof}

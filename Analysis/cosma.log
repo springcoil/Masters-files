@@ -1,0 +1,1404 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.8.14)  22 AUG 2012 16:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**cosma.tex
+(./cosma.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\multicol@sort@counter=\count96
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen113
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks18
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks19
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks20
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 1999/11/29 v1.2d
+\athelp@=\toks22
+\minaw@=\dimen122
+\bigaw@=\dimen123
+\minCDarrowwidth=\dimen124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip48
+\bibsep=\skip49
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count110
+\Hy@pagecounter=\count111
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count112
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count113
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count114
+\Field@Width=\dimen126
+\Fld@charsize=\dimen127
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count115
+\c@Item=\count116
+\c@Hfootnote=\count117
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count118
+\c@bookmark@seq@number=\count119
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip50
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 13.
+
+(./cosma.aux)
+\openout1 = `cosma.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen128
+\scratchbox=\box54
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen129
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box55
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count126
+)
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
+
+(./cosma.out) (./cosma.out)
+\@outlinefile=\write3
+\openout3 = `cosma.out'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Overfull \hbox (59.92348pt too wide) in paragraph at lines 26--26
+ [][] 
+ []
+
+
+Overfull \hbox (59.92348pt too wide) in paragraph at lines 26--26
+ [] 
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 28--42
+\OT1/cmr/m/n/9 causal ef-fect of an in-di-
+ []
+
+(./cosma.toc
+Underfull \hbox (badness 8132) in paragraph at lines 1--1
+  [][][]\OT1/cmr/bx/n/10 Introduction: ``If your 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+ [] [][][]\OT1/cmr/bx/n/10 How Ho-mophily and 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+ [][] [][][]\OT1/cmr/m/n/10 Contagion Ef-fects 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+ [][] [][][]\OT1/cmr/m/n/10 The Ar-gu-ment from 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+ [][] [][][]\OT1/cmr/m/n/10 Identifying Con-ta-gion 
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 spon-si-ble Just-So Story- 
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `cosma.toc'.
+
+
+Underfull \hbox (badness 7722) in paragraph at lines 47--47
+[]\OT1/cmr/bx/n/14.4 Introduction: ``If
+ []
+
+
+Package natbib Warning: Citation `Siegfried-germs-and-ideas' on page 1 undefine
+d on input line 59.
+
+
+Package natbib Warning: Citation `Sperber-explaining' on page 1 undefined on in
+put line 59.
+
+
+Package natbib Warning: Citation `Birds-of-a-Feather-review' on page 1 undefine
+d on input line 62.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 6173) in paragraph at lines 75--79
+\OT1/cmr/m/n/10 friends through their shared
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
+\OT1/cmr/m/n/10 fond-ness for roller-coasters,
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 75--79
+\OT1/cmr/m/n/10 mon thrill-seeking propen-sity,
+ []
+
+
+Package natbib Warning: Citation `Manski-identification-for-prediction' on page
+ 2 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Pearl-causality-2nd' on page 2 undefined on i
+nput line 114.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 2 might be wrong on input line 120.
+
+
+[2]
+
+LaTeX Warning: Reference `table:terminology' on page 3 undefined on input line 
+152.
+
+
+Package natbib Warning: Citation `R' on page 3 undefined on input line 155.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+\OT1/cmtt/m/n/10 / / www . stat . cmu . edu / []cshalizi /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]\OT1/cmr/bx/n/14.4 How Ho-mophily
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\OT1/cmr/bx/n/14.4 and Individual-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\OT1/cmr/bx/n/14.4 Level Cau-sa-tion
+ []
+
+
+Package natbib Warning: Citation `Bartlett-stochastic-population-models' on pag
+e 3 undefined on input line 170.
+
+
+Package natbib Warning: Citation `Ellner-Guckenheimer' on page 3 undefined on i
+nput line 170.
+
+
+Package natbib Warning: Citation `MEJN-epidemics-on-networks' on page 3 undefin
+ed on input line 170.
+
+
+Package natbib Warning: Citation `Rogers-diffusion-of-innovations' on page 3 un
+defined on input line 171.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 3 might be wrong on input line 172.
+
+
+[3]
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+4 undefined on input line 174.
+
+
+Package natbib Warning: Citation `Atkinson-viruses-obesity' on page 4 undefined
+ on input line 181.
+
+
+Package natbib Warning: Citation `Fowler-Christakis-happiness' on page 4 undefi
+ned on input line 183.
+
+
+Package natbib Warning: Citation `Sperber-explaining' on page 4 undefined on in
+put line 191.
+
+
+Package natbib Warning: Citation `Leenders-structure-and-influence' on page 4 u
+ndefined on input line 195.
+
+
+Package natbib Warning: Citation `aral2009distinguishing' on page 4 undefined o
+n input line 198.
+
+
+Package natbib Warning: Citation `Bakshy-Karrer-Adamic' on page 4 undefined on 
+input line 201.
+
+
+Package natbib Warning: Citation `flickr-tagging-influence' on page 4 undefined
+ on input line 201.
+
+
+Package natbib Warning: Citation `Yang-Longini-Halloran-detecing-transmission' 
+on page 4 undefined on input line 201.
+
+
+Package natbib Warning: Citation `bramoulle2009ipetsn' on page 4 undefined on i
+nput line 201.
+
+
+Package natbib Warning: Citation `Rosenbaum-Rubin-1983' on page 4 undefined on 
+input line 208.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 4 might be wrong on input line 224.
+
+
+[4]
+
+Package natbib Warning: Citation `Manski-reflection-problem' on page 5 undefine
+d on input line 228.
+
+
+Package natbib Warning: Citation `Calvo-Armengol-Jackson-on-parent-child-correl
+ation' on page 5 undefined on input line 237.
+
+
+Package natbib Warning: Citation `Blume-Brock-Durlauf-Ioannides-identification'
+ on page 5 undefined on input line 240.
+
+
+Package natbib Warning: Citation `Spirtes-Glymour-Scheines' on page 5 undefined
+ on input line 251.
+
+
+Package natbib Warning: Citation `Pearl-causality-2nd' on page 5 undefined on i
+nput line 251.
+
+
+Package natbib Warning: Citation `Pearl-on-causal-inference' on page 5 undefine
+d on input line 251.
+
+
+Package natbib Warning: Citation `Morgan-Winship-counterfactuals' on page 5 und
+efined on input line 251.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--256
+[]\OT1/cmr/bx/n/12 Contagion Ef-fects
+ []
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 5 undefined on input li
+ne 276.
+
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 280.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 280.
+
+<images/latent-homophily.pdf, id=147, 501.875pt x 361.35pt>
+File: images/latent-homophily.pdf Graphic file (type pdf)
+
+<use images/latent-homophily.pdf>
+Package pdftex.def Info: images/latent-homophily.pdf used on input line 291.
+(pdftex.def)             Requested size: 501.87376pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
+\OT1/cmr/m/n/10 la-tent vari-ables
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 293--293
+\OT1/cmr/m/n/10 ($\OML/cmm/m/it/10 X$\OT1/cmr/m/n/10 ) to in-flu-ence
+ []
+
+
+Overfull \hbox (73.51169pt too wide) in paragraph at lines 301--311
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]\OT1/cmr/m/n/10 Figure 2:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]\OT1/cmr/m/n/10 Notational
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+\OT1/cmr/m/n/10 used in this
+ []
+
+
+Overfull \hbox (19.62347pt too wide) in paragraph at lines 289--314
+ [] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package natbib Warning: Citation `Spirtes-Glymour-Scheines' on page 6 undefined
+ on input line 319.
+
+
+Package natbib Warning: Citation `Pearl-causality-2nd' on page 6 undefined on i
+nput line 319.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 6 undefined on input li
+ne 325.
+
+
+Package natbib Warning: Citation `Pearl-causality-2nd' on page 6 undefined on i
+nput line 326.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 6 undefined on input li
+ne 343.
+
+
+LaTeX Warning: Reference `fig:observable-control' on page 6 undefined on input 
+line 345.
+
+
+LaTeX Warning: Reference `fig:observable-control' on page 6 undefined on input 
+line 346.
+
+
+Package natbib Warning: Citation `Elwert-Christakis-wives-and-ex-wives' on page
+ 6 undefined on input line 354.
+
+
+Package natbib Warning: Citation `Leenders-structure-and-influence' on page 6 u
+ndefined on input line 357.
+
+
+Package natbib Warning: Citation `Steglich-Snijders-Pearson-selection-and-influ
+ence' on page 6 undefined on input line 357.
+
+
+Package natbib Warning: Citation `aral2009distinguishing' on page 6 undefined o
+n input line 361.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 6 might be wrong on input line 362.
+
+
+[6] <images/observable-control.pdf, id=158, 501.875pt x 361.35pt>
+File: images/observable-control.pdf Graphic file (type pdf)
+
+<use images/observable-control.pdf>
+Package pdftex.def Info: images/observable-control.pdf used on input line 366.
+(pdftex.def)             Requested size: 501.87376pt x 361.34912pt.
+
+<images/observable-control-b.pdf, id=159, 503.8825pt x 361.35pt>
+File: images/observable-control-b.pdf Graphic file (type pdf)
+
+<use images/observable-control-b.pdf>
+Package pdftex.def Info: images/observable-control-b.pdf used on input line 367
+.
+(pdftex.def)             Requested size: 503.88127pt x 361.34912pt.
+
+Overfull \hbox (3.38217pt too wide) in paragraph at lines 366--368
+ \OML/cmm/m/it/10 a$[] 
+ []
+
+
+Overfull \hbox (2.3891pt too wide) in paragraph at lines 366--368
+ \OML/cmm/m/it/10 b$[] 
+ []
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 7 undefined on input li
+ne 374.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 7 undefined on input li
+ne 374.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 7 undefined on input li
+ne 379.
+
+
+LaTeX Warning: Reference `fig:observable-control' on page 7 undefined on input 
+line 380.
+
+
+Package natbib Warning: Citation `Spirtes-Glymour-Scheines' on page 7 undefined
+ on input line 382.
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 391--391
+[]\OT1/cmr/bx/n/12 The Ar-gu-ment from
+ []
+
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+7 undefined on input line 395.
+
+
+Package natbib Warning: Citation `flickr-tagging-influence' on page 7 undefined
+ on input line 408.
+
+
+Package natbib Warning: Citation `bramoulle2009ipetsn' on page 7 undefined on i
+nput line 408.
+
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+7 undefined on input line 422.
+
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+7 undefined on input line 432.
+
+
+Package natbib Warning: Citation `lyons2010semvfsa' on page 7 undefined on inpu
+t line 432.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 7 might be wrong on input line 438.
+
+
+[7]
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+8 undefined on input line 455.
+
+
+Package natbib Warning: Citation `Fowler-Christakis-happiness' on page 8 undefi
+ned on input line 455.
+
+
+LaTeX Warning: Reference `fig:asymmetry-model' on page 8 undefined on input lin
+e 472.
+
+<images/asymmetry-model-2step.pdf, id=168, 505.89pt x 355.3275pt>
+File: images/asymmetry-model-2step.pdf Graphic file (type pdf)
+
+<use images/asymmetry-model-2step.pdf>
+Package pdftex.def Info: images/asymmetry-model-2step.pdf used on input line 47
+7.
+(pdftex.def)             Requested size: 505.88875pt x 355.32661pt.
+
+Overfull \hbox (91.25696pt too wide) in paragraph at lines 477--478
+ [] 
+ []
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 8 undefined on input li
+ne 486.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 8 undefined on input li
+ne 486.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Overfull \hbox (100.08789pt too wide) in alignment at lines 493--496
+ [][][] []
+ []
+
+<images/timeseries-named-5000-a.pdf, id=171, 433.62pt x 433.62pt>
+File: images/timeseries-named-5000-a.pdf Graphic file (type pdf)
+
+<use images/timeseries-named-5000-a.pdf>
+Package pdftex.def Info: images/timeseries-named-5000-a.pdf used on input line 
+507.
+(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
+
+<images/timeseries-namer-5000-a.pdf, id=172, 433.62pt x 433.62pt>
+File: images/timeseries-namer-5000-a.pdf Graphic file (type pdf)
+
+<use images/timeseries-namer-5000-a.pdf>
+Package pdftex.def Info: images/timeseries-namer-5000-a.pdf used on input line 
+508.
+(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
+
+<images/timeseries-mutual-5000-a.pdf, id=173, 433.62pt x 433.62pt>
+File: images/timeseries-mutual-5000-a.pdf Graphic file (type pdf)
+
+<use images/timeseries-mutual-5000-a.pdf>
+Package pdftex.def Info: images/timeseries-mutual-5000-a.pdf used on input line
+ 509.
+(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
+
+<images/timeseries-difference-5000-a.pdf, id=174, 433.62pt x 433.62pt>
+File: images/timeseries-difference-5000-a.pdf Graphic file (type pdf)
+
+<use images/timeseries-difference-5000-a.pdf>
+Package pdftex.def Info: images/timeseries-difference-5000-a.pdf used on input 
+line 510.
+(pdftex.def)             Requested size: 155.24895pt x 155.24954pt.
+
+Overfull \hbox (162.9979pt too wide) in paragraph at lines 507--511
+ []$ 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.6436pt on input line 524.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 8 undefined on input lin
+e 527.
+
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 8 undefined on input lin
+e 528.
+
+
+Package natbib Warning: Citation `Cohen-Cole-Fletcher' on page 8 undefined on i
+nput line 531.
+
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 8 undefined on input lin
+e 532.
+
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 8 undefined on input lin
+e 534.
+
+
+Package natbib Warning: Citation `Christakis-Fowler-spread-of-obesity' on page 
+8 undefined on input line 539.
+
+
+Package natbib Warning: Citation `Fowler-Christakis-happiness' on page 8 undefi
+ned on input line 539.
+
+[8]
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 9 undefined on input lin
+e 547.
+
+
+Package natbib Warning: Citation `Fowler-Christakis-2010cbchsn' on page 9 undef
+ined on input line 569.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+\OT1/cmr/bx/n/14.4 Ho-mophily Look
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+\OT1/cmr/bx/n/14.4 Like Cau-sa-tion
+ []
+
+
+Package natbib Warning: Citation `CRS-social-media' on page 9 undefined on inpu
+t line 589.
+
+
+Package natbib Warning: Citation `Gellner-cause-and-meaning' on page 9 undefine
+d on input line 594.
+
+
+Package natbib Warning: Citation `Aron-main-currents' on page 9 undefined on in
+put line 598.
+
+
+Package natbib Warning: Citation `Bourdieu-distinction' on page 9 undefined on 
+input line 607.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 9 might be wrong on input line 608.
+
+
+[9] <images/survey-regression2.pdf, id=196, 501.875pt x 361.35pt>
+File: images/survey-regression2.pdf Graphic file (type pdf)
+
+<use images/survey-regression2.pdf>
+Package pdftex.def Info: images/survey-regression2.pdf used on input line 616.
+(pdftex.def)             Requested size: 501.87376pt x 361.34912pt.
+
+Overfull \hbox (5.00378pt too wide) in paragraph at lines 616--617
+ [] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `fig:voter-model-graph' on page 10 undefined on input 
+line 645.
+
+<images/voter-model-graph.pdf, id=198, 501.875pt x 361.35pt>
+File: images/voter-model-graph.pdf Graphic file (type pdf)
+
+<use images/voter-model-graph.pdf>
+Package pdftex.def Info: images/voter-model-graph.pdf used on input line 649.
+(pdftex.def)             Requested size: 501.87376pt x 361.34912pt.
+
+Overfull \hbox (5.00378pt too wide) in paragraph at lines 649--650
+ [] 
+ []
+
+
+LaTeX Warning: Reference `fig:survey-regression2' on page 10 undefined on input
+ line 656.
+
+
+LaTeX Warning: Reference `fig:survey-regression2' on page 10 undefined on input
+ line 656.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package natbib Warning: Citation `Bartlett-remembering' on page 10 undefined on
+ input line 665.
+
+
+Package natbib Warning: Citation `Sperber-explaining' on page 10 undefined on i
+nput line 665.
+
+
+Package natbib Warning: Citation `Huckfeldt-Johnson-Sprague-political-disagreem
+ent' on page 10 undefined on input line 665.
+
+
+Package natbib Warning: Citation `Friedkin-social-influence' on page 10 undefin
+ed on input line 665.
+
+
+Package natbib Warning: Citation `Friedkin-social-influence' on page 10 undefin
+ed on input line 671.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 10 might be wrong on input line 675
+.
+
+[10]
+
+Package natbib Warning: Citation `Liggett-particle-systems' on page 11 undefine
+d on input line 678.
+
+
+Package natbib Warning: Citation `Sood-Redner-voter-model' on page 11 undefined
+ on input line 678.
+
+<images/diffusion-initial-act.pdf, id=208, 722.7pt x 433.62pt>
+File: images/diffusion-initial-act.pdf Graphic file (type pdf)
+
+<use images/diffusion-initial-act.pdf>
+Package pdftex.def Info: images/diffusion-initial-act.pdf used on input line 68
+7.
+(pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
+
+<images/diffusion-midway-act.pdf, id=209, 722.7pt x 433.62pt>
+File: images/diffusion-midway-act.pdf Graphic file (type pdf)
+
+<use images/diffusion-midway-act.pdf>
+Package pdftex.def Info: images/diffusion-midway-act.pdf used on input line 688
+.
+(pdftex.def)             Requested size: 722.69823pt x 433.61894pt.
+
+Overfull \hbox (199.16437pt too wide) in paragraph at lines 687--689
+ [] 
+ []
+
+
+Overfull \hbox (199.16437pt too wide) in paragraph at lines 687--689
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 57.94167pt on input line 697.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+<images/correlation-homoph.pdf, id=210, 722.7pt x 361.35pt>
+File: images/correlation-homoph.pdf Graphic file (type pdf)
+
+<use images/correlation-homoph.pdf>
+Package pdftex.def Info: images/correlation-homoph.pdf used on input line 702.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+
+<images/correlation-neutral.pdf, id=211, 722.7pt x 361.35pt>
+File: images/correlation-neutral.pdf Graphic file (type pdf)
+
+<use images/correlation-neutral.pdf>
+Package pdftex.def Info: images/correlation-neutral.pdf used on input line 703.
+
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+
+Overfull \hbox (1.55156pt too wide) in paragraph at lines 702--704
+ [] 
+ []
+
+
+Overfull \hbox (1.55156pt too wide) in paragraph at lines 702--704
+ [] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `fig:network-evolutions' on page 11 undefined on input
+ line 717.
+
+
+LaTeX Warning: Reference `fig:network-correlations' on page 11 undefined on inp
+ut line 725.
+
+
+Package natbib Warning: Citation `Cox-Griffeath-voter-model' on page 11 undefin
+ed on input line 742.
+
+
+Package natbib Warning: Citation `Gelman-et-al-red-state-blue-state' on page 11
+ undefined on input line 755.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 11 might be wrong on input line 762
+.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 764--764
+[]\OT1/cmr/bx/n/14.4 Constructive Re-
+ []
+
+
+Package natbib Warning: Citation `Morgan-Winship-counterfactuals' on page 12 un
+defined on input line 784.
+
+
+Package natbib Warning: Citation `Pearl-causality' on page 12 undefined on inpu
+t line 784.
+
+
+Package natbib Warning: Citation `Spirtes-Glymour-Scheines' on page 12 undefine
+d on input line 784.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 12 undefined on input l
+ine 798.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--815
+[]\OT1/cmr/m/n/10 Divide the nodes into two
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 12 might be wrong on input line 821
+.
+
+[12]
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 13 undefined on input l
+ine 841.
+
+
+Package natbib Warning: Citation `Manski-identification-for-prediction' on page
+ 13 undefined on input line 854.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 13 undefined on input l
+ine 863.
+
+
+LaTeX Warning: Reference `fig:timeseriesmodel' on page 13 undefined on input li
+ne 867.
+
+
+Package natbib Warning: Citation `Spirtes-Glymour-Scheines' on page 13 undefine
+d on input line 871.
+
+
+Overfull \hbox (16.59851pt too wide) detected at line 877
+\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X[]; Y[]\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)]\OML/cmm/m/it/10 ^^Z
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X[]; X[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 A[
+] \OT1/cmr/m/n/10 = 1]\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X[]
+; Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )]
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 13 might be wrong on input line 886
+.
+
+[13]
+
+LaTeX Warning: Reference `fig:survey-regression2' on page 14 undefined on input
+ line 890.
+
+
+Package natbib Warning: Citation `Mayo-error' on page 14 undefined on input lin
+e 903.
+
+
+Package natbib Warning: Citation `Girvan-MEJN-community-structure' on page 14 u
+ndefined on input line 928.
+
+
+Package natbib Warning: Citation `MEJN-Girvan-community-structure' on page 14 u
+ndefined on input line 928.
+
+
+Package natbib Warning: Citation `Bickel-Chen-on-modularity' on page 14 undefin
+ed on input line 928.
+
+
+Package natbib Warning: Citation `Porter-Onnela-Mucha-communities' on page 14 u
+ndefined on input line 928.
+
+
+Package natbib Warning: Citation `Fortunato-community-detection' on page 14 und
+efined on input line 928.
+
+
+Package natbib Warning: Citation `Elwert-Christakis-wives-and-ex-wives' on page
+ 14 undefined on input line 929.
+
+
+LaTeX Warning: Reference `fig:latent-homophily' on page 14 undefined on input l
+ine 944.
+
+
+LaTeX Warning: Reference `fig:observable-control' on page 14 undefined on input
+ line 944.
+
+
+Package natbib Warning: Citation `airoldi2008mmsb' on page 14 undefined on inpu
+t line 949.
+
+
+Package natbib Warning: Citation `Reichardt-White-role-models' on page 14 undef
+ined on input line 949.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 935--953
+\OT1/cmr/m/n/10 sented so far, such control-by-
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 14 might be wrong on input line 953
+.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
+[]\OT1/cmr/bx/n/14.4 Conclusion: To-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
+\OT1/cmr/bx/n/14.4 wards Re-spon-si-
+ []
+
+
+Package natbib Warning: Citation `Boudon-ideology' on page 15 undefined on inpu
+t line 977.
+
+
+Package natbib Warning: Citation `Berger-culture' on page 15 undefined on input
+ line 977.
+
+
+Package natbib Warning: Citation `Lieberson-matter-of-taste' on page 15 undefin
+ed on input line 977.
+
+
+Package natbib Warning: Citation `Kipling-just-so' on page 15 undefined on inpu
+t line 987.
+
+
+Package natbib Warning: Citation `Harvey-Pagel' on page 15 undefined on input l
+ine 993.
+
+
+Package natbib Warning: Citation `Gillespie-pop-gen' on page 15 undefined on in
+put line 993.
+
+
+Package natbib Warning: Citation `Lieberson-matter-of-taste' on page 15 undefin
+ed on input line 1016.
+
+
+Package natbib Warning: Citation `Lieberson-Lynn-wrong-branch' on page 15 undef
+ined on input line 1018.
+
+
+Package natbib Warning: Citation `Kaufman-endogenous' on page 15 undefined on i
+nput line 1020.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 15 might be wrong on input line 102
+1.
+
+[15]
+
+LaTeX Warning: Reference `fig:network-evolutions' on page 16 undefined on input
+ line 1027.
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 1037--1049
+\OT1/cmr/m/n/10 We thank Edo Airoldi, Tan-moy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1049
+\OT1/cmr/m/n/10 Matthew Jack-son, Brian Kar-rer,
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 16 might be wrong on input line 104
+9.
+
+[16] (./cosma.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1054.
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1054.
+ (./cosma.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1054.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1054.
+
+Package rerunfilecheck Info: File `cosma.out' has not changed.
+(rerunfilecheck)             Checksum: 842BB111D68244CF23EA423F7EEEDA7A;999.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1054.
+ ) 
+Here is how much of TeX's memory you used:
+ 6597 strings out of 495059
+ 95496 string characters out of 3182030
+ 204917 words of memory out of 3000000
+ 9623 multiletter control sequences out of 15000+200000
+ 13453 words of font info for 52 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 29i,17n,28p,260b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on cosma.pdf (17 pages, 365191 bytes).
+PDF statistics:
+ 364 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+

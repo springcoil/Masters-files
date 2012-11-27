@@ -1,0 +1,61 @@
+
+\section{Linear elastodynamics}
+On $\mathbb{R}^3$ consider the equations
+$\rho \mathbf{u}_{tt} = div(\mathbf{c}\cdot \nabla \mathbf{u})$
+that is,
+\begin{equation}\label{3.2.25}
+ \rho u_{tt}^{i} = \dfrac{\partial}{\partial x^{j}}[c^{ijkl} \dfrac{\partial u^{k}}{\partial x^{l}}]
+\end{equation}
+where $\rho$ is a positive function, and $\mathbf{c}$ is a fourth-order tensor field (the \textbf{elasticity tensor}) 
+on $\mathbb{R}^3$ with the symmetries $c^{ijkl} = c^{klij} = c^{jikl}$.
+   On $\mathcal{F}(\mathbb{R}^3;\mathbb{R}^3)\times \mathcal{F}(\mathbb{R}^3;\mathbb{R}^3)$ 
+   (or more precisely on 
+   $H^1(\mathbb{R}^3:\mathbb{R}^3) \times L^2(\mathbb{R}^3;\mathbb{R}^3)$
+   with suitable decay properties at infinity), define
+   \begin{equation}
+    \Omega((\mathbf{u},\dot{\mathbf{u}}),(\mathbf{v},\dot{\mathbf{v}}) = \int_{\mathbf{R}^3}\rho(
+    \dot{\mathbf{v}}\cdot\mathbf{u} - \dot{\mathbf{u}}\cdot\mathbf{v}))d^3 x
+   \end{equation}
+The form $\Omega$ is the canonical symplectic for $\mathbf{u}$ and their conjugate momenta $\pi = \rho \dot{\mathbf{u}}$
+ On the space of functions $\mathbf{u}$: $\mathbb{R}^3 \rightarrow \mathbb{R}^3$
+ \begin{equation}
+  \langle \mathbf{u},\mathbf{v} \rangle_{\rho} = \int_{\mathbb{R}^3} \rho \mathbf{u} \cdot \mathbf{v} d^3 x
+ \end{equation}
+There the operator $B\mathbf{u}= - (1/\rho)div(\mathbf{c} \cdot \nabla \mathbf{u})$ is symmetric with respect to this
+inner product and thus we can say that the operator A($\mathbf{u},\dot{\mathbf{u}}) = (\dot{\mathbf{u}}, (1/\rho)div(\mathbf{c} \cdot \nabla \mathbf{u})) $
+is $\Omega$-skew. The equation (\ref{3.2.25}) of linear elastodynamics are checked to be Hamiltonian with respect to 
+$\Omega$ given by 
+\begin{equation}
+ H(\mathbf{u},\dot{\mathbf{u}}) = \dfrac{1}{2} \int \rho \|\dot{\mathbf{u}}\|^2 d^3 x + \dfrac{1}{2} \int c^{ijkl}e_{ij}e_{kl} d^3 x
+\end{equation}
+where 
+\begin{equation*}
+ e_{ij} = \dfrac{1}{2}\left( \dfrac{\partial u^{i}}{dx^{j}} + \dfrac{\partial u^{j}}{\partial x^{i}}\right)
+\end{equation*}
+
+\subsection{Technical Supplement}
+\begin{remark}
+ The symbols $\mathcal{F}$ and $Den$ stand for function spaces included in the space
+of all functions and densities, chosen appropriate to the functional analy-
+sis needs of the particular problem. In practice this often means, among
+other things, that appropriate conditions at infinity are imposed to permit
+integration by parts. 
+Also some particular spaces (such as spaces with compact support) are picked because then the integral is finite.
+
+\end{remark}
+
+\begin{remark}
+Let $H^1(\mathbb{R}^3)$ denote the $H^1$ functions on $\mathbb{R}^3$, that is, functions which, along with their 
+first derivatives are square integrable)
+\end{remark}
+\paragraph{Spaces of functions}
+ Let $\mathcal{F}(\mathbb{R}^3)$ be the space of smooth functions $\phi:\mathbb{R}^3 \rightarrow \mathbb{R}$,
+ and let $Den_{C}(\mathbb{R}^3$) be the space of smooth densities on $\mathbb{R}^3$ with compact support. 
+ We will write a density $\pi \in Den_C(\mathbb{R}^3)$ as a function $\pi ' \in \mathcal{F}(\mathbb{R}^3)$ with 
+ compact support times the volume element $d^3 x$ on $\mathbb{R}^3$ as $\pi = \pi ' d^3 x$. The spaces $\mathcal{F}$
+ and $Den_C$ are in weak nondegenerate duality by the pairing $\langle \phi, \pi \rangle = \int \phi \pi ' d^3 x$
+    We can just think of densities as analogues of one-forms and we shall bypass the measure theoretic approach, although it is based on the more
+primitive physical concept of measuring the masses of portions of a body.
+
+
+\end{document}

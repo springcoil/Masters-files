@@ -1,0 +1,193 @@
+
+\section{Connections}
+Firstly, let us solidify and recall some notation
+The set of all vector fields $\Gamma(TM)$ takes on the structure of a module over the 
+commutative algebra of smooth functions on M, denoted $C^{\infty}(M)$.
+\begin{definition}
+ An affine connection on M is the operation $\nabla$ which assigns to every vector field $\mathbf{X}$ a linear
+ map but not necessarily a $C^{\infty}(M)$- linear map\footnote{There is a map which is linear over the reals but not necessarily
+ over the ring of functions}
+ $\nabla_{\mathbf{X}}$ on the space $\mathcal{O}$(M) of vector fields - we can say that the is a module of vector fields
+ on the sheaf of rings. 
+\begin{eqnarray}
+ \nabla_{\mathbf{X}}(\lambda \mathbf{Y} + \mu \mathbf{Z}) \\
+ = \lambda \nabla_{\mathbf{X}} \mathbf{Y} + \mu \nabla_{\mathbf{X}} \mathbf{Z}
+\end{eqnarray}
+for every $\lambda, \mu\;\in\;\mathbb{R}$
+such that the following conditions are satisfied 
+\begin{itemize}
+ \item for arbitrary (smooth) functions f,g on M 
+ \begin{equation}\label{2.4}
+  \nabla_{f\mathbf{X} + g\mathbf{Y}}(\mathbf{Z}) = f \nabla_{\mathbf{X}}(\mathbf{Z}) 
+  +g \nabla_{\mathbf{Y}}(\mathbf{Z})
+ \end{equation}
+this is called $C^{\infty}$-linearity
+\item for arbitrary function f
+\begin{equation}\label{2.5}
+ \nabla_{\mathbf{X}}(f\mathbf{Y}) = (\nabla_{\mathbf{X}}f)\mathbf{Y} + f(\nabla_{\mathbf{X}}(\mathbf{Y})
+\end{equation}
+recall that $\nabla_{\mathbf{X}}f$ is just the usual directional derivative of a function f along a vector field
+so we'll say $\nabla_{\mathbf{X}} = df$ 
+\end{itemize}
+
+\end{definition}
+Let us write down explicit formulae in a given local co-ordinates $\left\lbrace x_i \right\rbrace$(i=1,$\cdots$,n)
+on a manifold M. 
+Let 
+$\mathbf{X} = X^i\mathbf{e}_{i}= X^{i}\dfrac{\partial}{\partial x^{i}}$
+$\mathbf{Y} = Y^i\mathbf{e}_{i} = Y^i \dfrac{\partial}{\partial x^i}$
+So lets write 
+\begin{equation}\label{2.6}
+ \nabla_{\mathbf{X}}\mathbf{Y} = \nabla_{X^i\partial_i}Y^k\partial_k = X^{i}\left(\nabla_i\left(Y^k\partial_k\right)\right)
+\end{equation}
+where $\partial_i$ is merely the base vector field, and 
+$\nabla_i = \nabla_{\partial_{i}}$, the $X^{i}$ comes up after the second equal sign in (\ref{2.6}) because it is merely
+a function. According to (\ref{2.4})
+\begin{equation}
+ \nabla_i(Y^k \partial_k) = \nabla_i(Y^k)\partial_k + Y^k(\nabla_i \partial_k)
+\end{equation}
+Let us now decompose the vector field $\nabla_i \partial_k$ over the basis $\partial_i$:
+\begin{equation}\label{2.7}
+ \nabla_i \partial_k = \christoffel{k}{m} \partial_m
+\end{equation}
+(take the two subscripts on the l.h.s and put them at the bottom on the Christoffel symbol ($\Gamma$) and include a 
+dummy index)
+and 
+\begin{equation}\label{2.8}
+ \nabla_i(Y^k \partial_k) = \dfrac{\partial Y^{k}(x)}{\partial x^{i}}\partial_{k} + Y^{k}\christoffel{m}{k} \partial_m
+\end{equation}
+And to return to where we began
+\begin{equation}\label{2.9}
+ \nabla_{\mathbf{X}}(\mathbf{Y}) = X^{i}\dfrac{\partial Y^{m}}{\partial x^{i}}\partial_{m} + 
+ X^{i}Y^{k}\christoffel{m}{k} \partial_m
+\end{equation}
+The coefficients $\left\lbrace \christoffel{m}{k}\right\rbrace$ are called \textit{Christoffel symbols} in coordinates
+$\left\lbrace x_i \right\rbrace$. We can say that these coefficients define a covariant derivative or a \textbf{connection} 
+  \subsection{Transformation of Christoffel symbols for an arbitrary connection}
+ Let $\nabla$ be a connection on a manifold M. Let {\christoffel{k}{m}} be Christoffel symbols of this connection
+ given in local coordinates $\left\lbrace x_i\right\rbrace$. Then according to (\ref{2.7}) and (\ref{2.8}) we have
+ \begin{equation}
+  \nabla_{\mathbf{X}}\mathbf{Y} = X^{m}\dfrac{\partial Y^{i}}{\partial x^{m}} \dfrac{\partial}{\partial x^{i}} +
+  X^{m} \christoffel{m}{k} Y^{k} \dfrac{\partial}{\partial x^{i}}
+ \end{equation}
+and in particular 
+$\christoffel{m}{k} \partial_i = \nabla_{\partial_{m}} \partial_k$
+Let us use this relation to calculate Christoffel symbols in a new coordinates 
+$\left\lbrace x^{i'} \right\rbrace$ 
+\begin{equation*}
+\Gamma_{m'k'}^{i'}\partial_{i'} = \nabla_{\partial_{m'}}\partial_{k'}
+\end{equation*}
+We have that $\partial_{m'} = \dfrac{\partial}{\partial x^{m'}}=
+\dfrac{\partial x^{m}}{\partial x^{m'}}\dfrac{\partial}{\partial x^{m}} = \dfrac{\partial x^{m}}{\partial x^{m'}}\partial_m$
+Hence due to properties (\ref{2.4}) and (\ref{2.5}) we have 
+\begin{eqnarray*}
+\Gamma_{m'k'}^{i'}\partial_{i'} = \nabla_{\partial_{m'}}\partial_{k'} = \nabla_{\partial_{m'}}\left(\dfrac{\partial x^{k}}
+{\partial x^{k'}}\partial_{k}\right) = \left(\dfrac{\partial x^{k}}{\partial x^{k'}}\right)\nabla_{\partial_{m'}}\partial_k
++\dfrac{\partial}{\partial x^{m'}}\left(\dfrac{\partial x^{k}}{\partial x^{k'}}\right)\partial_k 
+\\
+= \left(\dfrac{\partial x^{k}}{\partial x^{k'}} \right)_{\nabla_{\dfrac{\partial x^{m}}{\partial x^{m'}}}\partial_{m}}\partial_k
++ \dfrac{\partial^{2} x^{k}}{\partial x^{m'}\partial x^{k'}}\partial_k
+= \dfrac{\partial x^{k}}{\partial x^{k'}} \dfrac{\partial x^{m}}{\partial x^{m'}} \Gamma^{i}_{mk}\partial_{i}
++ \dfrac{\partial^{2}x^{k}}{\partial x^{m'} \partial x^{k'}}\partial_{k}
+\\ = \dfrac{\partial x^{k}}{\partial x^{k'}}\dfrac{\partial x^{m}}{\partial x^{m'}} \Gamma^{i}_{mk} 
+\dfrac{\partial x^{i'}}{\partial x^{i}}\partial_{i'} + 
+\dfrac{\partial^{2} x^{k}}{\partial x^{m'} \partial x^{k'}} 
+\dfrac{\partial x^{i'}}{\partial x^{k}}\partial_{i'}
+\end{eqnarray*}
+We get the transformation law: 
+If $\left\lbrace \Gamma_{km}^{i}\right\rbrace$
+ are Christoffel symbols fo the connection $\nabla$ in local coordinates $\left\lbrace x^i\right\rbrace$
+and $\left\lbrace \Gamma_{k'm'}^{i'}\right\rbrace$ are Christoffel syombols of this connection in new local coordinates
+$\left\lbrace x^{i'}\right\rbrace$ then
+\begin{equation}\label{2.11}
+ \Gamma_{k'm'}^{i'} = \dfrac{\partial x^{k}}{\partial x^{k'}}\dfrac{\partial x^{m}}{\partial x^{m'}}
+ \dfrac{\partial x^{i'}}{\partial x^{i}}\Gamma_{km}^{i}
+ + \dfrac{\partial^{2} x^{r}}{\partial x^{k'}\partial x^{m'}} \dfrac{\partial x^{i'}}{\partial x^{r}}
+\end{equation}
+\begin{remark}
+ Christoffel symbols do not transform as a tensor. If the second term is euqal to zero, i.e. transformation 
+ of coordinates are linear then the transformation rule above is the same as a transformation rule for tensors
+ of the type  $\binom{1}{2}$. In general this ins note true. Christoffel symbols do not transform as a tensor under
+ arbitrary non-linear coordinate transformations.
+\end{remark}
+
+  \section{What is a Geodesic}
+ Let us recall the definition of a geodesic. 
+ A \textbf{geodesic} on a smooth manifold M with an \textbf{affine connection} $\nabla$ is defined as a curve 
+ $\gamma(t)$ such that \textbf{parallel transport} along the curve preserves the tangent vector to the curve, so 
+ \begin{equation}\label{1}
+  \nabla_{\dot{\gamma}} \dot{\gamma} = 0
+ \end{equation}
+at each point along the curve, where $\dot{\gamma}$ is the derivative w.r.t. t. More precisely, in order to define the 
+covariant derivative of $\dot{\gamma}$ to a continuously differentiable vector field on an open set. 
+However, the resulting value of \ref{1} is independent of the choice of extension.
+    We can however write this in local form, 
+    \begin{equation*}
+     \dfrac{d^{2} x^{\lambda}}{dt^2} + \Gamma_{\mu \nu}^{\lambda} \dfrac{dx^{\mu}}{dt} \dfrac{dx^{\nu}}{dt} = 0,
+    \end{equation*}
+where $x^{\mu}(t)$ are the coordinates of the curve $\gamma(t)$ and $\Gamma_{\mu \nu}^{\lambda}$ are the Christoffel
+symbols of the connection $\nabla$. This is just an ODE for the coordinates. It has a unique solution, given an
+initial position and an initial velocity. Therefore, fromt he point of view of classical mechainics, geodesics can 
+be thought of as trajectories of \textbf{free} \textbf{particles} in a manifold. Indeed, the equation 
+$\nabla_{\dot{\gamma}}\dot{\gamma} = 0$ means that the acceleration of the curve has no components in the direction 
+of the surface (the direction of the surface is the same as the direction of the affine connection). We can also 
+say that the acceleration of the curve is perpendicular to the tangent plane of the surface at each point of the
+curve. So the motion is completely determined by the bending of the surface. This also the idea of General Relativity where
+particles move on geodesics and the bending is caused by gravity. 
+\section{Bundles and Connections}
+Let us review some of the fundamental and classical notions of Principal Bundles and Connections.
+Let G be a Lie group. A principal G-bundle P over a smooth manifold X is a manifold with a (smooth) right G
+action and orbit space $P/G = X$
+   We demand that the action admits local product structures, i.e. it is locally
+   equivalent to the product space U x G, where U is an open set in X. Then we have a fibration 
+   $\pi: P \rightarrow X$. We say that P has structure group G.
+ Three useful ways of defining a connection on such a bundle are:
+ \begin{enumerate}
+  \item As a field of 'horizontal subspaces' $H \subset TP$ transverse to the fibers of $\pi$
+  That is, for each $p \in P$ we have the decomposition
+  \begin{equation*}
+   TP_{p} = H_p \oplus T(\pi^{-1}(x))
+  \end{equation*}
+where $\pi(p) = x$. The field of subspaces is required to be preserved by the action of G on P. 
+\item As a 1-form A on P with values in the Lie algebra $\mathfrak{g}$ of G i.e. a section of the 
+vector bundle 
+$T^*P \otimes \mathfrak{g}$
+over P. Again we require this to be invariant under G, acting by a combination of the given action on P and
+the adjoing action on $\mathfrak{g}$. Also, A should be restricted to the canonical right-invariant form on the 
+fibres.
+\item For any linear representation of G, on $\mathbb{C}^n$ or $\mathbb{R}^n$, we get a vector bundle E over X 
+associated with P and the representation. The fibres of E are copies of $\mathbb{C}^n$ or $\mathbb{R}^n$ respectively. 
+Conversely, if given a vector bundle E we can make a principal bundle. For example, if E is a complex
+n-plane bundle we get a principal bundle P with the structure group $GL(n,\mathbb{C})$ by taking the set of 
+all 'frames' in E. A point in the fibre of P over x $\in$ X is a set of basis vectors for $E_x$. Additional algebraic
+structure on E yields a principal bundle with a smaller structure group. For example is E is a complex vector bundle with
+a Hermitian metric we get a principal bundle U(n) bundle of orthonormal frams.e 
+   \paragraph{} For classical groups, (automorphisms of a vector space preserving some linear algebraic structure)
+   the concepts of principal and vector bundles are completely equivalent. 
+
+ \end{enumerate}
+Now given a vector bundle E (real or complex) a connection on the frame bundle can be defined by a \textbf{covariant derivative}
+on E, that is a linear map:
+\begin{equation}
+ \nabla: \Omega_{X}^{0}(E) \rightarrow \Omega_X^1(E)
+\end{equation}
+Here we introduce the notation $\Omega^p_X(E)$ to denote sections of 
+$\bigwedge^pT^*X \otimes E$ - the p-forms with values in E. The map 
+$\nabla$ is required to satisfy the Leibniz rule 
+$\nabla(f.s) = df.s + f\nabla s$ for any f a real or complex function on X and s $\in \Gamma(E)$, where $\Gamma(E)$ 
+denotes sections on E. 
+   To understand this definition, consider a tangent vector v to X at a point x. If s is a section of E we can make 
+   the contraction $\langle \nabla s, v \rangle \in E_x$ which is to be thought of as the derivative of s in the 
+   direction v at x. If E has additional algebraic structure we can require the covariant derivative to be compatible 
+   with this; for example if E has a metric, a compatible connection is one for which $\nabla(s,t) = (\nabla s, t) + (s, 
+   \nabla t)$, for all sections s,t. 
+      One see the equivalence of these viewpoints as follows to go from (2) to (1) we regard $H_p$ (the horizontal 
+    space) to be the kernel of $A_p: TP_{p} \rightarrow \mathfrak{g}$.
+  To go from (3) to (1) we first observe that $\nabla$ is a local operator; that is, if two sections $s_1$, $s_2$
+  agree on an open set U in X, so also do $\nabla s_1$ $\nabla s_2$. 
+  This follows from Leibnitz rule by considering $\phi s_i$, where $\phi$ is a cutoff function. 
+ Then we say that a local section $\delta$ of the frame bundle (i.e. a collection of sections $s_1,\cdots, s_n$ of E)
+ is horizontal at x in X if all the $\nabla s_i$ vanish at x. Finally we define $H_p$ to be the tangent space to a 
+ horizontal section $\delta$ through p, regarded as a submanifold of P. 
+ \end{document}
+

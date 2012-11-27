@@ -1,0 +1,31 @@
+\section{Lecture 1}
+For a smooth (for now, real) manifold M, we let $\AA1$
+\begin{dfn} \label{DfnCochainComplex}
+    Let $V^i$ be vector spaces and let $d$ be linear maps.
+
+    A sequence
+    $$
+     \ldots \rightarrow V^k \xrightarrow{d} V^{k+1} \xrightarrow{d} V^{k+2}
+     \xrightarrow{d} \ldots \, ,
+    $$
+    such that $d^2=0$, is called a \bb{cochain complex}.
+
+    \medskip
+
+    Elements of $ V := \bigoplus_i{V^i} $ are called \bb{cochains}, \\
+    elements of $ \bigoplus_i{\ker d} $ \bb{cocycles} ("closed forms") \\
+    and elements of $ \bigoplus_i{\im d} $ \bb{coboundaries} ("exact forms").
+
+    \medskip
+
+    We call $d$ \bb{coboundary operator} or differential.
+
+    We say that $ (V,d) $ is a \bb{complex} if the corresponding sequence is a complex.
+\end{dfn}
+
+\begin{rem}
+    \begin{enumerate}
+    \item If the arrows of the sequence point in the other direction, then we speak of \bb{chain complexes}.
+    \item In order to simplify notations, I write $ d: V^k \to V^{k+1} $ instead of $ d_k: V^k \to V^{k+1} $ since this is understood in the context.
+    \end{enumerate}
+\end{rem}

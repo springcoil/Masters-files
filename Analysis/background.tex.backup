@@ -1,0 +1,285 @@
+\section{Lie groups}
+   Lie groups are groups which are also differentiable manifolds, in which the group operations are smooth.
+   Well-known examples are the general linear group, the unitary group, the orthogonal group and the 
+   special linear group. 
+ \begin{definition}
+  A \textit{Lie group} G is a differential manifold with group structure such that the map $G \times G \rightarrow G$
+  given by $(g,h) \Rightarrow gh^{-1}$ is $C^\infty$.
+ \end{definition}
+\begin{definition}
+ A \textit{Lie algebra} $\mathfrak{g}$ over $\Rbb$ is a real vector space $\mathfrak{g}$ together with a bilinear
+ operator $[\cdot,\cdot]: \mathfrak{g} \times \mathfrak{g} \rightarrow \mathfrak{g}$ (the \textit{bracket}) such that
+ for all $x,y,z \in \mathfrak{g}$, 
+ \begin{enumerate}
+  \item [x,y] = -[y,x]                         (anti-commutativity)
+  \item [[x,y],z] + [[y,z],x] + [[z,x],y] = 0 (Jacobi identity)
+ \end{enumerate}
+
+\end{definition}
+We will see that there is a Lie algebra associated to each Lie group, and that every connected, simply connected (i.e. 
+the fundamental group $\pi_{1}(G)$ is trivial) Lie group is determined up to isomorphism by its Lie algebra. The study
+of such Lie groups then reduces to a study of their Lie algebras. 
+\begin{definition}
+ Let $\varphi: M \rightarrow N$ be $C^{\infty}$. Smooth vector fields X on M and Y on N are $\varphi$-related if $d \varphi \circ X = Y \circ \varphi$,
+ which is short for $(d\varphi)_{p}(X_{p}) = Y_{\varphi(p)}$ for all $p \in M$.
+\end{definition}
+\begin{exercise}
+ Let $\varphi: M \rightarrow N$ be $C^{\infty}$. Let $X_{1}$ and $X_2$ be smooth vector fields on M,
+ and let $Y_1$ and $Y_2$ be smooth vector fields on N. If $X_{i}$ is $\varphi-related$ to $Y_{i}$, i =1,2, then 
+ $[X_1,X_2]$ is $\varphi$-related to $[Y_1,Y_2]$.
+ \end{exercise}
+
+ \begin{proof}
+  Let us consider a smooth $\varphi:M \rightarrow N$, and let $X_1$ and $X_2$ be smooth vector fields on M and let 
+  $Y_1$ and $Y_2$ be smooth vector fields on N.
+ Let $d\varphi \circ X_1 = Y_1 \circ \varphi$ and 
+ $d \varphi \circ X_2 = Y_2 \circ \varphi$
+ Then $d\varphi \circ (X_1 X_2 - X_2 X_1)$
+ \\ $\Rightarrow d\varphi \circ X_1 X_2 - d\varphi X_2 X_1$
+ \\ $\Rightarrow Y_1 \circ \varphi(d\varphi \circ X_2) - Y_2 \circ \varphi(d\varphi \circ X_1)$
+ \\ $\Rightarrow Y_1Y_2 \circ \varphi - Y_2 Y_1 \circ \varphi$
+ \\ $\Rightarrow (Y_1Y_2 - Y_2Y_1) \circ \varphi$
+ $\Rightarrow [Y_1, Y_2] \circ \varphi$\\
+ So we have proved that $X_{i}$ is $\varphi$-related to $Y_i$, i=1,2, then $[X_1,X_2]$ is $\varphi$-related to $[Y_1,Y_2]$ 
+ \end{proof}
+
+\begin{definition}
+ Let G be a Lie group and $g \in G$. Left translation $l_{g}$ and right translation $r_{g}$ by g are diffeomorphism of G
+ given by 
+ \begin{equation*}
+  l_g h = gh \quad r_g = hg,\;\;\;\;\; for \; all\; h \in G
+ \end{equation*}
+A vector field X on G is called \textit{left-invariant} if X is $l_g$-related to itself for all $g \in G$, that is \\
+\begin{center}$dl_g \circ X = X \circ l_g,$ \end{center}
+ which is short for \;\;\;\;\;\;\; \begin{center}$dl_g(X_h) = X_{gh}$ for all $h \in G$.\end{center}
+\end{definition}
+\begin{proposition}\label{Prop1}
+ Let G be a Lie group and $\mathfrak{g}$ is a set of left-invariant vector fields. 
+ \begin{enumerate}
+  \item $\mathfrak{g}$ is a real vector space, and the map $\alpha: \mathfrak{g} \rightarrow T_{e}G$ defined by $\alpha(X) = X(e)$
+  is an isomorphism of $\mathfrak{g}$ with the tangent space $T_{e}G$ of G at the identity. Consequently $dim(\mathfrak{g}) = 
+  dim(G)$.
+  \item Left invariant vector fields are smooth
+  \item The Lie bracket of two left-invariant vector fields is a left invariant vector field
+  \item $\mathfrak{g}$ is a Lie algebra under the Lie bracket operation of vector fields.
+ \end{enumerate}
+\begin{proof}
+ It is not difficult to see that $\mathfrak{g}$ is a real vector space and that $\alpha$ is linear. Since 
+ $\alpha(X) = \alpha(Y)$ yields 
+ \begin{equation*}
+  X_{g} = dl_g(X_e) = dl_g(\alpha(X)) = dl_g(\alpha(Y)) = dl_g(Y_e) = Y_g \;\;\;\;\;for\;each\;g\in G,
+ \end{equation*}
+$\alpha$ is injective. In order to see the surjectivity of $\alpha$ let $v \in T_e G$ and define 
+\begin{center}
+ \begin{equation*}
+  X_g = dl_g(v) \;\;\;for\;all\; g,h \in G
+ \end{equation*}
+ \end{center}
+This proves part (1). 
+   \\ For (2) let $X \in \mathfrak{g}$ and $f \in C^{\infty}(G)$. We need to show that Xf $\in C^{\infty}(G)$. 
+  Let $\varphi: G \times G \rightarrow G$ be a smooth map given by multiplication $\varphi(g,h) = gh$. Let $i^{1}_{e}$ and
+  $i^{2}_{g}$ be the smooth maps $G \rightarrow G \times G$ given by $i^{1}_{e}(h) = (h,e)$ and $i^{2}_{g}(h) = (g,h)$
+ Let Y be any smooth vector field on G with $Y_e = X_e$. Then $[(0,Y)(f\circ \varphi)]\circ i^{1}_e$ is smooth and 
+\begin{center}
+ \begin{equation*}
+  [(0,Y)(f\circ \varphi)]\circ i^{1}_e(g) = (0,Y)_{(g,e)}(f\circ \varphi)
+\end{equation*}\begin{equation*} = 0_{g}(f\circ \varphi \circ i^{1}_{e}) + Y_{e}(f\circ \varphi \circ i^{2}_{g})\end{equation*}
+\begin{equation*}
+\hfill = X_{e}(f\circ \varphi \circ i^2_{g}) = X_{e}(f\circ l_{g})\end{equation*}\begin{equation*}
+\hfill = dl_{g}(X_{e})f = X_{g} f = Xf(g)
+ \end{equation*}
+which proves part (2).
+   Since by (2), left-invariant vector fields are smooth, their Lie brackets are defined and by simple checking they 
+   are again left-invarint, which shows (3). (4) follows from (3) and by the fact that \textbf{The vector space of all smooth 
+   vectors fields under the Lie bracket on vector fields is a Lie algebra}
+\end{center}
+
+\qed
+\end{proof}
+
+\end{proposition}
+\begin{definition}
+ We define the \textit{Lie algebra of the Lie group G} to be the Lie algebra $\mathfrak{g}$ of left-invariant vector fields
+ on G
+\end{definition}
+Often it will be convenient to think of the $T_{e} G$ as the Lie algerba of G with the Lie algebra stricture induced by the 
+isomorphism $\alpha$ form Proposition \ref{Prop1}(1).
+\begin{example}
+ The real line  $\Rbb$ is a Lie group under addition. The left-invariant fields are simply the constant vector
+ fields $\left\lbrace\lambda(\dfrac{d}{dr})|\lambda \in \Rbb\right\rbrace$. The bracket of any two such vector fields is 0.
+\end{example}
+\begin{example}
+ The Lie group \Gl = $\det^{-1}(\Rbb \ {0})$ is a (differentiable) submanifold of 
+ \gl. \Gl has global coordinates $A_{ij}$ which assigns to each matrix A the ij-th entry. Since
+ $\det(A^{-1})= \det(A)^{-1}$ and $\det(AB) = \det(A)\det(B)$ for any A,B $\in$ \Gl, the matrix 
+ $AB^{-1}$ is invertible with the ij-th entry $(AB^{-1})_{ij}$ being a rational function in the entries
+ of A and B with non-zero denominator. Therefore $(A,B) \mapsto AB^{-1}$ is $C^{\infty}$
+ \\\;\;\;Consider the isomorphisms $\alpha: \mathfrak{g} \rightarrow T_{e}G$ from Proposition $\ref{Prop1}$(1). Since $T_e\Gl$
+ = $T_e\gl$ and the map $\beta: T_e\gl \rightarrow \gl$ given by $\beta(v)_{ij}:= v_{ij}$ is a (canonical) isomorphism, 
+ $\beta\circ \alpha$ induces a Lie algebra structure on \gl. We leave it as an exercise to show that the bracket agrees with the
+ usual $[A,B] = AB - BA$. 
+\end{example}
+Taking the example above as a starting point, we can create other examples. The non-singular matrices $GL(n,\mathbb{C})$ of all 
+n $\times$ n complex matrices $\mathfrak{gl}(n,\mathbb{C})$ is a Lie group with Lie algebra $\mathfrak{gl}(n,\mathbb{C})$.
+If V is an n-dimensional real vector space, a basis of V determines a diffeomorphism from End(V) to \gl sending Aut(V) onto 
+\Gl. In this way End(V) is a Lie group from Lie algebra Aut(V). We get an analog example for complex case vector spaces.
+ \\ The special linear group \Sl, the Unitary group U(n), the special unitaroy group \Su are the most important examples
+ for us. 
+ \subsection{Homomorphisms}
+ \begin{definition}
+  A map $\varphi:G \rightarrow H$ is a (Lie group) homomorphism if $\varphi$ is both $C^{\infty}$ and a homomorphism of groups.
+  We call $\varphi$ an \textit{isomorphism} if $\varphi$ is also a diffeomorphism. 
+  If $\mathfrak{g}$ and $\mathfrak{h}$ are Lie algebras, a map $\psi:\mathfrak{g} \rightarrow \mathfrak{h}$ is a 
+  \textit{(Lie algebra) homomorphism} if it is linear and it preserves brackets ($\psi[X,Y]=[\psi(X),\psi(Y)]$ for all 
+  X,Y $\in \mathfrak{g}$). If $\psi$ is also a bijection, then $\psi$ is an \textit{isomorphism}.
+ \end{definition}
+Let $\varphi:G \rightarrow H$ be a homomorphism. Then $\varphi$ maps the identity of G to the identity of H, and the differential
+$d \varphi$ of $\varphi$ is a linear transformation of $\mathfrak{g}=T_{e}G$ into $\mathfrak{h} = T_e H$. Notice that by the natural
+identification between Lie algebras and left-invariant vector fields $d\varphi(X)$ is the unique left-invariant vector field
+satisfying 
+\begin{equation}\label{2.3.1}
+ (d\varphi(X))_e = d\varphi_e(X_e).
+\end{equation}
+\begin{theorem}\label{2.3.2}
+ Let G and H Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$ respectively, and let $\varphi:G \rightarrow H$
+ be a homomorphism. Then
+ \begin{enumerate}
+  \item X and $d\varphi(X)$ are $\varphi$-related for each $X \in \mathfrak{g}$.
+  \item d$\varphi$: $\mathfrak{g}\rightarrow \mathfrak{h}$ is a Lie algebra homomorphism. 
+ \end{enumerate}
+
+\end{theorem}
+\begin{proof}
+ The left-invariant vector fields $d \varphi(X)$ and X are $\varphi$-related to, because 
+ \begin{equation*}
+  (d\varphi(X))_{\varphi(g)} = dl){\varphi(g)}d\varphi_{e}(X_e) = d(l_{\varphi(g)}\circ \varphi)X_{e} = d(\varphi \circ l_{g})X_{e} = d\varphi(X_{g}).
+ \end{equation*}
+ To show part (2), let $X,Y \in \mathfrak{g}$. By an exercise result [X,Y] is $\varphi$-related to the 
+ left invariant vector field [$d\varphi(X), d\varphi(Y)$], that is 
+ \begin{equation*}
+  (d\varphi([X,Y]))_{e} \stackrel{\ref{2.3.1}}{=} d\varphi_{e}([X,Y]_e) = [d\varphi(X),d\varphi(Y)]_{\varphi(e)} = [d\varphi(X),d\varphi(Y)]_{e}
+ \end{equation*}
+Therefore using the identification of left-invariant vector fields with tangent vectors at the identity,
+$d\varphi([X,Y])=[d\varphi(X), d\varphi(Y)].$\footnote{We had to be careful not to mix up notations, we had to take a detour via the tangent
+space at e, because of how $\varphi$-related was defined}
+ 
+\qed
+\end{proof}
+\subsection{Lie subgroups}
+\begin{definition} $(H,\phi)$ is a \textit{Lie subgroup} of the Lie group G if 
+ \begin{enumerate}
+  \item H is a Lie group;
+  \item $(H,\varphi)$ is a submanifold of G;
+  \item $\varphi: H \rightarrow G$ is a Lie group homomorphism.
+ \end{enumerate}
+$(H,\varphi)$ is called a \textit{closed subgroup} of G if $\phi(H)$ is also a closed subset of G.
+\end{definition}
+  Let $\mathfrak{g}$ be a Lie algebra. A subspace $\mathfrak{h} \subset \mathfrak{g}$ if [X,Y] $\in \mathfrak{h}$ for all
+  X,Y $\in \mathfrak{h}$.
+ \paragraph{}
+ Let $(H,\phi)$ be a Lie subgroup of G, and let $\mathfrak{h}$ and $\mathfrak{g}$ be their respective Lie algebras. Then
+ by Theorem (\ref{2.3.2}) $d \varphi$ yields and isomorphism between $\mathfrak{h}$ and the Lie subalgebra $d\varphi(\mathfrak{h})$
+ of $\mathfrak{g}$.
+ We will show in this section one of the fundamental theorems in Lie group theory, which asserts that there is a 1:1 
+ correspondence between connected Lie subgroups of a Lie group and subalgebras of its Lie algebra.
+ We need the following two propositions.
+ \begin{proposition}
+ Let G be a connected Lie group, and let U be a neighbourhood of e. Then
+ \begin{equation*}
+  G = \bigcup_{n=1}^\infty U^n
+ \end{equation*}
+where $U^n$ consists of all n-fold products of elements of U. 
+\begin{proof}
+ Let us consider V:=$U \cup U^{-1}\;(where\;U^-1\;=\;\left\lbrace g^{-1} \in U| g \in U \right\rbrace$)
+ and let 
+ \begin{equation*}
+  H := \bigcup_{n=1}^{\infty} V^n \subset \bigcup_{n=1}^{\infty} U^n.
+ \end{equation*}
+ H is a subgroup of G and open in G, since $h \in H$ implies $hV \in H$. Therefore each coset of H is also open in G.
+ Since 
+ \begin{equation*}
+  H = G \ \bigcup_{g \in G, gH \neq H}^{\infty} gH,
+ \end{equation*}
+H is also closed. Since H is non-empty and G is connected we get G = H
+\qed
+\end{proof}
+
+ \end{proposition}
+Recall that a \textit{k-dimensional distribution} $\D$ on a manifold M is a choice of a k-dimensional
+linear subspace $\D_{p} \subset T_p M.$ A distribution is \textit{smooth}, if it is locally spanned by smooth 
+vector fields $X_1,\cdots,X_k,$ or equivalently if $\D$ is a smooth subbundle of Tm. A smooth distribution
+is \textit{involutive} if $[X,Y] \in \D$ for any smooth vector fields X,Y $\in \D$. It is \textit{completely
+integrable}, if for each point $p \in M$ there is an integral manifold N of $\D$ passing through p,
+where N is intergral if 
+\begin{equation*}
+ N \stackrel{i}{\rightarrow} M\; and\; di_{p}(T_{p}N) = D_{p} \; for \; each\; p \in N
+\end{equation*}
+A smooth coordinate chart (U, $\phi$) is flat for $\D$, if 
+$\phi(U) = U' \times U''\subset \Rbb^k \times \Rbb^{n - k}$, and at
+points of U, $\D$ is spanned by the first k coordinate vector fields 
+$\dfrac{\partial}{\partial x^1} , \cdots , \dfrac{\partial}{\partial x^k}$ . This implies
+that each slice of the form $x^{k+1} = c^{k+1} , \cdots, x^n = c^n$ for constants $c^i$ is an integral manifold
+of $\D$. Beware that the terminology is inconsistent among various books. However, we will
+show the famous Frobenius’ Theorem which states that terminology is of no consequence.
+Before that we need to recall a few definitions and prove a few lemmas.
+\begin{definition}. Let $\M$ be a smooth manifold and let X be a vector field on $\M$ .
+(1) An integral curve of X is a smooth curve $\gamma : J \rightarrow \M$ with $J \subset \Rbb$ an open interval
+such that
+$\dot{\gamma}(t) = X_{\gamma}(t)$ for all $t \in J$.
+If $\theta \in J$, then $\gamma(\theta)$ is the starting point.
+(2) Let $\theta(p) : \D(p) \rightarrow \M$ be the \textit{maximal integral curve} with starting point p.
+(3) The flow of X is the map $\theta :\D \rightarrow \M$ given by $\theta_{t} (p) = \gamma_{p} (t)$ for (t, p) in the domain
+$ \D := \left\lbrace(\D^{(p)} , p) | p \in M \right\rbrace$.
+(4) X is called complete if the domain of its flow is $\Rbb \times \M$.
+\end{definition}
+\subsection{Killing forms}
+Consider a \textit{Lie algebra} \gg over a field $\Kbb$. Every element x of \gg defines the 
+\textbf{adjoint endomorphism} $\textrm{ad}(x)$ of \gg as 
+
+$\textrm{ad}(x)(y) = [x, y]. $
+
+Now, supposing \gg is of finite dimension, the trace of the composition of two such endomorphisms defines a 
+\textit{symmetric
+bilinear form}
+\\
+B(x, y) = trace(ad(x)$\circ$ad(y))
+
+with values in K, the \textbf{Killing form} on \gg
+
+The Killing form for some Lie algebras $\mathfrak{g}$ are (for $X, Y \in \mathfrak{g}$):
+
+\begin{table}
+    \begin{tabular}{|l|l|}
+        \hline
+          $\mathfrak{g}$              & B(X,Y)                                  \\ \hline
+        $\mathfrak{gl}(n,\mathbb{R})$ & 2$\mathrm{tr}(XY) - 2\mathrm{tr}(X)tr(Y)$ \\ 
+        $\mathfrak{sl}(n,\mathbb{R})$ & 2n$\mathrm{tr}(XY)$                       \\ 
+        $\mathfrak{su}(n)$            & 2n$\mathrm{tr}(XY)$                       \\ 
+        $\mathfrak{so}(n,\mathbb{C})$ & (n-2)$\mathrm{tr}(XY)$                    \\ 
+        $\mathfrak{sp}(n,\mathbb{R})$ & (2n+2)$\mathrm{tr}(XY)$                   \\ 
+        $\mathfrak{sp}(n,\mathbb{C})$ & (2n+2)$\mathrm{tr}(XY)$                   \\
+        \hline
+    \end{tabular}
+\end{table}
+See \cite{fulton_representation_1991} for the Representation theory of Lie groups.
+\subsection{Classifying spaces}
+Classifying spaces are one of the more important notions of modern Algebraic Topology, particularly Homotopical Algebra, see \cite{hatcher_algebraic_2001} 
+and references therein. We introduce the notion and an important theorem without proof.
+\begin{theorem}[Milnor]
+ Let G be a topological group. There exists a classifying space for G. 
+\end{theorem}
+BG is well-defined only up to 'homotopy equivalence'.
+In algebraic topology one considers the \texit{classifying space} BG of a topological group G. By definition this 
+is the quotient of a contractible space EG on which G acts freely. Thus there is a fibration 
+$G \rightarrow EG \rightarrow BG$. For a Lie group G we can approximate EG by finite dimensional manifolds. 
+Isomorphism classes of G bundles over a space X are in 1-1 correspondence with homotopy classes of maps from X to BG.
+\begin{example}
+ If G = U(n) then BG is the Grassmanian of n-planes in $\Cbb^{\infty}$, which for our purposes can be studied by taking
+ n-planes in $\Cbb^{N}$ for sufficiently lare N, in any given problem or calculation.
+\end{example}
+\textbf{Borel's theorem}
+Suppose we have a spectral sequence (of vector spaces over a field k of characteristic zero) with 
+\begin{equation*}
+ 
+\end{equation*}
+

@@ -1,0 +1,18 @@
+\section{Introduction}
+One of the active areas of geometric topology at the border to mathematical physics is the theory of 'Chern-Simons' theory.
+The aim is to elucidate some of the techniques aimed at graduate students, and beginning researchers who know the basics
+of differential forms and differential manifolds. 
+ After an introduction to Lie groups and Lie algebras, principal bundles, connections and gauge transformations,
+ we will carefully construct the Chern-Simons action and study the moduli space of its classical solutions. 
+ This yields Taubes' beautiful and influential description of Casson's invariant for homology 3-spheres via
+ Chern-Simons Theory for which we need such concepts as differential operators and spectral flow. This naturally
+ leads to subjects like the eta invariant and the rho invariant on the one hand as well as the quantization of the
+ Chern-Simons action and Witten's invariants on the other.
+ Furthermore some modern examples from Theoretical Condensed Matter physics will be included. 
+ \subsection{An overview}
+ Let G be a semi-simple Lie group and $\mathfrak{g}$ its Lie algebra. A connection A on the trivial G-bundle over a 
+ closed oriented 3-manifold M is a $\mathfrak{g}$-valued 1-form, i.e. $A \in \Omega^1(M;\mathfrak{g})$.
+ Chern-Simons theory is a quantum field theory in three dimensions, whose action is proportional to the Chern-Simons
+ invariant given in \cite{Chern1974}
+    The celebrated work by Witten on the Jones Polynomial \cite{Witten:1988hf}.
+The other work \cite{donaldson1997geometry,Tong:2005un} are also good references for some of the material referenced.

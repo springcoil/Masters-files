@@ -1,0 +1,538 @@
+\section{Quantization}
+\begin{quotation}
+ Most visions of happiness blithely assume beating all the statistical odds.  - Alain de Botton
+\end{quotation}
+
+Let us introduce the notions of Quantization and Geometric Quantization.
+\subsection{Line bundles and connections.}
+Suppose L is a complex line bundle over M. Let $\lbrace U_{\alpha} \rbrace$ be an open cover of M so that
+$L|_{U_{\alpha}}$ is trivial. Pick a connection \nab on L. On $U_\alpha$ let $\nab = d - 2 \pi i A_{\alpha}
+$\footnote{Note the minus sign - apparently this is used to make $c_1$(L) agree with the usual one}
+\textbf{Gauge change`:} Suppose $g: U_\alpha \cap U_\beta \rightarrow  S^1 = \lbrace |z| = 1 \rbrace \subset \Cbb$ is
+a gauge transformation, i.e., a change of trivialization. Then we write $g(x) = \exp(-2\pi i f(x))$. Under a gauge change,
+\begin{equation*}
+ 2 \pi i A_{\alpha} \mapsto dgg^{-1} + g(-2\pi i)A_{\alpha} g^{-1} = -2 \pi i(A_{\alpha} + df).
+\end{equation*}
+Hence $A_\alpha \mapsto A_\alpha + df$.
+\textbf{Curvature:} The curvature is given by $-2\pi i d A_{\alpha}+ (-2\pi i)^2 A_\alpha \wedge A_\alpha$ = $-2\pi i d A_{\alpha}$,
+since we're dealing with 1 x 1 matrices (and they commute)! Moreover, $d A_\alpha$ transforms to $g d a_{\alpha} g^{-1}
+= d A_\alpha,$ i.e $d A_\alpha$ is invariant under gauge change. Therefore, {$d A_\alpha$} can be patched into a closed 2-form
+on M.
+\footnote{Closed forms are elements of the set: $Z^r(M,\Rbb) = \lbrace \omega \in A^r(M)| d\omega = 0 \rbrace$ or the kernel of the homomorphism 
+$d:A^r(M) \rightarrow A^{r-1}(M)$ Recall that a closed differential form is not necessarily exact, but that an exact differential
+form via Poincare's lemma is always closed. Recall also that elements of the set $B^r(M,\Rbb) = \lbrace \omega \in A^{r}(M) |
+\omega = d\beta\; for\;some\;\beta \in A^{r-1}(M)\rbrace$. Clearly $A^{r}(M)$ is the cochain group of differential forms
+on a manifold M, also remember that differential forms are sections of the cotangent bundle, so it is an abuse of notation
+to call them 'on a manifold M'} The cohomology class of the closed 2-form m is called the 
+\textit{first Chern class} of L and is denoted $c_1(L) \in H_{dR}^{2}(M;\Rbb)$. Note that $c_1(L) = \dfrac{i}{2\pi}[F_A]$.
+\begin{remark}
+ $c_1(L)$ is actually an element of $H^2(M;\Zbb) \subset H^2(M;\Rbb)$.
+\end{remark}
+\begin{theorem}
+ Let $\omega$ be a closed 2-form on M such that $[\omega] \in H^2(M;\Zbb) \subset H^2(M;\Rbb).$ Then there exists a complex
+ line bundle $L \rightarrow M$ and a connection \nab such that $\omega = \dfrac{i}{2\pi}F_A$(In particular, this means that 
+ $c_1(L) = [\omega].$)
+ \begin{proof}
+  Chose a \textit{good cover} $U_\alpha$ of M. A \textit{good cover} is a cover for which $U_\alpha \simeq \Rbb^n$,\
+  $U_\alpha \cap U_\beta \simeq \Rbb^n$ or $\emptyset$, $U_\alpha \cap U_\beta \cap U_\gamma \simeq \Rbb^n,\;or\;\emptyset,etc$
+  Here $\simeq$ means "diffeomorphic to``, and dim M = n. Such a good cover exists on any smooth manifold, and this can be
+  constructed by using a Riemannian metric to construst geodesically convex neighbourhoods.
+  \newline Over $U_\alpha$, construct the trivial bundle $U_\alpha \times \Cbb \rightarrow U_\alpha$ with connection
+  $-2\pi i A_\alpha$ so that $d A_\alpha = \omega$ on $ U_\alpha$. Here we are using the fact that $U_\alpha \simeq \Rbb^n$
+  and the Poincare lemma to find a primitive for $\omega$.
+  \newline Next, on overlaps $U_\alpha \cap U_\beta \simeq \Rbb^n$, $A_\alpha - A_\beta = df_{\alpha \beta}$
+  since $dA_\alpha = dA_\beta = \omega$. Again, we are using the Poincare lemma. Observe that the choice of $f_{\alpha \beta}
+  $ is unique up to the choice of a constant function.
+  \newline We now use $g_{\alpha \beta} = \exp(-2\pi i f_{\alpha \beta})$ to patch the $U_\alpha \times \Cbb 's$. Namely
+ , we glue $(U_\alpha \times U_\beta) \times \Cbb \subset U_\beta \times \Cbb$ to $(U_\alpha \times U_\beta) \times \Cbb \subset U_\alpha 
+ \times \Cbb$ by sending (x,z) to (x,g(x)z). 
+ \newline In order to make sure that the gluing is consistent, we need to verifiy the following on triple intersections
+ $U_\alpha \cap U_\beta \cap U_\gamma$: 
+ \begin{equation*}
+  g_{\alpha \beta}g_{\beta \gamma} = g_{\alpha \gamma},
+ \end{equation*}
+ or, equivalently, 
+ \begin{equation}
+  f_{\alpha \beta} + f_{\beta \gamma} = f_{\alpha \gamma} mod \Zbb.
+ \end{equation}
+We ask whether it is possible to choose complex numbers $a_{\alpha \beta}$ so that $\bar{f}_{\alpha \beta} = f_{\alpha \beta}
++ a_{\alpha \beta}$ satisfies the above equation. To answer this, consider the simplical complex for M corresponding to the
+good cover $\lbrace U_\alpha \rbrace$: To each $U_\alpha$, assign  a vertex (0-simplex) $v_\alpha$.
+To each nontrivial $U_\alpha \cap U_\beta$, assign an edge (1-simplex) between $v_\alpha$ and $v_\beta$. To each nontrivial
+$U_\alpha \cap U_\beta \cap U_\gamma$, place a 2-simplex with vertices $v_\alpha, v_\beta, v_\gamma$. With respect to 
+this simplical decomposition of M, $\delta f = \lbrace f_{\alpha \beta} + f_{\beta \gamma} - f_{\alpha \beta} \rbrace$ is 
+a 2-cocycle with values in \Cbb. Now the question can be rephrased as follows: Is there a 1-cochain $a= \lbrace a_{\alpha \beta}
+\rbrace$ with values in \Cbb such that $f- \delta a$ has values in \Zbb? THis is precisely the same as asking for [$\omega$]
+to be in $H^2(M;\Zbb)$.
+\qed
+ \end{proof}
+
+\end{theorem}
+\subsection{Geometric quantization}
+Given a sympletic manifold $(M,\omega)$, construct a complex line bundle $L \rightarrow M$ and a connection \nab such that 
+the curvature is $-2 \pi i \omega$. Let $C^{\infty} (M)$ be the Poisson algebra of $C^{\infty}$-functions on $(M, \omega)$,
+and let $\Gamma(L)$ be the smooth sections of L. 
+\newline By \textit{(geometric) quantization} we mean a Lie algebra representation of $C^{\infty}(M)$ on $\Gamma(L)$,
+i.e., a Lie algebra homomorphism from $C^{\infty}(M)$ to $End(\Gamma(L)).$ (Usually the operators are unbounded.)
+In the case at hand, assign: 
+\begin{equation*}
+ f \mapsto \nab_{X_{f}} - 2\pi i f.
+\end{equation*}
+The assignment is a Lie algebra homomorphism: 
+\begin{eqnarray}
+ {f,g} \mapsto [\nab_{X_{f}} - 2 \pi i f, \nab_{X_{g}} - 2 \pi i g ] \\
+  = (\nab_{[X_f,X_g]} - 2 \pi i \omega (X_f, X_g)) - 2 \pi i X_{f} g - 2 \pi i X_{g} f
+ \\ = \nab_{X_{\lbrace f,g \rbrace}} + 2 \pi i \omega (X_f, X_g)
+ \\ = \nab_{X_{\lbrace f,g \rbrace}} + 2 \pi i \lbrace f,g \rbrace
+\end{eqnarray}
+\textbf{Primordial Example:} Consider $(\Rbb^{2n}, \omega = dpdq)$ with coordinates (p,q). (Here, p stands for momentum a covector, 
+and q for position a vector.) Construct the trivial line bundle $\Rbb^{2n} \times \Cbb$ with connection \nab = $d - \dfrac{i}{\hbar}A.$
+The quantize by sending
+\begin{equation*}
+ f \mapsto \nab_{X_{f}} - \dfrac{i}{\hbar}f
+\end{equation*}
+We compute that $X_p = \dfrac{\partial}{\partial q}$ $X_q = \dfrac{\partial}{\partial p}$.
+Hence, upon quantizing:
+\begin{equation*}
+ p \mapsto \nab_{-\dfrac{\partial}{\partial q}} - \dfrac{i}{\hbar} p = - \dfrac{\partial}{\partial q} - \dfrac{i}{\hbar}
+ pdq (- \dfrac{\partial}{\partial q}) - \dfrac{i}{\hbar} p = \dfrac{\partial}{\partial q}
+\end{equation*}
+\begin{equation*}
+ q \mapsto \nab_{-\dfrac{\partial}{\partial p}} - \dfrac{i}{\hbar} q = - \dfrac{\partial}{\partial p} - \dfrac{i}{\hbar}
+ pdq (- \dfrac{\partial}{\partial p}) - \dfrac{i}{\hbar} q = \dfrac{\partial}{\partial p} - \dfrac{i}{\hbar} q.
+\end{equation*}
+If we restrict to sections that are only functions in q, then the above more or less reduces to our quantum mechanics picture.
+\section{Path integrals}
+\subsection{Sigma models.}
+Let us study maps u:$X \rightarrow M$ between Riemannian manifold. Let Map(X,M) be the set of smooth maps form X to M. Then given
+$u \in Map(X,M)$ we define the \textit{energy functional:}
+\begin{equation*}
+ S_X: Map(X,M) \rightarrow \Rbb
+\end{equation*}
+\begin{equation*}
+ u \mapsto \int_X |du|^{2} dvol_X
+\end{equation*}
+More precisely, at $x \in X$, we take an orthonormal basis $e_1,\cdots, e_n$ of $T_x X$ (Here dim X = n). Then $du^2$
+means $\Sigma^{n}_{i=1} \langle u_{*} e_i, u_{*} e_{i} \rangle$ $\langle \cdot , \cdot \rangle$ is 
+with respect to the Riemannian metric for M.
+By 'functional' we mean a function on some space of functions. A critical point of the energy functional is called a 
+'harmonic map'. 
+\begin{remark}
+ The energy functional (the generic term is 'action') has the following properties
+ \begin{enumerate}
+  \item If f: X' $\rightarrow$ X is an isometry, then $S_{X'}( u \circ f) = S_X(u).$
+  \item If -X is X with reversed orientation, then $S_{-X}(u) = - S_{X}(u).$
+  \item If X = $X_1 \sqcup X_2$ (disjoint union), then $S_X (u) = S_{X_{1}}(u|_{X_{1}}) + S_{X_{2}}(u|_{X_{2}})$
+ \item Suppose X = $X_{+} \cup X_{-},$ where $\partial X_{+}$ = $\partial X_{-}$ = Y is a codimension 1 submanifold of X.
+ If $u_+ \in Map(X_+,M)$, $u_- \in Map(X_-,M)$, $u_{+}|Y = u_{-}|Y$, then $S_{X}(u) = S_{X_{+}}(u_{+}) + S_{X_{-}}(u_{-}).$
+ Here u is defined to be $u_+$ on $X_+$ and $u_-$ on $X_-$.
+ \end{enumerate}
+
+\end{remark}
+\subsection{Feynman path integral}.
+In \textit{classical mechanics}, the trajectory of a particle between two points (say a and b) in configuration space 
+minimizes the action $S(\gamma)$.
+ In \textit{quantum mechanics}, to each path $\gamma$ you assign a ''probability function`` $e^{iS(\gamma)/\hbar}$
+ and integrate over the space of all paths connection a and b:
+ \begin{equation*}
+  \int e^{iS(\gamma)/\hbar}d \mu (y)
+ \end{equation*}
+This is called the \textit{Feynman path integral.} Here $d\mu$ is some measure on the paths connecting a and b. 
+\begin{remark}
+ The Feynman path integral has been rigorously defined only in some cases, even defining a measure in the measure theoretic sense
+ is difficult. 
+ When we go from quantum to classical (i.e. in the large $\hbar$ limit), we expect the rapid oscilations of $e^{iS(\gamma)/\hbar}$
+ to cancel each other, except near the critical points of $S(\gamma).$ Hence the main contributions are the \textit{classical 
+ trajectories.}
+\end{remark}
+\textbf{Sigma model:}Let us consider the sigma model. Let $C_X= Map(X,M)$. If X does not have boundary, then the 'partition function'
+\begin{equation*}
+ Z(X) = \int_{C_{X}(\alpha)} e^{iS(\gamma)/\hbar} d \mu_{X} (u)>
+\end{equation*}
+Here we are integrating over $C_X(\alpha)$ which is the subset of $C_X$ consisting of maps u: $X \rightarrow M$
+which restrict to $\alpha$ on $\partial X = Y$.
+\textbf{Plan:}
+Although Z(X) may not be rigorously defined, we can write down expected properties of Z(X) and $Z_Y$, which is some vector
+subspace of functions on $C_Y$ that Z(X) should live in.
+\textbf{Axioms:}
+\begin{enumerate}
+ \item (Orientation) $Z_{-Y} = Z^{*}_Y$ where $Z^{*}_Y$ is the dual vector space of $Z_Y$.
+ \item (Multiplication) $Z_{Y_{1} \sqcup Y_{2}} = Z_{Y_{1}} \tensor Z_{Y_{2}}$
+ \item (Gluing) $Z(X) = \langle Z(X_{+}), Z(X_{-}) \rangle$, where $X = X_+ \cup X_-$, $\partial X_+ = \partial X_- = Y$,
+ and the pairing is between $Z_Y$ and $Z_Y^{*}$
+ 
+ 
+\end{enumerate}
+\textbf{Explanation} We explain the Gluing Axiom. Using the expected properties of the Feynman path integral (e.g., Fubini's
+theorem),
+\begin{equation*}
+ Z(X) = \int_{C_{X}} e^{iS_{X}(u)(\gamma)/\hbar}d \mu (u)
+\end{equation*}
+$= \int_{C_{Y}} \left(\int_{C_{X_{+}}(\alpha)}e^{iS_{X_{+}}(u_{+})(\gamma)/\hbar}d \mu_{X_{+}} (u_{+}) \cdot 
+\int_{C_{X_{-}}(\alpha)}e^{iS_{X_{-}}(u_{-})(\gamma)/\hbar}d \mu_{X_{-}} (u_{-}) \right)d\mu_{Y} (\alpha)$
+$= \int_{C_{Y}} Z(X_{+})(\alpha)\cdot Z(X_{-})(\alpha)d\mu_{Y}(\alpha)$
+$= \langle Z(X_{+},Z(X_{-})\rangle$
+ Here, $u_{+} = u|_{X_{+}}$ $u_{-} = u|_{X_{-}}$, and $\alpha = u|_{Y}.$
+ We are also using $S_{X}(u) = S_{X_{+}}(u_{+}) + S_{X_{-}}(u_{-})$.
+ \subsection{Topological Quantum Field Theory (TQFT) axioms.}
+ We now formulate the TQFT in the sense of Atiyah. They are almost the same as the axioms derived for the sigma model
+ above; the only major difference is that we ask the vector spaces to be finite-dimensional. 
+\paragraph{} Consider a commutative ring $\Lambda$ with 1, such as \Cbb 
+(A) A finitely generated $\Lambda$-module $Z(\Sigma)$ associated to each oriented closed smooth d-dimensional manifold $\Sigma$ (corresponding to the \textit{homotopy} axiom),
+
+(B) An element $Z(M)\in Z(\partial M)$ associated to each oriented smooth (d+1)-dimensional manifold (with boundary) $M$ (corresponding to an ''additive'' axiom). 
+
+These data are subject to the following axioms
+
+(1) $Z$ is ''functorial'' with respect to orientation preserving \textit{diffeomorphisms} of $\Sigma$ and $M$,
+
+(2) $Z$ is ''involutory'', i.e. $Z(\Sigma^*)=Z(\Sigma)^*$ where $\Sigma^*$ is $\Sigma$ with opposite orientation and $Z(\Sigma)^*$ denotes the dual module,
+
+(3) $Z$ is ''multiplicative''.
+
+Furthermore, Atiyah adds two axiom to them. Namely, they are (4) and (5).
+
+(4) $Z(\phi)=\Lambda$ for the d-dimensional empty manifold and $Z(\phi)=1$ for the (d+1)-dimensional empty manifold.
+If we view   $Z(M)  $, for closed   $M  $, as a numerical invariant of   $M  $, 
+then for a manifold with boundary we should think of   $Z(M)\in Z(\partial M)  $
+as a "relative" invariant. Let   $f:\Sigma\times I\rightarrow\Sigma\times I  $ 
+be an orientation preserving diffeomorphism, and identify opposite ends of   $\Sigma\times I  $ by   $f  $. 
+This gives a manifold   $\Sigma_f  $ and our axioms imply
+  $\Sigma_f=\text{Trace}\ \Sigma(f)  $
+where   $\Sigma(f)  $ is the induced automorphism of   $Z(\Sigma)  $.
+
+
+(5)   $Z(M^*)=\overline{Z(M)}  $ (the \textit{hermitian} axiom). Equivalently,   $Z(M^*)  $ is the disjoint of   $Z(M)  $
+
+Note that for a manifold   $M  $ with boundary   $\Sigma  $ we can always form the double   $M\cup_\Sigma M^*  $ which is a closed manifold. (5) shows that
+  $Z(M\cup_\Sigma M^*)=|Z(M)|^2  $
+where on the right we compute the norm in the hermitian (possibly indefinite) metric.
+\subsection{Loop groups}
+To further understand TQFT and the like, we need some further representation theory.
+\subsubsection{Maurer-Cartan form.}
+\begin{definition}
+ Let G be a Lie group. Then the Maurer-Cartan form $\mu$ is a left-invariant 1-form on G wit values in the Lie group \gg which
+ satisfies $\mu(e)(A) = A$, where A$\int T_{e}G= \gg$ (More generally, $\mu(g)(g(I+tA)) = I+tA$, if we write A as $I
+ +tA$.)
+\end{definition}
+\textit{Notation:} Often write A $\in T_eG$ as $I+tA$ or $e^{tA}$ and think of A as an equivalence class of arcs. 
+For matrix Lie groups (i.e., subgroups of \Glc, the Maurer-Cartain form is $\mu = X^{-1}dX$, where X is an n x n matrix 
+whose (ij)-th entry is the coordinate function $x_{ij}$.
+One verifies that $\mu(I)(I + tA) = dX(I+tA) = I + tA$ and $\mu(g)(g(I+tA)) = g^{-1}g(I+tA) = I+tA$.
+Now let G = SU(2). We recall SU(2) is diffeomorphic to $S^3$. If A = $\left(\begin{matrix}
+                                                                      a & b \\
+                                                                      c & d
+                                                                     \end{matrix}\right)\in SU(2),$
+  then a,b determine A and $\lbrace|a|^2 + |b|^2 = 1 \rbrace$ is the unit sphere in $\Cbb^{2}$.
+ Consider the 3-form 
+ \begin{equation*}
+  \sigma = \dfrac{1}{24 \pi^{2}} Tr(\mu \wedge \mu \wedge \mu),
+ \end{equation*}
+where $\mu$ is the Maurer-Cartan form. 
+\begin{lemma} |$\sigma$| generates the integral cohomology group $H^3(SU(2);\Zbb) \simeq H^3(S^3;\Zbb) \simeq \Zbb$
+\begin{proof}
+ Let us perform the calculation at $e \in G$ and rely on the left-invariance. \su (2) is the set of traceless
+ skew-Hermitian matrices and has an \Rbb-basis:
+
+ \begin{equation*}
+\{
+   A = \left( \begin{matrix}                                                      i& 0 \\
+                                                                      0 & -i \end{matrix} \right), B = \left( 
+                                                                      \begin{matrix}       0& 1\\
+                                                                      -1 & -0 
+                                                                      \end{matrix} \right), 
+                                                                    C =  \left( \begin{matrix}         0& i \\
+                                                                      i & 0 \end{matrix} \right) \}
+ \end{equation*}
+ We compute that:
+ \begin{equation*}
+  \sigma(e)(A,B,C) = \dfrac{1}{24\pi^{2}}(3!)Tr(ABC) = \dfrac{1}{4\pi^{2}} Tr \left( \begin{matrix}                       0& 1\\
+                                                                      -1 & -0 \end{matrix} \right)  = - \dfrac{1}{2\pi^{2}}
+ \end{equation*}
+Here 3! comes from observing that we are taking alternating sums when evaluating three tangent vectors A,B,C and each sum is the same.
+Since 2$\pi^{2}$ is the volume of the unit 3-sphere in $\Rbb^{4}$ $\int_{S^{3}} \sigma = -1$ and
+$|\sigma|$ generates $H^{3}(SU(2);\Zbb).$
+\qed
+\end{proof}
+
+ 
+\end{lemma}
+\subsection{The loop group}Suppose G = SU(2). And let LG be the loop group, i.e., the group of smooth maps
+$S^1 \rightarrow G$
+\begin{lemma}
+$H^{2}(LG;\Zbb) = \Zbb$
+\begin{proof}
+First observe that $LG \simeq G \times \Omega G$, where $\Omega G$ is the set of \textit{based} loops,
+namely smooth maps$S^1 \rightarrow G$ which map $1 \mapsto e$ (Here we view the 1-sphere as a subspace of \Cbb and 
+e the identity of G)
+In fact, we can send $\gamma \in LG$ to ($\gamma(1), (\gamma(1))^{-1}\gamma)$
+Now, we have $\pi_{i}(\Omega G,e) \simeq \pi_{i+1}(G,e)$. (Here $e \in \Omega G$ refers to the map $S^{1} \rightarrow G$
+which maps to $e \in G$.) For the isomorphism, we can think of a map $(S^i,pt) \rightarrow (\Omega G, e)$ as a maps
+$(S^{i+1}, pt) \rightarrow (G,e). $
+ We then have: 
+ \begin{equation*}
+  \pi_{1}(G) = \pi_{1}(S^{3}) = 0, 
+  \pi_2(G) = 0, \pi_3(G) = \Zbb
+ \end{equation*}
+\begin{equation*}
+ \pi_1(LG) - \pi_1(G) \times \pi_1(\Omega G) = \pi_1(G) \times \pi_2(G) = 0, \pi_2(LG) = \pi_2(G) \times \pi_3(G) = \Zbb
+\end{equation*}
+By the Hurewicz isomorphism theorem, the first nontrivial $\pi_i$ and $H_i$ agree, and we have
+\begin{equation*}
+ H_2(LG) \simeq \pi_2(G) \simeq \Zbb
+\end{equation*}
+\qed
+\end{proof}
+\end{lemma}
+\begin{lemma}
+ A generator for $H^2(LG;\Zbb)$ is given by $\omega_0 = \int_{S^{1}} \phi^{*}\sigma$, where $\phi: LG \times S^1 \rightarrow 
+ G$ is the evaluation map $\phi(\gamma, \theta) = \gamma(\theta)$.
+\end{lemma}
+We need to explain the integration operation. First,
+\begin{equation*}
+ \phi^{*}{\sigma}(\gamma,\theta)\left(\xi, \eta, \dfrac{\partial}{\partial \theta} \right) = \sigma(\gamma(\theta))(\xi
+ (\theta),\eta(\theta),\gamma^{'}(\theta)),
+\end{equation*}
+where $\xi, \eta \in T_{\gamma}LG$. Then
+\begin{eqnarray*}
+ \omega_{0}(\gamma)(\xi, \eta) = \left(\int_{S^{1}} \phi^{*}(\sigma) \right)(\gamma)(\epsilon, \eta)\\
+\quad = \int_{0}^{2\pi} \sigma(\gamma(\theta))(\epsilon(\theta), \eta(\theta), \gamma^{'}(\theta))d\theta
+ \quad = \dfrac{1}{4\pi^{2}}\int_{0}^{2\pi} Tr(\gamma^{-1}\xi(\theta)\cdot \gamma^{-1}\eta(\theta)\cdot \gamma^{-1}\gamma^{'}(\theta))d\theta
+\end{eqnarray*}
+The composition 
+\begin{equation*}
+ H^3(G) \stackrel{\phi^{*}}{\rightarrow} H^{3}(LG \times S^{1}) \stackrel{\int_{S^{1}}}{\rightarrow} H^{2}(LG)
+\end{equation*}
+  is called a \textit{transgression}. It is not hard to see that the composition sends generators to generators. 
+  Now let $\omega$ be the left-invariant 2-form on LG given by the extending the Lie algebra 2-cocycle $\omega$
+  (with $[\omega]\in H^{2}(L\gg;\Cbb))$, where 
+  \begin{equation*}
+   \omega(e)(\xi, \eta) = \dfrac{1}{4 \pi^{2}} \int_{0}^{2\pi} \langle \xi^{'}(\theta) , \eta(\theta) \rangle d\theta.
+  \end{equation*}
+Here $\langle, \rangle$ is the Killing form for $\su (2)$, which is a multiple of (A,B) $\mapsto Tr(AB)$. If we set
+$\xi = X \tensor t^{m}$ and $\eta = Y \tensor t^{n}$, and if $t = e^{i\theta}$, then 
+$\frac{d}{d\theta}e^{im\theta} = im e^{im\theta}$ and 
+\begin{equation}\label{5}
+ \omega(e)(X \tensor t^{m}, Y \tensor t^{n}) = \dfrac{i}{2\pi}\langle X,Y \rangle m \delta_{m+n,0}.
+\end{equation}
+Observe that $\langle X,Y \rangle m\delta_{m+n,0}$ is the Lie algebra 2-cocycle. The 2-cocycle property translates into
+$d\omega$ being closed. 
+\begin{lemma}
+ $\omega = \omega_{0} + d \beta$, where 
+\begin{equation*}
+ \beta(\gamma)(\xi) = \dfrac{1}{8 \pi^{2}} \int_{0}^{2\pi} \mathrm{Tr}(\gamma^{-1}\gamma^{'}(\theta)
+ \cdot \gamma^{-1}\xi(\theta))d\theta
+\end{equation*}
+Hence $\omega$ is also a generator for $H^{2}(LG; \Zbb)$.
+\begin{proof}
+ We compare 
+ \begin{equation}\label{6}
+  \omega_{0}(\gamma)(\xi,\eta) =  \dfrac{1}{4\pi^{2}}\int_{0}^{2\pi} Tr(\gamma^{-1}\xi(\theta)\cdot \gamma^{-1}\eta(\theta)\cdot \gamma^{-1}\gamma^{'}(\theta))d\theta
+ \end{equation}
+ and 
+ \begin{equation}\label{7}
+  \omega(\gamma)(\xi,\eta) =  \dfrac{1}{4\pi^{2}}\int_{0}^{2\pi} Tr((\gamma^{-1}\xi)^{'}(\theta)\cdot  \gamma^{-1}\eta(\theta))d\theta
+ \end{equation}
+Let $\tilde{\xi}$ and $\tilde{\eta}$ be left invariant extensions of $\xi$ and $\eta$ to all LG. Then we can use the
+Cartan formula:
+\begin{equation*}
+ d\beta(\gamma)(\xi,\eta) = \tilde{\xi}(\beta(\tilde{\eta})) - \tilde{\eta}(\beta(\tilde{\xi})) - \beta([\tilde{\xi},
+ \tilde{\xi}]).
+\end{equation*}
+We have $\beta(\gamma)([\tilde{\xi},
+ \tilde{\xi}])= \omega_{0}(\gamma)(\xi,\eta),$ and since $\gamma^{-1}\tilde{\xi}(\theta), \gamma^{-1}\tilde{\eta}(\theta)$
+ are constant for all $\gamma$, we have 
+ \begin{equation*}
+  \tilde{\xi}(\beta(\tilde{\eta})) = \dfrac{1}{8\pi^{2}}\int_{0}^{2\pi} Tr((\gamma^{-1}\xi)^{'}\cdot \gamma^{-1} \eta)d\theta,
+ \end{equation*}
+\begin{equation*}
+ -\tilde{\eta}(\beta(\tilde{\xi})) = -\dfrac{1}{8\pi^{2}} Tr((\gamma^{-1}\eta)^{'}\cdot \gamma^{-1} \xi)d\theta
+\end{equation*}
+This proves $\omega = \omega_{0} +d\beta$.
+
+
+
+ \qed
+\end{proof}
+
+
+\end{lemma}
+\section{The Wess-Zumino-Witten Model}
+Let us discuss the Wess-Zumino-Witten (WZW) model.
+\begin{definition}
+ Let $\Sigma$ be a compact Riemann surface, without boundary. Let G be the Lie group SU(2). 
+ Consider $Map(\Sigma, G)$, the space of smooth maps $f:\Sigma \rightarrow G$.
+ We first define the \textit{energy functional} 
+    \begin{equation*}
+     E_{\Sigma} (f) = -i\int_{\Sigma} \mathrm{Tr}\left(f^{-1}\partial f\wedge f^{-1} \bar{\partial} f\right).
+    \end{equation*}
+\textbf{Interpretation:}
+First recall that the Killing form of G=SU(2) is a constant multiple of (X,Y) $\mapsto \mathrm{Tr}(X,Y)$.
+If we use the local holomorphic coordinate $z = x+iy$ for $\Sigma$, then
+\begin{equation*}
+ \partial f = \dfrac{\partial f}{\partial z} dz = \dfrac{1}{2}\left( \dfrac{\partial f}{\partial x} - i \dfrac{\partial f}{\partial y}
+ \right) (dx+ idy)
+\end{equation*}
+\begin{equation*}
+ \bar{\partial} f = \dfrac{\partial f}{\partial z} dz = \dfrac{1}{2}\left( \dfrac{\partial f}{\partial x} +
+ i \dfrac{\partial f}{\partial y}
+ \right) (dx - idy)
+\end{equation*}
+\end{definition}
+If f(z) = e (which we may assume since $f^{-1}\partial f $ and  $ f^{-1} \bar{\partial} f$ are left-invariant),
+then: 
+\begin{equation*}
+ -i\mathrm{Tr}(f^{-1}\partial f\wedge f^{-1} \bar{\partial} f) = -\frac{1}{2}
+ \mathrm{Tr}\left(\left(\dfrac{\partial f}{\partial x}\right)^{2} + \left(\dfrac{\partial f}{\partial y}\right)^{2} \right) dxdy.
+\end{equation*}
+Hence, $E_{\Sigma}(f)$ is, up to constant multiple, equal to the energy $\int_{\Sigma} |df|^{2}dvol$ defined 
+previously.
+Note that there is no metric defined for $\Sigma$. A complex structure on $\Sigma$ defines a metric up to a 
+conformal
+factor, i.e. $g \cong fg$, where f is a positive function on $\Sigma$. Hence $E_{\Sigma}(f)$ only depends on the
+\textit{
+conformal class} of the metric, corresponding to the complex structure on $\Sigma$.
+\textbf{WZW action} Let k be a nonnegaitve integer, called the level. Then define:
+\begin{equation*}
+ S_{\Sigma}(f) = \dfrac{k}{4\pi} E_{\Sigma}(f) - 2\pi i k \int_{B} \tilde{f^{*}}\sigma ,
+\end{equation*}
+where B is a 3-manifold with $\partial B = \Sigma$, $\tilde{f}: B \rightarrow G$ is an extension of
+$f:\Sigma \rightarrow
+G,$ and $\sigma = \dfrac{1}{24 \pi^{2}} \mathrm{Tr}(\mu \wedge \mu \wedge \mu)$ where $\mu$ is the Maurer-Cartan
+form.
+\begin{remark}
+ $S_{\Sigma}(f)$ is, strictly speaking, $S_{\Sigma}(\tilde{f})$. To remove the dependence on the extension 
+ $\tilde{f}$  
+ we exponentiate it. 
+\end{remark}
+\subsection{Polyakov-Wiegmann formula}
+\begin{proposition}[Polakov-Wiegmann formaula]. Let $\Sigma$ be a closed Riemann surface. Given $f,g: \Sigma \rightarrow G$,
+ we have:
+ \begin{equation*}
+  \exp(-S_{\Sigma}(fg)) = \exp(-S_{\Sigma}(f) - S_{\Sigma}(g) + \Gamma_{\Sigma}(f,g)),
+ \end{equation*}
+where $\Gamma_{\Sigma}(f,g)) = - \dfrac{ik}{2\pi} \int_{\Sigma} \mathrm{Tr}(f^{-1}\bar{\partial} f \wedge \partial g g^{-1}).$
+
+\end{proposition}
+\begin{proof}
+ We will often use the identity 
+ $\mathrm{Tr}(\omega \wedge \eta) = (1)^{pq}\mathrm{Tr}(\eta \wedge \omega)$,
+ where $\omega$ is a p-form with values in \gg and $\eta$ is a q-form with values in \gg.
+ We compute 
+ \begin{equation*}
+  -\dfrac{k}{4\pi} E_{\Sigma}(f) = \dfrac{ik}{4 \pi}\int_{\Sigma} 
+  \mathrm{Tr}\left(\left( fg\right)^{-1}\partial(fg)\wedge
+  (fg)^{-1}\bar{\partial}(fg)\right)
+ \end{equation*}
+\begin{flushright}
+ \begin{equation*}
+   = \dfrac{ik}{4 \pi}\int_{\Sigma} \mathrm{Tr}\left(g^{-1}f^{-1})(f\partial g + 
+   \partial f \cdot g) \wedge (g^{-1} f^{-1})(f\bar{\partial}
+   g + \bar{\partial} g + \bar{\partial} f \cdot g)\right)
+ \end{equation*}
+\begin{equation*}
+ = \dfrac{ik}{4 \pi}\int_{\Sigma} \mathrm{Tr}\left(g^{-1}\partial g + g^{-1} f^{-1} \partial f \cdot g) \wedge 
+ (g^{-1}\bar{\partial}
+   g + g^{-1} f^{-1} \bar{\partial} f \cdot g)\right)
+\end{equation*}
+\begin{equation*}
+ = \dfrac{ik}{4 \pi}\int_{\Sigma} \mathrm{Tr}\left(g^{-1} \partial g \wedge  g^{-1} \bar{\partial} g + f^{-1} 
+ \partial  f
+ \wedge f^{-1} \bar{\partial} f + \partial g g^{-1} \wedge f^{-1} \bar{\partial} f 
+ + f^{-1} \bar{\partial}f + f^{-1} \partial f \wedge \bar{\partial} g \cdot g^{-1}\right)
+\end{equation*}
+\begin{equation*}
+ = - \dfrac{k}{4 \pi} \left( E_{\Sigma} (f) + E_{\Sigma} (g)\right)  + \dfrac{ik}{4\pi} \int_{\Sigma}
+ \mathrm{Tr}\left(-f^{-1} \bar{\partial}f \wedge \partial g g^{-1} + f^{-1} \partial f
+\wedge \bar{\partial} g \cdot g^{-1} \right)
+\end{equation*}
+
+\end{flushright}
+Next, 
+\begin{equation*}
+\mathrm{Tr}\left(f^{-1} df \wedge d g g^{-1} \right) = \mathrm{Tr} 
+\left( f^{-1} 
+ (\partial f + \bar{\partial} f) 
+ \wedge(\partial g + \bar{\partial} g ) g^{-1} \right)
+\end{equation*}
+\begin{flushright}
+ \begin{equation*}
+ = \mathrm{Tr} (f^{-1} \partial f \wedge \bar{\partial} g g^{-1}) + \mathrm{Tr}(f^{-1}
+  \bar{\partial} f \wedge \partial g g^{-1} ),
+ \end{equation*}
+\end{flushright}
+since terms of the form $\partial f \wedge \partial g $ and $\bar{\partial}f \wedge \bar{\partial} g$ are zero. 
+Hence we
+conclude that:
+\begin{equation}\label{polyakov}
+ -\dfrac{k}{4 \pi} E_{\Sigma}(f) = \dfrac{ik}{4 \pi} \left( - E_{\Sigma}(f) - E_{\Sigma}(g)) +
+ \Gamma_{\Sigma}(f,g) + \dfrac{ik}{4\pi} \int_{\Sigma} \mathrm{Tr}(f^{-1} df \wedge dg g^{-1} \right).
+\end{equation}
+Next consider the Wess-Zumino terms. Ommiting the tidles for convenience, we have: 
+\begin{equation*}
+ 2\pi i k \int_{B} (fg)^{*}\sigma = \dfrac{2\pi i k}{24\pi^{2}} \int_{B} \mathrm{Tr}\left(\left(fg\right)^{-1}
+ d\left(fg\right)
+ \wedge \left(fg\right)^{-1}d\left(fg\right)\wedge \left(fg\right)^{-1}d\left(fg\right)\right)
+\end{equation*}
+ \begin{flushright}
+  \begin{equation*}
+   = \dfrac{ik}{12\pi} \int_{B} \left(A_1 + 3 A_2 + 3 A_3 + A_4 \right), 
+  \end{equation*}
+\begin{equation*}
+ = 2\pi i k \int_{B} \left( f^{*} \sigma + g^{*} \sigma \right) + \dfrac{ik}{4 \pi} \int_{B} (A_2 + A_3)
+\end{equation*}
+ \end{flushright}
+where 
+\begin{flushright}
+       $A_1= \mathrm{Tr}(f^{-1} df f^{-1} df f^{-1} df )$
+     $A_2 = \mathrm{Tr}\left( dg g^{-1} f^{-1} df f^{-1} df \right)$
+        $A_3 = \mathrm{Tr}(dgg^{-1} dgg^{-1} f^{-1} df )$
+        $A_4 = \mathrm{Tr}(g^{-1} dgg^{-1} dgg^{-1} dg)$
+      \end{flushright}
+Now, \begin{flushright}
+\begin{equation*}
+ d(\mathrm{Tr}(dgg^{-1}f^{-1} df)) = dgg^{-1} dgg^{-1} df + dgg^{-1} f^{-1} df f^{-1} df = A_2 + A_3,
+\end{equation*}
+\end{flushright}
+ using $d(f^{-1}) = -f^{-1} df f^{-1}$. Finally,
+ \begin{equation}\label{polyakov2}
+  \dfrac{ik}{4\pi} \int_{B} (A_2 + A_3) = \dfrac{ik}{4\pi} \int_{\Sigma} \mathrm{Tr} (dgg^{-1} f^{-1} df),
+ \end{equation}
+using Stoke's theorem. Combining equations (\ref{polyakov2} and ,\ref{polyakov}) gives the result.
+\qed
+\end{proof}
+\subsection{Line bundles over} $LG_\Cbb$. Let us consider the complexification $G_\Cbb$ instead of G.
+Consider $\Cbb \mathbb{P}^{1} = \Cbb \cup \left\lbrace \infty \right\rbrace.$ Let $D_{0} = \left\lbrace |z| 
+\leq 1 \right\rbrace$ $\subset \Cbb$, $D_\infty = \left\lbrace |z| \geq 1 \right\rbrace \cup \left\lbrace \infty \right\rbrace$,
+and $S^1 = \left\lbrace |z| = 1 \right\rbrace = \partial D_{0} = - \partial D_{\infty}$.
+We define a complex line bundle $\mathcal{L}$ over $LG_\Cbb$ as follows: Let $Map_{0}(D_{\infty},G)$ be the set of smooth
+maps $f_\infty: D_\infty \rightarrow G_\Cbb$ with $f_\infty(\infty) = e.$ Then let 
+$\mathcal{L} = Map_{0}(D_\infty, G_\Cbb)/\iso$, where $\left(f_\infty, u \right) \iso (g_\infty, v)$ if:
+\begin{enumerate}
+ \item $f_{\infty}|_{S^{1}} = g_\infty|_{S^{1}}.$
+ \item If $g_\infty = f_\infty h_\infty$, then 
+ \begin{equation*}
+  v = u \cdot \exp (-S_{\Cbb \mathbb{P}^{1}}(h) + \Gamma_{D_{\infty}}\left( f_\infty, h\infty)\right).
+ \end{equation*}
+Here h is an extension of $h_\infty$ to $D_0$ by e. (Note that $h_\infty|_{S^{1}} = e.$)
+The equivalence class of $(f_\infty, u)$ will be denoted $[f_\infty, u]$. The projection $\mathcal{L} \rightarrow 
+LG_\Cbb$ is given by $[f_\infty, u] \rightarrow f_{\infty}|_{S^{1}}$
+We can view $f_0:D_0 \rightarrow G_\Cbb$ as an element of $\mathcal{L}$ as follows: Let $f_\infty$ be a smooth extension
+of $f_0$, i.e., $f_\infty |_{S^{1}} = f_{0}|_{S^{1}}.$ Then assign $f_0 \mapsto [f_\infty, 
+\exp (-S_{\Cbb \mathbb{P}^{1}}(f))].$
+\end{enumerate}
+\begin{lemma} $ [f_\infty, 
+\exp (-S_{\Cbb \mathbb{P}^{1}}(f))].$ does not depend on the extension $f_\infty$.
+\begin{proof}
+ See \qed
+\end{proof}
+
+\end{lemma}
+\subsection{An Euler characteristic of the gauge equivalence classes of \textit{SU(2)}-connections}
+In 1988 Taubes defined an invariant for homology 3-spheres M by defining an euler-characteristic on the space of gauge
+equivalence classes of SU(2)-connections. Then he proved that his invariant is actually the same as Casson's invariant for
+Homology 3-spheres. This is a little survey particularly of the gauge theoretic view on Casson's invariant for homology
+3-spheres, which related it to Chern-Simons theory and leads to a refinement of the Casson invariant, Floer's instanton homology.
+\subsubsection{The Casson invariant.} Let M be a closed 3-manifold with $H^{i}(M) = H^{i}(S^{3})$.
+Consider a Heegaard decomposition of M, i.e. let $X_{k},$ $k = 1,2$
+

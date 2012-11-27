@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, textcomp, url, hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+      
+      \newcommand{\christoffel}[3][i]{\ensuremath{\Gamma_{#1#2}^{#3}}}
+\newcommand{\Gl}{\ensuremath{GL(n,\mathbb{R})}}
+\newcommand{\gl}{\ensuremath{\mathfrak{gl}(n\mathbb{R})}}
+\newcommand{\Sl}{\ensuremath{SL(n,\mathbb{C})}}
+\newcommand{\nsl}{\ensuremath{\mathfrak{sl}(n\mathbb{C})}}
+\newcommand{\Su}{\ensuremath{SU(n,\mathbb{C})}}
+\newcommand{\su}{\ensuremath{\mathfrak{su}(n\mathbb{C})}}
+\newtheorem{metaphor}{Metaphor}
+\newtheorem{idea}{Idea}
+\newtheorem{convention}{Convention}
+\newtheorem{recall}{Recall}
+\def \grad {\overrightarrow{\nabla}}
+\def \curl {\overrightarrow{\nabla} \wedge \cdot}
+\def \div {\overrightarrow{\nabla} \cdot}
+\def \nab {\ensuremath{\nabla}}
+\def \im {\text{im }}
+\def \ker {\text{ker }}
+\def \scal {\text{<\textperiodcentered,\textperiodcentered>}}
+\newcommand{\eee}{\ensuremath{e_{i_1}\wedge \cdots \wedge e_{i_p}}}
+\def \hodge{*}
+
+\def \C {\mathcal{C}} % for categories
+\def \D {\mathcal{D}}
+\def \S {\mathcal{S}}
+\def \P {\mathcal{P}}
+\def \U {\mathcal{U}}
+\def \M{\ensuremath{\mathcal{M}}}
+
+\def\Cbb{\ensuremath{\mathbb{C}}}
+\def\Kbb{\ensuremath{\mathbb{K}}}
+\def\Nbb{\mathbb{N}}
+\def\Pbb{\mathbb{P}}
+\def\Qbb{\mathbb{Q}}
+\def\Rbb{\ensuremath{\mathbb{R}}}
+\def\Zbb{\ensuremath{\mathbb{Z}}}
+
+\def \gg{\ensuremath{\mathfrak{g}}}
+\def \eps {\varepsilon}
+\def \AA{\ensuremath{\mathcal{A}^{1}}}
+\def  \AAA{\ensuremath{\mathcal{A}}}
+\def \Fff{\mathfrak{F}}
+%\def \commutes {\ar@{}[rd]|{\circlearrowleft}}
+\def \commutes {\ar@{}[rd]|{\mbox{ \Large{$\circlearrowleft$} }}}
+
+\newcommand{\tensor}{\otimes}
+\newcommand{\itexarray}[1]{\begin{matrix}#1\end{matrix}} %To draw commutative Diagrams
+\newcommand{\Ob}{{\rm Ob}}
+     \newcommand{\Cob}{{\rm Cob}}   
+	\newcommand{\Vect}{{\mathrm{Vect}}}   
+	\newcommand{\Hilb}{{\mathrm{Hilb}}}    
+	\newcommand{\tr}{{\rm tr}}   
+      \newcommand{\Hom}{{\rm hom}}
+\newcommand{\cChVect}{\mathrm {cCh(Vect)}}
+\newcommand{\gVect}{\mathrm {gVect}} 
+\newcommand{\To}{\Rightarrow}  
+\newcommand{\newword}[1]{\textbf{\emph{#1}}}
+\def \hodge{*}
+\def \iso {\cong}
+%opening
+\title{On Chern Simons Theory}
+\author{Peadar Coyle}
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{abstract}
+\end{abstract}
+
+\pagenumbering{arabic}
+\include{csintroduction}
+\include{background}
+\include{topologicalphases}
+\include{Cartan_formalism}
+\include{Connections_PrincipalBundles}
+\include{Quantization}
+%\include{Tensors_Classical_Mechanics}
+
+
+%\include{Kitaev_K-Theory_Notes}
+
+\bibliographystyle{plain}
+\bibliography{thesis}
+\end{document}
